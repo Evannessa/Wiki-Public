@@ -1,0 +1,74 @@
+<a href="{{include.linkPath}}">
+    <svg class="family-member-group" data-title="{{include.ourTitle | downcase}}" data-first-gen="{{include.firstGen}}" data-generation-index="{{person.generationIndex}}" viewbox="0 0 100 100" preserveaspectratio="xMinYMin meet" width="10%" height="10%">
+        <defs>
+            <filter id="solid">
+                <feFlood flood-color="#262b59" result="bg" />
+                <feMerge>
+                    <feMergeNode in="bg" />
+                    <feMergeNode in="SourceGraphic" />
+                </feMerge>
+            </filter>
+        </defs>
+        <clipPath id="myClip">
+            <!--
+      Everything outside the circle will be
+      clipped and therefore invisible.
+    --> <rect height="100" rx="15" width="100" />
+        </clipPath>
+
+
+        <svg class="hidden-info" height="0" width="0">
+            <text class="parents">{{include.parents | downcase}}</text>
+            <text class="partners">{{include.partners | downcase}}</text>
+            <text class="title" x="50" y="-10">{{include.ourTitle | downcase}}</text>
+        </svg>
+
+        {%- comment -%}Info to display on hover{%- endcomment -%}
+        <svg class="hover-info" height="100" viewbox="0 0 100 100" width="100">
+            {% if person.marriedFrom %}
+                <a class="marriedFrom" href="{{person.marriedFrom | downcase}}">
+                    <text class="marriedFrom" filter="url(#solid)" width="100%" x="0" y="50">
+						From {{person.marriedFrom | downcase}} Clan
+					</text>
+                </a>
+            {% endif %}
+            {% if person.marriedInto %}
+                <a class="marriedInto" href="{{person.marriedInto|downcase}}">
+                    <text class="marriedInto" filter="url(#solid)" width="100%" x="0" y="50">
+						Married into {{person.marriedInto | downcase}} Clan
+					</text>
+				</a>
+                {% endif %}
+        </svg>
+        <rect height="100" rx="15" width="100" /> {%- comment -%}Aspect ratios for the SVG, determines how the object is positioned and fit within, sort of like objectFit property{%- endcomment -%}
+            {%- comment -%}This one's like top {%- endcomment -%}
+        {% assign aspectRatio = "xMidYMin slice" %}
+        {% if include.imagePosition == "center" %}
+		{%- comment -%}This one's like center {%- endcomment -%}
+            {% assign aspectRatio = "xMidYMid slice" %}
+        {% elsif include.imagePosition == "left" %}
+            {% assign aspectRatio = "xMinYMid slice" %}
+        {% endif %}
+        {%- comment -%}The image {%- endcomment -%}
+
+        <image class="family-member" xlink:href="{{include.source}}" clip-path="url(#myClip)" preserveaspectratio="{{aspectRatio}}" /> {%- comment -%}The display name{%- endcomment -%}
+			{% if person.tags contains "Condition/Deceased" %}
+	<svg class="badge" width="20" height="20" viewBox="0 0 100 100">
+				<image href="/assets/symbols/deceased.svg" x="0" y="0" height="100" width="100"/>
+		</svg>
+			{% endif %}
+			{% if person.tags contains "Condition/Missing" or person.tags contains "Condition/Location-Unknown" %}
+			<svg class="badge" width="20" height="20" y="20" viewbox="0 0 100 100">
+				<image class="invert" href="/assets/symbols/missing.png" x="0" y="0" height="100" width="100">
+			</svg>
+			{% endif %}
+        {% assign name = include.ourTitle %}
+        {% if person.Clan %}
+            {% assign ourClan = person.Clan | downcase %}
+            {% assign name = include.ourTitle | remove: {{ourClan}} %}
+        {% endif %}
+
+        <text class="visible-title" filter="url(#solid)" x="50" y="110">{{name}}</text>
+
+    </svg>
+</a>

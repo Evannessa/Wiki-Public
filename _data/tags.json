@@ -1,0 +1,4619 @@
+[
+  {
+    "tag": "category/object-collection",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/_staging/z_Templates/Wiki Templates/Things/Template - Object Collection.md"
+    ]
+  },
+  {
+    "tag": "category/named-object",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/_staging/z_Templates/Wiki Templates/Things/Template - Named Object.md"
+    ]
+  },
+  {
+    "tag": "category/thing-list",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/_staging/z_Templates/Wiki Templates/Things/Template - Thing List.md"
+    ]
+  },
+  {
+    "tag": "category/named-vehicle",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/_staging/z_Templates/Wiki Templates/Things/Template - Named Vehicle.md"
+    ]
+  },
+  {
+    "tag": "category/named-equipment",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/_staging/z_Templates/Wiki Templates/Things/Template - Named Equipment.md"
+    ]
+  },
+  {
+    "tag": "category/inhabitant",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/_staging/z_Templates/Wiki Templates/Things/Template - Inhabitant.md"
+    ]
+  },
+  {
+    "tag": "category/gm-synopsis",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/_staging/z_Templates/Wiki Templates/Sources/Template - GM Synopsis.md"
+    ]
+  },
+  {
+    "tag": "category/story-source",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/_staging/z_Templates/Wiki Templates/Sources/Template - Story Source.md"
+    ]
+  },
+  {
+    "tag": "category/player-synopsis",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/_staging/z_Templates/Wiki Templates/Sources/Template - Player Synopsis.md"
+    ]
+  },
+  {
+    "tag": "category/general-dangers-article",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/_staging/z_Templates/Wiki Templates/Dangers/Template - General Dangers Article.md"
+    ]
+  },
+  {
+    "tag": "category/hazard",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/_staging/z_Templates/Wiki Templates/Dangers/Template - Hazard.md"
+    ]
+  },
+  {
+    "tag": "category/poison",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/_staging/z_Templates/Wiki Templates/Dangers/Template - Poison.md"
+    ]
+  },
+  {
+    "tag": "category/trap",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/_staging/z_Templates/Wiki Templates/Dangers/Template - Trap.md"
+    ]
+  },
+  {
+    "tag": "category/disease",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/_staging/z_Templates/Wiki Templates/Dangers/Template - Disease.md"
+    ]
+  },
+  {
+    "tag": "category/creature",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/_staging/z_Templates/Wiki Templates/Dangers/Template - Creature.md"
+    ]
+  },
+  {
+    "tag": "category/location/region--geographical",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/_staging/z_Templates/Wiki Templates/Places/Template - Region_ Geographical.md"
+    ]
+  },
+  {
+    "tag": "category/settlement",
+    "tagCount": 5,
+    "relativePaths": [
+      "_notes/_staging/z_Templates/Wiki Templates/Places/Template - Settlement.md",
+      "_notes/Idyllwild/Campaign Data/Locations/Settlements/Tatara (Rust Devil Village).md",
+      "_notes/Idyllwild/Campaign Data/Locations/Settlements/The City of Myth.md",
+      "_notes/Idyllwild/Campaign Data/Locations/Settlements/Copper Grove.md",
+      "_notes/Idyllwild/Campaign Data/Locations/Settlements/Amolai.md"
+    ]
+  },
+  {
+    "tag": "category/location/region--dimensional",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/_staging/z_Templates/Wiki Templates/Places/Template - Region_ Deimensional.md"
+    ]
+  },
+  {
+    "tag": "category/location/region--political",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/_staging/z_Templates/Wiki Templates/Places/Template - Region_ Political.md"
+    ]
+  },
+  {
+    "tag": "category/location/region--urban",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/_staging/z_Templates/Wiki Templates/Places/Template - Region_ Area.md"
+    ]
+  },
+  {
+    "tag": "category/location",
+    "tagCount": 51,
+    "relativePaths": [
+      "_notes/_staging/z_Templates/Wiki Templates/Places/Template - Location.md",
+      "_notes/Idyllwild/Campaign Data/Lore/The Cloud Archipelago.md",
+      "_notes/Idyllwild/Campaign Data/Locations/The Forest/Sultana and Vantoya Farrowdream's Home.md",
+      "_notes/Idyllwild/Campaign Data/Locations/The Forest/Abandoned Zanad Homestead.md",
+      "_notes/Idyllwild/Campaign Data/Locations/The Forest/The Dark House.md",
+      "_notes/Idyllwild/Campaign Data/Locations/Settlements/Amolai.md",
+      "_notes/Idyllwild/Campaign Data/Locations/The Abyss/The Abyss.md",
+      "_notes/Idyllwild/Campaign Data/Locations/The Abyss/Regions/Horizon Shifts.md",
+      "_notes/Idyllwild/Campaign Data/Locations/The Abyss/Regions/Layer 3 - Magma's Molt.md",
+      "_notes/Idyllwild/Campaign Data/Locations/The Abyss/Regions/Layer 4 - The Rapture.md",
+      "_notes/Idyllwild/Campaign Data/Locations/The Abyss/Regions/Layer 2 - The Broken Sea.md",
+      "_notes/Idyllwild/Campaign Data/Locations/The Abyss/Regions/Layer 1 - The Tangle.md",
+      "_notes/Idyllwild/Campaign Data/Locations/Quantum Islands/Solis.md",
+      "_notes/Idyllwild/Campaign Data/Locations/Quantum Islands/The Blossoming Bounds (Orchadia).md",
+      "_notes/Idyllwild/Campaign Data/Locations/Quantum Islands/Slumbering Sea.md",
+      "_notes/Idyllwild/Campaign Data/Locations/Quantum Islands/Other Quantum Islands.md",
+      "_notes/Idyllwild/Campaign Data/Locations/Quantum Islands/Alimoux Bathhouse.md",
+      "_notes/Idyllwild/Campaign Data/Locations/Quantum Islands/Dimensional Observatory.md",
+      "_notes/Idyllwild/Campaign Data/Locations/Copper Grove Locations/Town Shops and Destinations.md",
+      "_notes/Idyllwild/Campaign Data/Locations/Copper Grove Locations/Specific Locations/The Martyred Moon (Café and Divination Shop).md",
+      "_notes/Idyllwild/Campaign Data/Locations/Copper Grove Locations/Specific Locations/The Spiritfarer (Ark Clan Tavern and Inn).md",
+      "_notes/Idyllwild/Campaign Data/Locations/Copper Grove Locations/Specific Locations/Resurrecting Pool.md",
+      "_notes/Idyllwild/Campaign Data/Locations/Copper Grove Locations/Specific Locations/Farrowdream Greenhouse.md",
+      "_notes/Idyllwild/Campaign Data/Locations/Copper Grove Locations/Specific Locations/Faller College.md",
+      "_notes/Idyllwild/Campaign Data/Locations/Copper Grove Locations/Town Regions/Town Regions.md",
+      "_notes/Idyllwild/Campaign Data/Locations/Copper Grove Locations/Town Regions/Within or Along the Cliffside.md",
+      "_notes/Idyllwild/Campaign Data/Locations/Copper Grove Locations/Town Regions/Atop the Cliff.md",
+      "_notes/Idyllwild/Campaign Data/Locations/Copper Grove Locations/Town Regions/At the Cliff's Base.md",
+      "_notes/Idyllwild/Campaign Data/Locations/Copper Grove Locations/Clan Homesteads/00 Clan Homes and Businesses.md",
+      "_notes/Idyllwild/Campaign Data/Locations/Copper Grove Locations/Clan Homesteads/Everlasting Clan Homes and Businesses.md",
+      "_notes/Idyllwild/Campaign Data/Locations/Copper Grove Locations/Clan Homesteads/Automaton Clan Homes and Businesses.md",
+      "_notes/Idyllwild/Campaign Data/Locations/Copper Grove Locations/Clan Homesteads/Common Clan Homes and Businesses.md",
+      "_notes/Idyllwild/Campaign Data/Locations/Copper Grove Locations/Clan Homesteads/Common House.md",
+      "_notes/Idyllwild/Campaign Data/Locations/Copper Grove Locations/Clan Homesteads/Gillespie Clan Homes and Businesses.md",
+      "_notes/Idyllwild/Campaign Data/Locations/Copper Grove Locations/Clan Homesteads/Rockfolk Clan Homes and Businesses.md",
+      "_notes/Idyllwild/Campaign Data/Locations/Copper Grove Locations/Clan Homesteads/La Clan Homes and Businesses.md",
+      "_notes/Idyllwild/Campaign Data/Locations/Copper Grove Locations/Clan Homesteads/Zanad Clan Homes and Businesses.md",
+      "_notes/Idyllwild/Campaign Data/Locations/Copper Grove Locations/Clan Homesteads/Yolo Clan Homes and Businesses.md",
+      "_notes/Idyllwild/Campaign Data/Locations/Copper Grove Locations/Clan Homesteads/Viseul Clan Homes and Businesses.md",
+      "_notes/Idyllwild/Campaign Data/Locations/Copper Grove Locations/Clan Homesteads/Slugfolk Clan Homes and Businesses.md",
+      "_notes/Idyllwild/Campaign Data/Locations/Copper Grove Locations/Clan Homesteads/Luekor Clan Homes and Businesses.md",
+      "_notes/Idyllwild/Campaign Data/Locations/Copper Grove Locations/Clan Homesteads/Farrowdream Clan Homes and Businesses.md",
+      "_notes/Idyllwild/Campaign Data/Locations/Copper Grove Locations/Clan Homesteads/Farbrand Clan Homes and Businesses.md",
+      "_notes/Idyllwild/Campaign Data/Locations/Copper Grove Locations/Clan Homesteads/Ark Clan Homes and Businesses.md",
+      "_notes/Idyllwild/Campaign Data/Locations/Copper Grove Locations/Clan Homesteads/Alimoux Clan Homes and Businesses.md",
+      "_notes/Idyllwild/Campaign Data/Locations/Copper Grove Locations/Marketplace Promenade.md"
+    ]
+  },
+  {
+    "tag": "category/merchant",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/_staging/z_Templates/Wiki Templates/Places/Template - Merchant.md"
+    ]
+  },
+  {
+    "tag": "category/location/adventure-area",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/_staging/z_Templates/Wiki Templates/Places/Template - Adventure Area.md"
+    ]
+  },
+  {
+    "tag": "category/deity",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/_staging/z_Templates/Wiki Templates/People/Template - Deity.md"
+    ]
+  },
+  {
+    "tag": "category/individual",
+    "tagCount": 270,
+    "relativePaths": [
+      "_notes/_staging/z_Templates/Wiki Templates/People/Template - Individual.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Zid Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Weix Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Valoren FarrowDream Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Tanzi Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Tizrav Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/UNKNOWN Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Tantivy Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Siobahn Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Tamaryn Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Selvorie Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Renshe Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Pictor Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Olyn Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Raja Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Levince Luekor Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Ocess Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Kuone Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Kelsean Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Evaluce Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Huntel Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Elvorix Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Cotta Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Chiala & Deka Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Aradne Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Bhainne Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Ansel Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Alkain Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Akantha Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Afer Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Aengolia Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/FarrowDream/Seanci FarrowDream.md",
+      "_notes/Idyllwild/Campaign Data/Characters/FarrowDream/Valoseiette FarrowDream.md",
+      "_notes/Idyllwild/Campaign Data/Characters/FarrowDream/Vox FarrowDream.md",
+      "_notes/Idyllwild/Campaign Data/Characters/FarrowDream/Vantoya FarrowDream.md",
+      "_notes/Idyllwild/Campaign Data/Characters/FarrowDream/UNKNOWN FarrowDream.md",
+      "_notes/Idyllwild/Campaign Data/Characters/FarrowDream/Tatiana FarrowDream.md",
+      "_notes/Idyllwild/Campaign Data/Characters/FarrowDream/Tolze FarrowDream.md",
+      "_notes/Idyllwild/Campaign Data/Characters/FarrowDream/Sultanna FarrowDream.md",
+      "_notes/Idyllwild/Campaign Data/Characters/FarrowDream/Sokanoe FarrowDream.md",
+      "_notes/Idyllwild/Campaign Data/Characters/FarrowDream/Seanci Farrowdream.md",
+      "_notes/Idyllwild/Campaign Data/Characters/FarrowDream/Pavati FarrowDream.md",
+      "_notes/Idyllwild/Campaign Data/Characters/FarrowDream/Scheherazade FarrowDream.md",
+      "_notes/Idyllwild/Campaign Data/Characters/FarrowDream/Nysali FarrowDream.md",
+      "_notes/Idyllwild/Campaign Data/Characters/FarrowDream/Lytess FarrowDream.md",
+      "_notes/Idyllwild/Campaign Data/Characters/FarrowDream/Lumi FarrowDream.md",
+      "_notes/Idyllwild/Campaign Data/Characters/FarrowDream/Lilyankha FarrowDream.md",
+      "_notes/Idyllwild/Campaign Data/Characters/FarrowDream/Noelani FarrowDream.md",
+      "_notes/Idyllwild/Campaign Data/Characters/FarrowDream/Leto FarrowDream.md",
+      "_notes/Idyllwild/Campaign Data/Characters/FarrowDream/Lavanya FarrowDream.md",
+      "_notes/Idyllwild/Campaign Data/Characters/FarrowDream/Cloya FarrowDream Yolo.md",
+      "_notes/Idyllwild/Campaign Data/Characters/FarrowDream/Iridesce FarrowDream.md",
+      "_notes/Idyllwild/Campaign Data/Characters/FarrowDream/Evoirayla FarrowDream.md",
+      "_notes/Idyllwild/Campaign Data/Characters/FarrowDream/Fenris FarrowDream.md",
+      "_notes/Idyllwild/Campaign Data/Characters/FarrowDream/Elbekh Farbrand FarrowDream.md",
+      "_notes/Idyllwild/Campaign Data/Characters/FarrowDream/Deolahn FarrowDream.md",
+      "_notes/Idyllwild/Campaign Data/Characters/FarrowDream/Calypsana FarrowDream.md",
+      "_notes/Idyllwild/Campaign Data/Characters/FarrowDream/Ciranos FarrowDream.md",
+      "_notes/Idyllwild/Campaign Data/Characters/FarrowDream/Aonani FarrowDream.md",
+      "_notes/Idyllwild/Campaign Data/Characters/FarrowDream/Aolani FarrowDream.md",
+      "_notes/Idyllwild/Campaign Data/Characters/FarrowDream/Alma FarrowDream.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Yolo/Yosiah Britalla.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Yolo/Wynroc Luekor Yolo.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Yolo/Obadel Yolo.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Yolo/Miano Yolo.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Yolo/Rahir Yolo.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Yolo/Nicia Yolo.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Yolo/Mec.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Yolo/Marriella Yolo.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Yolo/Naef La.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Yolo/Kalissie.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Yolo/Jhama Luekor.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Yolo/Feli Yolo.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Yolo/Eysabella Yolo.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Yolo/Enge Yolo.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Yolo/Cynah Yolo.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Yolo/Bobo Yolo.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Yolo/Arvinada La.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Yolo/Birstan The Curator of Charity.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Visitors/The King.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Visitors/The Soldier.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Visitors/K’ahanaluai, Priestess of Amolai.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Visitors/Maragesh.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Visitors/Laksha.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Viseul/Verochka Viseul.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Viseul/Yaro Viseul.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Viseul/Vadanya Viseul.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Viseul/Ulyanna Viseul.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Viseul/Pasha Viseul.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Viseul/Tvetlanka Viseul.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Viseul/Nicolai Viseul.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Viseul/Nikita Viseul.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Viseul/Natasa Viseul.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Viseul/Mihaela Viseul.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Viseul/Kanta Viseul.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Viseul/Dulsana Viseul.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Viseul/Ema Viseul.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Viseul/Elske Viseul.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Viseul/Chirasmi Viseul.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Viseul/Alosha Viseul.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Viseul/Aleksandr Viseul.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Rockfolk/Veyhar Rockfolk.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Rockfolk/Yahi Rockfolk.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Rockfolk/Ashigol Rockfolk.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Rockfolk/Raach Rockfolk.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Rockfolk/Jumi Rockfolk.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Rockfolk/Guartz.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Luekor/Wynfir Luekor.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Luekor/Vishkanoya Luekor.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Luekor/Pameiya Luekor.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Luekor/Miakodi Luekor.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Luekor/Kodra Luekor.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Luekor/Khanzarova Luekor.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Luekor/Kealou Luekor.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Luekor/Kapridel Luekor.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Luekor/Kalahir Luekor.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Luekor/Indikha Luekor.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Luekor/Izyankin Luekor.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Luekor/Eydelveiss Luekor.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Luekor/Ember Luekor.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Luekor/DISOWNED Luekor.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Luekor/Caelid Luekor.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Luekor/Ahmnizaya Luekor.md",
+      "_notes/Idyllwild/Campaign Data/Characters/La/Yohimbe La.md",
+      "_notes/Idyllwild/Campaign Data/Characters/La/Zazie La.md",
+      "_notes/Idyllwild/Campaign Data/Characters/La/Sivash La.md",
+      "_notes/Idyllwild/Campaign Data/Characters/La/Thikari La.md",
+      "_notes/Idyllwild/Campaign Data/Characters/La/Serapis La.md",
+      "_notes/Idyllwild/Campaign Data/Characters/La/Roxelena La.md",
+      "_notes/Idyllwild/Campaign Data/Characters/La/Saacha Ark La.md",
+      "_notes/Idyllwild/Campaign Data/Characters/La/Mahendra La.md",
+      "_notes/Idyllwild/Campaign Data/Characters/La/Machiko La.md",
+      "_notes/Idyllwild/Campaign Data/Characters/La/Kukkur La.md",
+      "_notes/Idyllwild/Campaign Data/Characters/La/Koretzi Viseul La.md",
+      "_notes/Idyllwild/Campaign Data/Characters/La/Khorynn La.md",
+      "_notes/Idyllwild/Campaign Data/Characters/La/Khannat La.md",
+      "_notes/Idyllwild/Campaign Data/Characters/La/Izona La.md",
+      "_notes/Idyllwild/Campaign Data/Characters/La/Kabati La.md",
+      "_notes/Idyllwild/Campaign Data/Characters/La/Haji La.md",
+      "_notes/Idyllwild/Campaign Data/Characters/La/Gaela La.md",
+      "_notes/Idyllwild/Campaign Data/Characters/La/Fudezutsu La.md",
+      "_notes/Idyllwild/Campaign Data/Characters/La/Cinna Farbrand La.md",
+      "_notes/Idyllwild/Campaign Data/Characters/La/Corrash La.md",
+      "_notes/Idyllwild/Campaign Data/Characters/La/Calyx La.md",
+      "_notes/Idyllwild/Campaign Data/Characters/La/Ciba La.md",
+      "_notes/Idyllwild/Campaign Data/Characters/La/Bennimo La.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Gillespie/Gil's Mother.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Gillespie/UNKNOWN_Sibling Gillespie.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Gillespie/UNKNOWN_B Gillespie.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Gillespie/Saraada Gillespie.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Gillespie/Khavar Farbrand Gillespie.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Gillespie/Parlie Gillespie.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Gillespie/Eilefe Gillespie.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Gillespie/Paarl Gillespie.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Gillespie/Ghayth Gillespie.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Gillespie/Chiri Gillespie.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Farbrand/Sasha Farbrand.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Farbrand/Talha Farbrand.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Farbrand/Ruben Farbrand.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Farbrand/Pyrah Farbrand.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Farbrand/Narmandakh Farbrand.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Farbrand/Nakoa Farbrand.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Farbrand/Narantuyaa Farbrand.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Farbrand/Monksaikhan Farbrand.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Farbrand/Malchinkuu Farbrand.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Farbrand/Monkhnaran Farbrand.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Farbrand/Erdenetsetseg Farbrand.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Farbrand/Leilani Farbrand.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Farbrand/Enkhmaa Farbrand.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Farbrand/Enkh Farbrand.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Farbrand/Dzambul Farbrand.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Farbrand/Cypra Farbrand.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Farbrand/Caoimhe Farbrand.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Farbrand/Burcu Farbrand.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Farbrand/Ankhbayar Farbrand.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Farbrand/Balam Farbrand.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Farbrand/Anekke Farbrand.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Farbrand/Altanchimeg Farbrand.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Farbrand/Altan Farbrand.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Farbrand/Ahulani Farbrand.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Automaton/Plier - Nuclear Sabotage Droid.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Automaton/Primordium - The Elder.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Automaton/Rune - The Overgrown.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Automaton/Trial and Error - The Voltaic Twins.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Automaton/Gil - The Healer.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Automaton/Manna - The Culinarian.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Automaton/Gadamastah - Blossimic Android.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Automaton/Jewel.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Automaton/Dajjal - The Ice-Breaker.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Automaton/Egh - The Archivist.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Automaton/Curiosity - The Forgetful.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Automaton/Cthonicaedes - The Psychopomp.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Automaton/Bru - Slug Scholar.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Everlasting/Lady Suoja.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Everlasting/Turtle Pope.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Everlasting/Tama.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Everlasting/Cinnamon Puff.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Everlasting/Grandmother.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Alimoux/Phalynx Alimoux.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Alimoux/Umberlux Alimoux.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Alimoux/Sealisse Alimoux.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Alimoux/Toph Alimoux.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Alimoux/Nephili Alimoux.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Alimoux/Omen Alimoux.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Alimoux/Rhyle Alimoux.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Alimoux/Mother Miranda.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Alimoux/Mother Cambria.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Alimoux/Melva Alimoux.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Alimoux/Elmirrai Luekor Alimoux.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Alimoux/Moka Alimoux.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Alimoux/Malahai Alimoux.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Alimoux/Judaia Alimoux.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Alimoux/Hallow Alimoux.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Alimoux/Frenzy Alimoux.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Alimoux/Grandfather Ash.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Alimoux/Faringkha Alimoux.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Alimoux/Elvanté Alimoux.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Alimoux/Drya Alimoux.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Alimoux/Daila FarrowDream Alimoux.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Alimoux/Choux Alimoux.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Alimoux/Chroma Alimoux.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Alimoux/Carmine Alimoux.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Alimoux/Avorendi Alimoux.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Alimoux/Aroe Alimoux.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Alimoux/Anjèl  Alimoux.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Alimoux/Ambergrei Alimoux.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Alimoux/Andynia Alimoux.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Common Clan/The Sansari Family.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Common Clan/The Rana Family.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Common Clan/Silvoxi.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Common Clan/Tsunumbra.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Common Clan/Grandma Benevanda.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Common Clan/Noctil Cimoro.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Common Clan/Okai.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Common Clan/Ravini.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Common Clan/Narael.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Common Clan/Lilanto and Nelios.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Common Clan/Detective Bayr.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Common Clan/Khaliun.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Common Clan/Edusa.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Common Clan/Crishira.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Common Clan/Bellchime.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Common Clan/Aoin.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Ark/Inasha Ark.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Ark/Virtua FarrowDream Ark.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Ark/Yasamin Ark.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Ark/Vice Ark.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Ark/Tezza Ark.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Ark/Soledad Ark.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Ark/Sannyoaino Ark.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Ark/Siavasha Ark.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Ark/Ravinder Ark.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Ark/Ravindra Ark.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Ark/Rama Ark.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Ark/Qatar Ark.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Ark/Paloma Ark.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Ark/Nilam Ark.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Ark/Nilofar Ark.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Ark/Marisol Ark.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Ark/Mariangel Ark.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Ark/Levolyn and Qatar Ark.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Ark/Lautaro Ark.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Ark/Lai Ark.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Ark/Inayo Ark.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Ark/Ignacio Ark.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Ark/Auzenn Ark.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Ark/Cristobal Ark.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Ark/Ciel Ark.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Ark/Atasi Ark.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Ark/Akanksha Ark.md"
+    ]
+  },
+  {
+    "tag": "clans/none",
+    "tagCount": 5,
+    "relativePaths": [
+      "_notes/_staging/z_Templates/Wiki Templates/People/Template - Individual.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Visitors/The King.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Visitors/The Soldier.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Visitors/Maragesh.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Visitors/Laksha.md"
+    ]
+  },
+  {
+    "tag": "category/cast-list",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/_staging/z_Templates/Wiki Templates/People/Template - Cast List.md"
+    ]
+  },
+  {
+    "tag": "category/titled-position",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/_staging/z_Templates/Wiki Templates/Other/Template - Titled Position.md"
+    ]
+  },
+  {
+    "tag": "category/plot-hook",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/_staging/z_Templates/Wiki Templates/Other/Template - Plot Hook.md"
+    ]
+  },
+  {
+    "tag": "category/story-gallery",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/_staging/z_Templates/Wiki Templates/Other/Template - Story Gallery.md"
+    ]
+  },
+  {
+    "tag": "category/other-list",
+    "tagCount": 2,
+    "relativePaths": [
+      "_notes/_staging/z_Templates/Wiki Templates/Other/Template - Sources.md",
+      "_notes/_staging/z_Templates/Wiki Templates/Other/Template - Other List.md"
+    ]
+  },
+  {
+    "tag": "gming/prep",
+    "tagCount": 8,
+    "relativePaths": [
+      "_notes/_staging/z_Templates/Wiki Templates/Other/Template - Prep Journal.md",
+      "_notes/_staging/GM SECRETS ! ! SPOILERS AHEAD/Prep Journal/Lazy GM Template.md",
+      "_notes/_staging/GM SECRETS ! ! SPOILERS AHEAD/Lore, Hooks, Rumors & Mysteries/The Ancient Kingdom.md",
+      "_notes/_staging/GM SECRETS ! ! SPOILERS AHEAD/Lore, Hooks, Rumors & Mysteries/Soldier, Poet, King -- GM SECRETS.md",
+      "_notes/_staging/GM SECRETS ! ! SPOILERS AHEAD/Lore, Hooks, Rumors & Mysteries/Copper Grove Mysteries.md",
+      "_notes/_staging/GM SECRETS ! ! SPOILERS AHEAD/Adventure Ideas/Expeditions/Hazards, Monsters, Islands.md",
+      "_notes/Idyllwild/Campaign Data/Mechanics/Camp Rules (ICON).md"
+    ]
+  },
+  {
+    "tag": "category/plot-idea",
+    "tagCount": 4,
+    "relativePaths": [
+      "_notes/_staging/z_Templates/Wiki Templates/Other/Template - Plot Idea.md",
+      "_notes/_staging/GM SECRETS ! ! SPOILERS AHEAD/Lore, Hooks, Rumors & Mysteries/The Ancient Kingdom.md",
+      "_notes/_staging/GM SECRETS ! ! SPOILERS AHEAD/Lore, Hooks, Rumors & Mysteries/Soldier, Poet, King -- GM SECRETS.md",
+      "_notes/_staging/GM SECRETS ! ! SPOILERS AHEAD/Lore, Hooks, Rumors & Mysteries/Copper Grove Mysteries.md"
+    ]
+  },
+  {
+    "tag": "category/further-information",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/_staging/z_Templates/Wiki Templates/Other/Template - Further Information.md"
+    ]
+  },
+  {
+    "tag": "category/general-topic",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/_staging/z_Templates/Wiki Templates/Other/Template - General Topic.md"
+    ]
+  },
+  {
+    "tag": "category/concept",
+    "tagCount": 5,
+    "relativePaths": [
+      "_notes/_staging/z_Templates/Wiki Templates/Other/Template - Concept.md",
+      "_notes/Idyllwild/Campaign Data/Mechanics/CLOCKS.md",
+      "_notes/Idyllwild/Campaign Data/Lore/The Turtle Popes.md",
+      "_notes/Idyllwild/Campaign Data/Lore/The Day-Night Cycle.md",
+      "_notes/Idyllwild/Campaign Data/Lore/Sky Dragons.md"
+    ]
+  },
+  {
+    "tag": "category/group--military",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/_staging/z_Templates/Wiki Templates/Groups/Template - Group_ Military.md"
+    ]
+  },
+  {
+    "tag": "category/group--family",
+    "tagCount": 18,
+    "relativePaths": [
+      "_notes/_staging/z_Templates/Wiki Templates/Groups/Template - Group_ Family.md",
+      "_notes/Idyllwild/Campaign Data/Clans/FarrowDream.md",
+      "_notes/Idyllwild/Campaign Data/Clans/Farrowdream.md",
+      "_notes/Idyllwild/Campaign Data/Clans/Viseul.md",
+      "_notes/Idyllwild/Campaign Data/Clans/Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Clans/Yolo.md",
+      "_notes/Idyllwild/Campaign Data/Clans/Slugfolk.md",
+      "_notes/Idyllwild/Campaign Data/Clans/Other.md",
+      "_notes/Idyllwild/Campaign Data/Clans/Rockfolk.md",
+      "_notes/Idyllwild/Campaign Data/Clans/Luekor.md",
+      "_notes/Idyllwild/Campaign Data/Clans/La.md",
+      "_notes/Idyllwild/Campaign Data/Clans/Gillespie.md",
+      "_notes/Idyllwild/Campaign Data/Clans/Everlasting.md",
+      "_notes/Idyllwild/Campaign Data/Clans/Farbrand.md",
+      "_notes/Idyllwild/Campaign Data/Clans/Common.md",
+      "_notes/Idyllwild/Campaign Data/Clans/Ark.md",
+      "_notes/Idyllwild/Campaign Data/Clans/Automaton.md",
+      "_notes/Idyllwild/Campaign Data/Clans/Alimoux.md"
+    ]
+  },
+  {
+    "tag": "category/group--religious",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/_staging/z_Templates/Wiki Templates/Groups/Template - Group_ Religious.md"
+    ]
+  },
+  {
+    "tag": "category/group--other",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/_staging/z_Templates/Wiki Templates/Groups/Template - Group_ Other.md"
+    ]
+  },
+  {
+    "tag": "category/group--government",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/_staging/z_Templates/Wiki Templates/Groups/Template - Group_ Government.md"
+    ]
+  },
+  {
+    "tag": "category/group--ethnic",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/_staging/z_Templates/Wiki Templates/Groups/Template - Group_ Ethnic.md"
+    ]
+  },
+  {
+    "tag": "category/group-list",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/_staging/z_Templates/Wiki Templates/Groups/Template - Group List.md"
+    ]
+  },
+  {
+    "tag": "category/group--criminal",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/_staging/z_Templates/Wiki Templates/Groups/Template - Group_ Criminal.md"
+    ]
+  },
+  {
+    "tag": "category/group--commerce",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/_staging/z_Templates/Wiki Templates/Groups/Template - Group_ Commerce.md"
+    ]
+  },
+  {
+    "tag": "timeline",
+    "tagCount": 3,
+    "relativePaths": [
+      "_notes/_staging/z_Templates/Wiki Templates/Events/Insert Timeline Event.md",
+      "_notes/Idyllwild/Campaign Data/Lore/The Turtle Popes.md",
+      "_notes/Idyllwild/Campaign Data/Lore/Sky Dragons.md"
+    ]
+  },
+  {
+    "tag": "uniquetimelineid",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/_staging/z_Templates/Wiki Templates/Events/Insert Timeline Event.md"
+    ]
+  },
+  {
+    "tag": "category/time-period",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/_staging/z_Templates/Wiki Templates/Events/Template - Time Period.md"
+    ]
+  },
+  {
+    "tag": "category/storyline",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/_staging/z_Templates/Wiki Templates/Events/Template - Storyline.md"
+    ]
+  },
+  {
+    "tag": "category/scene",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/_staging/z_Templates/Wiki Templates/Events/Template - Scene.md"
+    ]
+  },
+  {
+    "tag": "category/quest",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/_staging/z_Templates/Wiki Templates/Events/Template - Quest.md"
+    ]
+  },
+  {
+    "tag": "category/event-list",
+    "tagCount": 2,
+    "relativePaths": [
+      "_notes/_staging/z_Templates/Wiki Templates/Events/Template - Event List.md",
+      "_notes/Idyllwild/Campaign Data/Lore/History of Copper Grove.md"
+    ]
+  },
+  {
+    "tag": "category/incident",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/_staging/z_Templates/Wiki Templates/Events/Template - Incident.md"
+    ]
+  },
+  {
+    "tag": "category/campaign-element",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/_staging/z_Templates/Wiki Templates/Gameplay/Template - Campaign Element.md"
+    ]
+  },
+  {
+    "tag": "mechanics/expedition",
+    "tagCount": 7,
+    "relativePaths": [
+      "_notes/_staging/z_Templates/Wiki Templates/Gameplay/Template - Intrigue.md",
+      "_notes/_staging/GM SECRETS ! ! SPOILERS AHEAD/Adventure Ideas/Expeditions/WildSea Stuff/Journeys (WildSea).md",
+      "_notes/_staging/GM SECRETS ! ! SPOILERS AHEAD/Adventure Ideas/Expeditions/ICON Stuff/Interludes and Downtime (WIP - formatting).md",
+      "_notes/_staging/GM SECRETS ! ! SPOILERS AHEAD/Adventure Ideas/Expeditions/ICON Stuff/Base Expedition Rules (WIP - formatting).md",
+      "_notes/_staging/GM SECRETS ! ! SPOILERS AHEAD/Adventure Ideas/Expeditions/ICON Stuff/Exploration.md",
+      "_notes/_staging/GM SECRETS ! ! SPOILERS AHEAD/Adventure Ideas/Expeditions/ICON Stuff/Perilous Wilds Moves.md",
+      "_notes/Idyllwild/Campaign Data/Mechanics/Camp Rules (ICON).md"
+    ]
+  },
+  {
+    "tag": "quest/intrigue",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/_staging/z_Templates/Wiki Templates/Gameplay/Template - Intrigue.md"
+    ]
+  },
+  {
+    "tag": "quest/investigation",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/_staging/z_Templates/Wiki Templates/Gameplay/Template - Intrigue.md"
+    ]
+  },
+  {
+    "tag": "masquerade",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/_staging/z_Templates/Wiki Templates/Gameplay/Template - Intrigue.md"
+    ]
+  },
+  {
+    "tag": "todo",
+    "tagCount": 12,
+    "relativePaths": [
+      "_notes/_staging/z_Templates/Wiki Templates/Gameplay/Template - Intrigue.md",
+      "_notes/_staging/GM SECRETS ! ! SPOILERS AHEAD/Prep Journal/Search for Dragon.md",
+      "_notes/_staging/GM SECRETS ! ! SPOILERS AHEAD/Idyllwild Campaign.md",
+      "_notes/_staging/GM SECRETS ! ! SPOILERS AHEAD/Adventure Ideas/Expeditions/WildSea Stuff/Roles and Aspects (WildSea)- WIP.md",
+      "_notes/Idyllwild/Campaign Data/Lore/Historical Figures.md",
+      "_notes/Idyllwild/Campaign Data/Locations/The Abyss/Regions/Layer 2 - The Broken Sea.md"
+    ]
+  },
+  {
+    "tag": "category/general-gameplay-article",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/_staging/z_Templates/Wiki Templates/Gameplay/Template - General Gameplay Article.md"
+    ]
+  },
+  {
+    "tag": "category/magic-item",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/_staging/z_Templates/Wiki Templates/Equipment/Template - Magic Item.md"
+    ]
+  },
+  {
+    "tag": "category/vehicle",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/_staging/z_Templates/Wiki Templates/Equipment/Template - Vehicle.md"
+    ]
+  },
+  {
+    "tag": "excalidraw",
+    "tagCount": 5,
+    "relativePaths": [
+      "_notes/_staging/z_Assets/Drawing 2022-08-08 13.59.17.excalidraw.md",
+      "_notes/_staging/GM SECRETS ! ! SPOILERS AHEAD/Lore, Hooks, Rumors & Mysteries/Soldier-Poet-King-Connections.excalidraw.md",
+      "_notes/_staging/Excalidraw/Soldier, Poet, and King Visions 2022-08-16 23.13.52.excalidraw.md",
+      "_notes/_staging/Excalidraw/Drawing 2022-07-16 00.09.50.excalidraw.md",
+      "_notes/_staging/Excalidraw/Layer 1 - The Tangle 2022-08-13 01.23.19.excalidraw.md"
+    ]
+  },
+  {
+    "tag": "gming/ideas",
+    "tagCount": 3,
+    "relativePaths": [
+      "_notes/_staging/GM SECRETS ! ! SPOILERS AHEAD/Lore, Hooks, Rumors & Mysteries/The Ancient Kingdom.md",
+      "_notes/_staging/GM SECRETS ! ! SPOILERS AHEAD/Lore, Hooks, Rumors & Mysteries/Soldier, Poet, King -- GM SECRETS.md",
+      "_notes/_staging/GM SECRETS ! ! SPOILERS AHEAD/Lore, Hooks, Rumors & Mysteries/Copper Grove Mysteries.md"
+    ]
+  },
+  {
+    "tag": "clans/alimoux",
+    "tagCount": 33,
+    "relativePaths": [
+      "_notes/_staging/GM SECRETS ! ! SPOILERS AHEAD/Lore, Hooks, Rumors & Mysteries/City of Myth Mysteries.md",
+      "_notes/Idyllwild/Campaign Data/Locations/Copper Grove Locations/Clan Homesteads/Everlasting Clan Homes and Businesses.md",
+      "_notes/Idyllwild/Campaign Data/Locations/Copper Grove Locations/Clan Homesteads/Alimoux Clan Homes and Businesses.md",
+      "_notes/Idyllwild/Campaign Data/Clans/Alimoux.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Alimoux/Phalynx Alimoux.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Alimoux/Umberlux Alimoux.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Alimoux/Sealisse Alimoux.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Alimoux/Toph Alimoux.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Alimoux/Nephili Alimoux.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Alimoux/Omen Alimoux.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Alimoux/Rhyle Alimoux.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Alimoux/Mother Miranda.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Alimoux/Mother Cambria.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Alimoux/Melva Alimoux.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Alimoux/Elmirrai Luekor Alimoux.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Alimoux/Moka Alimoux.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Alimoux/Malahai Alimoux.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Alimoux/Judaia Alimoux.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Alimoux/Hallow Alimoux.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Alimoux/Frenzy Alimoux.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Alimoux/Grandfather Ash.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Alimoux/Faringkha Alimoux.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Alimoux/Elvanté Alimoux.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Alimoux/Drya Alimoux.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Alimoux/Daila FarrowDream Alimoux.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Alimoux/Choux Alimoux.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Alimoux/Chroma Alimoux.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Alimoux/Carmine Alimoux.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Alimoux/Avorendi Alimoux.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Alimoux/Aroe Alimoux.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Alimoux/Anjèl  Alimoux.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Alimoux/Ambergrei Alimoux.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Alimoux/Andynia Alimoux.md"
+    ]
+  },
+  {
+    "tag": "mechanics/rules",
+    "tagCount": 14,
+    "relativePaths": [
+      "_notes/_staging/GM SECRETS ! ! SPOILERS AHEAD/Adventure Ideas/Expeditions/WildSea Stuff/Roles and Aspects (WildSea)- WIP.md",
+      "_notes/_staging/GM SECRETS ! ! SPOILERS AHEAD/Adventure Ideas/Expeditions/WildSea Stuff/Resources (WildSea).md",
+      "_notes/_staging/GM SECRETS ! ! SPOILERS AHEAD/Adventure Ideas/Expeditions/WildSea Stuff/Benefits and Injuries (WildSea).md",
+      "_notes/_staging/GM SECRETS ! ! SPOILERS AHEAD/Adventure Ideas/Expeditions/WildSea Stuff/Resource Gathering (WildSea).md",
+      "_notes/_staging/GM SECRETS ! ! SPOILERS AHEAD/Adventure Ideas/Expeditions/WildSea Stuff/Journeys (WildSea).md",
+      "_notes/_staging/GM SECRETS ! ! SPOILERS AHEAD/Adventure Ideas/Expeditions/ICON Stuff/Base Expedition Rules (WIP - formatting).md",
+      "_notes/_staging/GM SECRETS ! ! SPOILERS AHEAD/Adventure Ideas/Expeditions/ICON Stuff/Exploration.md",
+      "_notes/_staging/GM SECRETS ! ! SPOILERS AHEAD/Adventure Ideas/Expeditions/ICON Stuff/Perilous Wilds Moves.md",
+      "_notes/Idyllwild/Campaign Data/Mechanics/Outposts (WildSea).md",
+      "_notes/Idyllwild/Campaign Data/Mechanics/Numenera Mire & Downtime Rules.md",
+      "_notes/Idyllwild/Campaign Data/Mechanics/Montages (WildSea).md",
+      "_notes/Idyllwild/Campaign Data/Mechanics/Crew Sheet (WildSea).md",
+      "_notes/Idyllwild/Campaign Data/Mechanics/Camp Rules (ICON).md",
+      "_notes/Idyllwild/Campaign Data/Mechanics/CLOCKS.md"
+    ]
+  },
+  {
+    "tag": "wip",
+    "tagCount": 5,
+    "relativePaths": [
+      "_notes/_staging/GM SECRETS ! ! SPOILERS AHEAD/Adventure Ideas/Expeditions/WildSea Stuff/Roles and Aspects (WildSea)- WIP.md",
+      "_notes/_staging/GM SECRETS ! ! SPOILERS AHEAD/Adventure Ideas/Expeditions/ICON Stuff/Base Expedition Rules (WIP - formatting).md",
+      "_notes/Idyllwild/Campaign Data/Characters/Luekor/Wynfir Luekor.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Everlasting/Turtle Pope.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Alimoux/Drya Alimoux.md"
+    ]
+  },
+  {
+    "tag": "resources",
+    "tagCount": 2,
+    "relativePaths": [
+      "_notes/_staging/GM SECRETS ! ! SPOILERS AHEAD/Adventure Ideas/Expeditions/WildSea Stuff/Resource Gathering (WildSea).md",
+      "_notes/_staging/GM SECRETS ! ! SPOILERS AHEAD/Adventure Ideas/Expeditions/ICON Stuff/Perilous Wilds Moves.md"
+    ]
+  },
+  {
+    "tag": "collecting",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/_staging/GM SECRETS ! ! SPOILERS AHEAD/Adventure Ideas/Expeditions/WildSea Stuff/Resource Gathering (WildSea).md"
+    ]
+  },
+  {
+    "tag": "mechanics/gathering",
+    "tagCount": 4,
+    "relativePaths": [
+      "_notes/_staging/GM SECRETS ! ! SPOILERS AHEAD/Adventure Ideas/Expeditions/WildSea Stuff/Resource Gathering (WildSea).md",
+      "_notes/_staging/GM SECRETS ! ! SPOILERS AHEAD/Adventure Ideas/Expeditions/ICON Stuff/Perilous Wilds Moves.md",
+      "_notes/Idyllwild/Campaign Data/Mechanics/Numenera Mire & Downtime Rules.md",
+      "_notes/Idyllwild/Campaign Data/Mechanics/Montages (WildSea).md"
+    ]
+  },
+  {
+    "tag": "scavenging",
+    "tagCount": 3,
+    "relativePaths": [
+      "_notes/_staging/GM SECRETS ! ! SPOILERS AHEAD/Adventure Ideas/Expeditions/WildSea Stuff/Resource Gathering (WildSea).md",
+      "_notes/Idyllwild/Campaign Data/Mechanics/Numenera Mire & Downtime Rules.md",
+      "_notes/Idyllwild/Campaign Data/Mechanics/Montages (WildSea).md"
+    ]
+  },
+  {
+    "tag": "salvaging",
+    "tagCount": 3,
+    "relativePaths": [
+      "_notes/_staging/GM SECRETS ! ! SPOILERS AHEAD/Adventure Ideas/Expeditions/WildSea Stuff/Resource Gathering (WildSea).md",
+      "_notes/Idyllwild/Campaign Data/Mechanics/Numenera Mire & Downtime Rules.md",
+      "_notes/Idyllwild/Campaign Data/Mechanics/Montages (WildSea).md"
+    ]
+  },
+  {
+    "tag": "quest/journey",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/_staging/GM SECRETS ! ! SPOILERS AHEAD/Adventure Ideas/Expeditions/WildSea Stuff/Journeys (WildSea).md"
+    ]
+  },
+  {
+    "tag": "quest/travel",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/_staging/GM SECRETS ! ! SPOILERS AHEAD/Adventure Ideas/Expeditions/WildSea Stuff/Journeys (WildSea).md"
+    ]
+  },
+  {
+    "tag": "wildsea",
+    "tagCount": 4,
+    "relativePaths": [
+      "_notes/_staging/GM SECRETS ! ! SPOILERS AHEAD/Adventure Ideas/Expeditions/WildSea Stuff/Journeys (WildSea).md",
+      "_notes/_staging/GM SECRETS ! ! SPOILERS AHEAD/Adventure Ideas/Expeditions/ICON Stuff/Exploration.md",
+      "_notes/Idyllwild/Campaign Data/Mechanics/Outposts (WildSea).md",
+      "_notes/Idyllwild/Campaign Data/Mechanics/Crew Sheet (WildSea).md"
+    ]
+  },
+  {
+    "tag": "watch",
+    "tagCount": 2,
+    "relativePaths": [
+      "_notes/_staging/GM SECRETS ! ! SPOILERS AHEAD/Adventure Ideas/Expeditions/WildSea Stuff/Journeys (WildSea).md",
+      "_notes/_staging/GM SECRETS ! ! SPOILERS AHEAD/Adventure Ideas/Expeditions/ICON Stuff/Perilous Wilds Moves.md"
+    ]
+  },
+  {
+    "tag": "threat",
+    "tagCount": 2,
+    "relativePaths": [
+      "_notes/_staging/GM SECRETS ! ! SPOILERS AHEAD/Adventure Ideas/Expeditions/WildSea Stuff/Journeys (WildSea).md"
+    ]
+  },
+  {
+    "tag": "discovery",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/_staging/GM SECRETS ! ! SPOILERS AHEAD/Adventure Ideas/Expeditions/WildSea Stuff/Journeys (WildSea).md"
+    ]
+  },
+  {
+    "tag": "player-choice",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/_staging/GM SECRETS ! ! SPOILERS AHEAD/Adventure Ideas/Expeditions/WildSea Stuff/Journeys (WildSea).md"
+    ]
+  },
+  {
+    "tag": "mechanics/weather",
+    "tagCount": 3,
+    "relativePaths": [
+      "_notes/_staging/GM SECRETS ! ! SPOILERS AHEAD/Adventure Ideas/Expeditions/WildSea Stuff/Journeys (WildSea).md",
+      "_notes/_staging/GM SECRETS ! ! SPOILERS AHEAD/Adventure Ideas/Expeditions/ICON Stuff/Perilous Wilds Moves.md"
+    ]
+  },
+  {
+    "tag": "encounter",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/_staging/GM SECRETS ! ! SPOILERS AHEAD/Adventure Ideas/Expeditions/WildSea Stuff/Journeys (WildSea).md"
+    ]
+  },
+  {
+    "tag": "mechanics/combat",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/_staging/GM SECRETS ! ! SPOILERS AHEAD/Adventure Ideas/Expeditions/WildSea Stuff/Journeys (WildSea).md"
+    ]
+  },
+  {
+    "tag": "gming/encounters",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/_staging/GM SECRETS ! ! SPOILERS AHEAD/Adventure Ideas/Expeditions/Hazards, Monsters, Islands.md"
+    ]
+  },
+  {
+    "tag": "blades-in-the-dark",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/_staging/GM SECRETS ! ! SPOILERS AHEAD/Adventure Ideas/Expeditions/ICON Stuff/Interludes and Downtime (WIP - formatting).md"
+    ]
+  },
+  {
+    "tag": "bitd",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/_staging/GM SECRETS ! ! SPOILERS AHEAD/Adventure Ideas/Expeditions/ICON Stuff/Interludes and Downtime (WIP - formatting).md"
+    ]
+  },
+  {
+    "tag": "fitd",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/_staging/GM SECRETS ! ! SPOILERS AHEAD/Adventure Ideas/Expeditions/ICON Stuff/Interludes and Downtime (WIP - formatting).md"
+    ]
+  },
+  {
+    "tag": "mechanics/downtime",
+    "tagCount": 3,
+    "relativePaths": [
+      "_notes/_staging/GM SECRETS ! ! SPOILERS AHEAD/Adventure Ideas/Expeditions/ICON Stuff/Interludes and Downtime (WIP - formatting).md",
+      "_notes/Idyllwild/Campaign Data/Mechanics/Numenera Mire & Downtime Rules.md",
+      "_notes/Idyllwild/Campaign Data/Mechanics/Montages (WildSea).md"
+    ]
+  },
+  {
+    "tag": "indulge",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/_staging/GM SECRETS ! ! SPOILERS AHEAD/Adventure Ideas/Expeditions/ICON Stuff/Interludes and Downtime (WIP - formatting).md"
+    ]
+  },
+  {
+    "tag": "vice",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/_staging/GM SECRETS ! ! SPOILERS AHEAD/Adventure Ideas/Expeditions/ICON Stuff/Interludes and Downtime (WIP - formatting).md"
+    ]
+  },
+  {
+    "tag": "points-of-interest",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/_staging/GM SECRETS ! ! SPOILERS AHEAD/Adventure Ideas/Expeditions/ICON Stuff/Exploration.md"
+    ]
+  },
+  {
+    "tag": "forage",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/_staging/GM SECRETS ! ! SPOILERS AHEAD/Adventure Ideas/Expeditions/ICON Stuff/Perilous Wilds Moves.md"
+    ]
+  },
+  {
+    "tag": "foraging",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/_staging/GM SECRETS ! ! SPOILERS AHEAD/Adventure Ideas/Expeditions/ICON Stuff/Perilous Wilds Moves.md"
+    ]
+  },
+  {
+    "tag": "mechanics/camp",
+    "tagCount": 6,
+    "relativePaths": [
+      "_notes/_staging/GM SECRETS ! ! SPOILERS AHEAD/Adventure Ideas/Expeditions/ICON Stuff/Perilous Wilds Moves.md",
+      "_notes/Idyllwild/Campaign Data/Mechanics/Camp Rules (ICON).md"
+    ]
+  },
+  {
+    "tag": "campfire",
+    "tagCount": 2,
+    "relativePaths": [
+      "_notes/_staging/GM SECRETS ! ! SPOILERS AHEAD/Adventure Ideas/Expeditions/ICON Stuff/Perilous Wilds Moves.md",
+      "_notes/Idyllwild/Campaign Data/Mechanics/Camp Rules (ICON).md"
+    ]
+  },
+  {
+    "tag": "camping",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/_staging/GM SECRETS ! ! SPOILERS AHEAD/Adventure Ideas/Expeditions/ICON Stuff/Perilous Wilds Moves.md"
+    ]
+  },
+  {
+    "tag": "scouting",
+    "tagCount": 2,
+    "relativePaths": [
+      "_notes/_staging/GM SECRETS ! ! SPOILERS AHEAD/Adventure Ideas/Expeditions/ICON Stuff/Perilous Wilds Moves.md"
+    ]
+  },
+  {
+    "tag": "scout",
+    "tagCount": 2,
+    "relativePaths": [
+      "_notes/_staging/GM SECRETS ! ! SPOILERS AHEAD/Adventure Ideas/Expeditions/ICON Stuff/Perilous Wilds Moves.md"
+    ]
+  },
+  {
+    "tag": "navigation",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/_staging/GM SECRETS ! ! SPOILERS AHEAD/Adventure Ideas/Expeditions/ICON Stuff/Perilous Wilds Moves.md"
+    ]
+  },
+  {
+    "tag": "pathfinding",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/_staging/GM SECRETS ! ! SPOILERS AHEAD/Adventure Ideas/Expeditions/ICON Stuff/Perilous Wilds Moves.md"
+    ]
+  },
+  {
+    "tag": "navigate",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/_staging/GM SECRETS ! ! SPOILERS AHEAD/Adventure Ideas/Expeditions/ICON Stuff/Perilous Wilds Moves.md"
+    ]
+  },
+  {
+    "tag": "food",
+    "tagCount": 5,
+    "relativePaths": [
+      "_notes/_staging/GM SECRETS ! ! SPOILERS AHEAD/Adventure Ideas/Expeditions/ICON Stuff/Perilous Wilds Moves.md",
+      "_notes/Idyllwild/Campaign Data/Mechanics/Numenera Mire & Downtime Rules.md",
+      "_notes/Idyllwild/Campaign Data/Mechanics/Montages (WildSea).md"
+    ]
+  },
+  {
+    "tag": "provisions",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/_staging/GM SECRETS ! ! SPOILERS AHEAD/Adventure Ideas/Expeditions/ICON Stuff/Perilous Wilds Moves.md"
+    ]
+  },
+  {
+    "tag": "mechanics/cooking",
+    "tagCount": 6,
+    "relativePaths": [
+      "_notes/_staging/GM SECRETS ! ! SPOILERS AHEAD/Adventure Ideas/Expeditions/ICON Stuff/Perilous Wilds Moves.md",
+      "_notes/Idyllwild/Campaign Data/Mechanics/Numenera Mire & Downtime Rules.md",
+      "_notes/Idyllwild/Campaign Data/Mechanics/Montages (WildSea).md",
+      "_notes/Idyllwild/Campaign Data/Mechanics/Camp Rules (ICON).md"
+    ]
+  },
+  {
+    "tag": "meal",
+    "tagCount": 3,
+    "relativePaths": [
+      "_notes/_staging/GM SECRETS ! ! SPOILERS AHEAD/Adventure Ideas/Expeditions/ICON Stuff/Perilous Wilds Moves.md",
+      "_notes/Idyllwild/Campaign Data/Mechanics/Numenera Mire & Downtime Rules.md",
+      "_notes/Idyllwild/Campaign Data/Mechanics/Montages (WildSea).md"
+    ]
+  },
+  {
+    "tag": "meals",
+    "tagCount": 2,
+    "relativePaths": [
+      "_notes/_staging/GM SECRETS ! ! SPOILERS AHEAD/Adventure Ideas/Expeditions/ICON Stuff/Perilous Wilds Moves.md",
+      "_notes/Idyllwild/Campaign Data/Mechanics/Camp Rules (ICON).md"
+    ]
+  },
+  {
+    "tag": "endure",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/_staging/GM SECRETS ! ! SPOILERS AHEAD/Adventure Ideas/Expeditions/ICON Stuff/Perilous Wilds Moves.md"
+    ]
+  },
+  {
+    "tag": "cramped-quarters",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/_staging/GM SECRETS ! ! SPOILERS AHEAD/Adventure Ideas/Expeditions/ICON Stuff/Perilous Wilds Moves.md"
+    ]
+  },
+  {
+    "tag": "roleplay",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/_staging/GM SECRETS ! ! SPOILERS AHEAD/Adventure Ideas/Expeditions/ICON Stuff/Perilous Wilds Moves.md"
+    ]
+  },
+  {
+    "tag": "backstory",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/_staging/GM SECRETS ! ! SPOILERS AHEAD/Adventure Ideas/Expeditions/ICON Stuff/Perilous Wilds Moves.md"
+    ]
+  },
+  {
+    "tag": "group-roll",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/_staging/GM SECRETS ! ! SPOILERS AHEAD/Adventure Ideas/Expeditions/ICON Stuff/Perilous Wilds Moves.md"
+    ]
+  },
+  {
+    "tag": "team-action",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/_staging/GM SECRETS ! ! SPOILERS AHEAD/Adventure Ideas/Expeditions/ICON Stuff/Perilous Wilds Moves.md"
+    ]
+  },
+  {
+    "tag": "defy-danger",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/_staging/GM SECRETS ! ! SPOILERS AHEAD/Adventure Ideas/Expeditions/ICON Stuff/Perilous Wilds Moves.md"
+    ]
+  },
+  {
+    "tag": "resist",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/_staging/GM SECRETS ! ! SPOILERS AHEAD/Adventure Ideas/Expeditions/ICON Stuff/Perilous Wilds Moves.md"
+    ]
+  },
+  {
+    "tag": "teamwork",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/_staging/GM SECRETS ! ! SPOILERS AHEAD/Adventure Ideas/Expeditions/ICON Stuff/Perilous Wilds Moves.md"
+    ]
+  },
+  {
+    "tag": "outpost",
+    "tagCount": 2,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Mechanics/Outposts (WildSea).md"
+    ]
+  },
+  {
+    "tag": "mechanics/crew",
+    "tagCount": 3,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Mechanics/Outposts (WildSea).md",
+      "_notes/Idyllwild/Campaign Data/Mechanics/Crew Sheet (WildSea).md",
+      "_notes/Idyllwild/Campaign Data/Mechanics/Camp Rules (ICON).md"
+    ]
+  },
+  {
+    "tag": "caravan",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Mechanics/Outposts (WildSea).md"
+    ]
+  },
+  {
+    "tag": "info/house-rules",
+    "tagCount": 2,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Mechanics/Numenera Mire & Downtime Rules.md",
+      "_notes/Idyllwild/Campaign Data/Mechanics/Ambient Rolls.md"
+    ]
+  },
+  {
+    "tag": "scrap",
+    "tagCount": 4,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Mechanics/Numenera Mire & Downtime Rules.md",
+      "_notes/Idyllwild/Campaign Data/Mechanics/Montages (WildSea).md"
+    ]
+  },
+  {
+    "tag": "machinery",
+    "tagCount": 2,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Mechanics/Numenera Mire & Downtime Rules.md",
+      "_notes/Idyllwild/Campaign Data/Mechanics/Montages (WildSea).md"
+    ]
+  },
+  {
+    "tag": "quest/delve",
+    "tagCount": 2,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Mechanics/Numenera Mire & Downtime Rules.md",
+      "_notes/Idyllwild/Campaign Data/Mechanics/Montages (WildSea).md"
+    ]
+  },
+  {
+    "tag": "hunt",
+    "tagCount": 2,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Mechanics/Numenera Mire & Downtime Rules.md",
+      "_notes/Idyllwild/Campaign Data/Mechanics/Montages (WildSea).md"
+    ]
+  },
+  {
+    "tag": "hunting",
+    "tagCount": 2,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Mechanics/Numenera Mire & Downtime Rules.md",
+      "_notes/Idyllwild/Campaign Data/Mechanics/Montages (WildSea).md"
+    ]
+  },
+  {
+    "tag": "creature",
+    "tagCount": 2,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Mechanics/Numenera Mire & Downtime Rules.md",
+      "_notes/Idyllwild/Campaign Data/Mechanics/Montages (WildSea).md"
+    ]
+  },
+  {
+    "tag": "animal",
+    "tagCount": 2,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Mechanics/Numenera Mire & Downtime Rules.md",
+      "_notes/Idyllwild/Campaign Data/Mechanics/Montages (WildSea).md"
+    ]
+  },
+  {
+    "tag": "meat",
+    "tagCount": 2,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Mechanics/Numenera Mire & Downtime Rules.md",
+      "_notes/Idyllwild/Campaign Data/Mechanics/Montages (WildSea).md"
+    ]
+  },
+  {
+    "tag": "tracking",
+    "tagCount": 2,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Mechanics/Numenera Mire & Downtime Rules.md",
+      "_notes/Idyllwild/Campaign Data/Mechanics/Montages (WildSea).md"
+    ]
+  },
+  {
+    "tag": "specimens",
+    "tagCount": 4,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Mechanics/Numenera Mire & Downtime Rules.md",
+      "_notes/Idyllwild/Campaign Data/Mechanics/Montages (WildSea).md"
+    ]
+  },
+  {
+    "tag": "harvesting",
+    "tagCount": 2,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Mechanics/Numenera Mire & Downtime Rules.md",
+      "_notes/Idyllwild/Campaign Data/Mechanics/Montages (WildSea).md"
+    ]
+  },
+  {
+    "tag": "plants",
+    "tagCount": 2,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Mechanics/Numenera Mire & Downtime Rules.md",
+      "_notes/Idyllwild/Campaign Data/Mechanics/Montages (WildSea).md"
+    ]
+  },
+  {
+    "tag": "heal",
+    "tagCount": 2,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Mechanics/Numenera Mire & Downtime Rules.md",
+      "_notes/Idyllwild/Campaign Data/Mechanics/Montages (WildSea).md"
+    ]
+  },
+  {
+    "tag": "healing",
+    "tagCount": 3,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Mechanics/Numenera Mire & Downtime Rules.md",
+      "_notes/Idyllwild/Campaign Data/Mechanics/Montages (WildSea).md",
+      "_notes/Idyllwild/Campaign Data/Mechanics/Camp Rules (ICON).md"
+    ]
+  },
+  {
+    "tag": "tend",
+    "tagCount": 2,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Mechanics/Numenera Mire & Downtime Rules.md",
+      "_notes/Idyllwild/Campaign Data/Mechanics/Montages (WildSea).md"
+    ]
+  },
+  {
+    "tag": "wound",
+    "tagCount": 2,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Mechanics/Numenera Mire & Downtime Rules.md",
+      "_notes/Idyllwild/Campaign Data/Mechanics/Montages (WildSea).md"
+    ]
+  },
+  {
+    "tag": "injury",
+    "tagCount": 2,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Mechanics/Numenera Mire & Downtime Rules.md",
+      "_notes/Idyllwild/Campaign Data/Mechanics/Montages (WildSea).md"
+    ]
+  },
+  {
+    "tag": "repair",
+    "tagCount": 2,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Mechanics/Numenera Mire & Downtime Rules.md",
+      "_notes/Idyllwild/Campaign Data/Mechanics/Montages (WildSea).md"
+    ]
+  },
+  {
+    "tag": "broken",
+    "tagCount": 2,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Mechanics/Numenera Mire & Downtime Rules.md",
+      "_notes/Idyllwild/Campaign Data/Mechanics/Montages (WildSea).md"
+    ]
+  },
+  {
+    "tag": "armor",
+    "tagCount": 2,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Mechanics/Numenera Mire & Downtime Rules.md",
+      "_notes/Idyllwild/Campaign Data/Mechanics/Montages (WildSea).md"
+    ]
+  },
+  {
+    "tag": "salvage",
+    "tagCount": 2,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Mechanics/Numenera Mire & Downtime Rules.md",
+      "_notes/Idyllwild/Campaign Data/Mechanics/Montages (WildSea).md"
+    ]
+  },
+  {
+    "tag": "mire",
+    "tagCount": 2,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Mechanics/Numenera Mire & Downtime Rules.md",
+      "_notes/Idyllwild/Campaign Data/Mechanics/Montages (WildSea).md"
+    ]
+  },
+  {
+    "tag": "burden",
+    "tagCount": 2,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Mechanics/Numenera Mire & Downtime Rules.md",
+      "_notes/Idyllwild/Campaign Data/Mechanics/Montages (WildSea).md"
+    ]
+  },
+  {
+    "tag": "relax",
+    "tagCount": 2,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Mechanics/Numenera Mire & Downtime Rules.md",
+      "_notes/Idyllwild/Campaign Data/Mechanics/Montages (WildSea).md"
+    ]
+  },
+  {
+    "tag": "rest",
+    "tagCount": 2,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Mechanics/Numenera Mire & Downtime Rules.md",
+      "_notes/Idyllwild/Campaign Data/Mechanics/Montages (WildSea).md"
+    ]
+  },
+  {
+    "tag": "flavor",
+    "tagCount": 2,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Mechanics/Numenera Mire & Downtime Rules.md",
+      "_notes/Idyllwild/Campaign Data/Mechanics/Montages (WildSea).md"
+    ]
+  },
+  {
+    "tag": "potion",
+    "tagCount": 2,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Mechanics/Numenera Mire & Downtime Rules.md",
+      "_notes/Idyllwild/Campaign Data/Mechanics/Montages (WildSea).md"
+    ]
+  },
+  {
+    "tag": "concotion",
+    "tagCount": 2,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Mechanics/Numenera Mire & Downtime Rules.md",
+      "_notes/Idyllwild/Campaign Data/Mechanics/Montages (WildSea).md"
+    ]
+  },
+  {
+    "tag": "drink",
+    "tagCount": 2,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Mechanics/Numenera Mire & Downtime Rules.md",
+      "_notes/Idyllwild/Campaign Data/Mechanics/Montages (WildSea).md"
+    ]
+  },
+  {
+    "tag": "mechanics/crafting",
+    "tagCount": 3,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Mechanics/Numenera Mire & Downtime Rules.md",
+      "_notes/Idyllwild/Campaign Data/Mechanics/Montages (WildSea).md",
+      "_notes/Idyllwild/Campaign Data/Mechanics/Camp Rules (ICON).md"
+    ]
+  },
+  {
+    "tag": "creation",
+    "tagCount": 2,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Mechanics/Numenera Mire & Downtime Rules.md",
+      "_notes/Idyllwild/Campaign Data/Mechanics/Montages (WildSea).md"
+    ]
+  },
+  {
+    "tag": "wright",
+    "tagCount": 2,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Mechanics/Numenera Mire & Downtime Rules.md",
+      "_notes/Idyllwild/Campaign Data/Mechanics/Montages (WildSea).md"
+    ]
+  },
+  {
+    "tag": "iotum",
+    "tagCount": 2,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Mechanics/Numenera Mire & Downtime Rules.md",
+      "_notes/Idyllwild/Campaign Data/Mechanics/Montages (WildSea).md"
+    ]
+  },
+  {
+    "tag": "projects",
+    "tagCount": 2,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Mechanics/Numenera Mire & Downtime Rules.md",
+      "_notes/Idyllwild/Campaign Data/Mechanics/Montages (WildSea).md"
+    ]
+  },
+  {
+    "tag": "long-term-tasks",
+    "tagCount": 2,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Mechanics/Numenera Mire & Downtime Rules.md",
+      "_notes/Idyllwild/Campaign Data/Mechanics/Montages (WildSea).md"
+    ]
+  },
+  {
+    "tag": "icon",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Mechanics/Camp Rules (ICON).md"
+    ]
+  },
+  {
+    "tag": "upgrades",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Mechanics/Camp Rules (ICON).md"
+    ]
+  },
+  {
+    "tag": "stories",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Mechanics/Camp Rules (ICON).md"
+    ]
+  },
+  {
+    "tag": "memories",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Mechanics/Camp Rules (ICON).md"
+    ]
+  },
+  {
+    "tag": "recovery",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Mechanics/Camp Rules (ICON).md"
+    ]
+  },
+  {
+    "tag": "fishing",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Mechanics/Camp Rules (ICON).md"
+    ]
+  },
+  {
+    "tag": "fish",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Mechanics/Camp Rules (ICON).md"
+    ]
+  },
+  {
+    "tag": "forge",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Mechanics/Camp Rules (ICON).md"
+    ]
+  },
+  {
+    "tag": "library",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Mechanics/Camp Rules (ICON).md"
+    ]
+  },
+  {
+    "tag": "shrine",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Mechanics/Camp Rules (ICON).md"
+    ]
+  },
+  {
+    "tag": "spirits",
+    "tagCount": 2,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Mechanics/Camp Rules (ICON).md"
+    ]
+  },
+  {
+    "tag": "gear",
+    "tagCount": 2,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Mechanics/Camp Rules (ICON).md"
+    ]
+  },
+  {
+    "tag": "survival",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Mechanics/Camp Rules (ICON).md"
+    ]
+  },
+  {
+    "tag": "thieves",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Mechanics/Camp Rules (ICON).md"
+    ]
+  },
+  {
+    "tag": "thief",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Mechanics/Camp Rules (ICON).md"
+    ]
+  },
+  {
+    "tag": "stealth",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Mechanics/Camp Rules (ICON).md"
+    ]
+  },
+  {
+    "tag": "spy",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Mechanics/Camp Rules (ICON).md"
+    ]
+  },
+  {
+    "tag": "game",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Mechanics/Camp Rules (ICON).md"
+    ]
+  },
+  {
+    "tag": "gambling",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Mechanics/Camp Rules (ICON).md"
+    ]
+  },
+  {
+    "tag": "cards",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Mechanics/Camp Rules (ICON).md"
+    ]
+  },
+  {
+    "tag": "spirit",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Mechanics/Camp Rules (ICON).md"
+    ]
+  },
+  {
+    "tag": "mechanics/clocks",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Mechanics/CLOCKS.md"
+    ]
+  },
+  {
+    "tag": "info/lore",
+    "tagCount": 15,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Lore/Story of the Ancient Civilization.md",
+      "_notes/Idyllwild/Campaign Data/Lore/The Artifacts.md",
+      "_notes/Idyllwild/Campaign Data/Lore/Soul Vortexes.md",
+      "_notes/Idyllwild/Campaign Data/Lore/Soldier, Poet, and King - Known Information.md",
+      "_notes/Idyllwild/Campaign Data/Lore/The Turtle Popes.md",
+      "_notes/Idyllwild/Campaign Data/Lore/The Resurrected.md",
+      "_notes/Idyllwild/Campaign Data/Lore/The Wild Hunt.md",
+      "_notes/Idyllwild/Campaign Data/Lore/The Day-Night Cycle.md",
+      "_notes/Idyllwild/Campaign Data/Lore/The Cloud Archipelago.md",
+      "_notes/Idyllwild/Campaign Data/Lore/Sky Dragons.md",
+      "_notes/Idyllwild/Campaign Data/Lore/History of Copper Grove.md",
+      "_notes/Idyllwild/Campaign Data/Lore/Historical Figures.md",
+      "_notes/Idyllwild/Campaign Data/Lore/Days of the Week and Month.md",
+      "_notes/Idyllwild/Campaign Data/Lore/Ahmnizaya's Notebook.md",
+      "_notes/Idyllwild/Campaign Data/Lore/Fey and Spirits.md"
+    ]
+  },
+  {
+    "tag": "info/items",
+    "tagCount": 2,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Lore/The Artifacts.md",
+      "_notes/Idyllwild/Campaign Data/Lore/Ahmnizaya's Notebook.md"
+    ]
+  },
+  {
+    "tag": "todo/needs-revision",
+    "tagCount": 6,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Lore/The Turtle Popes.md",
+      "_notes/Idyllwild/Campaign Data/Lore/The Resurrected.md",
+      "_notes/Idyllwild/Campaign Data/Lore/The Day-Night Cycle.md",
+      "_notes/Idyllwild/Campaign Data/Lore/The Cloud Archipelago.md",
+      "_notes/Idyllwild/Campaign Data/Lore/History of Copper Grove.md",
+      "_notes/Idyllwild/Campaign Data/Locations/Quantum Islands/Other Quantum Islands.md"
+    ]
+  },
+  {
+    "tag": "category/region--geographical",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Lore/The Cloud Archipelago.md"
+    ]
+  },
+  {
+    "tag": "anchor/light",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Lore/History of Copper Grove.md"
+    ]
+  },
+  {
+    "tag": "event/light",
+    "tagCount": 19,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Lore/History of Copper Grove.md"
+    ]
+  },
+  {
+    "tag": "scene/light",
+    "tagCount": 5,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Lore/History of Copper Grove.md"
+    ]
+  },
+  {
+    "tag": "legacy",
+    "tagCount": 2,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Lore/History of Copper Grove.md"
+    ]
+  },
+  {
+    "tag": "event/dark",
+    "tagCount": 9,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Lore/History of Copper Grove.md"
+    ]
+  },
+  {
+    "tag": "scene/dark",
+    "tagCount": 3,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Lore/History of Copper Grove.md"
+    ]
+  },
+  {
+    "tag": "period/dark",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Lore/History of Copper Grove.md"
+    ]
+  },
+  {
+    "tag": "info/calendar",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Lore/Days of the Week and Month.md"
+    ]
+  },
+  {
+    "tag": "dangerous",
+    "tagCount": 2,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Locations/The Forest/The Dark House.md",
+      "_notes/Idyllwild/Campaign Data/Locations/Quantum Islands/Other Quantum Islands.md"
+    ]
+  },
+  {
+    "tag": "haunted",
+    "tagCount": 2,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Locations/The Forest/The Dark House.md",
+      "_notes/Idyllwild/Campaign Data/Locations/Quantum Islands/Other Quantum Islands.md"
+    ]
+  },
+  {
+    "tag": "conditional-access",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Locations/The Forest/The Dark House.md"
+    ]
+  },
+  {
+    "tag": "clans/amolai",
+    "tagCount": 2,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Locations/Settlements/Amolai.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Visitors/K’ahanaluai, Priestess of Amolai.md"
+    ]
+  },
+  {
+    "tag": "abyss",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Locations/The Abyss/The Abyss.md"
+    ]
+  },
+  {
+    "tag": "quantum-island",
+    "tagCount": 4,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Locations/Quantum Islands/Solis.md",
+      "_notes/Idyllwild/Campaign Data/Locations/Quantum Islands/The Blossoming Bounds (Orchadia).md",
+      "_notes/Idyllwild/Campaign Data/Locations/Quantum Islands/Alimoux Bathhouse.md",
+      "_notes/Idyllwild/Campaign Data/Locations/Quantum Islands/Dimensional Observatory.md"
+    ]
+  },
+  {
+    "tag": "needs-revision",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Locations/Quantum Islands/Other Quantum Islands.md"
+    ]
+  },
+  {
+    "tag": "hospitable",
+    "tagCount": 3,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Locations/Quantum Islands/Other Quantum Islands.md"
+    ]
+  },
+  {
+    "tag": "trade",
+    "tagCount": 2,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Locations/Quantum Islands/Other Quantum Islands.md"
+    ]
+  },
+  {
+    "tag": "inaccessible",
+    "tagCount": 2,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Locations/Quantum Islands/Other Quantum Islands.md"
+    ]
+  },
+  {
+    "tag": "satellite",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Locations/Quantum Islands/Other Quantum Islands.md"
+    ]
+  },
+  {
+    "tag": "friendly",
+    "tagCount": 4,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Locations/Quantum Islands/Other Quantum Islands.md"
+    ]
+  },
+  {
+    "tag": "inacessible",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Locations/Quantum Islands/Other Quantum Islands.md"
+    ]
+  },
+  {
+    "tag": "hospital",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Locations/Quantum Islands/Other Quantum Islands.md"
+    ]
+  },
+  {
+    "tag": "pleasant",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Locations/Quantum Islands/Other Quantum Islands.md"
+    ]
+  },
+  {
+    "tag": "every-few-years",
+    "tagCount": 2,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Locations/Quantum Islands/Other Quantum Islands.md"
+    ]
+  },
+  {
+    "tag": "populated",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Locations/Quantum Islands/Other Quantum Islands.md"
+    ]
+  },
+  {
+    "tag": "xenophobic",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Locations/Quantum Islands/Other Quantum Islands.md"
+    ]
+  },
+  {
+    "tag": "inhabited",
+    "tagCount": 5,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Locations/Quantum Islands/Other Quantum Islands.md"
+    ]
+  },
+  {
+    "tag": "yearly",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Locations/Quantum Islands/Other Quantum Islands.md"
+    ]
+  },
+  {
+    "tag": "frequency-unknown",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Locations/Quantum Islands/Other Quantum Islands.md"
+    ]
+  },
+  {
+    "tag": "phantom",
+    "tagCount": 2,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Locations/Quantum Islands/Other Quantum Islands.md"
+    ]
+  },
+  {
+    "tag": "esoteric",
+    "tagCount": 3,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Locations/Quantum Islands/Other Quantum Islands.md"
+    ]
+  },
+  {
+    "tag": "every-few-months",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Locations/Quantum Islands/Other Quantum Islands.md"
+    ]
+  },
+  {
+    "tag": "once-a-year",
+    "tagCount": 2,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Locations/Quantum Islands/Other Quantum Islands.md"
+    ]
+  },
+  {
+    "tag": "uninhabited",
+    "tagCount": 2,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Locations/Quantum Islands/Other Quantum Islands.md"
+    ]
+  },
+  {
+    "tag": "region",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Locations/Quantum Islands/Other Quantum Islands.md"
+    ]
+  },
+  {
+    "tag": "rare",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Locations/Quantum Islands/Other Quantum Islands.md"
+    ]
+  },
+  {
+    "tag": "difficult-to-reach",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Locations/Quantum Islands/Other Quantum Islands.md"
+    ]
+  },
+  {
+    "tag": "extremely-dangerous",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Locations/Quantum Islands/Other Quantum Islands.md"
+    ]
+  },
+  {
+    "tag": "do-not-attempt-access",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Locations/Quantum Islands/Other Quantum Islands.md"
+    ]
+  },
+  {
+    "tag": "peaceful",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Locations/Quantum Islands/Other Quantum Islands.md"
+    ]
+  },
+  {
+    "tag": "sparsely-inhabited",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Locations/Quantum Islands/Other Quantum Islands.md"
+    ]
+  },
+  {
+    "tag": "category/faction",
+    "tagCount": 4,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Factions/The Coven.md",
+      "_notes/Idyllwild/Campaign Data/Factions/Rust Devils.md",
+      "_notes/Idyllwild/Campaign Data/Factions/Fallers.md",
+      "_notes/Idyllwild/Campaign Data/Factions/Gliders.md"
+    ]
+  },
+  {
+    "tag": "faction/the-coven",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Factions/The Coven.md"
+    ]
+  },
+  {
+    "tag": "faction/rust-devils",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Factions/Rust Devils.md"
+    ]
+  },
+  {
+    "tag": "faction/gliders",
+    "tagCount": 6,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Factions/Fallers.md",
+      "_notes/Idyllwild/Campaign Data/Factions/Gliders.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Common Clan/Silvoxi.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Common Clan/Tsunumbra.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Common Clan/Noctil Cimoro.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Ark/Qatar Ark.md"
+    ]
+  },
+  {
+    "tag": "clans/common",
+    "tagCount": 19,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Clans/FarrowDream.md",
+      "_notes/Idyllwild/Campaign Data/Clans/Farrowdream.md",
+      "_notes/Idyllwild/Campaign Data/Clans/Common.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Common Clan/The Sansari Family.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Common Clan/The Rana Family.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Common Clan/Silvoxi.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Common Clan/Tsunumbra.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Common Clan/Grandma Benevanda.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Common Clan/Noctil Cimoro.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Common Clan/Okai.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Common Clan/Ravini.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Common Clan/Narael.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Common Clan/Lilanto and Nelios.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Common Clan/Detective Bayr.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Common Clan/Khaliun.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Common Clan/Edusa.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Common Clan/Crishira.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Common Clan/Bellchime.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Common Clan/Aoin.md"
+    ]
+  },
+  {
+    "tag": "clans/viseul",
+    "tagCount": 20,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Clans/Viseul.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Viseul/Verochka Viseul.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Viseul/Yaro Viseul.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Viseul/Vadanya Viseul.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Viseul/Ulyanna Viseul.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Viseul/Pasha Viseul.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Viseul/Tvetlanka Viseul.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Viseul/Nicolai Viseul.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Viseul/Nikita Viseul.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Viseul/Natasa Viseul.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Viseul/Mihaela Viseul.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Viseul/Kanta Viseul.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Viseul/Dulsana Viseul.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Viseul/Ema Viseul.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Viseul/Elske Viseul.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Viseul/Chirasmi Viseul.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Viseul/Alosha Viseul.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Viseul/Aleksandr Viseul.md",
+      "_notes/Idyllwild/Campaign Data/Characters/La/Koretzi Viseul La.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Alimoux/Faringkha Alimoux.md"
+    ]
+  },
+  {
+    "tag": "clans/zanad",
+    "tagCount": 32,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Clans/Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Zid Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Weix Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Valoren FarrowDream Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Tanzi Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Tizrav Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/UNKNOWN Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Tantivy Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Siobahn Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Tamaryn Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Selvorie Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Renshe Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Pictor Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Olyn Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Raja Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Levince Luekor Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Ocess Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Kuone Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Kelsean Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Evaluce Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Huntel Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Elvorix Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Cotta Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Chiala & Deka Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Aradne Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Bhainne Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Ansel Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Alkain Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Akantha Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Afer Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Aengolia Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Ark/Inayo Ark.md"
+    ]
+  },
+  {
+    "tag": "clans/yolo",
+    "tagCount": 20,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Clans/Yolo.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Yolo/Yosiah Britalla.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Yolo/Wynroc Luekor Yolo.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Yolo/Obadel Yolo.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Yolo/Miano Yolo.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Yolo/Rahir Yolo.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Yolo/Nicia Yolo.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Yolo/Mec.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Yolo/Marriella Yolo.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Yolo/Naef La.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Yolo/Kalissie.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Yolo/Jhama Luekor.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Yolo/Feli Yolo.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Yolo/Eysabella Yolo.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Yolo/Enge Yolo.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Yolo/Cynah Yolo.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Yolo/Bobo Yolo.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Yolo/Arvinada La.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Yolo/Birstan The Curator of Charity.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Alimoux/Daila FarrowDream Alimoux.md"
+    ]
+  },
+  {
+    "tag": "clans/slugfolk",
+    "tagCount": 2,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Clans/Slugfolk.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Yolo/Eysabella Yolo.md"
+    ]
+  },
+  {
+    "tag": "clans/other",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Clans/Other.md"
+    ]
+  },
+  {
+    "tag": "clans/rockfolk",
+    "tagCount": 7,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Clans/Rockfolk.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Rockfolk/Veyhar Rockfolk.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Rockfolk/Yahi Rockfolk.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Rockfolk/Ashigol Rockfolk.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Rockfolk/Raach Rockfolk.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Rockfolk/Jumi Rockfolk.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Rockfolk/Guartz.md"
+    ]
+  },
+  {
+    "tag": "clans/luekor",
+    "tagCount": 21,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Clans/Luekor.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Levince Luekor Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Yolo/Wynroc Luekor Yolo.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Yolo/Jhama Luekor.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Luekor/Wynfir Luekor.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Luekor/Vishkanoya Luekor.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Luekor/Pameiya Luekor.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Luekor/Miakodi Luekor.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Luekor/Kodra Luekor.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Luekor/Khanzarova Luekor.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Luekor/Kealou Luekor.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Luekor/Kapridel Luekor.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Luekor/Kalahir Luekor.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Luekor/Indikha Luekor.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Luekor/Izyankin Luekor.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Luekor/Eydelveiss Luekor.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Luekor/Ember Luekor.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Luekor/DISOWNED Luekor.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Luekor/Caelid Luekor.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Luekor/Ahmnizaya Luekor.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Alimoux/Elmirrai Luekor Alimoux.md"
+    ]
+  },
+  {
+    "tag": "clans/la",
+    "tagCount": 25,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Clans/La.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Yolo/Naef La.md",
+      "_notes/Idyllwild/Campaign Data/Characters/La/Yohimbe La.md",
+      "_notes/Idyllwild/Campaign Data/Characters/La/Zazie La.md",
+      "_notes/Idyllwild/Campaign Data/Characters/La/Sivash La.md",
+      "_notes/Idyllwild/Campaign Data/Characters/La/Thikari La.md",
+      "_notes/Idyllwild/Campaign Data/Characters/La/Serapis La.md",
+      "_notes/Idyllwild/Campaign Data/Characters/La/Roxelena La.md",
+      "_notes/Idyllwild/Campaign Data/Characters/La/Saacha Ark La.md",
+      "_notes/Idyllwild/Campaign Data/Characters/La/Mahendra La.md",
+      "_notes/Idyllwild/Campaign Data/Characters/La/Machiko La.md",
+      "_notes/Idyllwild/Campaign Data/Characters/La/Kukkur La.md",
+      "_notes/Idyllwild/Campaign Data/Characters/La/Koretzi Viseul La.md",
+      "_notes/Idyllwild/Campaign Data/Characters/La/Khorynn La.md",
+      "_notes/Idyllwild/Campaign Data/Characters/La/Khannat La.md",
+      "_notes/Idyllwild/Campaign Data/Characters/La/Izona La.md",
+      "_notes/Idyllwild/Campaign Data/Characters/La/Kabati La.md",
+      "_notes/Idyllwild/Campaign Data/Characters/La/Haji La.md",
+      "_notes/Idyllwild/Campaign Data/Characters/La/Gaela La.md",
+      "_notes/Idyllwild/Campaign Data/Characters/La/Fudezutsu La.md",
+      "_notes/Idyllwild/Campaign Data/Characters/La/Cinna Farbrand La.md",
+      "_notes/Idyllwild/Campaign Data/Characters/La/Corrash La.md",
+      "_notes/Idyllwild/Campaign Data/Characters/La/Calyx La.md",
+      "_notes/Idyllwild/Campaign Data/Characters/La/Ciba La.md",
+      "_notes/Idyllwild/Campaign Data/Characters/La/Bennimo La.md"
+    ]
+  },
+  {
+    "tag": "clans/gillespie",
+    "tagCount": 11,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Clans/Gillespie.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Gillespie/Gil's Mother.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Gillespie/UNKNOWN_Sibling Gillespie.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Gillespie/UNKNOWN_B Gillespie.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Gillespie/Saraada Gillespie.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Gillespie/Khavar Farbrand Gillespie.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Gillespie/Parlie Gillespie.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Gillespie/Eilefe Gillespie.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Gillespie/Paarl Gillespie.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Gillespie/Ghayth Gillespie.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Gillespie/Chiri Gillespie.md"
+    ]
+  },
+  {
+    "tag": "clans/everlasting",
+    "tagCount": 7,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Clans/Everlasting.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Everlasting/Lady Suoja.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Everlasting/Turtle Pope.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Everlasting/Town Defense Automatons.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Everlasting/Tama.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Everlasting/Cinnamon Puff.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Everlasting/Grandmother.md"
+    ]
+  },
+  {
+    "tag": "clans/farbrand",
+    "tagCount": 28,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Clans/Farbrand.md",
+      "_notes/Idyllwild/Campaign Data/Characters/FarrowDream/Elbekh Farbrand FarrowDream.md",
+      "_notes/Idyllwild/Campaign Data/Characters/La/Cinna Farbrand La.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Gillespie/Khavar Farbrand Gillespie.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Farbrand/Sasha Farbrand.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Farbrand/Talha Farbrand.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Farbrand/Ruben Farbrand.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Farbrand/Pyrah Farbrand.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Farbrand/Narmandakh Farbrand.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Farbrand/Nakoa Farbrand.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Farbrand/Narantuyaa Farbrand.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Farbrand/Monksaikhan Farbrand.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Farbrand/Malchinkuu Farbrand.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Farbrand/Monkhnaran Farbrand.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Farbrand/Erdenetsetseg Farbrand.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Farbrand/Leilani Farbrand.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Farbrand/Enkhmaa Farbrand.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Farbrand/Enkh Farbrand.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Farbrand/Dzambul Farbrand.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Farbrand/Cypra Farbrand.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Farbrand/Caoimhe Farbrand.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Farbrand/Burcu Farbrand.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Farbrand/Ankhbayar Farbrand.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Farbrand/Balam Farbrand.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Farbrand/Anekke Farbrand.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Farbrand/Altanchimeg Farbrand.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Farbrand/Altan Farbrand.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Farbrand/Ahulani Farbrand.md"
+    ]
+  },
+  {
+    "tag": "clans/ark",
+    "tagCount": 29,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Clans/Ark.md",
+      "_notes/Idyllwild/Campaign Data/Characters/La/Saacha Ark La.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Ark/Inasha Ark.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Ark/Virtua FarrowDream Ark.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Ark/Yasamin Ark.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Ark/Vice Ark.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Ark/Tezza Ark.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Ark/Soledad Ark.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Ark/Sannyoaino Ark.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Ark/Siavasha Ark.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Ark/Ravinder Ark.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Ark/Ravindra Ark.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Ark/Rama Ark.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Ark/Qatar Ark.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Ark/Paloma Ark.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Ark/Nilam Ark.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Ark/Nilofar Ark.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Ark/Marisol Ark.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Ark/Mariangel Ark.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Ark/Levolyn and Qatar Ark.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Ark/Lautaro Ark.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Ark/Lai Ark.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Ark/Inayo Ark.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Ark/Ignacio Ark.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Ark/Auzenn Ark.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Ark/Cristobal Ark.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Ark/Ciel Ark.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Ark/Atasi Ark.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Ark/Akanksha Ark.md"
+    ]
+  },
+  {
+    "tag": "clans/automaton",
+    "tagCount": 15,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Clans/Automaton.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Automaton/Plier - Nuclear Sabotage Droid.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Automaton/Primordium - The Elder.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Automaton/Rune - The Overgrown.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Automaton/Trial and Error - The Voltaic Twins.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Automaton/Gil - The Healer.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Automaton/Manna - The Culinarian.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Automaton/Gadamastah - Blossimic Android.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Automaton/Jewel.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Automaton/Dajjal - The Ice-Breaker.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Automaton/Egh - The Archivist.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Automaton/Curiosity - The Forgetful.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Automaton/Cthonicaedes - The Psychopomp.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Automaton/Bru - Slug Scholar.md"
+    ]
+  },
+  {
+    "tag": "condition/deceased",
+    "tagCount": 42,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Zid Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Valoren FarrowDream Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Tizrav Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Tantivy Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Selvorie Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Pictor Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Cotta Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Akantha Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/FarrowDream/Sokanoe FarrowDream.md",
+      "_notes/Idyllwild/Campaign Data/Characters/FarrowDream/Lytess FarrowDream.md",
+      "_notes/Idyllwild/Campaign Data/Characters/FarrowDream/Lavanya FarrowDream.md",
+      "_notes/Idyllwild/Campaign Data/Characters/FarrowDream/Cloya FarrowDream Yolo.md",
+      "_notes/Idyllwild/Campaign Data/Characters/FarrowDream/Evoirayla FarrowDream.md",
+      "_notes/Idyllwild/Campaign Data/Characters/FarrowDream/Calypsana FarrowDream.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Yolo/Wynroc Luekor Yolo.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Yolo/Mec.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Yolo/Naef La.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Yolo/Kalissie.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Yolo/Jhama Luekor.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Yolo/Eysabella Yolo.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Viseul/Yaro Viseul.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Viseul/Pasha Viseul.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Viseul/Chirasmi Viseul.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Luekor/Wynfir Luekor.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Luekor/Khanzarova Luekor.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Luekor/Kapridel Luekor.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Luekor/Kalahir Luekor.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Farbrand/Sasha Farbrand.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Farbrand/Talha Farbrand.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Farbrand/Narmandakh Farbrand.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Farbrand/Enkhmaa Farbrand.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Farbrand/Dzambul Farbrand.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Farbrand/Caoimhe Farbrand.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Farbrand/Burcu Farbrand.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Farbrand/Balam Farbrand.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Alimoux/Phalynx Alimoux.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Alimoux/Umberlux Alimoux.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Alimoux/Grandfather Ash.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Ark/Virtua FarrowDream Ark.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Ark/Ravindra Ark.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Ark/Ignacio Ark.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Ark/Akanksha Ark.md"
+    ]
+  },
+  {
+    "tag": "generation/first",
+    "tagCount": 42,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Zid Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Valoren FarrowDream Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Tizrav Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Tantivy Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Pictor Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Akantha Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/FarrowDream/Tatiana FarrowDream.md",
+      "_notes/Idyllwild/Campaign Data/Characters/FarrowDream/Lytess FarrowDream.md",
+      "_notes/Idyllwild/Campaign Data/Characters/FarrowDream/Lavanya FarrowDream.md",
+      "_notes/Idyllwild/Campaign Data/Characters/FarrowDream/Calypsana FarrowDream.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Yolo/Wynroc Luekor Yolo.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Yolo/Mec.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Yolo/Naef La.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Yolo/Kalissie.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Yolo/Jhama Luekor.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Yolo/Eysabella Yolo.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Yolo/Enge Yolo.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Viseul/Yaro Viseul.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Viseul/Vadanya Viseul.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Viseul/Chirasmi Viseul.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Rockfolk/Ashigol Rockfolk.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Rockfolk/Jumi Rockfolk.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Luekor/Wynfir Luekor.md",
+      "_notes/Idyllwild/Campaign Data/Characters/La/Yohimbe La.md",
+      "_notes/Idyllwild/Campaign Data/Characters/La/Mahendra La.md",
+      "_notes/Idyllwild/Campaign Data/Characters/La/Khannat La.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Gillespie/Saraada Gillespie.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Farbrand/Enkhmaa Farbrand.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Farbrand/Balam Farbrand.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Automaton/Primordium - The Elder.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Automaton/Rune - The Overgrown.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Automaton/Gil - The Healer.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Automaton/Gadamastah - Blossimic Android.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Automaton/Jewel.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Automaton/Cthonicaedes - The Psychopomp.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Automaton/Bru - Slug Scholar.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Everlasting/Turtle Pope.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Everlasting/Tama.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Everlasting/Cinnamon Puff.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Everlasting/Grandmother.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Alimoux/Grandfather Ash.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Ark/Sannyoaino Ark.md"
+    ]
+  },
+  {
+    "tag": "clans/",
+    "tagCount": 180,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Zid Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Weix Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Valoren FarrowDream Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Tanzi Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Tizrav Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Siobahn Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Tamaryn Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Selvorie Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Renshe Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Raja Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Levince Luekor Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Ocess Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Kelsean Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Evaluce Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Huntel Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Elvorix Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Cotta Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Chiala & Deka Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Aradne Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Bhainne Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Ansel Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Alkain Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Aengolia Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/FarrowDream/Seanci FarrowDream.md",
+      "_notes/Idyllwild/Campaign Data/Characters/FarrowDream/Valoseiette FarrowDream.md",
+      "_notes/Idyllwild/Campaign Data/Characters/FarrowDream/Vox FarrowDream.md",
+      "_notes/Idyllwild/Campaign Data/Characters/FarrowDream/Vantoya FarrowDream.md",
+      "_notes/Idyllwild/Campaign Data/Characters/FarrowDream/UNKNOWN FarrowDream.md",
+      "_notes/Idyllwild/Campaign Data/Characters/FarrowDream/Tatiana FarrowDream.md",
+      "_notes/Idyllwild/Campaign Data/Characters/FarrowDream/Tolze FarrowDream.md",
+      "_notes/Idyllwild/Campaign Data/Characters/FarrowDream/Sultanna FarrowDream.md",
+      "_notes/Idyllwild/Campaign Data/Characters/FarrowDream/Sokanoe FarrowDream.md",
+      "_notes/Idyllwild/Campaign Data/Characters/FarrowDream/Seanci Farrowdream.md",
+      "_notes/Idyllwild/Campaign Data/Characters/FarrowDream/Pavati FarrowDream.md",
+      "_notes/Idyllwild/Campaign Data/Characters/FarrowDream/Scheherazade FarrowDream.md",
+      "_notes/Idyllwild/Campaign Data/Characters/FarrowDream/Nysali FarrowDream.md",
+      "_notes/Idyllwild/Campaign Data/Characters/FarrowDream/Lumi FarrowDream.md",
+      "_notes/Idyllwild/Campaign Data/Characters/FarrowDream/Lilyankha FarrowDream.md",
+      "_notes/Idyllwild/Campaign Data/Characters/FarrowDream/Noelani FarrowDream.md",
+      "_notes/Idyllwild/Campaign Data/Characters/FarrowDream/Leto FarrowDream.md",
+      "_notes/Idyllwild/Campaign Data/Characters/FarrowDream/Lavanya FarrowDream.md",
+      "_notes/Idyllwild/Campaign Data/Characters/FarrowDream/Cloya FarrowDream Yolo.md",
+      "_notes/Idyllwild/Campaign Data/Characters/FarrowDream/Iridesce FarrowDream.md",
+      "_notes/Idyllwild/Campaign Data/Characters/FarrowDream/Evoirayla FarrowDream.md",
+      "_notes/Idyllwild/Campaign Data/Characters/FarrowDream/Fenris FarrowDream.md",
+      "_notes/Idyllwild/Campaign Data/Characters/FarrowDream/Elbekh Farbrand FarrowDream.md",
+      "_notes/Idyllwild/Campaign Data/Characters/FarrowDream/Deolahn FarrowDream.md",
+      "_notes/Idyllwild/Campaign Data/Characters/FarrowDream/Calypsana FarrowDream.md",
+      "_notes/Idyllwild/Campaign Data/Characters/FarrowDream/Ciranos FarrowDream.md",
+      "_notes/Idyllwild/Campaign Data/Characters/FarrowDream/Aonani FarrowDream.md",
+      "_notes/Idyllwild/Campaign Data/Characters/FarrowDream/Aolani FarrowDream.md",
+      "_notes/Idyllwild/Campaign Data/Characters/FarrowDream/Alma FarrowDream.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Yolo/Yosiah Britalla.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Yolo/Wynroc Luekor Yolo.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Yolo/Obadel Yolo.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Yolo/Miano Yolo.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Yolo/Rahir Yolo.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Yolo/Nicia Yolo.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Yolo/Mec.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Yolo/Marriella Yolo.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Yolo/Naef La.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Yolo/Kalissie.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Yolo/Jhama Luekor.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Yolo/Feli Yolo.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Yolo/Eysabella Yolo.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Yolo/Enge Yolo.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Yolo/Cynah Yolo.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Yolo/Bobo Yolo.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Yolo/Arvinada La.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Luekor/Wynfir Luekor.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Luekor/Vishkanoya Luekor.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Luekor/Pameiya Luekor.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Luekor/Miakodi Luekor.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Luekor/Kodra Luekor.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Luekor/Khanzarova Luekor.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Luekor/Kealou Luekor.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Luekor/Kapridel Luekor.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Luekor/Kalahir Luekor.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Luekor/Indikha Luekor.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Luekor/Izyankin Luekor.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Luekor/Eydelveiss Luekor.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Luekor/Ember Luekor.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Luekor/DISOWNED Luekor.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Luekor/Caelid Luekor.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Luekor/Ahmnizaya Luekor.md",
+      "_notes/Idyllwild/Campaign Data/Characters/La/Yohimbe La.md",
+      "_notes/Idyllwild/Campaign Data/Characters/La/Zazie La.md",
+      "_notes/Idyllwild/Campaign Data/Characters/La/Sivash La.md",
+      "_notes/Idyllwild/Campaign Data/Characters/La/Thikari La.md",
+      "_notes/Idyllwild/Campaign Data/Characters/La/Serapis La.md",
+      "_notes/Idyllwild/Campaign Data/Characters/La/Roxelena La.md",
+      "_notes/Idyllwild/Campaign Data/Characters/La/Saacha Ark La.md",
+      "_notes/Idyllwild/Campaign Data/Characters/La/Mahendra La.md",
+      "_notes/Idyllwild/Campaign Data/Characters/La/Machiko La.md",
+      "_notes/Idyllwild/Campaign Data/Characters/La/Kukkur La.md",
+      "_notes/Idyllwild/Campaign Data/Characters/La/Koretzi Viseul La.md",
+      "_notes/Idyllwild/Campaign Data/Characters/La/Khorynn La.md",
+      "_notes/Idyllwild/Campaign Data/Characters/La/Khannat La.md",
+      "_notes/Idyllwild/Campaign Data/Characters/La/Izona La.md",
+      "_notes/Idyllwild/Campaign Data/Characters/La/Kabati La.md",
+      "_notes/Idyllwild/Campaign Data/Characters/La/Haji La.md",
+      "_notes/Idyllwild/Campaign Data/Characters/La/Gaela La.md",
+      "_notes/Idyllwild/Campaign Data/Characters/La/Fudezutsu La.md",
+      "_notes/Idyllwild/Campaign Data/Characters/La/Cinna Farbrand La.md",
+      "_notes/Idyllwild/Campaign Data/Characters/La/Corrash La.md",
+      "_notes/Idyllwild/Campaign Data/Characters/La/Calyx La.md",
+      "_notes/Idyllwild/Campaign Data/Characters/La/Ciba La.md",
+      "_notes/Idyllwild/Campaign Data/Characters/La/Bennimo La.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Gillespie/Gil's Mother.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Gillespie/UNKNOWN_Sibling Gillespie.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Gillespie/UNKNOWN_B Gillespie.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Gillespie/Saraada Gillespie.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Gillespie/Khavar Farbrand Gillespie.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Gillespie/Parlie Gillespie.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Gillespie/Eilefe Gillespie.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Gillespie/Paarl Gillespie.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Gillespie/Ghayth Gillespie.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Gillespie/Chiri Gillespie.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Farbrand/Sasha Farbrand.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Farbrand/Talha Farbrand.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Farbrand/Ruben Farbrand.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Farbrand/Pyrah Farbrand.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Farbrand/Narmandakh Farbrand.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Farbrand/Nakoa Farbrand.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Farbrand/Narantuyaa Farbrand.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Farbrand/Monksaikhan Farbrand.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Farbrand/Malchinkuu Farbrand.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Farbrand/Monkhnaran Farbrand.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Farbrand/Erdenetsetseg Farbrand.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Farbrand/Leilani Farbrand.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Farbrand/Enkhmaa Farbrand.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Farbrand/Enkh Farbrand.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Farbrand/Dzambul Farbrand.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Farbrand/Cypra Farbrand.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Farbrand/Caoimhe Farbrand.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Farbrand/Burcu Farbrand.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Farbrand/Ankhbayar Farbrand.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Farbrand/Balam Farbrand.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Farbrand/Anekke Farbrand.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Farbrand/Altanchimeg Farbrand.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Farbrand/Altan Farbrand.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Farbrand/Ahulani Farbrand.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Automaton/Primordium - The Elder.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Automaton/Rune - The Overgrown.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Automaton/Trial and Error - The Voltaic Twins.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Automaton/Gil - The Healer.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Automaton/Manna - The Culinarian.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Automaton/Gadamastah - Blossimic Android.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Automaton/Jewel.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Automaton/Dajjal - The Ice-Breaker.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Automaton/Egh - The Archivist.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Automaton/Curiosity - The Forgetful.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Automaton/Cthonicaedes - The Psychopomp.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Automaton/Bru - Slug Scholar.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Everlasting/Lady Suoja.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Everlasting/Turtle Pope.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Everlasting/Town Defense Automatons.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Everlasting/Cinnamon Puff.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Everlasting/Grandmother.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Alimoux/Mother Miranda.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Alimoux/Grandfather Ash.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Common Clan/The Sansari Family.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Common Clan/The Rana Family.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Common Clan/Silvoxi.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Common Clan/Tsunumbra.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Common Clan/Grandma Benevanda.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Common Clan/Okai.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Common Clan/Ravini.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Common Clan/Narael.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Common Clan/Lilanto and Nelios.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Common Clan/Detective Bayr.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Common Clan/Khaliun.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Common Clan/Crishira.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Common Clan/Bellchime.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Common Clan/Aoin.md"
+    ]
+  },
+  {
+    "tag": "family-links-done",
+    "tagCount": 220,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Zid Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Weix Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Valoren FarrowDream Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Tanzi Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Tizrav Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Siobahn Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Tamaryn Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Selvorie Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Renshe Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Raja Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Levince Luekor Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Ocess Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Kuone Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Kelsean Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Evaluce Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Huntel Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Elvorix Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Cotta Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Chiala & Deka Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Aradne Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Bhainne Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Ansel Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Alkain Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Afer Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Aengolia Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/FarrowDream/Seanci FarrowDream.md",
+      "_notes/Idyllwild/Campaign Data/Characters/FarrowDream/Valoseiette FarrowDream.md",
+      "_notes/Idyllwild/Campaign Data/Characters/FarrowDream/Vox FarrowDream.md",
+      "_notes/Idyllwild/Campaign Data/Characters/FarrowDream/Vantoya FarrowDream.md",
+      "_notes/Idyllwild/Campaign Data/Characters/FarrowDream/UNKNOWN FarrowDream.md",
+      "_notes/Idyllwild/Campaign Data/Characters/FarrowDream/Tatiana FarrowDream.md",
+      "_notes/Idyllwild/Campaign Data/Characters/FarrowDream/Tolze FarrowDream.md",
+      "_notes/Idyllwild/Campaign Data/Characters/FarrowDream/Sultanna FarrowDream.md",
+      "_notes/Idyllwild/Campaign Data/Characters/FarrowDream/Sokanoe FarrowDream.md",
+      "_notes/Idyllwild/Campaign Data/Characters/FarrowDream/Seanci Farrowdream.md",
+      "_notes/Idyllwild/Campaign Data/Characters/FarrowDream/Pavati FarrowDream.md",
+      "_notes/Idyllwild/Campaign Data/Characters/FarrowDream/Scheherazade FarrowDream.md",
+      "_notes/Idyllwild/Campaign Data/Characters/FarrowDream/Nysali FarrowDream.md",
+      "_notes/Idyllwild/Campaign Data/Characters/FarrowDream/Lumi FarrowDream.md",
+      "_notes/Idyllwild/Campaign Data/Characters/FarrowDream/Lilyankha FarrowDream.md",
+      "_notes/Idyllwild/Campaign Data/Characters/FarrowDream/Noelani FarrowDream.md",
+      "_notes/Idyllwild/Campaign Data/Characters/FarrowDream/Leto FarrowDream.md",
+      "_notes/Idyllwild/Campaign Data/Characters/FarrowDream/Lavanya FarrowDream.md",
+      "_notes/Idyllwild/Campaign Data/Characters/FarrowDream/Cloya FarrowDream Yolo.md",
+      "_notes/Idyllwild/Campaign Data/Characters/FarrowDream/Iridesce FarrowDream.md",
+      "_notes/Idyllwild/Campaign Data/Characters/FarrowDream/Evoirayla FarrowDream.md",
+      "_notes/Idyllwild/Campaign Data/Characters/FarrowDream/Fenris FarrowDream.md",
+      "_notes/Idyllwild/Campaign Data/Characters/FarrowDream/Elbekh Farbrand FarrowDream.md",
+      "_notes/Idyllwild/Campaign Data/Characters/FarrowDream/Deolahn FarrowDream.md",
+      "_notes/Idyllwild/Campaign Data/Characters/FarrowDream/Calypsana FarrowDream.md",
+      "_notes/Idyllwild/Campaign Data/Characters/FarrowDream/Ciranos FarrowDream.md",
+      "_notes/Idyllwild/Campaign Data/Characters/FarrowDream/Aonani FarrowDream.md",
+      "_notes/Idyllwild/Campaign Data/Characters/FarrowDream/Aolani FarrowDream.md",
+      "_notes/Idyllwild/Campaign Data/Characters/FarrowDream/Alma FarrowDream.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Yolo/Yosiah Britalla.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Yolo/Wynroc Luekor Yolo.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Yolo/Obadel Yolo.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Yolo/Miano Yolo.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Yolo/Rahir Yolo.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Yolo/Nicia Yolo.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Yolo/Mec.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Yolo/Marriella Yolo.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Yolo/Naef La.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Yolo/Kalissie.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Yolo/Jhama Luekor.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Yolo/Feli Yolo.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Yolo/Eysabella Yolo.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Yolo/Enge Yolo.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Yolo/Cynah Yolo.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Yolo/Bobo Yolo.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Yolo/Arvinada La.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Yolo/Birstan The Curator of Charity.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Viseul/Verochka Viseul.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Viseul/Yaro Viseul.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Viseul/Vadanya Viseul.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Viseul/Ulyanna Viseul.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Viseul/Pasha Viseul.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Viseul/Tvetlanka Viseul.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Viseul/Nicolai Viseul.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Viseul/Nikita Viseul.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Viseul/Natasa Viseul.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Viseul/Mihaela Viseul.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Viseul/Kanta Viseul.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Viseul/Dulsana Viseul.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Viseul/Ema Viseul.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Viseul/Elske Viseul.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Viseul/Chirasmi Viseul.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Viseul/Alosha Viseul.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Viseul/Aleksandr Viseul.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Rockfolk/Yahi Rockfolk.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Rockfolk/Ashigol Rockfolk.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Luekor/Wynfir Luekor.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Luekor/Vishkanoya Luekor.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Luekor/Pameiya Luekor.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Luekor/Miakodi Luekor.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Luekor/Kodra Luekor.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Luekor/Khanzarova Luekor.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Luekor/Kealou Luekor.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Luekor/Kapridel Luekor.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Luekor/Kalahir Luekor.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Luekor/Indikha Luekor.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Luekor/Izyankin Luekor.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Luekor/Eydelveiss Luekor.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Luekor/Ember Luekor.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Luekor/DISOWNED Luekor.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Luekor/Caelid Luekor.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Luekor/Ahmnizaya Luekor.md",
+      "_notes/Idyllwild/Campaign Data/Characters/La/Yohimbe La.md",
+      "_notes/Idyllwild/Campaign Data/Characters/La/Zazie La.md",
+      "_notes/Idyllwild/Campaign Data/Characters/La/Sivash La.md",
+      "_notes/Idyllwild/Campaign Data/Characters/La/Thikari La.md",
+      "_notes/Idyllwild/Campaign Data/Characters/La/Serapis La.md",
+      "_notes/Idyllwild/Campaign Data/Characters/La/Roxelena La.md",
+      "_notes/Idyllwild/Campaign Data/Characters/La/Saacha Ark La.md",
+      "_notes/Idyllwild/Campaign Data/Characters/La/Mahendra La.md",
+      "_notes/Idyllwild/Campaign Data/Characters/La/Machiko La.md",
+      "_notes/Idyllwild/Campaign Data/Characters/La/Kukkur La.md",
+      "_notes/Idyllwild/Campaign Data/Characters/La/Koretzi Viseul La.md",
+      "_notes/Idyllwild/Campaign Data/Characters/La/Khorynn La.md",
+      "_notes/Idyllwild/Campaign Data/Characters/La/Khannat La.md",
+      "_notes/Idyllwild/Campaign Data/Characters/La/Izona La.md",
+      "_notes/Idyllwild/Campaign Data/Characters/La/Kabati La.md",
+      "_notes/Idyllwild/Campaign Data/Characters/La/Haji La.md",
+      "_notes/Idyllwild/Campaign Data/Characters/La/Gaela La.md",
+      "_notes/Idyllwild/Campaign Data/Characters/La/Fudezutsu La.md",
+      "_notes/Idyllwild/Campaign Data/Characters/La/Cinna Farbrand La.md",
+      "_notes/Idyllwild/Campaign Data/Characters/La/Corrash La.md",
+      "_notes/Idyllwild/Campaign Data/Characters/La/Calyx La.md",
+      "_notes/Idyllwild/Campaign Data/Characters/La/Ciba La.md",
+      "_notes/Idyllwild/Campaign Data/Characters/La/Bennimo La.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Gillespie/Gil's Mother.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Gillespie/UNKNOWN_Sibling Gillespie.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Gillespie/UNKNOWN_B Gillespie.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Gillespie/Saraada Gillespie.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Gillespie/Khavar Farbrand Gillespie.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Gillespie/Parlie Gillespie.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Gillespie/Eilefe Gillespie.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Gillespie/Paarl Gillespie.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Gillespie/Ghayth Gillespie.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Gillespie/Chiri Gillespie.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Farbrand/Sasha Farbrand.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Farbrand/Talha Farbrand.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Farbrand/Ruben Farbrand.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Farbrand/Pyrah Farbrand.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Farbrand/Narmandakh Farbrand.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Farbrand/Nakoa Farbrand.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Farbrand/Narantuyaa Farbrand.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Farbrand/Monksaikhan Farbrand.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Farbrand/Malchinkuu Farbrand.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Farbrand/Monkhnaran Farbrand.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Farbrand/Erdenetsetseg Farbrand.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Farbrand/Leilani Farbrand.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Farbrand/Enkhmaa Farbrand.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Farbrand/Enkh Farbrand.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Farbrand/Dzambul Farbrand.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Farbrand/Cypra Farbrand.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Farbrand/Caoimhe Farbrand.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Farbrand/Burcu Farbrand.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Farbrand/Ankhbayar Farbrand.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Farbrand/Balam Farbrand.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Farbrand/Anekke Farbrand.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Farbrand/Altanchimeg Farbrand.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Farbrand/Altan Farbrand.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Farbrand/Ahulani Farbrand.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Alimoux/Phalynx Alimoux.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Alimoux/Umberlux Alimoux.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Alimoux/Sealisse Alimoux.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Alimoux/Toph Alimoux.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Alimoux/Nephili Alimoux.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Alimoux/Omen Alimoux.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Alimoux/Rhyle Alimoux.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Alimoux/Mother Miranda.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Alimoux/Mother Cambria.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Alimoux/Melva Alimoux.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Alimoux/Elmirrai Luekor Alimoux.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Alimoux/Moka Alimoux.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Alimoux/Malahai Alimoux.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Alimoux/Judaia Alimoux.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Alimoux/Hallow Alimoux.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Alimoux/Frenzy Alimoux.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Alimoux/Grandfather Ash.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Alimoux/Faringkha Alimoux.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Alimoux/Elvanté Alimoux.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Alimoux/Drya Alimoux.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Alimoux/Daila FarrowDream Alimoux.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Alimoux/Choux Alimoux.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Alimoux/Chroma Alimoux.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Alimoux/Carmine Alimoux.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Alimoux/Avorendi Alimoux.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Alimoux/Aroe Alimoux.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Alimoux/Anjèl  Alimoux.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Alimoux/Ambergrei Alimoux.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Alimoux/Andynia Alimoux.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Ark/Inasha Ark.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Ark/Virtua FarrowDream Ark.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Ark/Yasamin Ark.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Ark/Vice Ark.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Ark/Tezza Ark.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Ark/Soledad Ark.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Ark/Sannyoaino Ark.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Ark/Siavasha Ark.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Ark/Ravinder Ark.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Ark/Ravindra Ark.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Ark/Rama Ark.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Ark/Qatar Ark.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Ark/Paloma Ark.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Ark/Nilam Ark.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Ark/Nilofar Ark.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Ark/Marisol Ark.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Ark/Mariangel Ark.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Ark/Levolyn and Qatar Ark.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Ark/Lautaro Ark.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Ark/Lai Ark.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Ark/Inayo Ark.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Ark/Ignacio Ark.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Ark/Auzenn Ark.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Ark/Cristobal Ark.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Ark/Ciel Ark.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Ark/Atasi Ark.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Ark/Akanksha Ark.md"
+    ]
+  },
+  {
+    "tag": "age/young-adult",
+    "tagCount": 27,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Weix Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Tanzi Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Siobahn Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Tamaryn Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Raja Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Evaluce Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Bhainne Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/FarrowDream/Iridesce FarrowDream.md",
+      "_notes/Idyllwild/Campaign Data/Characters/FarrowDream/Aolani FarrowDream.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Yolo/Nicia Yolo.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Yolo/Cynah Yolo.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Viseul/Nicolai Viseul.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Viseul/Mihaela Viseul.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Luekor/Pameiya Luekor.md",
+      "_notes/Idyllwild/Campaign Data/Characters/La/Gaela La.md",
+      "_notes/Idyllwild/Campaign Data/Characters/La/Calyx La.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Gillespie/Parlie Gillespie.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Gillespie/Ghayth Gillespie.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Farbrand/Leilani Farbrand.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Everlasting/Lady Suoja.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Alimoux/Moka Alimoux.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Alimoux/Choux Alimoux.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Common Clan/Crishira.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Common Clan/Bellchime.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Ark/Yasamin Ark.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Ark/Siavasha Ark.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Ark/Qatar Ark.md"
+    ]
+  },
+  {
+    "tag": "clans/farrowdream",
+    "tagCount": 33,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Valoren FarrowDream Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/FarrowDream/Seanci FarrowDream.md",
+      "_notes/Idyllwild/Campaign Data/Characters/FarrowDream/Valoseiette FarrowDream.md",
+      "_notes/Idyllwild/Campaign Data/Characters/FarrowDream/Vox FarrowDream.md",
+      "_notes/Idyllwild/Campaign Data/Characters/FarrowDream/Vantoya FarrowDream.md",
+      "_notes/Idyllwild/Campaign Data/Characters/FarrowDream/UNKNOWN FarrowDream.md",
+      "_notes/Idyllwild/Campaign Data/Characters/FarrowDream/Tatiana FarrowDream.md",
+      "_notes/Idyllwild/Campaign Data/Characters/FarrowDream/Tolze FarrowDream.md",
+      "_notes/Idyllwild/Campaign Data/Characters/FarrowDream/Sultanna FarrowDream.md",
+      "_notes/Idyllwild/Campaign Data/Characters/FarrowDream/Sokanoe FarrowDream.md",
+      "_notes/Idyllwild/Campaign Data/Characters/FarrowDream/Seanci Farrowdream.md",
+      "_notes/Idyllwild/Campaign Data/Characters/FarrowDream/Pavati FarrowDream.md",
+      "_notes/Idyllwild/Campaign Data/Characters/FarrowDream/Scheherazade FarrowDream.md",
+      "_notes/Idyllwild/Campaign Data/Characters/FarrowDream/Nysali FarrowDream.md",
+      "_notes/Idyllwild/Campaign Data/Characters/FarrowDream/Lytess FarrowDream.md",
+      "_notes/Idyllwild/Campaign Data/Characters/FarrowDream/Lumi FarrowDream.md",
+      "_notes/Idyllwild/Campaign Data/Characters/FarrowDream/Lilyankha FarrowDream.md",
+      "_notes/Idyllwild/Campaign Data/Characters/FarrowDream/Noelani FarrowDream.md",
+      "_notes/Idyllwild/Campaign Data/Characters/FarrowDream/Leto FarrowDream.md",
+      "_notes/Idyllwild/Campaign Data/Characters/FarrowDream/Lavanya FarrowDream.md",
+      "_notes/Idyllwild/Campaign Data/Characters/FarrowDream/Cloya FarrowDream Yolo.md",
+      "_notes/Idyllwild/Campaign Data/Characters/FarrowDream/Iridesce FarrowDream.md",
+      "_notes/Idyllwild/Campaign Data/Characters/FarrowDream/Evoirayla FarrowDream.md",
+      "_notes/Idyllwild/Campaign Data/Characters/FarrowDream/Fenris FarrowDream.md",
+      "_notes/Idyllwild/Campaign Data/Characters/FarrowDream/Elbekh Farbrand FarrowDream.md",
+      "_notes/Idyllwild/Campaign Data/Characters/FarrowDream/Deolahn FarrowDream.md",
+      "_notes/Idyllwild/Campaign Data/Characters/FarrowDream/Calypsana FarrowDream.md",
+      "_notes/Idyllwild/Campaign Data/Characters/FarrowDream/Ciranos FarrowDream.md",
+      "_notes/Idyllwild/Campaign Data/Characters/FarrowDream/Aonani FarrowDream.md",
+      "_notes/Idyllwild/Campaign Data/Characters/FarrowDream/Aolani FarrowDream.md",
+      "_notes/Idyllwild/Campaign Data/Characters/FarrowDream/Alma FarrowDream.md",
+      "_notes/Idyllwild/Campaign Data/Characters/La/Roxelena La.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Ark/Virtua FarrowDream Ark.md"
+    ]
+  },
+  {
+    "tag": "traits-done",
+    "tagCount": 19,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Tanzi Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Luekor/Ahmnizaya Luekor.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Alimoux/Phalynx Alimoux.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Alimoux/Melva Alimoux.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Alimoux/Elmirrai Luekor Alimoux.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Alimoux/Malahai Alimoux.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Alimoux/Judaia Alimoux.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Alimoux/Hallow Alimoux.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Alimoux/Frenzy Alimoux.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Alimoux/Faringkha Alimoux.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Alimoux/Elvanté Alimoux.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Alimoux/Daila FarrowDream Alimoux.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Alimoux/Choux Alimoux.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Alimoux/Chroma Alimoux.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Alimoux/Carmine Alimoux.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Alimoux/Avorendi Alimoux.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Alimoux/Aroe Alimoux.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Alimoux/Anjèl  Alimoux.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Alimoux/Ambergrei Alimoux.md"
+    ]
+  },
+  {
+    "tag": "condition/missing",
+    "tagCount": 8,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/UNKNOWN Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Viseul/Verochka Viseul.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Luekor/Kealou Luekor.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Luekor/Indikha Luekor.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Luekor/Ember Luekor.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Luekor/DISOWNED Luekor.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Gillespie/UNKNOWN_Sibling Gillespie.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Alimoux/Nephili Alimoux.md"
+    ]
+  },
+  {
+    "tag": "special/suoja-guardian",
+    "tagCount": 11,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Selvorie Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Elvorix Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Akantha Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/FarrowDream/Lytess FarrowDream.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Yolo/Yosiah Britalla.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Yolo/Mec.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Rockfolk/Raach Rockfolk.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Gillespie/Saraada Gillespie.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Farbrand/Altan Farbrand.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Automaton/Jewel.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Alimoux/Grandfather Ash.md"
+    ]
+  },
+  {
+    "tag": "location/observatory",
+    "tagCount": 2,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Renshe Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Ansel Zanad.md"
+    ]
+  },
+  {
+    "tag": "location/quantum-island",
+    "tagCount": 7,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Renshe Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Olyn Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Kelsean Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Evaluce Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Aradne Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Ansel Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Ark/Qatar Ark.md"
+    ]
+  },
+  {
+    "tag": "family-status/parent",
+    "tagCount": 65,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Renshe Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Levince Luekor Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Kuone Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Aradne Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/FarrowDream/Valoseiette FarrowDream.md",
+      "_notes/Idyllwild/Campaign Data/Characters/FarrowDream/Vantoya FarrowDream.md",
+      "_notes/Idyllwild/Campaign Data/Characters/FarrowDream/Tolze FarrowDream.md",
+      "_notes/Idyllwild/Campaign Data/Characters/FarrowDream/Sultanna FarrowDream.md",
+      "_notes/Idyllwild/Campaign Data/Characters/FarrowDream/Noelani FarrowDream.md",
+      "_notes/Idyllwild/Campaign Data/Characters/FarrowDream/Leto FarrowDream.md",
+      "_notes/Idyllwild/Campaign Data/Characters/FarrowDream/Fenris FarrowDream.md",
+      "_notes/Idyllwild/Campaign Data/Characters/FarrowDream/Elbekh Farbrand FarrowDream.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Yolo/Yosiah Britalla.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Yolo/Obadel Yolo.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Yolo/Rahir Yolo.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Yolo/Marriella Yolo.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Yolo/Bobo Yolo.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Yolo/Birstan The Curator of Charity.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Viseul/Ulyanna Viseul.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Viseul/Tvetlanka Viseul.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Viseul/Nikita Viseul.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Viseul/Dulsana Viseul.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Viseul/Aleksandr Viseul.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Rockfolk/Ashigol Rockfolk.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Rockfolk/Raach Rockfolk.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Luekor/Vishkanoya Luekor.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Luekor/Kealou Luekor.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Luekor/Izyankin Luekor.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Luekor/Eydelveiss Luekor.md",
+      "_notes/Idyllwild/Campaign Data/Characters/La/Sivash La.md",
+      "_notes/Idyllwild/Campaign Data/Characters/La/Thikari La.md",
+      "_notes/Idyllwild/Campaign Data/Characters/La/Roxelena La.md",
+      "_notes/Idyllwild/Campaign Data/Characters/La/Saacha Ark La.md",
+      "_notes/Idyllwild/Campaign Data/Characters/La/Kukkur La.md",
+      "_notes/Idyllwild/Campaign Data/Characters/La/Koretzi Viseul La.md",
+      "_notes/Idyllwild/Campaign Data/Characters/La/Fudezutsu La.md",
+      "_notes/Idyllwild/Campaign Data/Characters/La/Cinna Farbrand La.md",
+      "_notes/Idyllwild/Campaign Data/Characters/La/Ciba La.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Gillespie/Gil's Mother.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Gillespie/UNKNOWN_B Gillespie.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Gillespie/Khavar Farbrand Gillespie.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Gillespie/Chiri Gillespie.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Farbrand/Ruben Farbrand.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Farbrand/Malchinkuu Farbrand.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Farbrand/Erdenetsetseg Farbrand.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Farbrand/Enkh Farbrand.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Farbrand/Anekke Farbrand.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Farbrand/Altanchimeg Farbrand.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Farbrand/Ahulani Farbrand.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Alimoux/Toph Alimoux.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Alimoux/Nephili Alimoux.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Alimoux/Melva Alimoux.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Alimoux/Malahai Alimoux.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Alimoux/Judaia Alimoux.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Alimoux/Faringkha Alimoux.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Alimoux/Daila FarrowDream Alimoux.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Alimoux/Ambergrei Alimoux.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Ark/Vice Ark.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Ark/Rama Ark.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Ark/Nilofar Ark.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Ark/Mariangel Ark.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Ark/Levolyn and Qatar Ark.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Ark/Lautaro Ark.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Ark/Lai Ark.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Ark/Ciel Ark.md"
+    ]
+  },
+  {
+    "tag": "special/player-npc",
+    "tagCount": 11,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Raja Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Huntel Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Bhainne Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Yolo/Feli Yolo.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Rockfolk/Yahi Rockfolk.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Rockfolk/Guartz.md",
+      "_notes/Idyllwild/Campaign Data/Characters/La/Khannat La.md",
+      "_notes/Idyllwild/Campaign Data/Characters/La/Bennimo La.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Gillespie/Parlie Gillespie.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Automaton/Rune - The Overgrown.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Alimoux/Drya Alimoux.md"
+    ]
+  },
+  {
+    "tag": "player/gus",
+    "tagCount": 2,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Raja Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Automaton/Rune - The Overgrown.md"
+    ]
+  },
+  {
+    "tag": "traits/mental/ambitious",
+    "tagCount": 2,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Raja Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/mental/cautious",
+    "tagCount": 3,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Raja Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Everlasting/Cinnamon Puff.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/mental/complacent",
+    "tagCount": 2,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Raja Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/mental/cowardly",
+    "tagCount": 2,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Raja Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/mental/decisive",
+    "tagCount": 3,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Raja Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Everlasting/Cinnamon Puff.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/mental/superstitious",
+    "tagCount": 3,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Raja Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "faction/fallers",
+    "tagCount": 4,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Levince Luekor Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Luekor/Vishkanoya Luekor.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Luekor/Ahmnizaya Luekor.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Ark/Auzenn Ark.md"
+    ]
+  },
+  {
+    "tag": "special/town-elder",
+    "tagCount": 3,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Ocess Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Automaton/Primordium - The Elder.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Ark/Sannyoaino Ark.md"
+    ]
+  },
+  {
+    "tag": "age/elder",
+    "tagCount": 17,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Ocess Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Elvorix Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/FarrowDream/Tatiana FarrowDream.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Yolo/Enge Yolo.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Yolo/Arvinada La.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Viseul/Vadanya Viseul.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Luekor/Kodra Luekor.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Luekor/Caelid Luekor.md",
+      "_notes/Idyllwild/Campaign Data/Characters/La/Yohimbe La.md",
+      "_notes/Idyllwild/Campaign Data/Characters/La/Mahendra La.md",
+      "_notes/Idyllwild/Campaign Data/Characters/La/Khannat La.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Gillespie/Saraada Gillespie.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Farbrand/Altan Farbrand.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Alimoux/Mother Miranda.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Alimoux/Mother Cambria.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Ark/Soledad Ark.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Ark/Sannyoaino Ark.md"
+    ]
+  },
+  {
+    "tag": "player/lonely",
+    "tagCount": 2,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Huntel Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Rockfolk/Guartz.md"
+    ]
+  },
+  {
+    "tag": "outdoorsman",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Elvorix Zanad.md"
+    ]
+  },
+  {
+    "tag": "protector",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Elvorix Zanad.md"
+    ]
+  },
+  {
+    "tag": "warrior",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Elvorix Zanad.md"
+    ]
+  },
+  {
+    "tag": "age/teenager",
+    "tagCount": 25,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Chiala & Deka Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/FarrowDream/Pavati FarrowDream.md",
+      "_notes/Idyllwild/Campaign Data/Characters/FarrowDream/Deolahn FarrowDream.md",
+      "_notes/Idyllwild/Campaign Data/Characters/FarrowDream/Aonani FarrowDream.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Yolo/Feli Yolo.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Viseul/Natasa Viseul.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Luekor/Miakodi Luekor.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Luekor/Ember Luekor.md",
+      "_notes/Idyllwild/Campaign Data/Characters/La/Serapis La.md",
+      "_notes/Idyllwild/Campaign Data/Characters/La/Machiko La.md",
+      "_notes/Idyllwild/Campaign Data/Characters/La/Khorynn La.md",
+      "_notes/Idyllwild/Campaign Data/Characters/La/Izona La.md",
+      "_notes/Idyllwild/Campaign Data/Characters/La/Corrash La.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Gillespie/Eilefe Gillespie.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Farbrand/Pyrah Farbrand.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Farbrand/Nakoa Farbrand.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Farbrand/Monkhnaran Farbrand.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Farbrand/Cypra Farbrand.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Alimoux/Rhyle Alimoux.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Alimoux/Frenzy Alimoux.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Common Clan/Ravini.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Common Clan/Khaliun.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Ark/Ravinder Ark.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Ark/Paloma Ark.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Ark/Cristobal Ark.md"
+    ]
+  },
+  {
+    "tag": "location/abyss",
+    "tagCount": 3,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Bhainne Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Luekor/Vishkanoya Luekor.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Ark/Auzenn Ark.md"
+    ]
+  },
+  {
+    "tag": "player/sage",
+    "tagCount": 3,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Bhainne Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/La/Bennimo La.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Gillespie/Parlie Gillespie.md"
+    ]
+  },
+  {
+    "tag": "age/child",
+    "tagCount": 9,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Zanad/Ansel Zanad.md",
+      "_notes/Idyllwild/Campaign Data/Characters/FarrowDream/Lumi FarrowDream.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Yolo/Miano Yolo.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Viseul/Ema Viseul.md",
+      "_notes/Idyllwild/Campaign Data/Characters/La/Zazie La.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Farbrand/Narantuyaa Farbrand.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Farbrand/Ankhbayar Farbrand.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Alimoux/Omen Alimoux.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Alimoux/Hallow Alimoux.md"
+    ]
+  },
+  {
+    "tag": "location/forest",
+    "tagCount": 5,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/FarrowDream/Vantoya FarrowDream.md",
+      "_notes/Idyllwild/Campaign Data/Characters/FarrowDream/Sultanna FarrowDream.md",
+      "_notes/Idyllwild/Campaign Data/Characters/FarrowDream/Pavati FarrowDream.md",
+      "_notes/Idyllwild/Campaign Data/Characters/FarrowDream/Deolahn FarrowDream.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Ark/Ciel Ark.md"
+    ]
+  },
+  {
+    "tag": "condition/location_unknown",
+    "tagCount": 5,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Yolo/Yosiah Britalla.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Yolo/Birstan The Curator of Charity.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Gillespie/Gil's Mother.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Gillespie/UNKNOWN_B Gillespie.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Everlasting/Tama.md"
+    ]
+  },
+  {
+    "tag": "special/clone",
+    "tagCount": 2,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Yolo/Wynroc Luekor Yolo.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Alimoux/Elmirrai Luekor Alimoux.md"
+    ]
+  },
+  {
+    "tag": "rust-devils",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Yolo/Mec.md"
+    ]
+  },
+  {
+    "tag": "player/tira",
+    "tagCount": 2,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Yolo/Feli Yolo.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Rockfolk/Yahi Rockfolk.md"
+    ]
+  },
+  {
+    "tag": "special/resurrected",
+    "tagCount": 4,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Yolo/Enge Yolo.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Luekor/Wynfir Luekor.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Luekor/Ahmnizaya Luekor.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Alimoux/Malahai Alimoux.md"
+    ]
+  },
+  {
+    "tag": "special/pc",
+    "tagCount": 5,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Yolo/Cynah Yolo.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Rockfolk/Veyhar Rockfolk.md",
+      "_notes/Idyllwild/Campaign Data/Characters/La/Calyx La.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Gillespie/Paarl Gillespie.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Everlasting/Lady Suoja.md"
+    ]
+  },
+  {
+    "tag": "merge",
+    "tagCount": 4,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Viseul/Yaro Viseul.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Viseul/Chirasmi Viseul.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Farbrand/Sasha Farbrand.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Farbrand/Burcu Farbrand.md"
+    ]
+  },
+  {
+    "tag": "traits/appearance/pristine",
+    "tagCount": 2,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Luekor/Wynfir Luekor.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/appearance/unadorned",
+    "tagCount": 2,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Luekor/Wynfir Luekor.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/appearance/slender",
+    "tagCount": 2,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Luekor/Wynfir Luekor.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/social/dependable",
+    "tagCount": 2,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Luekor/Wynfir Luekor.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/social/generous",
+    "tagCount": 2,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Luekor/Wynfir Luekor.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/social/helpful",
+    "tagCount": 2,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Luekor/Wynfir Luekor.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/social/honest",
+    "tagCount": 2,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Luekor/Wynfir Luekor.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/social/loyal",
+    "tagCount": 2,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Luekor/Wynfir Luekor.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/social/selfless",
+    "tagCount": 2,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Luekor/Wynfir Luekor.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "player/ingrid",
+    "tagCount": 2,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/La/Khannat La.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Alimoux/Drya Alimoux.md"
+    ]
+  },
+  {
+    "tag": "condition/hacked",
+    "tagCount": 6,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Automaton/Plier - Nuclear Sabotage Droid.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Automaton/Trial and Error - The Voltaic Twins.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Automaton/Manna - The Culinarian.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Automaton/Dajjal - The Ice-Breaker.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Automaton/Egh - The Archivist.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Automaton/Curiosity - The Forgetful.md"
+    ]
+  },
+  {
+    "tag": "generation/second",
+    "tagCount": 6,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Automaton/Plier - Nuclear Sabotage Droid.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Automaton/Trial and Error - The Voltaic Twins.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Automaton/Manna - The Culinarian.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Automaton/Dajjal - The Ice-Breaker.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Automaton/Egh - The Archivist.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Automaton/Curiosity - The Forgetful.md"
+    ]
+  },
+  {
+    "tag": "category/group__other",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Everlasting/Town Defense Automatons.md"
+    ]
+  },
+  {
+    "tag": "traits/mental/independent",
+    "tagCount": 2,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Everlasting/Cinnamon Puff.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/mental/skillful",
+    "tagCount": 2,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Everlasting/Cinnamon Puff.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/mental/tenacious",
+    "tagCount": 2,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Everlasting/Cinnamon Puff.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/mental/perceptive",
+    "tagCount": 2,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Everlasting/Cinnamon Puff.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "location/bathhouse",
+    "tagCount": 11,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Alimoux/Mother Miranda.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Alimoux/Mother Cambria.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Alimoux/Elmirrai Luekor Alimoux.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Alimoux/Elvanté Alimoux.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Alimoux/Chroma Alimoux.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Alimoux/Avorendi Alimoux.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Alimoux/Anjèl  Alimoux.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Alimoux/Andynia Alimoux.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Ark/Yasamin Ark.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Ark/Siavasha Ark.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Ark/Marisol Ark.md"
+    ]
+  },
+  {
+    "tag": "location/traveling",
+    "tagCount": 3,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Alimoux/Carmine Alimoux.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Common Clan/Narael.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Ark/Inasha Ark.md"
+    ]
+  },
+  {
+    "tag": "age/adult",
+    "tagCount": 2,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Alimoux/Aroe Alimoux.md",
+      "_notes/Idyllwild/Campaign Data/Characters/Alimoux/Andynia Alimoux.md"
+    ]
+  },
+  {
+    "tag": "traits",
+    "tagCount": 187,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/mental",
+    "tagCount": 41,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/mental/impatient",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/mental/intelligent",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/mental/religious",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/mental/stupid",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/mental/adaptive",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/mental/analytical",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/mental/creative",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/mental/patient",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/mental/conformist",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/mental/emotional",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/mental/inattentive",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/mental/incompetent",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/mental/indecisive",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/mental/reckless",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/mental/secular",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/mental/skeptical",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/mental/uninventive",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/appearance",
+    "tagCount": 20,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/appearance/stylish",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/appearance/ugly",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/appearance/beautiful",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/appearance/diminutive",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/appearance/disheveled",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/appearance/filthy",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/appearance/flabby",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/appearance/hulking",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/appearance/muscular",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/appearance/ornate",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/appearance/tasteless",
+    "tagCount": 2,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/appearance/towering",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/social",
+    "tagCount": 38,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/social/bossy",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/social/cruel",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/social/dishonest",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/social/friendly",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/social/impartial",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/social/peaceful",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/social/quiet",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/social/secretive",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/social/selfish",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/social/stingy",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/social/suspicious",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/social/talkative",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/social/tolerant",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/social/trusting",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/social/unfriendly",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/social/deferential",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/social/demanding",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/social/forthcoming",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/social/intolerant",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/social/lenient",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/social/uncooperative",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/social/unfair",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/social/unfaithful",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/social/unreliable",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/social/violent",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/role",
+    "tagCount": 20,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/role/administrative",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/role/artist",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/role/counselor",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/role/crafter",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/role/criminal",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/role/engineer",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/role/entertainer",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/role/healer",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/role/laborer",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/role/leader",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/role/merchant",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/role/other",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/role/outdoorsman",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/role/protector",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/role/researcher",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/role/scholar",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/role/services",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/role/transporter",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/role/warrior",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/personality",
+    "tagCount": 37,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/personality/anxious",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/personality/calm",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/personality/charming",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/personality/cheerful",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/personality/childish",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/personality/energetic",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/personality/enthusiastic",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/personality/funny",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/personality/gentle",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/personality/humble",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/personality/impolite",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/personality/mature",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/personality/optimistic",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/personality/pessimistic",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/personality/proud",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/personality/respectful",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/personality/sensitive",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/personality/eccentric",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/personality/smooth",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/personality/articulate",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/personality/subtle",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/personality/apathetic",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/personality/awkward",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/personality/caring",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/personality/depressed",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/personality/dull",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/personality/humorless",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/personality/incoherent",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/personality/listless",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/personality/overt",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/personality/repulsive",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/personality/savvy",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/personality/thick-skinned",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/personality/wrathful",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/personality/cold",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/personality/naïve",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/status",
+    "tagCount": 20,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/status/lucky",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/status/popular",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/status/influential",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/status/anonymous",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/status/disreputable",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/status/famous",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/status/helpless",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/status/irrelevant",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/status/isolated",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/status/lower-class",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/status/poor",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/status/powerful",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/status/reputable",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/status/uneducated",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/status/unpopular",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/status/upper-class",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/status/wealthy",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/status/well-connected",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/status/well-educated",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/physical/clumsy",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/physical/quick",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/physical/weak",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/physical/conspicuous",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/physical/fragile",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/physical/graceful",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/physical/ponderous",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/physical/stealthy",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/physical/strong",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "traits/physical/tough",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Character Traits.md"
+    ]
+  },
+  {
+    "tag": "role/blacksmith",
+    "tagCount": 1,
+    "relativePaths": [
+      "_notes/Idyllwild/Campaign Data/Characters/Ark/Inayo Ark.md"
+    ]
+  }
+]

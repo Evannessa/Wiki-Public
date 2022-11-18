@@ -1,0 +1,300 @@
+ {"areas":[{
+        "guid": "9a7dd7c0-eddb-4a73-8684-24512926c8dc",
+        "id": "0",
+        "name": "Cerulle",
+        "parent_region": "Mystral",
+        "area_type": [
+          "neighborhood"
+        ],
+        "tags": [
+          "tourist trap"
+        ]
+      },
+      {
+        "guid": "6c225421-df4a-4ec0-97d6-e04304515a17",
+        "id": "1",
+        "name": "Shanicoia",
+        "parent_region": "Mystral",
+        "area_type": [
+          "neighborhood"
+        ],
+        "tags": [
+          "tourist trap"
+        ]
+      },
+      {
+        "guid": "d0d62443-e5fb-4984-b8c7-05996102119d",
+        "id": "2",
+        "name": "Dheoset Marketplace",
+        "parent_region": "Mystral",
+        "area_type": [
+          "marketplace"
+        ],
+        "tags": [
+          "tourist trap"
+        ]
+      },
+      {
+        "guid": "731e6651-10c3-4e09-9882-00c7b6971c16",
+        "id": "3",
+        "name": "Savaval",
+        "parent_region": "Covetous",
+        "area_type": [
+          "neighborhood",
+          "red light district"
+        ],
+        "tags": [
+          "none"
+        ]
+      },
+      {
+        "guid": "282342a0-d81b-4ae5-a4e1-7ea69f2a165c",
+        "id": "4",
+        "name": "Cimmerian Market",
+        "parent_region": "Covetous",
+        "area_type": [
+          "marketplace",
+          "black market"
+        ],
+        "tags": [
+          "shady",
+          "dangerous"
+        ]
+      },
+      {
+        "guid": "f8a0935f-4a0f-4134-8971-9e06f27abed6",
+        "id": "5",
+        "name": "Carelmeis Fairground",
+        "parent_region": "Covetous",
+        "area_type": [
+          "neighborhood",
+          "fairground"
+        ],
+        "tags": [
+          "shady",
+          "tourist trap"
+        ]
+      },
+      {
+        "guid": "a50b059d-f924-476b-aa71-b7366609b9b6",
+        "id": "6",
+        "name": "The Onyx Village",
+        "parent_region": "Mystral",
+        "area_type": [
+          "village"
+        ],
+        "tags": [
+          "haunted"
+        ]
+      },
+      {
+        "guid": "b9b851f0-ba13-4e54-beaa-c7828f856fc3",
+        "id": "7",
+        "name": "Ciatrelenno",
+        "parent_region": "Valaatos",
+        "area_type": [
+          "neighborhood"
+        ],
+        "tags": [
+          "none"
+        ]
+      },
+      {
+        "guid": "87cfb04e-c89c-4019-861b-6fbcd67116aa",
+        "id": "8",
+        "name": "Tulrata Town",
+        "parent_region": "Valaatos",
+        "area_type": [
+          "neighborhood",
+          "ethnic enclave"
+        ],
+        "tags": [
+          "exclusive access "
+        ]
+      },
+      {
+        "guid": "d7b4b29b-27e9-4a10-8fa6-618b44d27f63",
+        "id": "9",
+        "name": "Luvenothes",
+        "parent_region": "Rein Dorei",
+        "area_type": [
+          "neighborhood"
+        ],
+        "tags": [
+          "wealthy",
+          "exclusive access "
+        ]
+      },
+      {
+        "guid": "7fb6f2fc-6b31-4c76-8f11-03e472544a35",
+        "id": "11",
+        "name": "Isoshari",
+        "parent_region": "Rein Dorei",
+        "area_type": [
+          "neighborhood"
+        ],
+        "tags": [
+          "wealthy"
+        ]
+      },
+      {
+            "guid": "07621a54-14a6-4daa-bc9b-6c9f66392108",
+            "id": "12",
+            "Name": "The Heaven Spires",
+            "Parent Region": "Kva Orthaeid",
+            "Area Type": [
+              "neighborhood"
+            ],
+            "tags": [
+              "sacred"
+            ]
+          },
+      {
+        "guid": "8a41fb10-f7ce-4c0f-a915-3aa3528a4ffc",
+        "id": "13",
+        "name": "Cerulle",
+        "parent_region": "Mystral",
+        "area_type": [
+          "neighborhood"
+        ],
+        "tags": [
+          "none"
+        ]
+      }
+    ],
+    "regions":[
+   {
+        "guid": "dce43ca3-0b88-4c7b-952d-7c6b5a541509",
+        "id": "0",
+        "name": "Mystral",
+        "type": "region"
+      },
+      {
+        "guid": "1f5d3e91-2320-4fa5-8c09-ec3a1c763a82",
+        "id": "1",
+        "name": "Kva Orthaeid",
+        "type": "region"
+      },
+      {
+        "guid": "ca9c214b-3867-4bef-901b-94d65ef61267",
+        "id": "2",
+        "name": "Rein Dorei",
+        "type": "region"
+      },
+      {
+        "guid": "125d851c-98ed-4a88-b026-f31fa76900e9",
+        "id": "3",
+        "name": "Valaatos",
+        "type": "region"
+      },
+      {
+        "guid": "cc597ca1-365b-438d-9a1c-eb235f2e9674",
+        "id": "4",
+        "name": "Covetous",
+        "type": "region"
+      },
+      {
+        "guid": "f032e5cb-33d7-4ad4-9cbd-7ce74c16582d",
+        "id": "5",
+        "name": "Volar",
+        "type": "region"
+      },
+      {
+        "guid": "d074cf05-5e2f-4fd4-a3ca-3d33faf17b47",
+        "id": "6",
+        "name": "Embral",
+        "type": "region"
+      }
+    ],
+    "passages":  [
+      {
+        "guid": "bead7263-2d2e-4da1-a9d0-2d5fb2411bce",
+        "id": "0",
+        "passage_type": [
+          "bridge"
+        ],
+        "name": "The Broken Bridge",
+        "tags": [
+          "impassible",
+          "heavily guarded"
+        ],
+        "connections": [
+          {
+            "guid": "3130b18c-e88b-4099-859f-41a66fb4188a",
+            "place_name": "Shanicoia",
+            "id": "0"
+          },
+          {
+            "guid": "29041807-ea30-42ab-bca0-6bd6da39aeab",
+            "place_name": "Volar",
+            "id": "1"
+          }
+        ]
+      },
+      {
+        "guid": "a63ce2de-d3ba-4751-8a6a-3041cd85b864",
+        "id": "1",
+        "passage_type": [
+          "tunnel",
+          "catacombs"
+        ],
+        "name": "The Guilded Tunnels",
+        "tags": [
+          "hidden"
+        ],
+        "connections": []
+      },
+      {
+        "guid": "0a0c34ba-644f-4936-9241-c60032277565",
+        "id": "2",
+        "passage_type": [
+          "sky passage",
+          "teleporter"
+        ],
+        "name": "The Ancestral Way",
+        "tags": [
+          "impassible",
+          "heavily guarded"
+        ],
+        "connections": []
+      },
+      {
+        "guid": "046d87f1-3f04-45eb-af26-ceffae221248",
+        "id": "3",
+        "passage_type": [
+          "sky passage",
+          "teleporter"
+        ],
+        "name": "Thyrranserine Skyway",
+        "tags": [
+          "heavily guarded",
+          "requires toll"
+        ],
+        "connections": []
+      },
+      {
+        "guid": "b03e7522-03fa-4b90-93fb-2cdb0a95aea7",
+        "id": "4",
+        "passage_type": [
+          "ferry"
+        ],
+        "name": "Stygian Ferry ",
+        "tags": [
+          "none"
+        ],
+        "connections": []
+      },
+      {
+        "guid": "6372208d-d08c-4d5e-9656-0764361bea3a",
+        "id": "5",
+        "passage_type": [
+          "ferry"
+        ],
+        "name": "The Remnant Walk",
+        "tags": [
+          "requires toll"
+        ],
+        "connections": []
+      }
+    ]
+}

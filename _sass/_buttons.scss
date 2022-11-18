@@ -1,0 +1,46 @@
+button,
+.btn {
+    backdrop-filter: blur(2px);
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    color: white;
+    box-shadow: 0px 2px 8px rgba(39, 33, 70, 0.45);
+    border: 1px solid rgba(156, 131, 200, 0.13);
+    background-color: rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transform: scale(1);
+    transition: transform 150ms ease-in;
+    position: relative;
+    &[data-click-action="navigate"] {
+        padding: unset;
+        border-radius: 15px;
+        max-height: 70px;
+    }
+    &:hover,
+    &:focus,
+    &:focus-within {
+        transform: scale(1.15);
+    }
+    &[data-variant="color-hover"] {
+        &:hover,
+        &:focus,
+        &:focus-within {
+            transform: scale(1.15);
+        }
+    }
+    .btn-img {
+        min-width: unset;
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: cover;
+        width: 100%;
+        border-radius: 15px;
+        pointer-events: none;
+    }
+    .btn-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}

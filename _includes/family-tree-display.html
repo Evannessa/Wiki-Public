@@ -1,0 +1,28 @@
+<svg class="family-tree" data-family="{{include.familyName}}" viewbox="0 0 100 100">
+    {% assign people = include.people %}
+    {% for person in people %}
+        {%assign clan = person.Clan %}
+        {% assign parents = person.parents | jsonify  %}
+        {% assign partners = person.partners | jsonify %}
+        {% assign title = person.title %}
+        {% assign linkPath = person.url %}
+        {% assign firstGen = false %}
+        {% if person.tags contains "Generation/First" %}
+            {% assign firstGen = true %}
+        {% endif %}
+
+        {% if person.firstName %}
+            {% assign firstName = person.firstName %}
+        {% else %}
+            {% assign nameSegments = person.title | split: " " %}
+            {% assign firstName = nameSegments[0] %}
+        {% endif %}
+        {% capture namePath %}
+            /assets/clans/{{clan | capitalize}}/{{firstName}}.webp
+        {% endcapture %}
+        {% assign imagePosition = person.imagePosition %}
+
+        {% include family-tree-card.html person=person source=namePath parents=parents partners=partners ourTitle=title firstGen=firstGen linkPath=linkPath imagePosition=imagePosition %}
+
+    {% endfor %}
+</svg>

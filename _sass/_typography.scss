@@ -1,0 +1,125 @@
+@import "../_sass/colors";
+@import "../_sass/variables";
+@font-face {
+    font-family: "Aquawax";
+    src: url("/assets/fonts/Aquawax Black Trial.ttf");
+    // src: url("/assets/fonts/LEMONMILK-Bold.otf");
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    line-height: 1.3;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    &::before {
+        display: block;
+        content: " ";
+        margin-top: -5rem;
+        height: 5rem;
+        visibility: hidden;
+        pointer-events: none;
+    }
+}
+
+h1,
+h2,
+h3 {
+    font-family: "Aquawax", cursive;
+    text-transform: uppercase;
+    @media (min-width: 992px) {
+        margin-bottom: 3rem;
+    }
+}
+h1,
+h2 {
+    > a {
+        text-transform: uppercase;
+    }
+}
+h1 {
+    font-size: calc(clamp(1.25rem, calc(2rem - 3vw), 6vw));
+    width: fit-content;
+    color: var(--color-secondary-base);
+    text-shadow: #ff05658a 0px 0px 3px, #ff0565a3 0px 0px 5px;
+    @media (min-width: 992px) {
+        margin-top: 4rem;
+    }
+
+    > a {
+        color: var(--color-secondary-base) !important;
+
+        &:hover {
+            color: white !important;
+        }
+    }
+}
+
+h2 {
+    color: var(--color-accent-base);
+    @media (min-width: 992px) {
+        margin-top: 4rem;
+    }
+    text-shadow: hsla(234, 56%, 58%, 0.647) 0px 0px 3px,
+        hsla(234, 56%, 58%, 0.569) 0px 0px 5px;
+}
+
+h3 {
+    --color-h3: hsl(234, 56%, 58%);
+    margin-bottom: 1rem;
+    font-weight: 400;
+    color: var(--color-h3);
+    text-shadow: hsla(234, 56%, 58%, 0.647) 0px 0px 3px,
+        hsla(234, 56%, 58%, 0.569) 0px 0px 5px;
+    // text-shadow: 0px 0px 5px var(--color-h3);
+}
+
+button {
+    border-top-color: none;
+    border-bottom-color: none;
+    border-left-color: none;
+    border-right-color: none;
+}
+
+.primary-to-secondary {
+    color: var(--color-secondary-base);
+    text-shadow: #ff05658a 0px 0px 3px, #ff0565a3 0px 0px 5px;
+    &:hover {
+        color: var(--color-accent-base);
+        text-shadow: #5864d0a5 0px 0px 3px, #5864d091 0px 0px 5px;
+    }
+}
+
+.primary-text {
+    color: var(--color-secondary-base);
+}
+
+.primary-text-shadow {
+    text-shadow: #ff05658a 0px 0px 3px, #ff0565a3 0px 0px 5px;
+    // text-shadow: var(--color-secondary-base) 0px 0px 3px, var(--color-secondary-base) 0px 0px 5px;
+}
+
+.secondary-text {
+    color: var(--color-accent-base);
+}
+
+.secondary-text-shadow {
+    text-shadow: #5864d0a5 0px 0px 3px, #5864d091 0px 0px 5px;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    scrollbar-width: thin !important;
+}
+nav,
+main {
+    &,
+    & * {
+        scrollbar-width: thin !important;
+    }
+}

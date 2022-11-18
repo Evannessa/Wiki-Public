@@ -1,0 +1,72 @@
+---
+layout: article-base
+galleryType: side
+includeSearch: false
+---
+{% include modal.html %}
+
+<article>
+    <div id="notes-entry-container">
+        <content>
+            {{ content }}
+        </content>
+        <aside class="primary">
+            <section class="featured-image">
+                {%assign clan = page.Clan %}
+                {% if page.firstName %}
+                    {%assign firstName = page.firstName %}
+                {% else %}
+                    {% assign nameSegments = page.title | split: " " %}
+                    {% assign firstName = nameSegments[0] %}
+                {% endif %}
+                {% capture namePath %}
+                    /assets/clans/{{clan|
+					capitalize}}/{{firstName}}.webp
+                {% endcapture %}
+                <img src="{{namePath}}" alt="{{namePath}}" />
+                <h2 class="floating-title ">{{page.title}}</h2>
+            </section>
+
+            {%- comment -%}
+            {% if page.tags.size > 0 %}
+                <section class="tag-section">
+                    <h2>Tags</h2>
+                    <ul class="tag-list">
+                        {% for tag in page.tags %}
+                            <li class="tag">
+                                #{{ tag }}
+                                <div class="shared-tag-preview-list">
+                                    <h3>Other notes tagged
+                                        <em>#{{tag}}</em>
+                                    </h3>
+                                    <div class="wrapper">
+                                        {% for note in site.notes %}
+                                            {% if note.tags
+									contains tag %}
+                                                <div class="shared-tag-preview">
+                                                    <a href="{{note.url}}">{{note.title}}</a>
+                                                </div>
+                                            {% endif %}
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </section>
+            {% endif %}
+{%- endcomment -%}
+        </aside>
+
+        <aside class="secondary" style="font-size: 0.9em">
+            <section class="links-section">
+                <h3 style="margin-bottom: 1em">
+                    Related
+                </h3>
+                {% include gallery-list.html galleryType="side" includeSearch="false" includeRelationships="true" %}
+
+            </section>
+        </aside>
+
+    </div>
+</article>

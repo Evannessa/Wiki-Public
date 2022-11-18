@@ -1,0 +1,14 @@
+---
+layout: default
+---
+
+<article class="list" data-layout="{{page.layout}}">
+
+    <!-- {% include page-nav.html headingLevel=3 %} -->
+    <content>
+        {{content}} <!-- {% include anchor_headings.html html=content generateId=true %} {{content}} -->
+    </content>
+    {% include side-view.html %}
+</article>
+
+<!-- <script src="/assets/scripts/create-gallery.js"></script> -->

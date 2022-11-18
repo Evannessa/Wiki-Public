@@ -1,0 +1,7 @@
+[build]
+  command = "jekyll build --trace"
+  publish = "_site"
+[[headers]]
+	for = "/*"
+		[headers.values]
+		Access-Control-Allow-Origin = "*"

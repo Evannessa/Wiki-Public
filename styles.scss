@@ -1,0 +1,21 @@
+---
+---
+
+$padding: (
+    small: 2rem,
+    medium: 4rem,
+    large: 6rem,
+);
+@each $size, $value in padding {
+    .padding-#{size} {
+        padding: $value;
+    }
+}
+@import "../_sass/variables";
+@import "../_sass/normalize";
+@import "../_sass/code";
+@import "../_sass/style";
+@import "../_sass/nav";
+@import "../_sass/canvas";
+@import "../_sass/timeline";
+@import "../_sass/gallery";

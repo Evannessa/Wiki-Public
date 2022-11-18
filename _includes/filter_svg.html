@@ -1,0 +1,63 @@
+
+<defs>
+<filter id="overlay" x="-20%" y="-20%" width="140%" height="140%" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" color-interpolation-filters="linearRGB">
+	<feFlood flood-color="#FFCC99" flood-opacity="0.4" x="0%" y="0%" width="100%" height="100%" result="flood1"/>
+	<feComposite in="flood1" in2="SourceAlpha" operator="in" x="0%" y="0%" width="100%" height="100%" result="composite"/>
+	<feBlend mode="overlay" x="0%" y="0%" width="100%" height="100%" in="SourceGraphic" in2="composite" result="blend2"/>
+</filter>
+<filter id="outline" x="-20%" y="-20%" width="140%" height="140%" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" color-interpolation-filters="linearRGB">
+	<feMorphology operator="dilate" radius="1 1" in="SourceAlpha" result="morphology"/>
+	<feFlood flood-color="#a3c0dc" flood-opacity="1" result="flood"/>
+	<feComposite in="flood" in2="morphology" operator="in" result="composite"/>
+	<feMerge result="merge">
+    		<feMergeNode in="composite" result="mergeNode"/>
+		<feMergeNode in="SourceGraphic" result="mergeNode1"/>
+  	</feMerge>
+</filter>
+<filter id="inner-shadow" x="-20%" y="-20%" width="140%" height="140%" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" color-interpolation-filters="linearRGB">
+	<feFlood flood-color="#000000" flood-opacity="1" result="flood"/>
+	<feComposite in="flood" in2="SourceAlpha" operator="out" result="composite1"/>
+	<feOffset dx="4" dy="4" in="composite1" result="offset"/>
+	<feGaussianBlur stdDeviation="4 4" in="offset" edgeMode="none" result="blur"/>
+	<feComposite in="blur" in2="SourceAlpha" operator="in" result="composite2"/>
+	<feMerge result="merge">
+    		<feMergeNode in="SourceGraphic"/>
+		<feMergeNode in="composite2"/>
+  	</feMerge>
+</filter>
+  <defs>
+<pattern id="bg-fill" x="" y="" width="50%" height="50%"
+    patternUnits="">
+  <image href="/assets/patterns/alchemy.gif" x="0" y="0"
+                width="600" height="450" />
+</pattern>
+<pattern id="overlay-empty" x="0" y="0" width="1" height="1"
+    patternUnits="">
+   <image href="/assets/svg/overmind-icon.svg" x="0" y="0" height="100" width="100"/>
+</pattern>
+<pattern id="gradient-pattern" x="0" y="0" width="100%" height="100%"
+    patternUnits="userSpaceOnUse">
+    <rect x="0" y="0" width="200" height="200%" fill="gradient-3"/>
+</pattern>
+ <linearGradient id="gradient-3" x1="0.2" y1="0.1" x2="0.8" y2="0.9">
+      <stop offset="3%" stop-color="#5f2c82"/>
+      <stop offset="99%" stop-color="#49a09d"/>
+    </linearGradient>
+    <radialGradient id="gradient-0" gradientTransform="translate(-0.9 0) scale(2, 2)">
+      <stop offset="0%" stop-color="#fdd575"/>
+      <stop offset="14.29%" stop-color="#fcc06a"/>
+      <stop offset="28.57%" stop-color="#fbaa63"/>
+      <stop offset="42.86%" stop-color="#f99262"/>
+      <stop offset="57.14%" stop-color="#f77868"/>
+      <stop offset="71.43%" stop-color="#f55973"/>
+      <stop offset="100%" stop-color="#d22e8c"/>
+    </radialGradient>
+    <linearGradient id="gradient-1" x1="0.35" y1="0.02" x2="0.65" y2="0.98">
+      <stop offset="0%" stop-color="#4964da"/>
+      <stop offset="11.8%" stop-color="rgba(146, 73, 221, 0.8)"/>
+      <stop offset="23.6%" stop-color="rgba(176, 60, 196, 0.6)"/>
+      <stop offset="35.4%" stop-color="rgba(192, 55, 173, 0.4)"/>
+      <stop offset="59%" stop-color="rgba(217, 46, 116, 0)"/>
+    </linearGradient>
+  </defs>
+</defs>

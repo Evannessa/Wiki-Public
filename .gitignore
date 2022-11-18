@@ -1,0 +1,20 @@
+# Generated website directory
+_site/
+
+# Sass cache
+.sass-cache/
+
+# Jekyll cache & metadata
+.jekyll-cache/
+.jekyll-metadata
+
+# Notes graph metadata
+_includes/notes_graph.json
+
+
+#pdfs
+
+*.pdf
+
+#private files
+

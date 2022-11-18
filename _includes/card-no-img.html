@@ -1,0 +1,10 @@
+<div class="card">
+    <div class="card__content">
+        <a
+            class="internal-link"
+            href="{{site.baseurl}}{{card.url}}{%- if site.use_html_extension -%}.html{%- endif -%}"
+            >{{ card.title }}</a
+        >
+        <p class="is-hidden">{{card.tags}}</p>
+    </div>
+</div>

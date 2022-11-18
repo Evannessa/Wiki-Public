@@ -1,0 +1,55 @@
+<section class="menu-item">
+    <a href="{{site.baseUrl}}/{{include.path}}" class="internal-link">
+        {% if include.icon %}
+            <span class="material-symbols-outlined">
+                {{include.icon}}
+            </span>
+        {% endif %}
+        {{include.text}}
+    </a>
+    {% if include.hasDropdown %}
+        {% assign source = site.notes %}
+        {% assign
+    customClassList = "dropdown" %}
+        {% if include.dropdownGrid %}
+            {% assign
+    customClassList = "dropdown grid" %}
+        {% endif %}
+        {% if include.isPages %}
+            {% assign
+    source = site.pages %}
+        {% endif %}
+
+        <ul class="{{customClassList}}">
+            {% for myPage in source %}
+                {% if include.tagName and myPage.tags contains
+        include.tagName %}
+                    {% assign title = myPage.title %}
+                    {% unless myPage.title %}
+                        {%
+        assign title = myPage.name | remove: ".html" | remove: "FamilyTree-" | append: "
+        Family Tree" %}
+                    {% endunless %}
+                    <li class="archive-group">
+                        <a href="{{myPage.url}}">
+                            {{title}}
+                        </a>
+                    </li>
+                {% endif %}
+                {% if include.category and myPage.category == include.category %}
+                    {%
+        assign title = myPage.title %}
+                    {% unless myPage.title %}
+                        {% assign title =
+        myPage.name | remove: ".html" | remove: "FamilyTree-" | append: " Family Tree" %}
+                    {% endunless %}
+                    <li class="archive-group">
+                        <a href="{{myPage.url}}">
+                            {{title}}
+                        </a>
+                    </li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+    {% endif %}
+</section>

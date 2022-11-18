@@ -1,0 +1,40 @@
+.img-gallery {
+    display: flex;
+    flex-direction: row;
+    max-width: 100%;
+    flex-wrap: wrap;
+    row-gap: 1rem;
+    img {
+        flex: 1 1 25%;
+        min-width: 0;
+        object-fit: cover;
+        transition: all 200ms ease-in;
+
+        &:hover {
+            filter: grayscale(100%);
+            filter: sepia(60%);
+            // filter: hue-rotate(45deg);
+            cursor: pointer;
+        }
+        // max-width: 4rem;
+    }
+}
+.side-view {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    height: 100%;
+    width: 20%;
+    img {
+        flex: 1 1 0;
+        min-width: 0;
+        max-width: 100%;
+        width: 100%;
+        object-fit: contain;
+    }
+    .caption {
+        width: 100%;
+        max-height: 1em;
+        padding: 1rem;
+    }
+}

@@ -1,0 +1,50 @@
+<!-- Get OUR first name (current page's)-->
+{% if page.firstName %}
+    {%assign ourFirstName = page.firstName %}
+{% else %}
+    {% assign ourNameSegments = page.title | split: " " %}
+    {% assign ourFirstName = ourNameSegments[0] %}
+{% endif %}
+<!--Subtitle and descriptor-->
+{% for parent in card.parents %}
+    <!-- If the current page shares  a parent with the other page --> {% assign theirParent = parent | downcase %}
+    {% assign ourTitle = page.title | downcase %}
+    {% if page.parents contains parent %}
+        <!-- They're siblings -->
+        <p class="accent">{{ourFirstName}}'s Sibling</p>
+        {% break %}
+    {% elsif ourTitle == theirParent %}
+        <!-- They're ourChild -->
+        <p class="accent">{{ourFirstName}}'s Child</p>
+    {% endif %}
+{% endfor %}
+<!--For all the parents on THIS page-->
+{% for parent in page.parents %}
+    <!-- If the title of the card matches one of OUR parents, they're our parent--> {% assign ourParent = parent | downcase %}
+    {% assign theirTitle = card.title | downcase %}
+    {% if ourParent == theirTitle %}
+        <p class="accent">{{ourFirstName}}'s
+												Parent</p>
+    {% endif %}
+
+{% endfor %}
+<!-- CLAN STUFF--> {% assign linkTitle = card.title | downcase %}
+{% assign ourTitle = page.title | downcase %}
+{% assign ourClan = page.Clan | downcase %}
+{% assign theirClan = card.Clan | downcase %}
+{% if ourClan == linkTitle %}
+    <p class="accent">{{ourFirstName}}'s Clan</p>
+{% elsif ourTitle == theirClan %}
+    <p class="accent">{{ourFirstName}} Clan Member</p>
+{% endif %}
+<!-- SPOUSE/PARTNER STUFF-->
+{% for partner in card.partners %}
+    {% assign ourTitle = page.title | downcase %}
+    {% assign theirPartner = partner | downcase %}
+    {% assign theirTitle = card.title | downcase %}
+    {% if theirPartner ==  ourTitle %}
+        <p class="accent">{{ourFirstName}}'s Partner or Spouse</p>
+    {% elsif page.partners contains theirTitle %}
+        <p class="accent">{{ourFirstName}}'s Partner or Spouse</p>
+    {% endif %}
+{% endfor %}

@@ -1,0 +1,14 @@
+---
+layout: default
+title: Characters
+id: characters
+permalink: /search-characters
+---
+
+<section class="gallery-section">
+    {% assign people = site.notes | "where_exp": "note", "note.tags contains
+    'Category/Individual'" %} {% include search.html %}
+    <div class="card-container card-container--gallery">
+        {% for card in people %} {% include card.html %} {% endfor %}
+    </div>
+</section>

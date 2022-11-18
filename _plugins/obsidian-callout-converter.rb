@@ -1,0 +1,18 @@
+# frozen_string_literal: true
+# require 'nokogiri'
+# Turns ==something== in Markdown to <mark>something</mark> in output HTML
+
+Jekyll::Hooks.register [:notes], :post_convert do |doc|
+  replace(doc)
+end
+
+Jekyll::Hooks.register [:pages], :post_convert do |doc|
+  # jekyll considers anything at the root as a page,
+  # we only want to consider actual pages
+  next unless doc.path.start_with?('_pages/')
+  replace_callout(doc)
+end
+
+def replace_callout(doc)
+  doc.content.gsub!(/> \[!(\w+)\]\s+(.+)/, "<details><summary>\\1</summary>\2</details>")
+end

@@ -1,0 +1,17 @@
+<div class="badge" title="{{include.type}}">
+    {% assign imageSource = include.type %}
+    {% assign extension = include.ext %}
+    {% assign invert = include.invert %}
+    {% capture assetPath %}
+        /assets/symbols/{{imageSource}}.{{extension}}
+    {% endcapture %}
+    {% assign classlist = "badge__img" %}
+    {% if invert == "true" %}
+        {% assign classlist = "badge__img invert" %}
+    {% endif %}
+    {% if include.isSvg %}
+        <image class="{{classlist}}" href="{{assetPath | strip}}" alt="imageSource">
+    {% else %}
+        <img class="{{classlist}}" src="{{assetPath | strip}}" alt="imageSource">
+    {% endif %}
+</div>

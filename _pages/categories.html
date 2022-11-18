@@ -1,0 +1,32 @@
+---
+layout: page
+title: Categories
+permalink: /categories/
+---
+
+<div id="archives">
+    {% for myPage in site.notes %}
+        {% for category_name in myPage.categories %}
+            <div class="archive-group">
+                <!-- {% capture category_name %}{{ category | first }}{% endcapture %} -->
+        <!-- <div id="#{{ category_name | slugize }}"></div> -->
+        <!-- <p></p> -->
+                {% if category_name == "clans" %}
+                    <a href="{{myPage.url}}">
+                        {{myPage.title}}
+                    </a>
+                {% endif %}
+
+                <!-- <h3 class="category-head">{{ category_name }}</h3> -->
+        <!-- <a name="{{ category_name | slugify }}"></a> -->
+        <!-- {% for post in site.categories[category_name] %}
+        <article class="archive-item">
+            <h4>
+                <a href="{{ site.baseurl }}{{ post.url }}">{{post.title}}</a>
+            </h4>
+        </article>
+        {% endfor %} -->
+            </div>
+        {% endfor %}
+    {% endfor %}
+</div>

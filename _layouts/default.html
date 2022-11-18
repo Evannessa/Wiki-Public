@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	{% include head.html %}
+	<body>
+
+		<nav>
+			
+			{% include nav.html isTopNav=true navType="desktop" %}
+			{% include nav.html isTopNav=false navType="mobile" %}
+		</nav>
+{% include breadcrumbs.html %}
+		<div class="wrapper">
+			<main data-layout="{{page.layout}}">{{ content }}</main>
+		</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="/assets/scripts/toggle-ui.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% include lazyload.html %}
+	</body>
+
+</html>

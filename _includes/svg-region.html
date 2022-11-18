@@ -1,0 +1,49 @@
+{%- assign shape = "circle" -%}
+{%- if include.type == "region" -%}
+    {% assign width = "30%" %}
+    {% assign height = "30%" %}
+    {% assign className = "region" %}
+    {%- assign shape = "hex" -%}
+{%- elsif include.type == "area" -%}
+    {% assign width = "10%" %}
+    {% assign height = "10%" %}
+    {% assign className = "area" %}
+{% elsif include.type == "site" %}
+    {% assign width = "3%" %}
+    {% assign height = "3%" %}
+    {% assign className = "site" %}
+{%- endif -%}
+
+<svg width="{{width}}"
+    height="{{height}}"
+    id="{{include.name}}"
+    viewbox="0 0 100 100"
+    class="{{className}}"
+    x="{{include.x}}"
+    y="{{include.y}}"
+    preserveAspectRatio="xMinYMin meet"
+    data-name="{{include.name}}"
+    data-img="{{include.img}}"
+    data-type="{{include.type}}"
+    data-description="{{include.description}}"
+    data-tags="{{include.tags}}"
+    data-connections="{{include.connections}}"
+    data-parent="{{include.parent}}"
+    style="{{include.propertyStyle}}"
+>
+    {%- include background_svg.html shape=shape -%}
+    {%- include filter_svg.html -%}
+    <image
+        class="hover-image"
+        href="{{include.img}}"
+        width="100%"
+        height="100%"
+        x="0" y="0"
+        loading="lazy"
+        preserveAspectRatio="{{include.preserveAspectRatio | xMinYMin meet}}"/>
+
+    <rect class="color-overlay" fill="url(#gradient-3)" width="100%" height="100%" x="0" y="0"/>
+    <text x="50" y="50">
+        {{include.name}}
+    </text>
+</svg>

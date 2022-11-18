@@ -1,0 +1,20 @@
+.popupWrapper {
+    position: relative;
+    .popover {
+        position: absolute;
+        top: 50%;
+        position: absolute;
+        bottom: 50%;
+        transform: translateY(50%);
+        background-color: var(--bg-color);
+        padding: 1em;
+        &[data-variant="left"] {
+            left: 100%;
+            transform: translateX(-50%) translateY(50%);
+        }
+        &[data-variant="right"] {
+            right: 100%;
+            transform: translateX(50%) translateY(50%);
+        }
+    }
+}

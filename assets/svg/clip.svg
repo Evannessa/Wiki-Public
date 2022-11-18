@@ -1,0 +1,22 @@
+  <svg xmlns="http://www.w3.org/2000/svg">
+<defs>
+
+    <clipPath id="hexClip">
+            <path
+            d="M25,10
+            L25,10
+            L75,10.0
+            L95,50
+            L75,90
+            L25, 90
+            L5,50
+            L25, 10
+            ">
+            </path>
+    </clipPath>
+    <clipPath id="ellipseClip">
+
+    </clipPath>
+
+</defs>
+</svg>

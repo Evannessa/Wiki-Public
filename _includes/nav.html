@@ -1,0 +1,31 @@
+<ul class="nav-section {{ include.navType }}">
+    {% if include.navType == "mobile" %}
+        <button class="main-nav-toggle inner">
+            <span class="material-symbols-outlined">
+                close
+            </span>
+        </button>
+    {% else %}
+        <button class="main-nav-toggle outer padding-small">
+            <span class="material-symbols-outlined">
+                menu
+            </span>
+        </button>
+    {% endif %}
+    {% include menu-item.html path="" icon="home" %}
+
+    {% include menu-item.html
+    hasDropdown=false text="Characters" hasDropdown=true tagName="Special/PC"
+    path="search-characters" %}
+
+    {% include menu-item.html hasDropdown=true
+    dropdownGrid=true text="Family Trees" path="trees-ruto" tagName="Category/Family-Tree" isPages=true %}
+
+    {% include menu-item.html path="locations-list" hasDropdown=true text="Locations"
+    category="search-locations" %}
+
+    {% include menu-item.html
+    path="lore-map-of-content" hasDropdown=true text="Lore"
+    tagName="info/lore" %}
+
+</ul>

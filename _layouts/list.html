@@ -1,0 +1,21 @@
+---
+layout: article-base
+galleryType: full
+includeSearch: true
+---
+<dialog>
+    <section class="modal-image">
+        <button class="close-modal" onclick="hideModal()">&#66338;</button>
+        <img alt="modal-img" class="show" id="modal-img" src="" />
+    </section>
+</dialog>
+<article class="list">
+    {% include page-nav.html headingLevel=2 %}
+    <content>{{content}}</content>
+    <section class="container">
+        <h2 id="clan-gallery">Clan Members Gallery</h2>
+        {% include gallery-list.html galleryType="full" includeSearch="true" clanMembersOnly=true %}
+    </section>
+
+</article>
+<script></script>

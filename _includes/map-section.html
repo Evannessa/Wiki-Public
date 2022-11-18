@@ -1,0 +1,79 @@
+<section class="parent-section">
+    <svg class="parent-list" viewbox="0 0 100 100">
+        {%- include pattern_svg.html type="svg" path="/assets/svg/overmind-icon.svg" -%}
+        <image class="featured-image" href="{{include.featuredImage}}" x="-50%" height="100%" preserveAspectRatio="xMidYMid slice"/>
+        {% assign parents = include.parents.lines %}
+        {% assign children = include.children.lines %}
+        {% assign grandchildren = include.grandchildren.lines %}
+
+        {% for parent in parents %}
+            {% assign xPosition = parent.x %}
+            {% assign yPosition = parent.y %}
+            {% assign tags = parent.tags | join: ", " %}
+            {% capture propertyStyleParent %}
+                --transform-props: scale(3) translate(-{{xPosition}}%, -{{yPosition}}%)
+            {% endcapture %}
+            {%- include svg-region.html
+                type="region"
+                name=parent.name
+                img=parent.img
+                description=parent.description
+                tags=tags
+                x=parent.x
+                y=parent.y
+                propertyStyle=propertyStyleParent
+                preserveAspectRatio=parent.preserveAspectRatio
+                -%}
+
+
+            {% assign ourChildren = children | where_exp: 'child', 'child.parent contains parent.name' %}
+            {% for child in ourChildren %}
+                {% assign xPosition = parent.x | plus: child.x_offset %}
+                {% assign yPosition = parent.y | plus: child.y_offset %}
+                {% capture propertyStyle %}
+                    --transform-props: scale(9) translate(-{{xPosition}}%, -{{yPosition}}%)
+                {% endcapture %}
+                {% assign childConnections = child.connections | map: "connectedTo" | join: ", " %}
+                {% assign tags = child.tags | join: ", " %}
+                {%- include svg-region.html
+                    type="area"
+                    name=child.name
+                    img=child.img
+                    description=child.description
+                    parent=parent.name
+                    tags=tags
+                    x=xPosition
+                    y=yPosition
+                    propertyStyle=propertyStyle
+                    preserveAspectRatio=parent.preserveAspectRatio
+                    connections=childConnections
+                    -%}
+
+
+                {% assign ourGrandchildren = grandchildren | where_exp: 'grandchild', 'grandchild.parent contains child.name' %}
+                {% for grandchild in ourGrandchildren %}
+                    {% assign xPosition = parent.x | plus: child.x_offset %}
+                    {% assign yPosition = parent.y | plus: child.y_offset %}
+                    {% capture propertyStyleGrandchild %}
+                        --transform-props: scale(9) translate(-{{xPosition}}%, -{{yPosition}}%);
+                    {% endcapture %}
+                    {% assign gcConnections = grandchild.connections | map: "connectedTo" | join: ", " %}
+                    {% assign tags = grandchild.tags | join: ", " %}
+                    {%- include svg-region.html
+                        type="site"
+                        name=grandchild.name
+                        img=grandchild.img
+                        description=grandchild.description
+                        tags=tags
+                        parent=child.name
+                        x=xPosition
+                        y=yPosition
+                        propertyStyleParent=propertyStyleGrandchild
+                        connections=cgConnections
+                        propertyStyle=propertyStyleGrandchild
+                        -%}
+                {% endfor %}
+            {% endfor %}
+        {% endfor %}
+    </svg>
+</section>

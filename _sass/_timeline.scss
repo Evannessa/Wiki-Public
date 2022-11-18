@@ -1,0 +1,129 @@
+.timeline-section {
+    overflow: auto;
+    display: grid;
+    grid-template-columns: 45% 5% 45%;
+    gap: 1rem;
+    h2,
+    h3,
+    h4,
+    h5 {
+        &:before {
+            display: none;
+        }
+    }
+    &::after {
+        content: "";
+        position: absolute;
+        width: 6px;
+        background-color: white;
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        margin-left: -3px;
+    }
+
+    div.period {
+        background-color: #212121;
+        border-radius: 8px;
+        color: white;
+        padding: 1rem 1.25rem;
+        display: flex;
+        flex-direction: column;
+        &:nth-child(odd) {
+            grid-column: 1/2;
+            .timeline-item--tooltip {
+                left: 100%;
+                right: unset;
+            }
+            .timeline-item--heading {
+                &:after {
+                    left: 100%;
+                    right: unset;
+                }
+            }
+        }
+        &:nth-child(even) {
+            grid-column: 3/4;
+            .timeline-item--tooltip {
+                left: unset;
+                right: 100%;
+            }
+            .timeline-item--heading {
+                &:after {
+                    left: unset;
+                    right: 100%;
+                }
+            }
+        }
+        @for $i from 1 through 20 {
+            &:nth-child(#{$i}) {
+                grid-row: #{$i}/#{$i + 1};
+            }
+            &:nth-child(#{$i + 1}) {
+                grid-row: #{$i + 1}/#{$i + 2};
+            }
+        }
+        header {
+            h2 {
+                font-size: medium;
+            }
+        }
+        .timeline-item {
+            h2,
+            h3,
+            h4 {
+                font-size: small;
+            }
+            &--wrapper {
+                position: relative;
+            }
+            &--tooltip {
+                position: absolute;
+                top: 50%;
+                z-index: 200;
+                // left: 100%;
+                background-color: hsl(249, 23%, 22%);
+                min-width: 20ch;
+                width: 400px;
+                padding: 1rem;
+                opacity: 0;
+                transform: translateY(-50%);
+                border-radius: 8px;
+                pointer-events: none;
+                transition: opacity 150ms ease-in;
+                border: 0.25rem solid cyan;
+            }
+            &--heading {
+                width: fit-content;
+                position: relative;
+                cursor: pointer;
+                //the line leaning from the timeline to its tooltip
+                &:after {
+                    pointer-events: none;
+                    opacity: 0%;
+                    content: "";
+                    position: absolute;
+                    width: 10rem;
+                    background-color: cyan;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    height: 0.25rem;
+                    transition: opacity 150ms ease-in;
+                    margin-inline: 2rem;
+                }
+                &:hover {
+                    color: cyan;
+                    + .timeline-item--tooltip {
+                        opacity: 100%;
+                        transform: translateY(-50%);
+                        transition: opacity 150ms ease-in;
+                        pointer-events: auto;
+                    }
+                    &:after {
+                        opacity: 100%;
+                    }
+                }
+            }
+        }
+    }
+}

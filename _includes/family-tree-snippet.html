@@ -1,0 +1,39 @@
+{% assign allTags = site.notes | map: "tags" | uniq %}
+<fieldset class="tab-group">
+    {% include filter-set.html allTags=allTags filter="Clans/" groupId="clan" filterByString="Clan" %}
+</fieldset>
+<div class="svg-container">
+    <div class="button-wrapper single">
+
+        <button id="reset-button" title="reset">
+            <span class="material-symbols-outlined">
+                restart_alt
+            </span>
+        </button>
+
+        <p class="instructions">Use
+            <span>arrow</span>
+            keys or
+            <span>WASD</span>
+            to pan</p>
+        <p class="instructions">Use
+            <span>+</span>
+            or
+            <span>-</span>
+            to zoom</p>
+        <p class="instructions">Hover over portrait to highlight immediate family members.</p>
+        <span class="input-span toggle-button">
+            <input
+                checked
+                id="show-unions"
+                name="showUnions"
+                onchange="toggleInput(event)"
+                type="checkbox" />
+            <label for="show-unions">Show Unions</label>
+        </span>
+    </div>
+    {% assign Clans = site.notes | map: "Clan" | uniq | compact %}
+	{% include family-tree-display.html people=include.people familyName=include.familyName %}
+</div>
+
+<script src="/assets/scripts/family-tree.js"></script>

@@ -1,0 +1,84 @@
+<div class="card" data-clan="{{card.Clan}}" data-age="{{card.age}}">
+
+    {%assign clan = card.Clan %}
+    {% if card.firstName %}
+        {% assign firstName = card.firstName %}
+    {% else %}
+        {% assign nameSegments = card.title | split: " " %}
+        {% assign firstName = nameSegments[0] %}
+    {% endif %}
+    {% capture namePath %}
+        /assets/clans/{{clan|
+								capitalize}}/{{firstName}}.webp
+    {% endcapture %}
+
+    <div class="card-img__wrapper" data-name="{{firstName}}" style="--placeholder-url: url(https://source.boringavatars.com/marble/160/{{firstName}}?square)">
+        {% assign zoom = card.zoom %}
+        {% assign positionClass = card.imagePosition %}
+        {% case positionClass %}
+            {% when 'center' %}
+                {% assign className = 'image-center' %}
+            {% when 'right' %}
+                {% assign className = 'image-right' %}
+            {% when 'left' %}
+                {% assign className = 'image-left' %}
+            {% else %}
+                {% assign className = 'image-top' %}
+        {% endcase %}
+        {% if zoom and zoom == 'in' %}
+            {% assign zoomClass = 'zoom-in' %}
+        {% elsif zoom == 'out' %}
+            {% assign zoomClass = 'zoom-out' %}
+        {% else %}
+            {% assign zoomClass = 'zoom-none' %}
+        {% endif %}
+        {% capture customClassList %}
+            card-img {{className}}
+            {{zoomClass}}
+        {% endcapture %}
+        <img class="{{customClassList}}" src="{{namePath | strip}}" alt="{{namePath}}" data-name="{{firstName}}"/>
+        <div class="badge__holder">
+            {% if card.tags contains "Condition/Deceased" %}
+                {% include card-badge.html type="deceased" ext="svg" %}
+            {% endif %}
+            {% if card.tags contains "Location/Bathhouse" %}
+                {% include card-badge.html type="spa" ext="png" invert="true" %}
+            {% endif %}
+            {% if card.tags contains "Location/Traveling" %}
+                {% include card-badge.html type="out-of-town" ext="svg" %}
+            {% endif %}
+            {% if card.tags contains "Location/Forest" %}
+                {% include card-badge.html type="willow-tree" ext="svg" %}
+            {% endif %}
+            {% if card.tags contains "Location/Quantum-Island" %}
+                {% include card-badge.html type="quantum-island" ext="svg" %}
+            {% endif %}
+            {% if card.tags contains "Location/Observatory" %}
+                {% include card-badge.html type="quantum-island" ext="svg" %}
+                {% include card-badge.html type="observatory-3" ext="svg" %}
+            {% endif %}
+            {% if card.tags contains "Location/Abyss" %}
+                {% include card-badge.html type="falling-rocks" ext="svg" %}
+            {% endif %}
+            {% if card.tags contains "Condition/Missing" %}
+                {% include card-badge.html type="missing" ext="png" invert="true" %}
+            {% endif %}
+            {% if card.tags contains "Condition/Hacked" %}
+                {% include card-badge.html type="processor" ext="svg" %}
+            {% endif %}
+            {% if card.tags contains "Special/Resurrected" %}
+                {% include card-badge.html type="embrassed-energy" ext="svg" %}
+            {% endif %}
+        </div>
+    </div>
+
+    <!-- Link to other page-->
+    <div class="card__content">
+
+        <a class="internal-link" href="{{site.baseurl}}{{card.url}}{%- if site.use_html_extension -%}.html{%- endif -%}">{{ card.title }}</a>
+        <p class="is-hidden">{{card.tags}}</p>
+        {% if include.includeRelationships == "true" %}
+            {% include relationships.html %}
+        {% endif %}
+    </div>
+</div>

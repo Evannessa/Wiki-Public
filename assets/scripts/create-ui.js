@@ -1,0 +1,219 @@
+"use strict";
+import { LocationHelpers as LH } from "./location-functions.js"
+
+import Helpers from "./helpers.js"
+
+
+export const LocationUIFactory = function (prefix, defaultData, containerElement, allLocations, fullStringTitle = true) {
+    // let containerElement = containerElement;
+
+    function getContainer() {
+        return containerElement
+    }
+    const uiData = {
+        title: {
+            contentCallback: (locationData) => {
+                const { id: name, type } = locationData;
+                if (!fullStringTitle) {
+                    return name;
+                }
+
+                let grandparent = " "
+                if (type === "area" || type === "site") {
+                    grandparent = locationData.parentName
+                }
+                if (grandparent.trim())
+                    grandparent = "| " + grandparent
+                let value = `City of Myth ${grandparent} | ${name}`
+                return value
+            },
+            defaultValue: defaultData.id,
+            contentFormat: "text"
+        },
+        tags: {
+            contentCallback: (locationData) => {
+                return locationData.tags
+            },
+            defaultValue: "none",
+            contentFormat: "text"
+        },
+        description: {
+            contentCallback: (locationData) => {
+                return locationData.description;
+            },
+            defaultValue: defaultData.description,
+            contentFormat: "text"
+        },
+        "connections-title": {
+            contentCallback: (locationData) => {
+                const { id: name, type } = locationData;
+                return `${type}s connected to ${name}`
+            },
+            contentFormat: "text",
+            defaultValue: `Places connected to ${defaultData.id}`
+        },
+        connections: {
+            contentCallback: (locationData) => {
+                let connections = locationData.connections//LH.returnConnectedElements(locationData)
+                dataToButtons(connections)
+                return connections
+            },
+            contentFormat: "elementArray",
+            defaultValue: dataToButtons(defaultData.connections),
+            hideOnEmpty: ['connections-title']
+        },
+        "children-title": {
+            contentCallback: (locationData) => {
+                const { id: name, type } = locationData;
+                const childType = LH.getChildType(type)
+                return `${childType}s in ${name}`
+            },
+            contentFormat: "text",
+            defaultValue: `Regions within ${defaultData.name}`
+        },
+        children: {
+            contentCallback: (locationData) => {
+                let childLocations = locationData.children
+                if (childLocations.length > 0)
+                    childLocations = dataToButtons(childLocations)
+                return childLocations
+            },
+            hideOnEmpty: ['children-title'],
+            contentFormat: "elementArray",
+            defaultValue: dataToButtons(defaultData.children)
+        },
+        "cast-title": {
+            contentCallback: (locationData) => {
+                const propertyName = "People"
+                return generateTitle(propertyName, locationData)
+            },
+            contentFormat: "text",
+            defaultValue: `People in ${defaultData.name}`
+        },
+        "cast": {
+            contentCallback: (locationData) => {
+                return dataToLinks(locationData.encounterData.cast) || "none"
+            },
+            hideOnEmpty: ['cast-title'],
+            contentFormat: "elementArray",
+            defaultValue: dataToLinks(defaultData.cast)
+        },
+        "factions-title": {
+            contentCallback: (locationData) => {
+                const propertyName = "Factions"
+                return generateTitle(propertyName, locationData)
+            },
+            contentFormat: "text",
+            defaultValue: `Factions in ${defaultData.name}`
+        },
+        factions: {
+            contentCallback: (locationData) => {
+                return dataToLinks(locationData.encounterData.factions) || "none"
+            },
+            hideOnEmpty: ['factions-title'],
+            contentFormat: "elementArray",
+            defaultValue: dataToLinks(defaultData.factions)
+        }
+    }
+
+    function generateTitle(propertyName, locationData) {
+        if (!locationData) {
+            return "none"
+        }
+        const parentName = locationData.id
+        return `${propertyName} in ${parentName}`
+    }
+    const resetToDefault = () => {
+        updateUIData(defaultData, true)
+
+    }
+    function dataToLinks(dataArray = []) {
+
+        dataArray = dataArray.map((child) => {
+            if (child.hasPage) {
+                return `<a class="map-link" href='/${child.id}'>
+                            ${child.id}
+                        </a>`
+            } else {
+                return Helpers.createPopover(child.id, child.id, child.description, { classes: ["map-link"] })
+
+            }
+        }).map((child) => Helpers.htmlToElement(child))
+        return dataArray
+    }
+
+    function dataToButtons(dataArray = []) {
+        function returnImage(child) {
+            let string = child.imageData ? `<img class="btn-img"
+                            src="${child.imageData?.mainImage}"
+                            alt="${child.id}"/>` : ``;
+            return string
+        }
+        dataArray = dataArray.map((child) => {
+            return `
+                <button
+                    data-link='${child.id}'
+                    data-click-action="navigate"
+                    data-hover-action="highlightHex">
+                    ${returnImage(child)}
+                            <span class="btn-text">${child.id}</span>
+                </button>`
+        }).map((child) => Helpers.htmlToElement(child))
+        return dataArray;
+    }
+
+
+    const getUIData = (property) => {
+        return uiData[property]
+    }
+    const initializeUIData = () => {
+        const suffixes = Object.keys(uiData)
+        suffixes.forEach((suffix) => {
+            uiData[suffix].element = document.querySelector(`.${prefix}__${suffix}`)
+        })
+        resetToDefault()
+    }
+
+
+
+    const updateUIData = (locationData, reset = false) => {
+
+        const suffixes = Object.keys(uiData)
+        suffixes.forEach((suffix) => {
+            const uiElement = uiData[suffix].element
+            if (uiElement.classList.contains("removed"))
+                uiElement.classList.remove("removed")
+
+        })
+        suffixes.forEach((suffix) => {
+            const uiElement = uiData[suffix].element
+
+            const uiContentFormat = uiData[suffix].contentFormat
+            Helpers.removeChildren(uiElement)
+            const content = reset ? uiData[suffix].defaultValue : uiData[suffix].contentCallback(locationData)
+
+            if (content === "none" || content === "..." || !content || content.length === 0) {
+                const hideOnEmpty = uiData[suffix].hideOnEmpty
+                if (hideOnEmpty && hideOnEmpty.length > 0) {
+
+                    hideOnEmpty.forEach((objKey) => {
+                        let obj = uiData[objKey]
+                        obj.element.classList.add("removed")
+                        uiElement.classList.add("removed")
+                    })
+                }
+                return;
+            }
+            if (uiContentFormat === "text") {
+                uiElement.textContent = content
+            } else if (uiContentFormat === "elementArray") {
+                content.forEach((el) => {
+                    if (typeof el === "object")
+                        uiElement.appendChild(el)
+                })
+            }
+        })
+    }
+    return { updateUIData, initializeUIData, getUIData, resetToDefault, getContainer }
+}
+

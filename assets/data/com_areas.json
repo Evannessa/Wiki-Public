@@ -1,0 +1,1295 @@
+{
+    "sheets": [
+        {
+            "name": "Regions",
+            "description": "description of what the sheet is",
+            "displayColumn": "id",
+            "guid": "50a43902-0c71-4a21-bcea-f489dd614496",
+            "columns": [
+                {
+                    "typeStr": "text",
+                    "guid": "67018e72-1cea-4492-a041-8efab4aeaf5b",
+                    "name": "name",
+                    "description": "Region Name",
+                    "defaultValue": "Mystral",
+                    "iconName": "newText",
+                    "configurable": {
+                        "name": "text",
+                        "description": "text",
+                        "defaultValue": "text"
+                    }
+                },
+                {
+                    "typeStr": "enum",
+                    "guid": "ee604da7-4a4b-458d-b30c-240a78b20621",
+                    "name": "type",
+                    "description": "region, area, or site",
+                    "options": "region, area, site",
+                    "defaultValue": "area",
+                    "iconName": "newEnum",
+                    "configurable": {
+                        "name": "text",
+                        "description": "text",
+                        "defaultValue": "text",
+                        "options": "text"
+                    }
+                },
+                {
+                    "typeStr": "int",
+                    "guid": "153dfb68-883f-46f8-86f6-1b3b45caba2a",
+                    "description": "the hex column for this data",
+                    "name": "column",
+                    "min": -100,
+                    "max": 100,
+                    "defaultValue": 0,
+                    "iconName": "newInt",
+                    "configurable": {
+                        "name": "text",
+                        "description": "text",
+                        "min": "int",
+                        "max": "int",
+                        "defaultValue": "int"
+                    }
+                },
+                {
+                    "typeStr": "int",
+                    "guid": "3d90e2c4-4161-4be5-a177-98560606510d",
+                    "description": "the hex row for this data",
+                    "name": "row",
+                    "min": -100,
+                    "max": 100,
+                    "defaultValue": 0,
+                    "iconName": "newInt",
+                    "configurable": {
+                        "name": "text",
+                        "description": "text",
+                        "min": "int",
+                        "max": "int",
+                        "defaultValue": "int"
+                    }
+                },
+                {
+                    "typeStr": "image",
+                    "guid": "342af424-876a-4741-bfe5-2faf750a6b11",
+                    "name": "img",
+                    "description": "main image for region",
+                    "defaultValue": "",
+                    "iconName": "newImage",
+                    "configurable": {
+                        "name": "text",
+                        "description": "text",
+                        "defaultValue": "text"
+                    }
+                },
+                {
+                    "typeStr": "enum",
+                    "guid": "baebd100-f18d-4c9d-b588-12116b193788",
+                    "name": "preserveAspectRatio",
+                    "description": "for svg image positioning",
+                    "options": "xMinYMin slice, xMidYMin slice, xMidYMid slice",
+                    "defaultValue": "xMinYMin slice",
+                    "iconName": "newEnum",
+                    "configurable": {
+                        "name": "text",
+                        "description": "text",
+                        "defaultValue": "text",
+                        "options": "text"
+                    }
+                },
+                {
+                    "typeStr": "multiple",
+                    "guid": "6c839e0f-6542-4bc1-8da3-a23fdb2b2f48",
+                    "name": "tags",
+                    "description": "tags for this region",
+                    "options": "safe, sketchy, dangerous, protected, vulnerable, fortified, wealthy, poor, comfortable",
+                    "defaultValue": "",
+                    "iconName": "newMulti",
+                    "displayType": "vertical",
+                    "configurable": {
+                        "name": "text",
+                        "description": "text",
+                        "defaultValue": "text",
+                        "options": "text",
+                        "displayType": "enum",
+                        "enum@displayType": {
+                            "options": [
+                                "vertical",
+                                "horizontal"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "typeStr": "longtext",
+                    "guid": "38fc2faf-a8e4-4922-b175-81e58eefaf1d",
+                    "name": "description",
+                    "description": "description of the region",
+                    "defaultValue": "",
+                    "iconName": "newLongText",
+                    "configurable": {
+                        "name": "text",
+                        "description": "text",
+                        "defaultValue": "longtext"
+                    }
+                }
+            ],
+            "lines": [
+                {
+                    "guid": "dce43ca3-0b88-4c7b-952d-7c6b5a541509",
+                    "id": "0",
+                    "name": "Mystral",
+                    "type": "region",
+                    "img": "..\\assets\\locations\\CityOfMyth\\vck5ef8p08w91.webp",
+                    "preserveAspectRatio": "xMinYMin slice",
+                    "column": 3,
+                    "row": 4,
+                    "tags": [
+                        "safe",
+                        "comfortable"
+                    ],
+                    "description": ""
+                },
+                {
+                    "guid": "1f5d3e91-2320-4fa5-8c09-ec3a1c763a82",
+                    "id": "1",
+                    "name": "Kva Orthaeid",
+                    "type": "region",
+                    "img": "..\\assets\\locations\\CityOfMyth\\Island of Delos-3.webp",
+                    "preserveAspectRatio": "xMidYMid slice",
+                    "column": 3,
+                    "row": 2,
+                    "tags": [
+                        "protected",
+                        "fortified",
+                        "wealthy"
+                    ],
+                    "description": ""
+                },
+                {
+                    "guid": "ca9c214b-3867-4bef-901b-94d65ef61267",
+                    "id": "2",
+                    "name": "Rein Dorei",
+                    "type": "region",
+                    "img": "..\\assets\\locations\\CityOfMyth\\thomas-stoop-thomasstoop-windcity.webp",
+                    "preserveAspectRatio": "xMinYMin slice",
+                    "column": 2,
+                    "row": 2,
+                    "tags": [
+                        "protected",
+                        "fortified",
+                        "wealthy"
+                    ],
+                    "description": ""
+                },
+                {
+                    "guid": "125d851c-98ed-4a88-b026-f31fa76900e9",
+                    "id": "3",
+                    "name": "Valaatos",
+                    "type": "region",
+                    "img": "..\\assets\\locations\\CityOfMyth\\arcs of  M I R J A V E H.webp",
+                    "preserveAspectRatio": "xMinYMin slice",
+                    "column": 4,
+                    "row": 3,
+                    "tags": [
+                        "fortified",
+                        "comfortable"
+                    ],
+                    "description": ""
+                },
+                {
+                    "guid": "cc597ca1-365b-438d-9a1c-eb235f2e9674",
+                    "id": "4",
+                    "name": "Covetous",
+                    "type": "region",
+                    "img": "..\\assets\\locations\\CityOfMyth\\Spirited Away.webp",
+                    "preserveAspectRatio": "xMinYMin slice",
+                    "column": 2,
+                    "row": 4,
+                    "tags": [
+                        "sketchy",
+                        "dangerous"
+                    ],
+                    "description": ""
+                },
+                {
+                    "guid": "f032e5cb-33d7-4ad4-9cbd-7ce74c16582d",
+                    "id": "5",
+                    "name": "Volar",
+                    "type": "region",
+                    "img": "..\\assets\\locations\\CityOfMyth\\Slums.jpg",
+                    "preserveAspectRatio": "xMidYMin slice",
+                    "column": 3,
+                    "row": 5,
+                    "tags": [
+                        "sketchy",
+                        "dangerous",
+                        "poor"
+                    ],
+                    "description": ""
+                },
+                {
+                    "guid": "d074cf05-5e2f-4fd4-a3ca-3d33faf17b47",
+                    "id": "6",
+                    "name": "Embral",
+                    "type": "region",
+                    "img": "..\\assets\\locations\\CityOfMyth\\embral.webp",
+                    "preserveAspectRatio": "xMidYMin slice",
+                    "column": 3,
+                    "row": 1,
+                    "tags": [
+                        "safe",
+                        "protected",
+                        "fortified"
+                    ],
+                    "description": ""
+                }
+            ],
+            "hidden": false,
+            "isProps": false,
+            "configurable": {
+                "name": "text",
+                "description": "text",
+                "displayColumn": "columnSelect@name",
+                "columnSelect@name@displayColumn": {
+                    "allowedTypes": [
+                        "int",
+                        "float",
+                        "text",
+                        "longtext"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Connections",
+            "description": "props@50a43902-0c71-4a21-bcea-f489dd614496",
+            "displayColumn": "id",
+            "guid": "7188d843-3335-4ce0-b5dc-724078759fba",
+            "columns": [
+                {
+                    "typeStr": "lineReference",
+                    "guid": "88fc841f-5e9c-48fc-adf2-57686fb38136",
+                    "name": "Connection 1",
+                    "description": "new connection",
+                    "sheet": "50a43902-0c71-4a21-bcea-f489dd614496",
+                    "defaultValue": "cc597ca1-365b-438d-9a1c-eb235f2e9674",
+                    "iconName": "newLineLink",
+                    "configurable": {
+                        "name": "text",
+                        "description": "text",
+                        "sheet": "sheetSelect",
+                        "defaultValue": "lineSelect@sheet"
+                    }
+                }
+            ],
+            "lines": [],
+            "hidden": true,
+            "isProps": true,
+            "parentSheetGUID": "50a43902-0c71-4a21-bcea-f489dd614496",
+            "columnGUID": "f9c549a5-efbf-417a-bb65-6b037592e501"
+        },
+        {
+            "name": "test",
+            "description": "props@50a43902-0c71-4a21-bcea-f489dd614496",
+            "displayColumn": "id",
+            "guid": "306d1437-8b9a-407a-be2d-74fe8ce55626",
+            "columns": [],
+            "lines": [],
+            "hidden": true,
+            "isProps": true,
+            "parentSheetGUID": "50a43902-0c71-4a21-bcea-f489dd614496",
+            "columnGUID": "d889bca6-152e-4cb9-a7c8-a2faa5d4d991"
+        },
+        {
+            "name": "Areas",
+            "description": "Areas nested within Regions",
+            "displayColumn": "id",
+            "guid": "65955ce3-843b-4c2f-86c1-cf4c454630c3",
+            "columns": [
+                {
+                    "typeStr": "text",
+                    "guid": "36fd2fa5-bb72-4253-a8d9-b1834eda7d49",
+                    "name": "name",
+                    "description": "Area Name",
+                    "defaultValue": "Cerulle",
+                    "iconName": "newText",
+                    "configurable": {
+                        "name": "text",
+                        "description": "text",
+                        "defaultValue": "text"
+                    }
+                },
+                {
+                    "typeStr": "enum",
+                    "guid": "7f6a3ab3-1357-4358-bd22-97453c7fa2b5",
+                    "name": "parent",
+                    "description": "The parent reigon that this area is nested within",
+                    "options": "Mystral, Kva Orthaeid, Volar, Valaatos, Rein Dorei, Covetous, Embral",
+                    "defaultValue": "Mystral",
+                    "iconName": "newEnum",
+                    "configurable": {
+                        "name": "text",
+                        "description": "text",
+                        "defaultValue": "text",
+                        "options": "text"
+                    }
+                },
+                {
+                    "typeStr": "multiple",
+                    "guid": "d8072f3a-96e7-465d-94ca-b5a6a343609a",
+                    "name": "area_type",
+                    "description": "type of area",
+                    "options": "neighborhood, marketplace, village, fairground, red light district, black market, ethnic enclave, pleasure house, ruins, slum",
+                    "defaultValue": "neighborhood",
+                    "iconName": "newMulti",
+                    "displayType": "vertical",
+                    "configurable": {
+                        "name": "text",
+                        "description": "text",
+                        "defaultValue": "text",
+                        "options": "text",
+                        "displayType": "enum",
+                        "enum@displayType": {
+                            "options": [
+                                "vertical",
+                                "horizontal"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "typeStr": "multiple",
+                    "guid": "972fae0b-2997-4b6b-ac53-0c5300f00a27",
+                    "name": "tags",
+                    "description": "extra tag descriptors",
+                    "options": "none, wealthy, impoverished, shady, tourist trap, haunted, forbidden, toxic, dangerous, inacessible, sacred, exclusive access ",
+                    "defaultValue": "none",
+                    "iconName": "newMulti",
+                    "displayType": "horizontal",
+                    "configurable": {
+                        "name": "text",
+                        "description": "text",
+                        "defaultValue": "text",
+                        "options": "text",
+                        "displayType": "enum",
+                        "enum@displayType": {
+                            "options": [
+                                "vertical",
+                                "horizontal"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "typeStr": "int",
+                    "guid": "1ea1c2a9-5bfc-41cb-9caf-d80531f68021",
+                    "description": "the hex column for this area",
+                    "name": "column",
+                    "min": 5,
+                    "max": 15,
+                    "defaultValue": 10,
+                    "iconName": "newInt",
+                    "configurable": {
+                        "name": "text",
+                        "description": "text",
+                        "min": "int",
+                        "max": "int",
+                        "defaultValue": "int"
+                    }
+                },
+                {
+                    "typeStr": "int",
+                    "guid": "9595db7b-9aba-477c-bd49-cb80a5c07630",
+                    "description": "the hex row for this area",
+                    "name": "row",
+                    "min": 5,
+                    "max": 15,
+                    "defaultValue": 10,
+                    "iconName": "newInt",
+                    "configurable": {
+                        "name": "text",
+                        "description": "text",
+                        "min": "int",
+                        "max": "int",
+                        "defaultValue": "int"
+                    }
+                },
+                {
+                    "typeStr": "image",
+                    "guid": "9887f9f1-9432-4a56-8cfe-d57a9c9041d2",
+                    "name": "img",
+                    "description": "area featured images",
+                    "defaultValue": "",
+                    "iconName": "newImage",
+                    "configurable": {
+                        "name": "text",
+                        "description": "text",
+                        "defaultValue": "text"
+                    }
+                },
+                {
+                    "typeStr": "list",
+                    "guid": "b41173af-36fb-4590-ac3d-3c350fb3b83b",
+                    "name": "connections",
+                    "description": "connections between these areas",
+                    "sheet": "15458f51-d9c4-4dc5-84b2-754cfd6c7e8a",
+                    "defaultValue": [],
+                    "iconName": "newList",
+                    "configurable": {
+                        "name": "text",
+                        "description": "text"
+                    }
+                },
+                {
+                    "typeStr": "longtext",
+                    "guid": "6f5088ce-05e3-4cdb-8450-0a9219c26c76",
+                    "name": "description",
+                    "description": "description of the area",
+                    "defaultValue": "",
+                    "iconName": "newLongText",
+                    "configurable": {
+                        "name": "text",
+                        "description": "text",
+                        "defaultValue": "longtext"
+                    }
+                },
+                {
+                    "typeStr": "longtext",
+                    "guid": "69fd6e77-4581-4d90-8f5c-cc68d9eab3b6",
+                    "name": "extraImages",
+                    "description": "string array of extra images for this area",
+                    "defaultValue": "",
+                    "iconName": "newLongText",
+                    "configurable": {
+                        "name": "text",
+                        "description": "text",
+                        "defaultValue": "longtext"
+                    }
+                }
+            ],
+            "lines": [
+                {
+                    "guid": "9a7dd7c0-eddb-4a73-8684-24512926c8dc",
+                    "id": "0",
+                    "tags": [
+                        "tourist trap"
+                    ],
+                    "area_type": [
+                        "neighborhood"
+                    ],
+                    "name": "Cerulle",
+                    "img": "..\\assets\\locations\\CityOfMyth\\tu-chuanhao-1-1.webp",
+                    "parent": "Mystral",
+                    "connections": [
+                        {
+                            "guid": "5729fdcf-e770-430a-bd56-cf196916f322",
+                            "connectedTo": "Shanicola",
+                            "id": "0"
+                        }
+                    ],
+                    "column": 2,
+                    "row": 1,
+                    "description": "",
+                    "extraImages": ""
+                },
+                {
+                    "guid": "6c225421-df4a-4ec0-97d6-e04304515a17",
+                    "id": "1",
+                    "tags": [
+                        "tourist trap"
+                    ],
+                    "area_type": [
+                        "neighborhood"
+                    ],
+                    "name": "Shanicoia",
+                    "img": "",
+                    "parent": "Mystral",
+                    "connections": [],
+                    "column": 3,
+                    "row": 3,
+                    "description": "",
+                    "extraImages": ""
+                },
+                {
+                    "guid": "d0d62443-e5fb-4984-b8c7-05996102119d",
+                    "id": "2",
+                    "tags": [
+                        "tourist trap"
+                    ],
+                    "area_type": [
+                        "marketplace"
+                    ],
+                    "name": "Dheoset Marketplace",
+                    "img": "..\\assets\\locations\\CityOfMyth\\Market.webp",
+                    "parent": "Mystral",
+                    "connections": [
+                        {
+                            "guid": "6e6ed2e2-99d2-4cd3-9973-68949e807072",
+                            "connectedTo": "Cerulle",
+                            "id": "0"
+                        },
+                        {
+                            "guid": "0809771c-896c-45ed-8e5b-0c9775fec04f",
+                            "connectedTo": "Cimmerian Market",
+                            "id": "1"
+                        }
+                    ],
+                    "column": 1,
+                    "row": 3,
+                    "description": "",
+                    "extraImages": ""
+                },
+                {
+                    "guid": "731e6651-10c3-4e09-9882-00c7b6971c16",
+                    "id": "3",
+                    "tags": [
+                        "shady",
+                        "dangerous"
+                    ],
+                    "area_type": [
+                        "neighborhood",
+                        "red light district"
+                    ],
+                    "name": "Savaval",
+                    "img": "..\\assets\\locations\\CityOfMyth\\The HideAway.webp",
+                    "parent": "Covetous",
+                    "connections": [],
+                    "column": 2,
+                    "row": 1,
+                    "description": "",
+                    "extraImages": ""
+                },
+                {
+                    "guid": "282342a0-d81b-4ae5-a4e1-7ea69f2a165c",
+                    "id": "4",
+                    "tags": [
+                        "shady",
+                        "dangerous"
+                    ],
+                    "area_type": [
+                        "marketplace",
+                        "black market"
+                    ],
+                    "name": "Cimmerian Market",
+                    "img": "..\\assets\\locations\\CityOfMyth\\Black Market.webp",
+                    "parent": "Covetous",
+                    "connections": [],
+                    "column": 3,
+                    "row": 2,
+                    "description": "",
+                    "extraImages": ""
+                },
+                {
+                    "guid": "f8a0935f-4a0f-4134-8971-9e06f27abed6",
+                    "id": "5",
+                    "tags": [
+                        "shady",
+                        "tourist trap"
+                    ],
+                    "area_type": [
+                        "neighborhood",
+                        "fairground"
+                    ],
+                    "name": "Carelmeis Fairground",
+                    "img": "..\\assets\\locations\\CityOfMyth\\Beyond Star Descendant - Carousel tree.webp",
+                    "parent": "Covetous",
+                    "connections": [],
+                    "column": 1,
+                    "row": 2,
+                    "description": "",
+                    "extraImages": ""
+                },
+                {
+                    "guid": "a50b059d-f924-476b-aa71-b7366609b9b6",
+                    "id": "6",
+                    "tags": [
+                        "haunted"
+                    ],
+                    "area_type": [
+                        "village"
+                    ],
+                    "name": "The Onyx Village",
+                    "img": "..\\assets\\locations\\CityOfMyth\\YV2U9zq.webp",
+                    "parent": "Covetous",
+                    "connections": [],
+                    "column": 2,
+                    "row": 3,
+                    "description": "Do NOT go here. \nAnd if you somehow end up here by accident,\nDO NOT EAT THE FOOD\n\nAt first seems a strange reflection of the Cimmerian Market. \nYou may think you've just gotten turned around and ended up back there.\nDon't make this mistake. \n\n",
+                    "extraImages": ""
+                },
+                {
+                    "guid": "b9b851f0-ba13-4e54-beaa-c7828f856fc3",
+                    "id": "7",
+                    "tags": [
+                        "none"
+                    ],
+                    "area_type": [
+                        "neighborhood"
+                    ],
+                    "name": "Ciatrelenno",
+                    "img": "",
+                    "parent": "Valaatos",
+                    "connections": [],
+                    "column": 2,
+                    "row": 2,
+                    "description": "",
+                    "extraImages": ""
+                },
+                {
+                    "guid": "87cfb04e-c89c-4019-861b-6fbcd67116aa",
+                    "id": "8",
+                    "tags": [
+                        "exclusive access "
+                    ],
+                    "area_type": [
+                        "neighborhood",
+                        "ethnic enclave"
+                    ],
+                    "name": "Tulrata Town",
+                    "img": "..\\assets\\locations\\CityOfMyth\\liquidcoco-wecom-temp-eda4f15420a84af15bdfbdcd5cceb431.webp",
+                    "parent": "Valaatos",
+                    "connections": [],
+                    "column": 2,
+                    "row": 3,
+                    "description": "",
+                    "extraImages": ""
+                },
+                {
+                    "guid": "d7b4b29b-27e9-4a10-8fa6-618b44d27f63",
+                    "id": "9",
+                    "tags": [
+                        "wealthy",
+                        "exclusive access "
+                    ],
+                    "area_type": [
+                        "neighborhood"
+                    ],
+                    "name": "Luvenothes",
+                    "img": "..\\assets\\locations\\CityOfMyth\\ed55rpmkyb791.webp",
+                    "parent": "Rein Dorei",
+                    "connections": [],
+                    "column": 2,
+                    "row": 1,
+                    "description": "",
+                    "extraImages": ""
+                },
+                {
+                    "guid": "7fb6f2fc-6b31-4c76-8f11-03e472544a35",
+                    "id": "11",
+                    "tags": [
+                        "wealthy"
+                    ],
+                    "area_type": [
+                        "neighborhood"
+                    ],
+                    "name": "Isoshari",
+                    "img": "..\\assets\\locations\\CityOfMyth\\Alchemy RPG - Chrysalea Ourro and Origin District.webp",
+                    "parent": "Rein Dorei",
+                    "connections": [],
+                    "column": 3,
+                    "row": 2,
+                    "description": "",
+                    "extraImages": ""
+                },
+                {
+                    "guid": "07621a54-14a6-4daa-bc9b-6c9f66392108",
+                    "id": "12",
+                    "tags": [
+                        "sacred"
+                    ],
+                    "area_type": [
+                        "neighborhood"
+                    ],
+                    "name": "The Heaven Spires",
+                    "img": "..\\assets\\locations\\CityOfMyth\\High Towers-1.webp",
+                    "parent": "Kva Orthaeid",
+                    "connections": [],
+                    "column": 2,
+                    "row": 1,
+                    "description": "",
+                    "extraImages": ""
+                },
+                {
+                    "guid": "cf2fa1f6-07b4-4e44-b7d3-c6a9e677fd29",
+                    "id": "12",
+                    "name": "Tartarus - W",
+                    "parent": "Covetous",
+                    "area_type": [
+                        "neighborhood",
+                        "marketplace",
+                        "red light district",
+                        "slum"
+                    ],
+                    "tags": [
+                        "none"
+                    ],
+                    "column": 3,
+                    "row": 3,
+                    "img": "..\\assets\\locations\\CityOfMyth\\Tartarus.webp",
+                    "connections": [],
+                    "description": "",
+                    "extraImages": ""
+                },
+                {
+                    "guid": "cb3a9a17-462c-4de9-bc2b-0765fc0f4c6e",
+                    "id": "13",
+                    "name": "Tartarus - S",
+                    "parent": "Volar",
+                    "area_type": [
+                        "neighborhood",
+                        "marketplace",
+                        "red light district",
+                        "ethnic enclave",
+                        "slum"
+                    ],
+                    "tags": [
+                        "none"
+                    ],
+                    "column": 1,
+                    "row": 2,
+                    "img": "..\\assets\\locations\\CityOfMyth\\Cyberpunk   Red Light District.webp",
+                    "connections": [],
+                    "description": "",
+                    "extraImages": ""
+                }
+            ],
+            "hidden": false,
+            "isProps": false,
+            "configurable": {
+                "name": "text",
+                "description": "text",
+                "displayColumn": "columnSelect@name",
+                "columnSelect@name@displayColumn": {
+                    "allowedTypes": [
+                        "int",
+                        "float",
+                        "text",
+                        "longtext"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Crossroads",
+            "description": "description of different crossroads that connect passages between areas ",
+            "displayColumn": "id",
+            "guid": "de7d68eb-e23b-47c6-82f6-aaa70e662dc5",
+            "columns": [
+                {
+                    "typeStr": "multiple",
+                    "guid": "0154aef3-9083-425a-894d-dbf5c7a0fb18",
+                    "name": "passage_type",
+                    "description": "the type of passage",
+                    "options": "road, path, stairs, ferry, elevator, sky passage, teleporter, tunnel, bridge, toll road, catacombs",
+                    "defaultValue": "road",
+                    "iconName": "newMulti",
+                    "displayType": "vertical",
+                    "configurable": {
+                        "name": "text",
+                        "description": "text",
+                        "defaultValue": "text",
+                        "options": "text",
+                        "displayType": "enum",
+                        "enum@displayType": {
+                            "options": [
+                                "vertical",
+                                "horizontal"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "typeStr": "text",
+                    "guid": "c4fd4c0e-6cd8-4f2c-8b18-e67c97433989",
+                    "name": "name",
+                    "description": "the passage name",
+                    "defaultValue": "new passage",
+                    "iconName": "newText",
+                    "configurable": {
+                        "name": "text",
+                        "description": "text",
+                        "defaultValue": "text"
+                    }
+                },
+                {
+                    "typeStr": "multiple",
+                    "guid": "6c8b56d0-ddc8-422b-90ca-5bc5018deb30",
+                    "name": "tags",
+                    "description": "extra descriptors for passage",
+                    "options": "none, hidden, impassible, heavily guarded, requires toll, secret",
+                    "defaultValue": "none",
+                    "iconName": "newMulti",
+                    "displayType": "vertical",
+                    "configurable": {
+                        "name": "text",
+                        "description": "text",
+                        "defaultValue": "text",
+                        "options": "text",
+                        "displayType": "enum",
+                        "enum@displayType": {
+                            "options": [
+                                "vertical",
+                                "horizontal"
+                            ]
+                        }
+                    }
+                }
+            ],
+            "lines": [
+                {
+                    "guid": "bead7263-2d2e-4da1-a9d0-2d5fb2411bce",
+                    "id": "0",
+                    "passage_type": [
+                        "bridge"
+                    ],
+                    "name": "The Broken Bridge",
+                    "tags": [
+                        "impassible",
+                        "heavily guarded"
+                    ]
+                },
+                {
+                    "guid": "a63ce2de-d3ba-4751-8a6a-3041cd85b864",
+                    "id": "1",
+                    "passage_type": [
+                        "tunnel",
+                        "catacombs"
+                    ],
+                    "name": "The Guilded Tunnels",
+                    "tags": [
+                        "hidden"
+                    ]
+                },
+                {
+                    "guid": "0a0c34ba-644f-4936-9241-c60032277565",
+                    "id": "2",
+                    "passage_type": [
+                        "sky passage",
+                        "teleporter"
+                    ],
+                    "name": "The Ancestral Way",
+                    "tags": [
+                        "impassible",
+                        "heavily guarded"
+                    ]
+                },
+                {
+                    "guid": "046d87f1-3f04-45eb-af26-ceffae221248",
+                    "id": "3",
+                    "passage_type": [
+                        "sky passage",
+                        "teleporter"
+                    ],
+                    "name": "Thyrranserine Skyway",
+                    "tags": [
+                        "heavily guarded",
+                        "requires toll"
+                    ]
+                },
+                {
+                    "guid": "b03e7522-03fa-4b90-93fb-2cdb0a95aea7",
+                    "id": "4",
+                    "passage_type": [
+                        "ferry"
+                    ],
+                    "name": "Stygian Ferry ",
+                    "tags": [
+                        "none"
+                    ]
+                },
+                {
+                    "guid": "6372208d-d08c-4d5e-9656-0764361bea3a",
+                    "id": "5",
+                    "passage_type": [
+                        "ferry"
+                    ],
+                    "name": "The Remnant Walk",
+                    "tags": [
+                        "requires toll"
+                    ]
+                }
+            ],
+            "hidden": false,
+            "isProps": false,
+            "configurable": {
+                "name": "text",
+                "description": "text",
+                "displayColumn": "columnSelect@name",
+                "columnSelect@name@displayColumn": {
+                    "allowedTypes": [
+                        "int",
+                        "float",
+                        "text",
+                        "longtext"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Sites",
+            "description": "sites within areas",
+            "displayColumn": "id",
+            "guid": "db83ca1e-ab93-4a82-9524-3d5408844433",
+            "columns": [
+                {
+                    "typeStr": "text",
+                    "guid": "afeddfb1-4ca9-4dde-b7be-ec84bb61a264",
+                    "name": "name",
+                    "description": "the name of the site",
+                    "defaultValue": "",
+                    "iconName": "newText",
+                    "configurable": {
+                        "name": "text",
+                        "description": "text",
+                        "defaultValue": "text"
+                    }
+                },
+                {
+                    "typeStr": "text",
+                    "guid": "8f814e27-a974-4dea-a8da-ad19eae6f186",
+                    "name": "parent",
+                    "description": "the parent area",
+                    "defaultValue": "",
+                    "iconName": "newText",
+                    "configurable": {
+                        "name": "text",
+                        "description": "text",
+                        "defaultValue": "text"
+                    }
+                },
+                {
+                    "typeStr": "image",
+                    "guid": "5bf55881-c2f4-4eeb-acae-a38dfb4703f6",
+                    "name": "img",
+                    "description": "the site image",
+                    "defaultValue": "",
+                    "iconName": "newImage",
+                    "configurable": {
+                        "name": "text",
+                        "description": "text",
+                        "defaultValue": "text"
+                    }
+                },
+                {
+                    "typeStr": "list",
+                    "guid": "86e4b347-0265-4d49-a961-75796d1b578e",
+                    "name": "connections",
+                    "description": "connections betwee these sites",
+                    "sheet": "e0290df1-6a33-45d6-8af5-506aedd29a3b",
+                    "defaultValue": [],
+                    "iconName": "newList",
+                    "configurable": {
+                        "name": "text",
+                        "description": "text"
+                    }
+                },
+                {
+                    "typeStr": "int",
+                    "guid": "dd7e2ae2-d4d8-4112-8477-49ec2b6fd1db",
+                    "description": "the hex column for this data",
+                    "name": "column",
+                    "min": 0,
+                    "max": 20,
+                    "defaultValue": 0,
+                    "iconName": "newInt",
+                    "configurable": {
+                        "name": "text",
+                        "description": "text",
+                        "min": "int",
+                        "max": "int",
+                        "defaultValue": "int"
+                    }
+                },
+                {
+                    "typeStr": "int",
+                    "guid": "99d8435d-7b37-438a-ae2d-3a938f129b62",
+                    "description": "the hex row nnumber for this data",
+                    "name": "row",
+                    "min": 0,
+                    "max": 10,
+                    "defaultValue": 0,
+                    "iconName": "newInt",
+                    "configurable": {
+                        "name": "text",
+                        "description": "text",
+                        "min": "int",
+                        "max": "int",
+                        "defaultValue": "int"
+                    }
+                },
+                {
+                    "typeStr": "longtext",
+                    "guid": "3051a290-88c1-4b54-a448-5f57bc60930a",
+                    "name": "description",
+                    "description": "description of the site",
+                    "defaultValue": "",
+                    "iconName": "newLongText",
+                    "configurable": {
+                        "name": "text",
+                        "description": "text",
+                        "defaultValue": "longtext"
+                    }
+                },
+                {
+                    "typeStr": "longtext",
+                    "guid": "2c2127a9-68ba-4af6-9edc-cd810f72bd5b",
+                    "name": "extraImages",
+                    "description": "extra images string array",
+                    "defaultValue": "",
+                    "iconName": "newLongText",
+                    "configurable": {
+                        "name": "text",
+                        "description": "text",
+                        "defaultValue": "longtext"
+                    }
+                }
+            ],
+            "lines": [
+                {
+                    "guid": "ca2304da-3e67-4ec7-88e8-2a2be5f3c92c",
+                    "id": "0",
+                    "name": "Koa's Mask Shop",
+                    "parent": "Cimmerian Market",
+                    "img": "..\\assets\\locations\\CityOfMyth\\Forgatory Mask Shop.webp",
+                    "connections": [
+                        {
+                            "guid": "fceba350-b200-4312-9351-96478fb6d1e7",
+                            "connectionTo": "",
+                            "id": "0"
+                        }
+                    ],
+                    "column": 2,
+                    "row": 2,
+                    "description": "",
+                    "extraImages": ""
+                },
+                {
+                    "guid": "20d03d62-8c06-4fef-9c9a-73fd9b9c34b5",
+                    "id": "1",
+                    "name": "The Anore Pleasurehouse",
+                    "parent": "Luvenothes",
+                    "img": "..\\assets\\locations\\CityOfMyth\\Dhayl amp; Aurya - Temple of unequal sisters 2.webp",
+                    "connections": [],
+                    "column": 1,
+                    "row": 2,
+                    "description": "",
+                    "extraImages": "pleasure-house-2.webp, pleasure-house-3.webp"
+                },
+                {
+                    "guid": "79f3f832-a29b-4c48-b141-73d1ad574057",
+                    "id": "2",
+                    "name": "The Fomori",
+                    "parent": "Shanicoia",
+                    "img": "..\\assets\\locations\\CityOfMyth\\Fomori.webp",
+                    "connections": [],
+                    "column": 3,
+                    "row": 3,
+                    "description": "",
+                    "extraImages": ""
+                },
+                {
+                    "guid": "e8dc11ab-e07c-45d9-84e8-3bdb02028298",
+                    "id": "3",
+                    "name": "The Alimoux Bathhouse",
+                    "parent": "Cerulle",
+                    "img": "..\\assets\\locations\\CopperGroveLocations\\bathhouse\\light-lounge.webp",
+                    "connections": [],
+                    "column": 2,
+                    "row": 2,
+                    "description": "",
+                    "extraImages": ""
+                },
+                {
+                    "guid": "e5863623-c3fc-421f-9375-1ff2a43fbefd",
+                    "id": "4",
+                    "name": "The Myth King's Palace",
+                    "parent": "Embral",
+                    "img": "..\\assets\\locations\\CityOfMyth\\速途练习！.webp",
+                    "connections": [],
+                    "column": 2,
+                    "row": 1,
+                    "description": "",
+                    "extraImages": ""
+                }
+            ],
+            "hidden": false,
+            "isProps": false,
+            "configurable": {
+                "name": "text",
+                "description": "text",
+                "displayColumn": "columnSelect@name",
+                "columnSelect@name@displayColumn": {
+                    "allowedTypes": [
+                        "int",
+                        "float",
+                        "text",
+                        "longtext"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "connections",
+            "description": "list@65955ce3-843b-4c2f-86c1-cf4c454630c3",
+            "displayColumn": "id",
+            "guid": "15458f51-d9c4-4dc5-84b2-754cfd6c7e8a",
+            "columns": [
+                {
+                    "typeStr": "text",
+                    "guid": "3ad4cfa2-f19b-4bfe-9dc4-85f104f5bf8b",
+                    "name": "connectedTo",
+                    "description": "What is this area connected to?",
+                    "defaultValue": "",
+                    "iconName": "newText",
+                    "configurable": {
+                        "name": "text",
+                        "description": "text",
+                        "defaultValue": "text"
+                    }
+                }
+            ],
+            "lines": [],
+            "hidden": true,
+            "isProps": false,
+            "parentSheetGUID": "65955ce3-843b-4c2f-86c1-cf4c454630c3",
+            "columnGUID": "b41173af-36fb-4590-ac3d-3c350fb3b83b"
+        },
+        {
+            "name": "connections",
+            "description": "list@db83ca1e-ab93-4a82-9524-3d5408844433",
+            "displayColumn": "id",
+            "guid": "e0290df1-6a33-45d6-8af5-506aedd29a3b",
+            "columns": [
+                {
+                    "typeStr": "text",
+                    "guid": "0d79fa29-9737-4f07-a72a-41b7b11bfb1b",
+                    "name": "connectionTo",
+                    "description": "what is this conneted to?",
+                    "defaultValue": "",
+                    "iconName": "newText",
+                    "configurable": {
+                        "name": "text",
+                        "description": "text",
+                        "defaultValue": "text"
+                    }
+                }
+            ],
+            "lines": [],
+            "hidden": true,
+            "isProps": false,
+            "parentSheetGUID": "db83ca1e-ab93-4a82-9524-3d5408844433",
+            "columnGUID": "86e4b347-0265-4d49-a961-75796d1b578e"
+        },
+        {
+            "name": "Global",
+            "description": "global map data for default view",
+            "displayColumn": "id",
+            "guid": "f1c22e5e-37fb-4634-91ce-9a676768f673",
+            "columns": [
+                {
+                    "typeStr": "text",
+                    "guid": "495fdee9-50c6-4c9b-8dfe-6adfec3ce2a1",
+                    "name": "name",
+                    "description": "global name",
+                    "defaultValue": "",
+                    "iconName": "newText",
+                    "configurable": {
+                        "name": "text",
+                        "description": "text",
+                        "defaultValue": "text"
+                    }
+                },
+                {
+                    "typeStr": "longtext",
+                    "guid": "f729bfb9-4ec0-4265-a59a-5574fd6e2757",
+                    "name": "description",
+                    "description": "global description of the map location",
+                    "defaultValue": "",
+                    "iconName": "newLongText",
+                    "configurable": {
+                        "name": "text",
+                        "description": "text",
+                        "defaultValue": "longtext"
+                    }
+                },
+                {
+                    "typeStr": "list",
+                    "guid": "7696e1d7-c12a-4621-bd4b-dcf0d4894b21",
+                    "name": "connections",
+                    "description": "connections to other maps/locations",
+                    "sheet": "a16f9554-7355-4aa0-933c-60cde074aff9",
+                    "defaultValue": [],
+                    "iconName": "newList",
+                    "configurable": {
+                        "name": "text",
+                        "description": "text"
+                    }
+                },
+                {
+                    "typeStr": "image",
+                    "guid": "a5bba954-6a98-46f7-8d84-bbd0c1eab7a5",
+                    "name": "img",
+                    "description": "the global img",
+                    "defaultValue": "",
+                    "iconName": "newImage",
+                    "configurable": {
+                        "name": "text",
+                        "description": "text",
+                        "defaultValue": "text"
+                    }
+                },
+                {
+                    "typeStr": "text",
+                    "guid": "1436fa57-f612-4541-ba65-91762a07bbe1",
+                    "name": "relativeAssetPath",
+                    "description": "relative path for the assets for this location",
+                    "defaultValue": "/assets/locations/CityOfMyth",
+                    "iconName": "newText",
+                    "configurable": {
+                        "name": "text",
+                        "description": "text",
+                        "defaultValue": "text"
+                    }
+                }
+            ],
+            "lines": [
+                {
+                    "guid": "b4119b07-dada-49aa-a0fd-2e6b7bad16c0",
+                    "id": "0",
+                    "name": "The City of Myth",
+                    "description": "",
+                    "connections": [],
+                    "img": "..\\assets\\locations\\CityOfMyth\\zhipei-fu-ancient-persia-holycity.webp",
+                    "relativeAssetPath": "/assets/locations/CityOfMyth"
+                }
+            ],
+            "hidden": false,
+            "isProps": false,
+            "configurable": {
+                "name": "text",
+                "description": "text",
+                "displayColumn": "columnSelect@name",
+                "columnSelect@name@displayColumn": {
+                    "allowedTypes": [
+                        "int",
+                        "float",
+                        "text",
+                        "longtext"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "connections",
+            "description": "list@f1c22e5e-37fb-4634-91ce-9a676768f673",
+            "displayColumn": "id",
+            "guid": "a16f9554-7355-4aa0-933c-60cde074aff9",
+            "columns": [],
+            "lines": [],
+            "hidden": true,
+            "isProps": false,
+            "parentSheetGUID": "f1c22e5e-37fb-4634-91ce-9a676768f673",
+            "columnGUID": "7696e1d7-c12a-4621-bd4b-dcf0d4894b21"
+        }
+    ]
+}

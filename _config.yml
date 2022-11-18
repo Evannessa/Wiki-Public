@@ -1,0 +1,74 @@
+title: Solrise Wiki
+include:
+    - "_pages"
+    - "_headers"
+
+exclude:
+    - _includes/notes_graph.json
+    - .vscode/
+    - _notes/*.ini
+    - .obsidian/
+    - CityOfMyth.dpo
+# You may need to change the base URL depending on your deploy configuration.
+# Specifically, when using GitHub Pages, the baseurl should point to where Git
+# Pages deploys your repository (which is usually the repository name).
+baseurl: ""
+
+# If you are using a host that cannot resolve URLs that do
+# not end with .html (such as Neocities), set this to 'true'.
+use_html_extension: false
+
+# Set to `true` to open non-internal links in new tabs, or
+# set to `false` to open non-internal links in current tab.
+open_external_links_in_new_tab: true
+
+# Set to `true` to replace tweet URLs with Twitter embeds.
+# Note that doing so will negatively the reader's privacy
+# as their browser will communicate with Twitter's servers.
+embed_tweets: false
+
+markdown-highlighter: true
+
+obsidian-callout-converter: true
+
+permalink: pretty
+relative_permalinks: false
+
+# tag_page_layout: tag_page`
+# tag_page_dir: tag
+plugins:
+    - jekyll-last-modified-at
+    # - jekyll-taggingplugins:
+    - jekyll-glossary_tooltip
+
+sass:
+    sass_dir: _sass
+    style: "compressed"
+
+gems:
+    - jekyll-auto-image
+
+collections:
+    notes:
+        output: true
+        permalink: /:slug
+
+defaults:
+    - scope:
+          path: "**/*"
+      values:
+          layout: "default"
+    - scope:
+          path: "_notes/**/*.md"
+      values:
+          layout: "note"
+    - scope:
+          path: "_pages/family-trees/*.html"
+      values:
+          layout: "page"
+    - scope:
+          path: "assets/clans"
+      values:
+          image: true
+# tag_page_layout: tag_page
+# tag_page_dir: tag

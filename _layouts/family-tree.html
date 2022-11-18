@@ -1,0 +1,98 @@
+---
+layout: default
+---
+
+{% assign trees = site.pages | "where_exp", "page": "page.tags contains 'Category/Family-Tree'" %}
+
+<div class="svg-container">
+    <div class="button-wrapper single">
+
+        <button class="toggle-button">
+            <span class="material-symbols-outlined">
+                chevron_left
+            </span>
+        </button>
+        <div class="controls">
+            <section class="button-group">
+                <button id="reset-button" title="reset view">
+                    <span class="material-symbols-outlined">
+                        restart_alt
+                    </span>
+                    Reset View
+                </button>
+                <button id="save-button" title="save view">
+                    <span class="material-symbols-outlined">
+                        save
+                    </span>
+                    Save Current View
+                </button>
+            </section>
+            <section class="button-group">
+                <p class="instructions">Jump to Generation...</p>
+                <button class="jump-gen" data-gen="0">
+                    Gen 1 - 2
+                </button>
+                <button class="jump-gen" data-gen="1">
+                    Gen 2 - 3
+                </button>
+                <button class="jump-gen" data-gen="2">
+                    Gen 3 - 4
+                </button>
+                <button class="jump-gen" data-gen="3">
+                    Gen 4 - 5
+                </button>
+            </section>
+
+            <div class="instructions-wrapper">
+                <p class="instructions">Use
+					Pan:
+                    <span>arrow keys</span>
+                    or
+                    <span>WASD</span>
+                </p>
+                <p class="instructions">
+                    Zoom:
+                    <span>+</span>
+                    or
+                    <span>-</span>
+                </p>
+                <p class="instructions"><span>Hover</span> portrait to highlight family</p>
+                <p class="instructions"><span>Click</span> portrait to open page</p>
+            </div>
+
+        </div>
+
+    </div>
+    <svg class="family-tree" viewbox="0 0 100 100" data-offset-x="{{page.startingOffsetX}}" data-offset-y="{{page.startingOffsetY}}" data-starting-scale="{{page.startingScale}}">
+
+        {% assign people = site.notes | "where_exp": "note", "note.tags contains page.clanName and note.tags contains 'Category/Individual'"%}
+        {% for person in people %}
+            {%assign clan = person.Clan %}
+            {% assign parents = person.parents | jsonify  %}
+            {% assign partners = person.partners | jsonify %}
+            {% assign title = person.title %}
+            {% assign linkPath = person.url %}
+            {% assign firstGen = false %}
+            {% if person.tags contains "Generation/First" %}
+                {% assign firstGen = true %}
+            {% endif %}
+
+            {% if person.firstName %}
+                {% assign firstName = person.firstName %}
+            {% else %}
+                {% assign nameSegments = person.title | split: " " %}
+                {% assign firstName = nameSegments[0] %}
+            {% endif %}
+            {% capture namePath %}
+                /assets/clans/{{clan | capitalize}}/{{firstName}}.webp
+            {% endcapture %}
+            {% assign imagePosition = person.imagePosition %}
+
+            {% include family-tree-card.html person=person source=namePath parents=parents partners=partners ourTitle=title firstGen=firstGen linkPath=linkPath imagePosition=imagePosition %}
+
+        {% endfor %}
+    </svg>
+</div>
+
+<script src="/assets/scripts/zoom.js" type="module"></script>
+<script src="/assets/scripts/family-tree.js" type="module"></script>

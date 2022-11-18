@@ -1,0 +1,14 @@
+<defs>
+    <pattern id="overlay-empty" x="0" y="0" width="1" height="1"
+    patternUnits="">
+        {%- if include.type == "image" -%}
+            <image href="{{include.path}}" x="{{include.xOffset | 0}}" y="{{include.yOffset | 0}}" height="100" width="100" class="{{include.extraImageClass}}"/>
+        {%- elsif include.type == "svg" -%}
+            <use href="{{include.path}}" />
+        {%- elsif include.type == "text" -%}
+            <text>
+                {{include.text}}
+            </text>
+        {%- endif -%}
+    </pattern>
+</defs>

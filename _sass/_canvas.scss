@@ -1,0 +1,375 @@
+.hidden-overflow-wide-main {
+    max-width: 95%;
+    max-height: 100vh;
+    overflow-y: hidden;
+}
+
+.svg-container {
+    position: relative;
+    // padding: 1rem;
+    max-height: 100vh;
+    overflow: hidden;
+    // overflow: scroll;
+    // border: 2px solid white;
+    // box-shadow: inset 5px 5px 10px 10px rgba(0, 0, 0, 0.5);
+    &:after,
+    &:before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #262b59;
+        background-image: url(/assets/patterns/rose-petals.svg);
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+    }
+    &:before {
+        pointer-events: none;
+        background: none;
+        z-index: 1;
+        box-shadow: inset 10px 10px 10px 0px rgba(0, 0, 0, 0.35), inset -10px -10px 10px 0px rgba(0, 0, 0, 0.35);
+    }
+    .button-wrapper {
+        * {
+            // font-size: calc(min(calc(max(1rem, 4vw)), 22px));
+            font-size: calc(clamp(1rem, calc(1.5rem - 2vw), 4vw));
+            //calc(min(calc(max(1rem, 4vw)), 22px));
+        }
+        transition: transform 200ms ease-out;
+        &.minimize {
+            transform: translate(100%, -50%);
+
+            transition: transform 200ms ease-in;
+        }
+        background-color: transparent;
+        position: fixed;
+        display: grid;
+        grid-template-columns: 50% 5% 45%;
+        &.single {
+            grid-template-columns: 5% 95%;
+        }
+        grid-template-rows: minmax(40vh, 60vh);
+        // min-height: 40vh;
+        top: 50%;
+        transform: translate(0%, -50%);
+        right: 0%;
+        text-align: center;
+        z-index: 900;
+        border-radius: 8px;
+        align-items: center;
+        max-width: 20vw;
+        .toggle-button {
+            grid-row: 1/3;
+            grid-column: 1/2;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0;
+            border-radius: unset;
+            background: #262b59;
+        }
+        .controls {
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            grid-row: 1/3;
+            grid-column: 2/3;
+            display: flex;
+            flex-direction: column;
+            background: hsla(234, 40%, 25%, 0.561);
+            backdrop-filter: blur(5px);
+            justify-content: space-evenly;
+            align-items: center;
+            // gap: 1rem;
+            padding: 1rem 0.5rem;
+            max-width: fit-content;
+            border-radius: inherit;
+            height: 100%;
+            button {
+                appearance: none;
+                font-size: small;
+            }
+        }
+        // font-size: 0.5rem;
+        .instructions {
+            font-size: small;
+        }
+        .instructions span {
+            font-size: inherit;
+            font-weight: bold;
+            color: $color-secondary;
+        }
+        .input-span {
+            display: inline-flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        //https://stackoverflow.com/questions/68789475/how-can-i-style-checkbox-with-css
+        [type="checkbox"] {
+            width: 1rem;
+            height: 1rem;
+            color: dodgerblue;
+            vertical-align: middle;
+            -webkit-appearance: none;
+            background: none;
+            border: 0;
+            outline: 0;
+            flex-grow: 0;
+            border-radius: 50%;
+            background-color: #ffffff;
+            transition: background 300ms;
+            cursor: pointer;
+        }
+
+        /* Pseudo element for check styling */
+
+        [type="checkbox"]::before {
+            content: "";
+            color: transparent;
+            display: block;
+            width: inherit;
+            height: inherit;
+            border-radius: inherit;
+            border: 0;
+            background-color: transparent;
+            background-size: contain;
+            box-shadow: inset 0 0 0 1px #ccd3d8;
+        }
+
+        /* Checked */
+
+        [type="checkbox"]:checked {
+            background-color: currentcolor;
+        }
+
+        [type="checkbox"]:checked::before {
+            box-shadow: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E %3Cpath d='M15.88 8.29L10 14.17l-1.88-1.88a.996.996 0 1 0-1.41 1.41l2.59 2.59c.39.39 1.02.39 1.41 0L17.3 9.7a.996.996 0 0 0 0-1.41c-.39-.39-1.03-.39-1.42 0z' fill='%23fff'/%3E %3C/svg%3E");
+        }
+
+        /* Disabled */
+
+        [type="checkbox"]:disabled {
+            background-color: #ccd3d8;
+            opacity: 0.84;
+            cursor: not-allowed;
+        }
+
+        /* IE */
+
+        [type="checkbox"]::-ms-check {
+            content: "";
+            color: transparent;
+            display: block;
+            width: inherit;
+            height: inherit;
+            border-radius: inherit;
+            border: 0;
+            background-color: transparent;
+            background-size: contain;
+            box-shadow: inset 0 0 0 1px #ccd3d8;
+        }
+
+        input {
+            font-size: 1rem;
+        }
+        .button-controls {
+            display: grid;
+            grid-template-rows: repeat(3, 1fr);
+            grid-template-columns: repeat(3, 1fr);
+            #left-button {
+                grid-row: 2/3;
+                grid-column: 1/2;
+            }
+            #up-button {
+                grid-row: 1/2;
+                grid-column: 2/3;
+            }
+            #right-button {
+                grid-row: 2/3;
+                grid-column: 3/4;
+            }
+            #down-button {
+                grid-row: 3/4;
+                grid-column: 2/3;
+            }
+        }
+        button {
+            padding: 0.25em 0.5em;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            background-color: hsl(234, 56%, 58%);
+            color: #212121;
+            transition: color 100ms ease-out background-color 100ms ease-out;
+            &:hover {
+                background-color: hsl(234, 45%, 27%);
+                color: white;
+            }
+        }
+        .tree-nav {
+            grid-column: 3/4;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            gap: 0.2rem;
+            margin-top: 1rem;
+            max-width: 100%;
+            z-index: -1;
+            height: 100%;
+            li {
+                appearance: none;
+                -moz-appearance: none;
+                display: inline-flex;
+                list-style-type: none;
+                margin: 0;
+                background-image: linear-gradient(-45deg, #2b2452, $color-background);
+                border-top-right-radius: 8px;
+                border-bottom-right-radius: 15px;
+                z-index: 0;
+                box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+                transform: translateX(-1rem);
+                transition: transform 150ms ease-out;
+                &:hover {
+                    transform: translateX(1rem);
+                }
+            }
+            a {
+                width: 100%;
+                height: 100%;
+                padding: 0.5rem;
+                text-align: right;
+                color: var(--color-accent-base)-lighter;
+                transition: color 100ms ease-in;
+                &:hover {
+                    color: white;
+                }
+            }
+        }
+    }
+}
+svg.badge {
+    // clip-path: circle(50%);
+}
+svg image.union {
+    opacity: 100%;
+    transition: opacity 200ms ease-out;
+    &.fade {
+        opacity: 20%;
+    }
+}
+svg.family-tree {
+    &.hide {
+        display: none;
+    }
+}
+svg.family-tree {
+    .family-member-group {
+        overflow: visible;
+        transition: opacity 200ms ease-out;
+        &.fade {
+            opacity: 20%;
+        }
+        rect {
+            fill: transparent;
+            stroke: hsl(234, 56%, 58%);
+            stroke-width: 1px;
+        }
+        .family-member {
+            height: 100%;
+            width: 100%;
+            filter: drop-shadow(3px 5px 2px #00000066);
+        }
+        &:hover {
+            .hover-info {
+                transform: translateX(110%) scaleX(1);
+                transition-delay: 100ms;
+            }
+        }
+        .hover-info {
+            pointer-events: visible;
+            transform: translateX(0) scaleX(0);
+            overflow: visible;
+            transition: transform 170ms ease-out;
+            &:hover {
+                transform: translateX(110%) scaleX(1);
+                transition-delay: 100ms;
+            }
+            .marriedFrom,
+            .marriedInto {
+                width: 100%;
+                fill: white;
+                overflow: hidden;
+                pointer-events: visible;
+                &:hover {
+                    fill: hsl(337, 100%, 51%);
+                }
+            }
+        }
+        .hidden-info {
+            display: none;
+        }
+        .visible-title {
+            text-anchor: middle;
+            fill: white;
+            // font-size: 0.25rem;
+        }
+        .text-bg {
+            fill: #262b59;
+            height: 2rem;
+        }
+        &:nth-child(odd) {
+            .text-bg {
+                transform: translateY(-5%);
+            }
+        }
+    }
+
+    line {
+        stroke-width: 0.1px;
+        transition: stroke 200ms ease-in, opacity 200ms ease-out;
+        &.partner {
+            stroke: hsl(337, 100%, 65%);
+        }
+        &.fade {
+            opacity: 10%;
+        }
+    }
+
+    path {
+        fill: none;
+        stroke: #446dac;
+        transition: stroke 200ms ease-in, opacity 200ms ease-out;
+        &.highlight {
+            // stroke:  hsl(234, 56%, 58%);
+            stroke: #73fbd3;
+            stroke-width: 3px;
+        }
+        &.fade {
+            opacity: 10%;
+        }
+        &.partner {
+            stroke: hsl(337, 100%, 65%);
+            &.highlight {
+                stroke: hsl(337, 100%, 65%);
+            }
+        }
+        &.parent {
+            stroke: hsl(337, 100%, 65%);
+            &.highlight {
+                stroke: hsl(337, 100%, 65%);
+            }
+        }
+        &.child {
+            stroke: #73fbd3;
+        }
+        &.sibling {
+        }
+        &.hide {
+            opacity: 0%;
+        }
+    }
+}

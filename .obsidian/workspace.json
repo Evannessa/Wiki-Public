@@ -1,0 +1,209 @@
+{
+  "main": {
+    "id": "52262ef23862531c",
+    "type": "split",
+    "children": [
+      {
+        "id": "16d33c20fcf22f30",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "977abb68f77e8461",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "_notes/Campaign Data/locations/The Ebon-Rain Gardens.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "ce67aff77f883fda",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "_notes/Campaign Data/locations/Frozen Hollows of Mist.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "a130a37d3b7e25be",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "_notes/Campaign Data/locations/Locations List.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "8c7bf612512489e9",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "_notes/Campaign Data/clans/The Shadoka/Barbaruabs.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "c2fcd1059ceb25f8",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "_notes/Campaign Data/clans/The Shadoka/Random Names.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "86961dc68980c09d",
+    "type": "split",
+    "children": [
+      {
+        "id": "7f948cfa3b443eb0",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "ac41b0b0c0a8a406",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "6b7892ce692d99fd",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "aead0c9809d2f9ba",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          },
+          {
+            "id": "4d97c7af10bfd037",
+            "type": "leaf",
+            "state": {
+              "type": "recent-files",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 229.50165557861328
+  },
+  "right": {
+    "id": "dd64a09249a21318",
+    "type": "split",
+    "children": [
+      {
+        "id": "0c5b9f67b7726ba5",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "0f08974c776a0e14",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "_notes/Campaign Data/locations/Frozen Hollows of Mist.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": true,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "0e0011ef184408d2",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "_notes/Campaign Data/locations/Frozen Hollows of Mist.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "1cf6769b00f5afc0",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "eff4dbb3f5243811",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "_notes/Campaign Data/locations/Frozen Hollows of Mist.md"
+              }
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200
+  },
+  "active": "ce67aff77f883fda",
+  "lastOpenFiles": [
+    "_notes/Campaign Data/locations/Locations List.md",
+    "_notes/Campaign Data/locations/Frozen Hollows of Mist.md",
+    "_notes/Campaign Data/locations/img from artbreeder.jpg",
+    "_notes/Campaign Data/locations/The Fallen Peak.md",
+    "_notes/Campaign Data/locations/The Ebon-Rain Gardens.md",
+    "_notes/Campaign Data/locations/The Woods of Mist.md",
+    "_notes/Campaign Data/locations/The Smoke Slough.md",
+    "_notes/Campaign Data/locations/Starshead Village.md",
+    "_site/assets/locations/Starshead.webp",
+    "_notes/Campaign Data/clans/Maternal Family/Grandpa.md"
+  ]
+}

@@ -1,0 +1,20 @@
+---
+layout: article-base
+---
+
+<article class="location">
+    {% include page-nav.html headingLevel=2 %}
+    <content
+	{% if page.rollTable %}
+		data-roll-table="{{page.rollTable}}"
+	{% endif %}
+	{% if page.macro %}
+		data-macro="{{page.macro}}"
+	{% endif %}
+	
+	>
+        {% include anchor_headings.html html=content anchorBody="#" %} <!-- {{content}} -->
+    </content>
+</article>
+
+<script src="/assets/scripts/toggle-ui.js"></script>

@@ -1,0 +1,217 @@
+<div id="search">
+    <div class="input-wrapper" style="display: flex;">
+        <label class="outer-label" for="search-box">Search</label>
+        <input
+            id="search-box"
+            name="search-box"
+            oninput="filterSearch(event)"
+            type="text"
+                >
+    </div>
+    <section class="filter-section--wrapper">
+        <button class="expand-button">Filters</button>
+   <section class="filter-section toggle-list">
+        {% assign allTags = site.notes | map: "tags" | uniq %}
+		<hr>
+        <fieldset class="active-filters">
+            <legend>Active Filters</legend>
+            <span class="filter-span active">
+
+            </span>
+        </fieldset>
+
+		<hr>
+        <fieldset class="global-filters">
+			<legend>Global Toggles</legend>
+            <span class="filter-span global"><input
+                    id="show-deceased"
+                    name="show-deceased"
+                    onchange="toggleAll(event)"
+                    type="checkbox" />
+                <label for="show-deceased">Show Deceased</label>
+            </span>
+		{%- comment -%}
+            <span class="filter-span global"><input
+                    id="any-toggle"
+                    name="filter-logic"
+                    onchange="toggleAll(event)"
+                    type="radio" />
+                <label for="any-toggle">Show Results That Match Any Of the Filters</label>
+            </span>
+            <span class="filter-span global"><input
+                    id="all-toggle"
+                    name="filter-logic"
+                    onchange="toggleAll(event)"
+                    type="radio" />
+                <label for="all-toggle">Show Results That Match All Of the Filters</label>
+            </span>
+{%- endcomment -%}	
+        </fieldset>
+		<hr>
+        {%- comment -%}Clan Filters{%- endcomment -%}
+		{% unless include.hideClanFilters %}
+			{% include filter-set.html allTags=allTags filter="Clans/" groupId="clan" filterByString="Clan" %}
+		{% endunless %}
+
+		<hr>
+     
+        {%- comment -%}Location Filters{%- endcomment -%}
+			{% include filter-set.html allTags=allTags filter="Location/" groupId="location" filterByString="Residence"%}
+
+			{% include filter-set.html allTags=allTags filter="Faction/" groupId="faction" filterByString="Faction"%}
+
+
+		<hr>
+{% include filter-set.html allTags=allTags filter="Age/" groupId="age" filterByString="Age"%}
+			{% include filter-set.html allTags=allTags filter="Condition/" groupId="condition" filterByString="Status"%}
+			<hr>
+			{% include filter-set.html allTags=allTags filter="Special/" groupId="special" filterByString="Special"%}
+			</section>
+	</section>		
+    </div>
+
+<script src="/assets/scripts/search.js">// let galleryCards; let deceasedFilter; let deceasedPeople; var SearchData =
+// {};
+
+// SearchData.currentQueries = [];
+
+// window.onload = function () {
+//     galleryCards = document.querySelectorAll(".card");
+//     deceasedFilter = document.querySelector("#Deceased");
+//     deceasedPeople = Array.from(galleryCards).filter((card) => card
+//         .innerText
+//         .toLowerCase()
+//         .includes("condition/deceased"));
+
+//     // hide all of the "deceased" people by default
+//     deceasedPeople.forEach((card) => {
+
+//         card.classList.add("is-hidden-deceased");
+//     });
+
+//     deceasedFilter.disabled = true;
+//     // disable the status filter
+
+// };
+
+// function doesMatchFilter(filter, className) {
+//     galleryCards.forEach((card) => {
+//         if (card
+//                 .innerText
+//                 .toLowerCase()
+//                 .includes(filter)) {
+//             card.classList.remove(className);
+//         }
+//     });
+// }
+
+// function toggleAll(event) {
+//     let toggle = event.currentTarget;
+//     // let deceasedFilter = document.querySelector("#Condition/Deceased");
+//     deceasedPeople.forEach((card) => {
+//         if (toggle.checked) {
+//             card.classList.remove("is-hidden-deceased");
+//             deceasedFilter.disabled = false;
+//         } else {
+//             card.classList.add("is-hidden-deceased");
+//             if (deceasedFilter.checked) {
+//                 deceasedFilter.click();
+//             }
+//             // deceasedFilter.checked = false;
+//             deceasedFilter.disabled = true;
+//         }
+//     });
+// }
+
+// function filterSearch(event) {
+//     let searchBox = event.currentTarget;
+//     let query = searchBox.value.toLowerCase(); // get the search box's value
+//     let filterText = [... SearchData.currentQueries];
+//     galleryCards.forEach((card) => {
+//         let match = filterText.some((text) => card
+//             .innerText
+//             .toLowerCase()
+//             .includes(text));
+//         let meetsQuery = card
+//             .innerText
+//             .toLowerCase()
+//             .includes(query);
+//         if (match && meetsQuery) {
+//             card.classList.remove("is-hidden");
+//         } else {
+//             card.classList.add("is-hidden");
+//         }
+
+//     });
+// }
+
+// function filterAll(event) {
+//     let noFilters = false;
+//     let filterChip = event.currentTarget;
+//     let searchBoxQuery = document
+//         .querySelector("#search-box")
+//         .value
+//         .toLowerCase();
+
+//     let filterText = Array.from(
+//         document.querySelectorAll("input[type='checkbox']:checked:not(#show-deceased)")
+//     ).map((box) => getCheckboxLabel(box).textContent.toLowerCase());
+
+//     SearchData.currentQueries = [... filterText];
+
+//     if (SearchData.currentQueries.length === 0) {
+//         noFilters = true;
+//     }
+
+//     console.log("After filter chip change", filterText);
+//     // go through the cards and filter the ones that match the current queries
+
+//     // if there are no filters
+//     if (noFilters) {
+//         let meetsQuery = true;
+
+//         // toggle all of our cards to be visible, if they meet the search query too, if
+//         // there is one
+//         galleryCards.forEach((card) => {
+//             if (searchBoxQuery) {
+//                 meetsQuery = card
+//                     .innerText
+//                     .toLowerCase()
+//                     .includes(searchBoxQuery);
+//             }
+//             if (meetsQuery) {
+//                 card.classList.remove("is-hidden");
+//             }
+//         });
+//     } else {
+
+//         galleryCards.forEach((card) => {
+//             let meetsQuery = true; // default value in case there isn't a query
+//             let match = filterText.some((text) => card
+//                 .innerText
+//                 .toLowerCase()
+//                 .includes(text));
+//             if (searchBoxQuery) {
+//                 meetsQuery = card
+//                     .innerText
+//                     .toLowerCase()
+//                     .includes(searchBoxQuery);
+//             }
+//             if (match && meetsQuery) { // if the filter is mattched
+//                 card.classList.remove("is-hidden");
+//             } else {
+//                 card.classList.add("is-hidden");
+//             }
+
+//         });
+//     }
+// } // https : // //
+// stackoverflow.com/questions/19434241/how-i-can-get-the-text-of-a-checkbox
+// function getCheckboxLabel(checkbox) {
+//     if (checkbox.parentNode.tagName === "LABEL") {
+//         return checkbox.parentNode;
+//     }
+//     if (checkbox.id) {
+//         return document.querySelector("label[for=\"" + checkbox.id + "\"]");
+//     }
+// }</script>

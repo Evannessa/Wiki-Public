@@ -1,0 +1,10 @@
+
+<filter id="outline" x="-20%" y="-20%" width="140%" height="140%" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" color-interpolation-filters="linearRGB">
+	<feMorphology operator="dilate" radius="3 3" in="SourceAlpha" result="morphology"/>
+	<feFlood flood-color="#a3c0dc" flood-opacity="1" result="flood"/>
+	<feComposite in="flood" in2="morphology" operator="in" result="composite"/>
+	<feMerge result="merge">
+    		<feMergeNode in="composite" result="mergeNode"/>
+		<feMergeNode in="SourceGraphic" result="mergeNode1"/>
+  	</feMerge>
+</filter>

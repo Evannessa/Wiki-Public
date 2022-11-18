@@ -1,0 +1,545 @@
+{
+    "sheets": [
+        {
+            "name": "Regions",
+            "description": "description of what the sheet is",
+            "displayColumn": "id",
+            "guid": "50a43902-0c71-4a21-bcea-f489dd614496",
+            "columns": [
+                {
+                    "typeStr": "text",
+                    "guid": "67018e72-1cea-4492-a041-8efab4aeaf5b",
+                    "name": "name",
+                    "description": "Region Name",
+                    "defaultValue": "Mystral",
+                    "iconName": "newText",
+                    "configurable": {
+                        "name": "text",
+                        "description": "text",
+                        "defaultValue": "text"
+                    }
+                },
+                {
+                    "typeStr": "enum",
+                    "guid": "ee604da7-4a4b-458d-b30c-240a78b20621",
+                    "name": "type",
+                    "description": "region, area, or site",
+                    "options": "region, area, site",
+                    "defaultValue": "area",
+                    "iconName": "newEnum",
+                    "configurable": {
+                        "name": "text",
+                        "description": "text",
+                        "defaultValue": "text",
+                        "options": "text"
+                    }
+                }
+            ],
+            "lines": [
+                {
+                    "guid": "dce43ca3-0b88-4c7b-952d-7c6b5a541509",
+                    "id": "0",
+                    "name": "Mystral",
+                    "type": "region"
+                },
+                {
+                    "guid": "1f5d3e91-2320-4fa5-8c09-ec3a1c763a82",
+                    "id": "1",
+                    "name": "Kva Orthaeid",
+                    "type": "region"
+                },
+                {
+                    "guid": "ca9c214b-3867-4bef-901b-94d65ef61267",
+                    "id": "2",
+                    "name": "Rein Dorei",
+                    "type": "region"
+                },
+                {
+                    "guid": "125d851c-98ed-4a88-b026-f31fa76900e9",
+                    "id": "3",
+                    "name": "Valaatos",
+                    "type": "region"
+                },
+                {
+                    "guid": "cc597ca1-365b-438d-9a1c-eb235f2e9674",
+                    "id": "4",
+                    "name": "Covetous",
+                    "type": "region"
+                },
+                {
+                    "guid": "f032e5cb-33d7-4ad4-9cbd-7ce74c16582d",
+                    "id": "5",
+                    "name": "Volar",
+                    "type": "region"
+                },
+                {
+                    "guid": "d074cf05-5e2f-4fd4-a3ca-3d33faf17b47",
+                    "id": "6",
+                    "name": "Embral",
+                    "type": "region"
+                }
+            ],
+            "hidden": false,
+            "isProps": false,
+            "configurable": {
+                "name": "text",
+                "description": "text",
+                "displayColumn": "columnSelect@name",
+                "columnSelect@name@displayColumn": {
+                    "allowedTypes": [
+                        "int",
+                        "float",
+                        "text",
+                        "longtext"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Connections",
+            "description": "props@50a43902-0c71-4a21-bcea-f489dd614496",
+            "displayColumn": "id",
+            "guid": "7188d843-3335-4ce0-b5dc-724078759fba",
+            "columns": [
+                {
+                    "typeStr": "lineReference",
+                    "guid": "88fc841f-5e9c-48fc-adf2-57686fb38136",
+                    "name": "Connection 1",
+                    "description": "new connection",
+                    "sheet": "50a43902-0c71-4a21-bcea-f489dd614496",
+                    "defaultValue": "cc597ca1-365b-438d-9a1c-eb235f2e9674",
+                    "iconName": "newLineLink",
+                    "configurable": {
+                        "name": "text",
+                        "description": "text",
+                        "sheet": "sheetSelect",
+                        "defaultValue": "lineSelect@sheet"
+                    }
+                }
+            ],
+            "lines": [],
+            "hidden": true,
+            "isProps": true,
+            "parentSheetGUID": "50a43902-0c71-4a21-bcea-f489dd614496",
+            "columnGUID": "f9c549a5-efbf-417a-bb65-6b037592e501"
+        },
+        {
+            "name": "test",
+            "description": "props@50a43902-0c71-4a21-bcea-f489dd614496",
+            "displayColumn": "id",
+            "guid": "306d1437-8b9a-407a-be2d-74fe8ce55626",
+            "columns": [],
+            "lines": [],
+            "hidden": true,
+            "isProps": true,
+            "parentSheetGUID": "50a43902-0c71-4a21-bcea-f489dd614496",
+            "columnGUID": "d889bca6-152e-4cb9-a7c8-a2faa5d4d991"
+        },
+        {
+            "name": "Areas",
+            "description": "Areas nested within Regions",
+            "displayColumn": "id",
+            "guid": "65955ce3-843b-4c2f-86c1-cf4c454630c3",
+            "columns": [
+                {
+                    "typeStr": "text",
+                    "guid": "36fd2fa5-bb72-4253-a8d9-b1834eda7d49",
+                    "name": "name",
+                    "description": "Area Name",
+                    "defaultValue": "Cerulle",
+                    "iconName": "newText",
+                    "configurable": {
+                        "name": "text",
+                        "description": "text",
+                        "defaultValue": "text"
+                    }
+                },
+                {
+                    "typeStr": "enum",
+                    "guid": "7f6a3ab3-1357-4358-bd22-97453c7fa2b5",
+                    "name": "parent_region",
+                    "description": "The parent reigon that this area is nested within",
+                    "options": "Mystral, Kva Orthaeid, Volar, Valaatos, Rein Dorei, Covetous, Embral",
+                    "defaultValue": "Mystral",
+                    "iconName": "newEnum",
+                    "configurable": {
+                        "name": "text",
+                        "description": "text",
+                        "defaultValue": "text",
+                        "options": "text"
+                    }
+                },
+                {
+                    "typeStr": "multiple",
+                    "guid": "d8072f3a-96e7-465d-94ca-b5a6a343609a",
+                    "name": "area_type",
+                    "description": "type of area",
+                    "options": "neighborhood, marketplace, village, fairground, red light district, black market, ethnic enclave, pleasure house, ruins",
+                    "defaultValue": "neighborhood",
+                    "iconName": "newMulti",
+                    "displayType": "vertical",
+                    "configurable": {
+                        "name": "text",
+                        "description": "text",
+                        "defaultValue": "text",
+                        "options": "text",
+                        "displayType": "enum",
+                        "enum@displayType": {
+                            "options": [
+                                "vertical",
+                                "horizontal"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "typeStr": "multiple",
+                    "guid": "972fae0b-2997-4b6b-ac53-0c5300f00a27",
+                    "name": "tags",
+                    "description": "extra tag descriptors",
+                    "options": "none, wealthy, impoverished, shady, tourist trap, haunted, forbidden, toxic, dangerous, inacessible, sacred, exclusive access ",
+                    "defaultValue": "none",
+                    "iconName": "newMulti",
+                    "displayType": "horizontal",
+                    "configurable": {
+                        "name": "text",
+                        "description": "text",
+                        "defaultValue": "text",
+                        "options": "text",
+                        "displayType": "enum",
+                        "enum@displayType": {
+                            "options": [
+                                "vertical",
+                                "horizontal"
+                            ]
+                        }
+                    }
+                }
+            ],
+            "lines": [
+                {
+                    "guid": "9a7dd7c0-eddb-4a73-8684-24512926c8dc",
+                    "id": "0",
+                    "tags": [
+                        "tourist trap"
+                    ],
+                    "parent_region": "Mystral",
+                    "area_type": [
+                        "neighborhood"
+                    ],
+                    "name": "Cerulle"
+                },
+                {
+                    "guid": "6c225421-df4a-4ec0-97d6-e04304515a17",
+                    "id": "1",
+                    "tags": [
+                        "tourist trap"
+                    ],
+                    "parent_region": "Mystral",
+                    "area_type": [
+                        "neighborhood"
+                    ],
+                    "name": "Shanicoia"
+                },
+                {
+                    "guid": "d0d62443-e5fb-4984-b8c7-05996102119d",
+                    "id": "2",
+                    "tags": [
+                        "tourist trap"
+                    ],
+                    "parent_region": "Mystral",
+                    "area_type": [
+                        "marketplace"
+                    ],
+                    "name": "Dheoset Marketplace"
+                },
+                {
+                    "guid": "731e6651-10c3-4e09-9882-00c7b6971c16",
+                    "id": "3",
+                    "tags": [
+                        "none"
+                    ],
+                    "parent_region": "Covetous",
+                    "area_type": [
+                        "neighborhood",
+                        "red light district"
+                    ],
+                    "name": "Savaval"
+                },
+                {
+                    "guid": "282342a0-d81b-4ae5-a4e1-7ea69f2a165c",
+                    "id": "4",
+                    "tags": [
+                        "shady",
+                        "dangerous"
+                    ],
+                    "parent_region": "Covetous",
+                    "area_type": [
+                        "marketplace",
+                        "black market"
+                    ],
+                    "name": "Cimmerian Market"
+                },
+                {
+                    "guid": "f8a0935f-4a0f-4134-8971-9e06f27abed6",
+                    "id": "5",
+                    "tags": [
+                        "shady",
+                        "tourist trap"
+                    ],
+                    "parent_region": "Covetous",
+                    "area_type": [
+                        "neighborhood",
+                        "fairground"
+                    ],
+                    "name": "Carelmeis Fairground"
+                },
+                {
+                    "guid": "a50b059d-f924-476b-aa71-b7366609b9b6",
+                    "id": "6",
+                    "tags": [
+                        "haunted"
+                    ],
+                    "parent_region": "Mystral",
+                    "area_type": [
+                        "village"
+                    ],
+                    "name": "The Onyx Village"
+                },
+                {
+                    "guid": "b9b851f0-ba13-4e54-beaa-c7828f856fc3",
+                    "id": "7",
+                    "tags": [
+                        "none"
+                    ],
+                    "parent_region": "Valaatos",
+                    "area_type": [
+                        "neighborhood"
+                    ],
+                    "name": "Ciatrelenno"
+                },
+                {
+                    "guid": "87cfb04e-c89c-4019-861b-6fbcd67116aa",
+                    "id": "8",
+                    "tags": [
+                        "exclusive access "
+                    ],
+                    "parent_region": "Valaatos",
+                    "area_type": [
+                        "neighborhood",
+                        "ethnic enclave"
+                    ],
+                    "name": "Tulrata Town"
+                },
+                {
+                    "guid": "d7b4b29b-27e9-4a10-8fa6-618b44d27f63",
+                    "id": "9",
+                    "tags": [
+                        "wealthy",
+                        "exclusive access "
+                    ],
+                    "parent_region": "Rein Dorei",
+                    "area_type": [
+                        "neighborhood"
+                    ],
+                    "name": "Luvenothes"
+                },
+                {
+                    "guid": "7fb6f2fc-6b31-4c76-8f11-03e472544a35",
+                    "id": "11",
+                    "tags": [
+                        "wealthy"
+                    ],
+                    "parent_region": "Rein Dorei",
+                    "area_type": [
+                        "neighborhood"
+                    ],
+                    "name": "Isoshari"
+                },
+                {
+                    "guid": "07621a54-14a6-4daa-bc9b-6c9f66392108",
+                    "id": "12",
+                    "tags": [
+                        "sacred"
+                    ],
+                    "parent_region": "Kva Orthaeid",
+                    "area_type": [
+                        "neighborhood"
+                    ],
+                    "name": "The Heaven Spires"
+                }
+            ],
+            "hidden": false,
+            "isProps": false,
+            "configurable": {
+                "name": "text",
+                "description": "text",
+                "displayColumn": "columnSelect@name",
+                "columnSelect@name@displayColumn": {
+                    "allowedTypes": [
+                        "int",
+                        "float",
+                        "text",
+                        "longtext"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Crossroads",
+            "description": "description of different crossroads that connect passages between areas ",
+            "displayColumn": "id",
+            "guid": "de7d68eb-e23b-47c6-82f6-aaa70e662dc5",
+            "columns": [
+                {
+                    "typeStr": "multiple",
+                    "guid": "0154aef3-9083-425a-894d-dbf5c7a0fb18",
+                    "name": "passage_type",
+                    "description": "the type of passage",
+                    "options": "road, path, stairs, ferry, elevator, sky passage, teleporter, tunnel, bridge, toll road, catacombs",
+                    "defaultValue": "road",
+                    "iconName": "newMulti",
+                    "displayType": "vertical",
+                    "configurable": {
+                        "name": "text",
+                        "description": "text",
+                        "defaultValue": "text",
+                        "options": "text",
+                        "displayType": "enum",
+                        "enum@displayType": {
+                            "options": [
+                                "vertical",
+                                "horizontal"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "typeStr": "text",
+                    "guid": "c4fd4c0e-6cd8-4f2c-8b18-e67c97433989",
+                    "name": "name",
+                    "description": "the passage name",
+                    "defaultValue": "new passage",
+                    "iconName": "newText",
+                    "configurable": {
+                        "name": "text",
+                        "description": "text",
+                        "defaultValue": "text"
+                    }
+                },
+                {
+                    "typeStr": "multiple",
+                    "guid": "6c8b56d0-ddc8-422b-90ca-5bc5018deb30",
+                    "name": "tags",
+                    "description": "extra descriptors for passage",
+                    "options": "none, hidden, impassible, heavily guarded, requires toll, secret",
+                    "defaultValue": "none",
+                    "iconName": "newMulti",
+                    "displayType": "vertical",
+                    "configurable": {
+                        "name": "text",
+                        "description": "text",
+                        "defaultValue": "text",
+                        "options": "text",
+                        "displayType": "enum",
+                        "enum@displayType": {
+                            "options": [
+                                "vertical",
+                                "horizontal"
+                            ]
+                        }
+                    }
+                }
+            ],
+            "lines": [
+                {
+                    "guid": "bead7263-2d2e-4da1-a9d0-2d5fb2411bce",
+                    "id": "0",
+                    "passage_type": [
+                        "bridge"
+                    ],
+                    "name": "The Broken Bridge",
+                    "tags": [
+                        "impassible",
+                        "heavily guarded"
+                    ]
+                },
+                {
+                    "guid": "a63ce2de-d3ba-4751-8a6a-3041cd85b864",
+                    "id": "1",
+                    "passage_type": [
+                        "tunnel",
+                        "catacombs"
+                    ],
+                    "name": "The Guilded Tunnels",
+                    "tags": [
+                        "hidden"
+                    ]
+                },
+                {
+                    "guid": "0a0c34ba-644f-4936-9241-c60032277565",
+                    "id": "2",
+                    "passage_type": [
+                        "sky passage",
+                        "teleporter"
+                    ],
+                    "name": "The Ancestral Way",
+                    "tags": [
+                        "impassible",
+                        "heavily guarded"
+                    ]
+                },
+                {
+                    "guid": "046d87f1-3f04-45eb-af26-ceffae221248",
+                    "id": "3",
+                    "passage_type": [
+                        "sky passage",
+                        "teleporter"
+                    ],
+                    "name": "Thyrranserine Skyway",
+                    "tags": [
+                        "heavily guarded",
+                        "requires toll"
+                    ]
+                },
+                {
+                    "guid": "b03e7522-03fa-4b90-93fb-2cdb0a95aea7",
+                    "id": "4",
+                    "passage_type": [
+                        "ferry"
+                    ],
+                    "name": "Stygian Ferry ",
+                    "tags": [
+                        "none"
+                    ]
+                },
+                {
+                    "guid": "6372208d-d08c-4d5e-9656-0764361bea3a",
+                    "id": "5",
+                    "passage_type": [
+                        "ferry"
+                    ],
+                    "name": "The Remnant Walk",
+                    "tags": [
+                        "requires toll"
+                    ]
+                }
+            ],
+            "hidden": false,
+            "isProps": false,
+            "configurable": {
+                "name": "text",
+                "description": "text",
+                "displayColumn": "columnSelect@name",
+                "columnSelect@name@displayColumn": {
+                    "allowedTypes": [
+                        "int",
+                        "float",
+                        "text",
+                        "longtext"
+                    ]
+                }
+            }
+        }
+    ]
+}

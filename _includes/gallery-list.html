@@ -1,0 +1,27 @@
+<section class="gallery-section">
+    {% assign includeSearch = include.includeSearch | strip %}
+    {% assign galleryType = include.galleryType | strip %}
+    {% if includeSearch == "true" %}
+        {% include search.html hideClanFilters="true" %}
+    {% endif %}
+    {% if page.backlinks.size > 0 %}
+        {% assign customClassList = "card-container card-container--gallery" %}
+        {% if galleryType == "side" %}
+            {% assign customClassList = "card-container" %}
+        {% endif %}
+        <div class="{{customClassList}}">
+            {% assign includeRelationships = include.includeRelationships %}
+            {% assign people = page.backlinks %}
+            {% if include.clanMembersOnly %}
+                {% assign people = page.backlinks | "where_exp": "person", "person.tags contains 'Category/Individual'" %}
+            {% endif %}
+            {% for card in people %}
+                {% include card.html includeRelationships=includeRelationships %}
+            {% endfor %}
+        </div>
+    {% else %}
+        <div style="font-size: 0.9em">
+            <p>There are no notes linking to this note.</p>
+        </div>
+    {% endif %}
+</section>
