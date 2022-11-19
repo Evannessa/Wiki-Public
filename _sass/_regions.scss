@@ -49,6 +49,7 @@
             writing-mode: vertical-rl;
             padding: unset;
             margin: unset;
+            font-size: 1rem;
         }
         hr {
             display: none;
@@ -164,6 +165,14 @@
         left: 0;
         width: 100%;
         height: 100%;
+        &.child-list:not(.parent-list) {
+            //TODO: tie this back in to the child
+            top: 50%;
+            left: 50%;
+            height: 20rem;
+            width: 20rem;
+            transform: translate(-50%, -50%);
+        }
         // background-color: url(#gradient-pattern);
         background-color: var(--bg-color);
         // backdrop-filter: blur(10px);
@@ -237,7 +246,6 @@
         // display: none;
     }
 }
-
 .hex path {
     stroke: var(--bg-color);
     // stroke: url(#gradient-pattern);
@@ -375,6 +383,40 @@
         stroke-linejoin: round;
     }
 }
+.connection-hex {
+    width: 10%;
+    height: auto;
+    position: fixed;
+    $connections: (
+        up: (
+            top: 0%,
+            left: 50%,
+            transform: translateX(-50%),
+        ),
+        down: (
+            bottom: 0%,
+            left: 50%,
+            transform: translateX(-50%),
+        ),
+        left: (
+            top: 50%,
+            left: 0%,
+            transform: translateY(-50%),
+        ),
+        right: (
+            top: 50%,
+            right: 0%,
+            transform: translateY(-50%),
+        ),
+    );
+    @each $name, $direction in $connections {
+        &.#{$name} {
+            @each $position, $value in $direction {
+                #{$position}: $value;
+            }
+        }
+    }
+}
 .removed {
     position: absolute;
     left: -999px;
@@ -408,4 +450,7 @@
         transition: opacity 150ms ease-out;
         // transition: opacity 450ms ease-out;
     }
+}
+.block-pointer-events {
+    pointer-events: none;
 }

@@ -16,6 +16,7 @@ export const regionViewerModule = (function () {
     let locationIDs;
     let locationData;
     let globalData;
+    let hoveredHexes = [];
 
     const selectedLocationElements = {
         element: "", // the hex element containing data for current location
@@ -31,11 +32,14 @@ export const regionViewerModule = (function () {
         });
     function addChildren() {
         locationData = locationData.map((loc) => {
-            let connections = [];
+            // let connections = [];
+            let connectedElement;
             for (let connection of loc.connections) {
-                connections = locationData.filter((conLoc) => conLoc.guid === connection.destinationId);
+                connectedElement = locationData.find((conLoc) => conLoc.guid === connection.destinationId);
+                connection.element = connectedElement;
                 // debugger;
             }
+            console.log(loc.connections);
             const children = locationData.filter((childLoc) => childLoc.parent === loc.guid);
             const parentName = locationData.find((parentLoc) => parentLoc.guid === loc.parent)?.id || "";
 
@@ -43,7 +47,7 @@ export const regionViewerModule = (function () {
                 ...loc,
                 children,
                 parentName,
-                connections: connections,
+                // connections: connections,
             };
         });
     }
@@ -139,14 +143,32 @@ export const regionViewerModule = (function () {
             Helpers.toggleClassOnAction(locationEl, dependentElement, { action: "show" });
             // Helpers.toggleClassOnAction(locationEl, dependentElement)
         } else {
-            console.log("Mouse exiting", location.id);
             if (!event.ctrlKey) {
-                //! put this back
-                // Helpers.toggleClassOnAction(locationEl, dependentElement, { action: "hide" });
+                Helpers.toggleClassOnAction(locationEl, dependentElement, { action: "hide" });
             }
             // Helpers.toggleClassOnAction(locationEl, dependentElement)
         }
     }
+
+    function createInfoModal() {}
+    // function togglePointerEvents(hex){
+    //     block
+
+    // }
+    // function toggleLockedDisplays(event, currentTarget){
+    //     let isRelease = event.type === "keyUp"
+    //     if(isRelease){
+
+    //     }else{
+    //         selectedLocationElements.hexChildren.forEach
+
+    //     }
+
+    //     if(event.currentTarget){
+
+    //     }
+
+    // }
 
     function getExtraImagesFromString(baseFilePath, stringNames) {
         // if (!stringNames && !stringNames.trim() && !stringNames === "") {
@@ -187,7 +209,12 @@ export const regionViewerModule = (function () {
             //if the previous element is also our parent, push it to the location heirarchy stack
             locationHeirarchyStack.push({ ...selectedLocationElements });
         }
+        console.log(locationData);
+        const { connections } = locationData;
 
+        if (connections) {
+            addConnectionButtons(connections, childContainer);
+        }
         cacheLocationElements(locationEl, childContainer);
         selectedLocationUI.updateUIData(locationData);
 
@@ -195,22 +222,22 @@ export const regionViewerModule = (function () {
         dependentElement.classList.add("hidden");
 
         //draw paths between connection
-        let { hexChildren } = selectedLocationElements;
-        hexChildren.forEach((hex, index) => {
-            const data = getLocationDataFromElement(hex);
-            if (data.connections) {
-                console.log("Our connections are", data.connections);
-                const destinationIds = data.connections.map((con) => con.guid);
-                destinationIds.forEach((guid) => {
-                    let destination = state.locations.byId[guid];
-                    console.log("Destination is", { destination });
-                    let destinationElement = documeny.querySelector(`[data-guid='${guid}']`);
-                    drawPaths(hex, destinationElement, container, childContainer);
-                });
-            }
-            // if (index + 1 < hexChildren.length)
-            // drawPaths(hex, hexChildren[index + 1], childContainer)
-        });
+        // let { hexChildren } = selectedLocationElements;
+        // hexChildren.forEach((hex, index) => {
+        //     const data = getLocationDataFromElement(hex);
+        //     if (data.connections) {
+        //         console.log("Our connections are", data.connections);
+        //         const destinationIds = data.connections.map((con) => con.guid);
+        //         destinationIds.forEach((guid) => {
+        //             let destination = state.locations.byId[guid];
+        //             console.log("Destination is", { destination });
+        //             let destinationElement = documeny.querySelector(`[data-guid='${guid}']`);
+        //             drawPaths(hex, destinationElement, container, childContainer);
+        //         });
+        //     }
+        // if (index + 1 < hexChildren.length)
+        // drawPaths(hex, hexChildren[index + 1], childContainer)
+        // });
         setDefaultVisibilityState();
 
         addListeners(selectedLocationElements.container);
@@ -260,8 +287,10 @@ export const regionViewerModule = (function () {
                 navigate: {
                     handler: (event) => {
                         const current = event.currentTarget;
-                        const targetName = current.dataset.link;
-                        const locationEl = document.querySelector(`[data-id='${targetName}']`);
+                        // const targetName = current.dataset.link;
+                        const targetId = current.dataset.guidLink;
+                        // const locationEl = document.querySelector(`[data-id='${targetName}']`);
+                        const locationEl = document.querySelector(`[data-guid='${targetId}']`);
                         selectLocation(locationEl);
                     },
                 },
@@ -286,8 +315,10 @@ export const regionViewerModule = (function () {
                         const isLeave = event.type === "mouseout" || event.type === "mouseleave";
                         // if (!isLeave) {
                         const actionElement = event.currentTarget;
-                        const targetName = actionElement.dataset.link;
-                        const hex = document.querySelector(`[data-id='${targetName}']`);
+                        // const targetName = actionElement.dataset.link;
+                        const targetId = actionElement.dataset.guidLink;
+                        // const hex = document.querySelector(`[data-id='${targetName}']`);
+                        const hex = document.querySelector(`[data-guid='${targetId}']`);
                         Helpers.toggleClassOnAction(actionElement, hex, { action: "highlight" });
                         displayInfo(event, hex);
                         // Helpers.highlightAnotherElement(actionElement, hex)
@@ -434,25 +465,41 @@ export const regionViewerModule = (function () {
      * @param {HTMLOrSVGElement} elementData.svgContainer - the container that the hex children will be added to
      */
     function createLocationGrid(parentElement = "", parentData = {}, elementData = {}) {
-        let { children, rowsAndColumns } = parentData;
+        let { children, rowsAndColumns, connections } = parentData;
         let { svgContainer } = elementData;
-        // children = getLocationsByProperty("parent", "guid")//filterChildLocations(parentName, childType)
-        // if (!children) {
-        //     children = getLocationsByProperty("parent", "guid")//filterChildLocations(parentName, childType)
-        // }
+
+        //TODO refactor this to go elsewhere and follow the SRP
 
         populateLocations(children, rowsAndColumns, svgContainer, globalData.baseAssetPath);
         createConnections(children, svgContainer);
+
         if (parentElement) {
             selectedLocationUI.updateUIData(parentElement);
         }
         return svgContainer;
     }
+    function addConnectionButtons(connections) {
+        let elements = connections.map((con) => {
+            return {
+                ...con.element,
+                direction: con.direction,
+            };
+        });
+        let connectionButtons = Helpers.dataToButtons(elements);
+        console.log(connectionButtons);
+        const containerElement = document.querySelector(".location-map .location-map");
+
+        connectionButtons.forEach((btn) => {
+            btn.classList.add("connection-hex");
+            containerElement.appendChild(btn);
+        });
+        // containerElement.appendChild(connectionButtons);
+    }
 
     function createConnections(childLocations, container) {
         childLocations.forEach((data) => {
             if (data.connections) {
-                const destinationIds = data.connections.map((con) => con.guid);
+                const destinationIds = data.connections.map((con) => con.destinationId);
                 const sourceElement = document.querySelector(`[data-guid='${data.guid}']`);
                 destinationIds.forEach((guid) => {
                     const destinationElement = document.querySelector(`[data-guid='${guid}']`);

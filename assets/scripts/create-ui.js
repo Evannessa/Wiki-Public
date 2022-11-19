@@ -60,8 +60,10 @@ export const LocationUIFactory = function (
         },
         connections: {
             contentCallback: (locationData) => {
-                let connections = locationData.connections;
+                let connections = locationData.connections.map((loc) => loc.element);
                 if (connections.length > 0) connections = dataToButtons(connections);
+                //also create connection buttons
+                //refactor this to be placed elsewhere
                 return connections;
             },
             contentFormat: "elementArray",
@@ -163,7 +165,9 @@ export const LocationUIFactory = function (
             .map((child) => {
                 return `
                 <button
+                    class='${child.direction ? child.direction : ""}'
                     data-link='${child.id}'
+                    data-guid-link='${child.guid}'
                     data-click-action="navigate"
                     data-hover-action="highlightHex">
                     ${returnImage(child)}

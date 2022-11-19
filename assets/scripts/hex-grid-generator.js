@@ -1,6 +1,6 @@
 "use strict";
 
-const iconBasePath = "/assets/locations/CityOfMyth/icons_and_symbols/generated-icons/constellation"
+const iconBasePath = "/assets/locations/CityOfMyth/icons_and_symbols/generated-icons/constellation";
 import Helpers from "./helpers.js";
 
 /**
@@ -15,16 +15,24 @@ export function populateLocations(locationData, gridData = { rows: 5, columns: 5
     // generateHexGrid(columns, rows, "overlay", svgContainer);
     injectLocationData(locationData, svgContainer, baseAssetPath);
     cutCorners(rows, columns, svgContainer);
-    const hexes = Array.from(svgContainer.querySelectorAll(".hex:not(.keyedLocation):not(.blank):not(.overlay)"))
-    addIconsToHex(hexes)
+    const hexes = Array.from(svgContainer.querySelectorAll(".hex:not(.keyedLocation):not(.blank):not(.overlay)"));
+    addIconsToHex(hexes);
 }
 function generateHexGrid(columns, rows, className, svgContainer) {
     let columnCounter = 0;
     let rowCounter = 0;
     while (rowCounter < rows) {
-        let xOffset = columnCounter * 18;
-        let yOffset = rowCounter * 20;
-        createHex(xOffset, yOffset, columnCounter, rowCounter, className, svgContainer);
+        // let xOffset = (columnCounter + 50) * 18;
+        let gapNumberX = columns === 5 ? 18 : 18;
+        let gapNumberY = columns === 5 ? 20 : 18;
+        // let gapNumberX = columns === 5 ? 18 : 34;
+        // let gapNumberY = columns === 5 ? 20 : 36;
+
+        let xOffset = columnCounter * gapNumberX;
+        // let xOffset = (columnCounter === 0 ? columnCounter + 50 : columnCounter) * 18;
+        let yOffset = rowCounter * gapNumberY;
+        // let yOffset = (rowCounter + 50) * 20;
+        createHex(xOffset, yOffset, columnCounter, rowCounter, className, svgContainer, columns);
 
         columnCounter++;
         if (columnCounter == columns) {
@@ -34,8 +42,6 @@ function generateHexGrid(columns, rows, className, svgContainer) {
     }
     adjustHexOffset();
 }
-
-
 
 /**
  * Translate each position
@@ -47,70 +53,70 @@ function generateHexGrid(columns, rows, className, svgContainer) {
  * @param {*} svgContainer
  * @returns
  */
-function createHex(xPosition, yPosition, columnNumber, rowNumber, className, svgContainer) {
-
-    let locationType = "region"
-    let parentName = ""
-    const emptyTileUnderlayImg = className === "main"
-        ? "/assets/locations/maps/icons_and_symbols/CircleHexBlank.webp"
-        : "/assets/locations/maps/icons_and_symbols/CircleHexBlank.webp"
+function createHex(xPosition, yPosition, columnNumber, rowNumber, className, svgContainer, size) {
+    let locationType = "region";
+    let parentName = "";
+    const emptyTileUnderlayImg =
+        className === "main"
+            ? "/assets/locations/maps/icons_and_symbols/CircleHexBlank.webp"
+            : "/assets/locations/maps/icons_and_symbols/CircleHexBlank.webp";
     if (!svgContainer.classList.contains("parent-list")) {
-        locationType = svgContainer.dataset?.type
-        parentName = svgContainer.dataset?.parent
-        parentName = parentName.replace(/\s/g, "_")
-    };
-    const uniqueID = `${columnNumber.toString()}${rowNumber.toString()}${className}${parentName}`
-    let svgHex = createSVGHex(
-        emptyTileUnderlayImg,
-        uniqueID
-        , className, locationType);
+        locationType = svgContainer.dataset?.type;
+        parentName = svgContainer.dataset?.parent;
+        parentName = parentName.replace(/\s/g, "_");
+    }
+    const uniqueID = `${columnNumber.toString()}${rowNumber.toString()}${className}${parentName}`;
+    let svgHex = createSVGHex(emptyTileUnderlayImg, uniqueID, className, locationType, size);
     // addIconToTile(svgHex)
 
     // if (!svgContainer)
     //     svgContainer = document.querySelector(".location-map__svg")
     svgContainer.appendChild(svgHex);
-    svgHex.setAttribute("x", xPosition)
-    svgHex.setAttribute("y", yPosition);// = yPosition
+    let xOffset = 50;
+    let yOffset = 50;
+    // xPosition = xPosition + xOffset;
+    // yPosition = yPosition + yOffset;
+    svgHex.setAttribute("x", xPosition);
+    svgHex.setAttribute("y", yPosition); // = yPosition
     // svgHex.style.transform = `translate(${xPosition}%, ${yPosition}%)`;
     svgHex.classList.add("hex");
     svgHex.classList.add("can-be-hidden");
     svgHex.classList.add(className);
-    svgHex.dataset.defaultVisibility = "visible"
+    svgHex.dataset.defaultVisibility = "visible";
     svgHex.dataset.row = rowNumber;
     svgHex.dataset.column = columnNumber;
     return svgHex;
 }
 function addIconsToHex(hexes) {
-    const iconHTMLArrays = generateIcons()
+    const iconHTMLArrays = generateIcons();
     hexes.forEach((tile) => {
-        const iconHTMLArray = iconHTMLArrays.pop()
-        const iconBlurHTML = iconHTMLArray[0] // blur should be bottom
-        const iconDarkHTML = iconHTMLArray[1] // dark should be second
+        const iconHTMLArray = iconHTMLArrays.pop();
+        const iconBlurHTML = iconHTMLArray[0]; // blur should be bottom
+        const iconDarkHTML = iconHTMLArray[1]; // dark should be second
 
-        const mainPath = tile.querySelector("path.main")
-        const overlayPath = tile.querySelector("path.overlay")
+        const mainPath = tile.querySelector("path.main");
+        const overlayPath = tile.querySelector("path.overlay");
 
-        const iconObjectBlur = Helpers.htmlToElement(iconBlurHTML)
-        const iconObjectDark = Helpers.htmlToElement(iconDarkHTML)
-        insertAfter(iconObjectBlur, mainPath)
-        insertAfter(iconObjectDark, overlayPath)
+        const iconObjectBlur = Helpers.htmlToElement(iconBlurHTML);
+        const iconObjectDark = Helpers.htmlToElement(iconDarkHTML);
+        insertAfter(iconObjectBlur, mainPath);
+        insertAfter(iconObjectDark, overlayPath);
 
         // tile.insertAdjacentHTML("beforeend", iconHTML)
         // let tileData = { row: tile.dataset.row, column: tile.dataset.column }
         // let overlayTile = document.querySelector(`.hex.overlay[data-row='${tileData.row}'][data-column='${tileData.column}']`)
         // overlayTile.insertAdjacentHTML("beforeend", iconHTML)
-
-    })
+    });
 }
 
 /**
  * Adjust the hexes in even columns so that they're offset to make a better grid
  */
-function adjustHexOffset() {
+function adjustHexOffset(gapNumberOffset) {
     Array.from(document.querySelectorAll(".hex")).forEach((hex) => {
         if (parseInt(hex.dataset.column) % 2 == 0) {
-            hex.setAttribute("x", hex.dataset.column * 18)
-            hex.setAttribute("y", hex.dataset.row * 20 - 10)
+            hex.setAttribute("x", hex.dataset.column * 18);
+            hex.setAttribute("y", hex.dataset.row * 20 - 10);
             // hex.style.transform = `translate( ${hex.dataset.column * 18}%, ${hex.dataset.row * 20 - 10
             // }%)`;
         }
@@ -123,7 +129,6 @@ function insertAfter(newNode, referenceNode) {
     referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
 }
 
-
 /**
  * Fill the indicated tiles on the grid with a pattern holding the image we want to use.
  * !If there are none, will fill empty hexes with pattern of parent location's image
@@ -131,37 +136,32 @@ function insertAfter(newNode, referenceNode) {
  * @param {String} locationType - string representing the type (regions, areas, sites) of location
  */
 function injectLocationData(locationData, svgContainer, baseAssetPath) {
-
     // console.log(locationData)
     locationData.forEach((dataObject) => {
-        const { row, column, guid, id, imageData } = dataObject
+        const { row, column, guid, id, imageData } = dataObject;
         // console.log({ row, column, guid, id, imageData })
-        const rcSelector = `[data-row='${row - 1}'][data-column='${column - 1}']`
+        const rcSelector = `[data-row='${row - 1}'][data-column='${column - 1}']`;
 
-        if (!svgContainer) svgContainer = document
-
+        if (!svgContainer) svgContainer = document;
 
         // const overlaySVG = svgContainer.querySelector(`.overlay${rcSelector}`)
-        const ourSVG = svgContainer.querySelector(
-            `.main${rcSelector}`
-        );
+        const ourSVG = svgContainer.querySelector(`.main${rcSelector}`);
 
         ourSVG.querySelector("pattern image").setAttribute("href", imageData.mainImage);
         // overlaySVG?.querySelector("pattern image").setAttribute("href", "/assets/locations/CityOfMyth/icons_and_symbols/HexOverlayIconFlat.png");
 
-        ourSVG.classList.add("keyedLocation")
+        ourSVG.classList.add("keyedLocation");
         // overlaySVG?.classList.add("keyedLocation")
         // overlaySVG.querySelector("pattern image").setAttribute("preserveAspectRatio", "xMidYMid meet")
 
-        ourSVG.querySelector("pattern image").setAttribute("preserveAspectRatio", "xMidYMid slice")
+        ourSVG.querySelector("pattern image").setAttribute("preserveAspectRatio", "xMidYMid slice");
         ourSVG.dataset.id = id;
         ourSVG.dataset.guid = guid;
-        ourSVG.dataset.hoverAction = "displayInfo"
-        ourSVG.dataset.clickAction = "selectLocation"
+        ourSVG.dataset.hoverAction = "displayInfo";
+        ourSVG.dataset.clickAction = "selectLocation";
 
-        ourSVG.querySelector("foreignObject .popover").classList.remove("removed")
+        ourSVG.querySelector("foreignObject .popover").classList.remove("removed");
         ourSVG.querySelector("foreignObject .popover p").textContent = id.trim();
-
 
         //    hoverAction: "displayInfo",
         //         clickAction: "selectLocation"
@@ -171,12 +171,16 @@ function injectLocationData(locationData, svgContainer, baseAssetPath) {
     });
 }
 
-
-
-function createSVGHex(img, id, className, locationType) {
-    const xOffset = locationType === "region" ? "0" : "8%"
+function createSVGHex(img, id, className, locationType, size) {
+    // let width = size === 3 ? "33.33%" : "24%";
+    let width = size === 3 ? "24%" : "24%";
+    // let width = "30%"; //////size * 5
+    // let height = size === 3 ? "33.33%" : "23%";
+    let height = size === 3 ? "23%" : "23%";
+    // let height = "30%";
+    const xOffset = locationType === "region" ? "0" : "8%";
     const svgData = `
-<svg class="svgChild ${locationType}" viewBox="0 0 100 100" width="24%" height="23%" y="10" x="${xOffset}" data-type="${locationType}" data-unique-id='${id}'>
+<svg class="svgChild ${locationType}" viewBox="0 0 100 100" width="${width}" height="${height}" y="10" x="${xOffset}" data-type="${locationType}" data-unique-id='${id}'>
 	<defs>
 		<pattern id="fill${id}" width="1" height="1" x="0" y="0" patternUnits="objectBoundingBox" viewBox="0 0 100 100">
 			<image class="pattern-image pattern-${className}" width="200" height="100" x="-50" y="0" href="${img}" preserveAspectRatio="xMidYMid meet" />
@@ -199,45 +203,34 @@ function htmlToElement(html) {
     return template.content.firstChild;
 }
 
-
-
 function cutCorners(maxColumn, maxRow, svgContainer = document) {
-    const size = maxColumn
+    const size = maxColumn;
     maxColumn = maxColumn - 1;
     maxRow = maxRow - 1;
     const size3by3 = [
         [0, 0],
-        [0, maxRow]
-    ]
-    const size5by5 = [
-        ...size3by3,
-        [maxColumn, 1],
-        [maxColumn, 0],
-        [maxColumn, maxRow],
-        [maxColumn, maxRow - 1]
-    ]
-    const coordinates = size === 3 ? size3by3 : size5by5
-    let tiles = coordinates.map(coord =>
-        getTileAtCoordinates(coord[0], coord[1], ".main", svgContainer))
+        [0, maxRow],
+    ];
+    const size5by5 = [...size3by3, [maxColumn, 1], [maxColumn, 0], [maxColumn, maxRow], [maxColumn, maxRow - 1]];
+    const coordinates = size === 3 ? size3by3 : size5by5;
+    let tiles = coordinates.map((coord) => getTileAtCoordinates(coord[0], coord[1], ".main", svgContainer));
 
     // let overlayTiles = coordinates.map(coord => getTileAtCoordinates(coord[0], coord[1], ".overlay", svgContainer))
-    tiles = [...tiles]
+    tiles = [...tiles];
     tiles.forEach((tile) => {
-        setTileStyle(tile)
-    })
+        setTileStyle(tile);
+    });
 }
 
 function getTileAtCoordinates(row, column, mainOrOverlay = ".main", svgContainer = document) {
-    return svgContainer.querySelector(
-        `${mainOrOverlay}[data-row='${row}'][data-column='${column}']`
-    );
+    return svgContainer.querySelector(`${mainOrOverlay}[data-row='${row}'][data-column='${column}']`);
 }
 
 function setTileStyle(tile, style = "blank") {
     tile.classList.add(style);
 }
 function generateIcons() {
-    const iconBasePath = "/assets/locations/maps/icons_and_symbols/icons/conversions/constellation"
+    const iconBasePath = "/assets/locations/maps/icons_and_symbols/icons/conversions/constellation";
     function returnIconHTML(suffix, index, className = "main") {
         return `
         <svg class="icon-container icon-container__${className}">
@@ -245,15 +238,14 @@ function generateIcons() {
         <img src="${iconBasePath}-${index}-${suffix}.webp" width="50%" height="50%" class="icon"/>
         </foreignObject>
         </svg>
-        `
+        `;
     }
-    let iconsArray = []
+    let iconsArray = [];
     for (let i = 1; i <= 30; i++) {
-        const iconHTMLBlur = returnIconHTML("blur", i)
-        const iconHTMLDark = returnIconHTML("dark", i, "overlay")
-        const innerArray = [iconHTMLBlur, iconHTMLDark]
-        iconsArray.push(innerArray)
+        const iconHTMLBlur = returnIconHTML("blur", i);
+        const iconHTMLDark = returnIconHTML("dark", i, "overlay");
+        const innerArray = [iconHTMLBlur, iconHTMLDark];
+        iconsArray.push(innerArray);
     }
-    return iconsArray
+    return iconsArray;
 }
-

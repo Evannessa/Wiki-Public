@@ -180,12 +180,14 @@
                         {
                             "guid": "61e1320a-07e1-4884-9df3-a44e69c7ecb9",
                             "id": "0",
-                            "destinationId": "b80c4b3d-3541-4a3f-a331-a1dde2ae5b3e"
+                            "destinationId": "b80c4b3d-3541-4a3f-a331-a1dde2ae5b3e",
+                            "direction": "left"
                         },
                         {
                             "guid": "6b06d4b8-9289-4209-96f1-7ae39df880c5",
                             "destinationId": "964edfb5-77af-401b-b284-8a99876f16e4",
-                            "id": "1"
+                            "id": "1",
+                            "direction": "down"
                         }
                     ]
                 },
@@ -1047,6 +1049,21 @@
                         "description": "text",
                         "sheet": "sheetSelect",
                         "defaultValue": "lineSelect@sheet"
+                    }
+                },
+                {
+                    "typeStr": "enum",
+                    "guid": "b2f62913-b11e-481d-a251-5a49206764d1",
+                    "name": "direction",
+                    "description": "direction of the button",
+                    "options": "up, down, left, right",
+                    "defaultValue": "up",
+                    "iconName": "newEnum",
+                    "configurable": {
+                        "name": "text",
+                        "description": "text",
+                        "defaultValue": "text",
+                        "options": "text"
                     }
                 }
             ],
