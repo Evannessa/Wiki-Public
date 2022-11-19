@@ -33,7 +33,7 @@ nav {
     .nav-section {
         display: flex;
         align-items: center;
-        min-height: 3rem;
+        // min-height: 2rem;
     }
 }
 nav {
@@ -141,6 +141,7 @@ ul.nav-section {
         border: none;
         text-transform: uppercase;
         font-family: "Aquawax", seif;
+        font-size: 1rem;
         color: var(--color-accent-base);
         white-space: nowrap;
     }

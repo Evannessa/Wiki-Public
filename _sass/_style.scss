@@ -102,7 +102,7 @@ p > img {
     max-width: 100%;
 }
 
-.wrapper p:not(.img-gallery) img:not(#modal-img, .card-img, .badge__img) {
+.wrapper p:not(.img-gallery) img:not(#modal-img, .card-img, .badge__img, .btn-img) {
     border-radius: $border-radius;
     outline: 2px double var(--color-accent-base);
     outline-offset: -1rem;

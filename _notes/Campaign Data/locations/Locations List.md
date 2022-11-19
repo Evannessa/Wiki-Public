@@ -13,7 +13,7 @@ tags:
 	1. [[The Smoke Slough]]
 	2. [[Frozen Hollows of Mist]]
 	3. [[The Ebon-Rain Gardens]]
-	4. [[Meadows of the Desolation]]
+	4. [[Meadows of Desolation]]
 	5. [[The Queen Bog]]
 	6. [[The Giant Bay]]
 	7. [[The Wall of Victory]]

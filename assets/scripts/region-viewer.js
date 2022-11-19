@@ -31,6 +31,11 @@ export const regionViewerModule = (function () {
         });
     function addChildren() {
         locationData = locationData.map((loc) => {
+            let connections = [];
+            for (let connection of loc.connections) {
+                connections = locationData.filter((conLoc) => conLoc.guid === connection.destinationId);
+                // debugger;
+            }
             const children = locationData.filter((childLoc) => childLoc.parent === loc.guid);
             const parentName = locationData.find((parentLoc) => parentLoc.guid === loc.parent)?.id || "";
 
@@ -38,6 +43,7 @@ export const regionViewerModule = (function () {
                 ...loc,
                 children,
                 parentName,
+                connections: connections,
             };
         });
     }
@@ -129,13 +135,15 @@ export const regionViewerModule = (function () {
         const isLeave = event.type === "mouseout" || event.type === "mouseleave";
         let location = getLocationDataFromElement(locationEl);
         if (!isLeave) {
-            console.log("Mouse entering", location.id);
             hoveredLocationUI.updateUIData(location);
             Helpers.toggleClassOnAction(locationEl, dependentElement, { action: "show" });
             // Helpers.toggleClassOnAction(locationEl, dependentElement)
         } else {
             console.log("Mouse exiting", location.id);
-            Helpers.toggleClassOnAction(locationEl, dependentElement, { action: "hide" });
+            if (!event.ctrlKey) {
+                //! put this back
+                // Helpers.toggleClassOnAction(locationEl, dependentElement, { action: "hide" });
+            }
             // Helpers.toggleClassOnAction(locationEl, dependentElement)
         }
     }
@@ -192,7 +200,7 @@ export const regionViewerModule = (function () {
             const data = getLocationDataFromElement(hex);
             if (data.connections) {
                 console.log("Our connections are", data.connections);
-                const destinationIds = data.connections.map((con) => con.destinationID);
+                const destinationIds = data.connections.map((con) => con.guid);
                 destinationIds.forEach((guid) => {
                     let destination = state.locations.byId[guid];
                     console.log("Destination is", { destination });
@@ -444,7 +452,7 @@ export const regionViewerModule = (function () {
     function createConnections(childLocations, container) {
         childLocations.forEach((data) => {
             if (data.connections) {
-                const destinationIds = data.connections.map((con) => con.destinationId);
+                const destinationIds = data.connections.map((con) => con.guid);
                 const sourceElement = document.querySelector(`[data-guid='${data.guid}']`);
                 destinationIds.forEach((guid) => {
                     const destinationElement = document.querySelector(`[data-guid='${guid}']`);

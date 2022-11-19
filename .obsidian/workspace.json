@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_notes/Campaign Data/locations/Frozen Hollows of Mist.md",
+                "file": "_notes/Campaign Data/locations/Desert of the Thorn.md",
                 "mode": "source",
                 "source": false
               }
@@ -142,7 +142,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_notes/Campaign Data/locations/Frozen Hollows of Mist.md",
+                "file": "_notes/Campaign Data/locations/Desert of the Thorn.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -159,7 +159,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_notes/Campaign Data/locations/Frozen Hollows of Mist.md",
+                "file": "_notes/Campaign Data/locations/Desert of the Thorn.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -182,8 +182,16 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_notes/Campaign Data/locations/Frozen Hollows of Mist.md"
+                "file": "_notes/Campaign Data/locations/Desert of the Thorn.md"
               }
+            }
+          },
+          {
+            "id": "c2aecbfbfd733e51",
+            "type": "leaf",
+            "state": {
+              "type": "DICE_ROLLER_VIEW",
+              "state": {}
             }
           }
         ],
@@ -191,19 +199,20 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "active": "ce67aff77f883fda",
   "lastOpenFiles": [
-    "_notes/Campaign Data/locations/Locations List.md",
-    "_notes/Campaign Data/locations/Frozen Hollows of Mist.md",
-    "_notes/Campaign Data/locations/img from artbreeder.jpg",
-    "_notes/Campaign Data/locations/The Fallen Peak.md",
     "_notes/Campaign Data/locations/The Ebon-Rain Gardens.md",
+    "_notes/Campaign Data/locations/The Fallen Peak.md",
+    "_notes/Campaign Data/locations/Locations List.md",
+    "_notes/Campaign Data/locations/Desert of the Thorn.md",
+    "_notes/Campaign Data/locations/Frozen Hollows of Mist.md",
+    "_notes/Campaign Data/locations/Meadows of Desolation.md",
+    "_notes/Campaign Data/locations/img from artbreeder.jpg",
     "_notes/Campaign Data/locations/The Woods of Mist.md",
     "_notes/Campaign Data/locations/The Smoke Slough.md",
-    "_notes/Campaign Data/locations/Starshead Village.md",
-    "_site/assets/locations/Starshead.webp",
-    "_notes/Campaign Data/clans/Maternal Family/Grandpa.md"
+    "_notes/Campaign Data/locations/Starshead Village.md"
   ]
 }
