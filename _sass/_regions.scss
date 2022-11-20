@@ -168,8 +168,10 @@
         &:not(.parent-list) {
             top: 50%;
             left: 50%;
-            height: 20rem;
-            width: 20rem;
+            // height: 20rem;
+            // width: 20rem;
+            width: 100%;
+            height: 100%;
             transform: translate(-50%, -50%);
             .hex path {
                 stroke-width: 0px;
@@ -252,7 +254,7 @@
 .hex path {
     stroke: var(--bg-color);
     // stroke: url(#gradient-pattern);
-    stroke-width: 10px;
+    // stroke-width: 10px;
 }
 .location-map {
     background-color: var(--bg-color);
@@ -280,13 +282,14 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-image: url(/assets/locations/BlueShallows.jpg);
+            background-image: url("/assets/locations/BlueShallows.jpg");
             background-size: cover;
-            mask-image: url(/assets/locations/vecteezy_abstract-dark-paint-splatter-grunge-background_6944589.jpg);
+            mask-image: url("/assets/locations/GrungeBG.webp");
             mask-size: cover;
-            mask-position: right;
+            // mask-position: right;
             mask-repeat: none;
             mask-type: luminance;
+            z-index: -1;
         }
         height: 100%;
         backdrop-filter: blur(5px);

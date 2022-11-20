@@ -21,8 +21,10 @@ export function populateLocations(locationData, gridData = { rows: 5, columns: 5
 function generateHexGrid(columns, rows, className, svgContainer) {
     let columnCounter = 0;
     let rowCounter = 0;
-    let gapNumberX = columns === 5 ? 18 : 30;
-    let gapNumberY = columns === 5 ? 20 : 35;
+    // let gapNumberX = columns === 5 ? 18 : 30;
+    // let gapNumberY = columns === 5 ? 20 : 35;
+    let gapNumberX = columns === 5 ? 20 : 30;
+    let gapNumberY = columns === 5 ? 22 : 35;
     while (rowCounter < rows) {
         let xOffset = columnCounter * gapNumberX;
         let yOffset = rowCounter * gapNumberY;
@@ -35,7 +37,7 @@ function generateHexGrid(columns, rows, className, svgContainer) {
         }
     }
     console.log(gapNumberX, gapNumberY);
-    adjustHexOffset(gapNumberX, gapNumberY);
+    adjustHexOffset(gapNumberX, gapNumberY, svgContainer);
 }
 
 /**
@@ -95,8 +97,8 @@ function addIconsToHex(hexes) {
 /**
  * Adjust the hexes in even columns so that they're offset to make a better grid
  */
-function adjustHexOffset(offsetX, offsetY) {
-    Array.from(document.querySelectorAll(".hex")).forEach((hex) => {
+function adjustHexOffset(offsetX, offsetY, container) {
+    Array.from(container.querySelectorAll(".hex")).forEach((hex) => {
         if (parseInt(hex.dataset.column) % 2 == 0) {
             hex.setAttribute("x", hex.dataset.column * offsetX);
             hex.setAttribute("y", hex.dataset.row * offsetY - offsetY / 2);
@@ -142,6 +144,8 @@ function injectLocationData(locationData, svgContainer, baseAssetPath) {
 function createSVGHex(img, id, className, locationType, size) {
     let width = size === 3 ? "35.33%" : "24%";
     let height = size === 3 ? "35.33%" : "23%";
+    // let width = "24%";
+    // let height = "23%";
     const xOffset = locationType === "region" ? "0" : "8%";
     const svgData = `
 <svg class="svgChild ${locationType}" viewBox="0 0 100 100" width="${width}" height="${height}" y="10" x="${xOffset}" data-type="${locationType}" data-unique-id='${id}'>
