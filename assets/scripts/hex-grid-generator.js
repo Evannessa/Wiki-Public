@@ -62,6 +62,12 @@ function createHex(xPosition, yPosition, columnNumber, rowNumber, className, svg
         parentName = svgContainer.dataset?.parent;
         parentName = parentName.replace(/\s/g, "_");
     }
+    function replaceIllegalCharacters(dirtyString) {
+        var cleanString = dirtyString.replace(/[|&;$%@"<>()+,'\s]/g, "");
+        return cleanString;
+    }
+    className = replaceIllegalCharacters(className);
+    parentName = replaceIllegalCharacters(parentName);
     const uniqueID = `${columnNumber.toString()}${rowNumber.toString()}${className}${parentName}`;
     let svgHex = createSVGHex(emptyTileUnderlayImg, uniqueID, className, locationType, size);
 
@@ -148,7 +154,7 @@ function createSVGHex(img, id, className, locationType, size) {
     // let height = "23%";
     const xOffset = locationType === "region" ? "0" : "8%";
     const svgData = `
-<svg class="svgChild ${locationType}" viewBox="0 0 100 100" width="${width}" height="${height}" y="10" x="${xOffset}" data-type="${locationType}" data-unique-id='${id}'>
+<svg class="svgChild ${locationType}" viewBox="0 0 100 100" width="${width}" height="${height}" y="10" x="${xOffset}" data-type="${locationType}">
 	<defs>
 		<pattern id="fill${id}" width="1" height="1" x="0" y="0" patternUnits="objectBoundingBox" viewBox="0 0 100 100">
 			<image class="pattern-image pattern-${className}" width="200" height="100" x="-50" y="0" href="${img}" preserveAspectRatio="xMidYMid meet" />

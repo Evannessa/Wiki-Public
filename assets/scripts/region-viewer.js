@@ -214,7 +214,7 @@ export const regionViewerModule = (function () {
 
         if (connections) {
             //TODO: add this back in later
-            // addConnectionButtons(connections, childContainer);
+            addConnectionButtons(connections, childContainer);
         }
         cacheLocationElements(locationEl, childContainer);
         selectedLocationUI.updateUIData(locationData);
@@ -438,7 +438,7 @@ export const regionViewerModule = (function () {
         let childType = "region";
         if (type === "region") childType = "area";
         else if (type === "area") childType = "site";
-        const svgContainer = createSVG(id, imageData.mainImage);
+        const svgContainer = createSVG(id, type); //imageData.mainImage);
 
         createImageDisplay(parentData, svgContainer);
 

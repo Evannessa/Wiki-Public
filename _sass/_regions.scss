@@ -172,6 +172,7 @@
             // width: 20rem;
             width: 100%;
             height: 100%;
+            padding: 5rem;
             transform: translate(-50%, -50%);
             .hex path {
                 stroke-width: 0px;
@@ -400,6 +401,7 @@
             transform: translateX(-50%),
             width: 100%,
             max-width: unset,
+            height: 10%,
         ),
         down: (
             bottom: 0%,
@@ -407,6 +409,7 @@
             transform: translateX(-50%),
             max-width: unset,
             width: 100%,
+            height: 10%,
         ),
         left: (
             top: 50%,
@@ -414,6 +417,7 @@
             transform: translateY(-50%),
             max-height: unset,
             height: 100%,
+            width: 10%,
         ),
         right: (
             top: 50%,
@@ -421,13 +425,33 @@
             max-height: unset,
             transform: translateY(-50%),
             height: 100%,
+            width: 10%,
         ),
     );
     @each $name, $direction in $connections {
         &.#{$name} {
             @each $position, $value in $direction {
                 #{$position}: $value;
+                img {
+                    @if ($position == "up" or $position == "$down") {
+                        width: 100%;
+                    } @else {
+                        height: 100%;
+                    }
+                    // max-width: 100%;
+                    // max-height: 100%;
+                    // width: 100%;
+                }
             }
+        }
+    }
+    img {
+        opacity: 20%;
+        transition: opacity 150ms ease-in-out;
+    }
+    &:hover {
+        img {
+            opacity: 100%;
         }
     }
 }
