@@ -577,7 +577,7 @@
                     "guid": "c577dab7-aa26-4d14-9fff-f0f7d953a70d",
                     "id": "Forgotten Shack",
                     "type": "site",
-                    "parent": "f492fe2d-03b3-4c1e-8653-22c312d28b95",
+                    "parent": "bde96b81-8d6c-4962-b4d2-af70b21e3d77",
                     "imageData": {
                         "guid": "73b2d0c4-8eae-4a07-8ff6-5ec712156ee5",
                         "mainImage": "..\\..\\locations\\SwampHouse.jpg",
@@ -585,8 +585,8 @@
                     },
                     "flavorData": {},
                     "encounterData": {},
-                    "column": 1,
-                    "row": 1,
+                    "column": 2,
+                    "row": 2,
                     "connections": []
                 },
                 {
@@ -601,8 +601,8 @@
                     },
                     "flavorData": {},
                     "encounterData": {},
-                    "column": 1,
-                    "row": 1,
+                    "column": 2,
+                    "row": 2,
                     "connections": []
                 },
                 {
@@ -617,8 +617,8 @@
                     },
                     "flavorData": {},
                     "encounterData": {},
-                    "column": 1,
-                    "row": 1,
+                    "column": 2,
+                    "row": 2,
                     "connections": []
                 },
                 {
@@ -633,8 +633,8 @@
                     },
                     "flavorData": {},
                     "encounterData": {},
-                    "column": 1,
-                    "row": 1,
+                    "column": 2,
+                    "row": 2,
                     "connections": []
                 },
                 {
@@ -649,8 +649,8 @@
                     },
                     "flavorData": {},
                     "encounterData": {},
-                    "column": 1,
-                    "row": 1,
+                    "column": 2,
+                    "row": 2,
                     "connections": []
                 },
                 {
@@ -665,8 +665,8 @@
                     },
                     "flavorData": {},
                     "encounterData": {},
-                    "column": 1,
-                    "row": 1,
+                    "column": 2,
+                    "row": 2,
                     "connections": []
                 }
             ],

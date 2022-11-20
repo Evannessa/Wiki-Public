@@ -213,7 +213,8 @@ export const regionViewerModule = (function () {
         const { connections } = locationData;
 
         if (connections) {
-            addConnectionButtons(connections, childContainer);
+            //TODO: add this back in later
+            // addConnectionButtons(connections, childContainer);
         }
         cacheLocationElements(locationEl, childContainer);
         selectedLocationUI.updateUIData(locationData);
@@ -514,7 +515,8 @@ export const regionViewerModule = (function () {
         const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
         svg.setAttribute("width", "100%");
         svg.setAttribute("height", "100%");
-        svg.setAttribute("viewBox", "0 -10 100 100");
+        const viewboxValues = type === "region" ? "0 -10 100 100" : "0 0 100 100";
+        svg.setAttribute("viewBox", viewboxValues);
         svg.setAttributeNS("http://www.w3.org/2000/xmlns/", "xmlns:xlink", "http://www.w3.org/1999/xlink");
         const trimmedParent = parentName.replace(/\s/g, "_");
         svg.classList.add(trimmedParent + "_container");

@@ -141,9 +141,9 @@ export const LocationUIFactory = function (
         dataArray = dataArray
             .map((child) => {
                 if (child.hasPage) {
-                    return `<a class="map-link" href='/${child.id}'>
+                    return `<div><a class="map-link" href='/${child.id}'>
                             ${child.id}
-                        </a>`;
+                        </a></div>`;
                 } else {
                     return Helpers.createPopover(child.id, child.id, child.description, { classes: ["map-link"] });
                 }
