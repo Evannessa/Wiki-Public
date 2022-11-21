@@ -1,3 +1,9 @@
-    <button class="icon-button" data-click-action="{{include.clickAction}}" data-scope="{{include.scope}}">
-        <img src="/assets/ui/{{include.fileName}}" alt="{{include.alt}}"/>
+<button class="icon-button"
+    data-click-action="{{include.clickAction}}"
+    data-scope="{{include.scope}}"
+    title="{{include.tooltipText}}"
+    data-variant="glow-hover"
+>
+    {% assign icon = {{include.iconName}} %}
+    {% include font-icon.html icon=icon %}
 </button>

@@ -3,7 +3,8 @@ button,
     backdrop-filter: blur(2px);
     padding: 0.5em 1em;
     border-radius: 5px;
-    color: white;
+    color: var(--color-primary-300);
+    // color: white;
     box-shadow: 0px 2px 8px rgba(39, 33, 70, 0.45);
     border: 1px solid rgba(156, 131, 200, 0.13);
     background-color: rgba(0, 0, 0, 0.1);
@@ -24,13 +25,25 @@ button,
             transform: scale(1.15);
         }
     }
-    &[data-variant="color-hover"] {
-        color: white;
+    &[data-variant="glow-hover"] {
         &:hover,
         &:focus,
-        &:focus-within {
+        &:focus-within,
+        &.active {
             // transform: unset;
-            color: var(--color-accent);
+            @extend .secondary-text-shadow;
+            // color: var(--color-accent);
+        }
+    }
+    &[data-variant="color-hover"] {
+        color: var(--color-primary-300);
+        &:hover,
+        &:focus,
+        &:focus-within,
+        &.active {
+            // transform: unset;
+            // @extend .secondary-text-shadow;
+            color: var(--color-secondary-300);
         }
     }
     .btn-img {

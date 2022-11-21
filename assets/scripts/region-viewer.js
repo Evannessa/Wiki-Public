@@ -108,7 +108,7 @@ export const regionViewerModule = (function () {
         selectedLocationUI.initializeUIData();
 
         hoveredLocationUI = new LocationUIFactory(
-            "child-location",
+            "child-location-info",
             globalData,
             document.querySelector(".location-hover-info"),
             state,

@@ -1,22 +1,38 @@
-  <div class="location-info expanded">
-        <div class="location-info__header">
-            <h1 class="location-info__title">
-                {{include.title}}
-            </h1>
-            <button class="expand" data-click-action="expand" data-variant="color-hover">
-
-            </button>
+<div class="location-info expanded">
+    <div class="location-info__header">
+        <div class="global-controls controls">
+            {% assign icon1 = 'gallery_thumbnail' %}
+            {% assign icon2 = 'zoom_out_map' %}
+            {% assign icon3 = 'undo' %}
+            {% include icon-button.html clickAction="toggle" scope="global"
+                iconName="gallery_thumbnail"
+                class="toggle"
+                tooltipText="show/hide location image gallery"
+            %}
+            {% include icon-button.html clickAction="reset" scope="global"
+                iconName="zoom_out_map"
+                class="reset"
+                tooltipText="zoom out map entirely"
+            %}
+            {% include icon-button.html clickAction="backOne" scope="global"
+                iconName="undo"
+                class="backOne"
+                tooltipText="back to previous location"
+                %}
         </div>
-        {% include map-ui.html prefix="location-info" hasControls=true hasTabs=true %}
-
+        <h1 class="location-info__title">
+            {{include.title}}
+        </h1>
+        <button class="expand" data-click-action="expand" data-variant="color-hover"></button>
     </div>
-<section class="location-map" data-path="{{include.path}}">
-    <svg class="location-map__svg location__container parent-list" viewbox="0 -10 100 100" data-type="region">
+    {% include map-ui.html prefix="location-info" hasControls=true hasTabs=true %}
 
-    </svg>
+</div>
+<section class="location-map" data-path="{{include.path}}">
+    <svg class="location-map__svg location__container parent-list" viewbox="0 -10 100 100" data-type="region"></svg>
 
     <div class="child-location location-hover-info can-be-hidden hidden" data-default-visibility="hidden">
-        {% include map-ui.html prefix="child-location" %}
+        {% include map-ui.html prefix="child-location-info" %}
     </div>
 </section>
 <script src="/assets/scripts/modal.js" type="module"></script>

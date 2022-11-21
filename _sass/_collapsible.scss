@@ -1,11 +1,20 @@
 .collapsible {
     position: relative;
+    background-color: var(--color-primary-base);
+    background-image: url(/assets/locations/maps/CosmosBG.webp);
+    background-size: cover;
+    background-blend-mode: soft-light;
+    color: var(--color-primary-darkest);
+    border-radius: unset;
     // background-color: #777;
 
     span,
     &:after {
-        color: var(--color-primary-base);
-        transition: color 200ms ease-in;
+        color: var(--color-primary-darkest);
+        &[data-variant="ghost"] {
+            color: var(--color-primary-base);
+            transition: color 200ms ease-in;
+        }
     }
     cursor: pointer;
     padding: 0.5em;
@@ -21,6 +30,7 @@
         right: 0;
         top: 50%;
         transform: translateY(-50%);
+        padding-right: 1em;
         font-weight: bold;
     }
     &.active {
@@ -29,15 +39,21 @@
         }
         span,
         &:after {
-            color: var(--color-secondary-base);
+            &[data-variant="ghost"] {
+                color: var(--color-secondary-base);
+            }
         }
         &:hover,
         &:focus,
         &:focus-within {
             span,
             &:after {
-                color: var(--color-primary-base);
+                &[data-variant="ghost"] {
+                    color: var(--color-primary-base);
+                }
             }
+        }
+        + .content {
         }
     }
     &:hover,
@@ -49,9 +65,17 @@
         }
     }
     + .content {
-        max-height: 0;
-        overflow-y: auto;
-        transition: max-height 0.2s ease-out;
         // max-height: 30vh;
+    }
+}
+.collapsible + .content {
+    max-height: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    transition: max-height 0.2s ease-out;
+    &.active {
+        max-height: 400px;
+        transition: max-height 200ms ease-in;
+        padding: 0.5em;
     }
 }

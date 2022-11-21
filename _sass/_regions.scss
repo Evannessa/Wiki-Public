@@ -2,63 +2,18 @@
     display: flex;
     height: 100%;
 }
-.location-map {
-    .map-link {
-    }
-}
+
 .location-info {
     height: 100vh;
     width: 0%;
-
     position: static;
     right: 100%;
-    // transform: translateX(0);
-    // min-width: 30vw;
     max-width: 50vw;
-    // height: 100%;
-    // max-height: 100%;
     z-index: 20;
     background-color: hsla(253, 56%, 8%, 0.435);
     backdrop-filter: blur(8px);
-    // border-radius: 8px;
     transition: width 150ms ease-in;
-    .location-info__content {
-        display: flex;
-        flex-direction: column;
-        .tab-section {
-            display: flex;
-            flex-direction: row;
-            &__content {
-                display: flex;
-                flex-direction: column;
-            }
-        }
-    }
-    .tabs {
-        display: flex;
-        flex-direction: row;
-        width: fit-content;
-        flex-wrap: nowrap;
-        writing-mode: vertical-rl;
-        text-orientation: sideways-right;
-        .tab {
-            border: unset;
-            &.active {
-                color: var(--color-primary-base);
-                border-left: 2px solid var(--color-primary-base);
-                // background-color: rgba(0, 255, 255, 0.315);
-            }
-        }
-    }
-    .tab-content {
-        height: 100%;
-        // background-color: rgba(0, 255, 255, 0.349);
-        display: none;
-        &.active {
-            display: flex;
-            flex-direction: column;
-        }
-    }
+
     .side-nav {
         display: flex;
         height: 100%;
@@ -77,6 +32,14 @@
         left: 100%;
         gap: 0.5em;
         border-radius: 8px;
+        .controls {
+            grid-row: 1/2;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 0.5em;
+            z-index: 1;
+        }
         h1 {
             text-orientation: sideways;
             writing-mode: vertical-rl;
@@ -93,7 +56,7 @@
         height: 100%;
         overflow-y: auto;
         overflow-x: hidden;
-        padding-block: 2em;
+        padding-top: 2em;
         h3 {
             font-size: small;
         }
@@ -105,6 +68,9 @@
         grid-auto-rows: 50px;
         gap: 0.4em;
     }
+    &__description {
+        font-size: small;
+    }
     &.expanded {
         transition: width 150ms ease-out;
         width: 40vw;
@@ -112,32 +78,15 @@
         @media (min-width: 992px) {
             // padding: 1.5em 2em;
         }
-        // transform: translateX(100%);
-        // transition: transform 150ms ease-in;
-        // .location-info__header {
-        //     left: 0;
-        //     height: 2rem;
-        //     width: 100%;
-        //     h1 {
-        //         text-orientation: mixed;
-        //         writing-mode: unset;
-        //     }
-        // }
     }
 
-    .featured-image {
-        border-radius: 8px;
-        max-width: 100%;
-        height: auto;
-        min-width: 500px;
-    }
     h1,
     h2,
     h3 {
         margin-bottom: unset;
     }
 }
-
+//the map itself
 .location-map .location-map {
     font-size: 1rem;
     --bg-color: #090516;
@@ -146,6 +95,7 @@
     width: 100vw;
     height: 100vh;
     overflow: hidden;
+    //wrapper for the individual location containers
     .location__container {
         padding: 3rem;
         .hex {
@@ -248,6 +198,7 @@
         }
     }
 }
+//location hexes that are specific locations rather than just decor
 .keyedLocation {
     pattern image.pattern-overlay {
         transform: scale(1.05, 1.01);
@@ -290,7 +241,6 @@
             }
             .overlay {
                 opacity: 0%;
-                // fill: var(--color-primary-base) !important;
                 transition: opacity 200ms ease-out;
             }
         }
@@ -308,65 +258,66 @@
 }
 .hex path {
     stroke: var(--bg-color);
-    // stroke: url(#gradient-pattern);
-    // stroke-width: 10px;
 }
 .location-info,
-.location-hover-info {
-    .map-info-card {
-        position: relative;
-        // max-height: 20vh;
-        overflow: hidden;
-        display: grid;
-        grid-template-rows: minmax(0, 60%) minmax(0, 1fr);
-        justify-content: center;
-        // max-height: 30vh;
-        .controls {
-            grid-row: 1/2;
-            // position: absolute;
-            // bottom: 0;
-            // left: 50%;
-            // transform: translateX(-50%);
-            display: flex;
-            justify-content: space-between;
-            gap: 0.5em;
-            z-index: 1;
-        }
-        .card-content {
-            max-height: 20vh;
-            overflow: auto;
-            .bold {
-                font-weight: bold;
-                font-size: xx-small;
-                margin-top: unset;
-                margin-bottom: 0;
-            }
-            p {
-                font-size: 0.75em;
-            }
-        }
-        .card-portrait {
+.child-location-info {
+    &__content {
+        .map-info-card {
             grid-row: 1/2;
             position: relative;
-            display: flex;
-            align-items: center;
+            overflow: hidden;
+            display: grid;
+            grid-template-rows: minmax(0, 80%) minmax(0, 1fr);
             justify-content: center;
-            max-height: 100%;
-            height: 100%;
-            img {
-                width: 100%;
-                height: auto;
-                object-fit: cover;
-                object-position: center;
-                // border-radius: 50%;
-                mask-image: url(/assets/locations/maps/portrait-mask.png);
-                mask-mode: luminance;
-                mask-position: center;
-                // mask-size: cover;
-                // object-fit: contain;
-                mask-size: contain;
+
+            .card-content {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: cenetr;
+                max-height: 20vh;
+                overflow: auto;
+                h1,
+                h2,
+                h3,
+                p {
+                    margin: unset;
+                    // display: flex;
+                    text-align: center;
+                }
+                .bold {
+                    font-weight: bold;
+                    font-size: xx-small;
+                    margin-top: unset;
+                    margin-bottom: 0;
+                }
+                p {
+                    font-size: 0.75em;
+                }
+            }
+            .card-portrait {
+                grid-row: 1/2;
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
                 max-height: 100%;
-                mask-repeat: no-repeat;
+                height: 100%;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    object-position: center;
+                    // border-radius: 50%;
+                    mask-image: url(/assets/locations/maps/portrait-mask.png);
+                    mask-mode: luminance;
+                    mask-position: center;
+                    // mask-size: cover;
+                    // object-fit: contain;
+                    mask-size: contain;
+                    max-height: 100%;
+                    mask-repeat: no-repeat;
+                }
             }
         }
     }
@@ -379,15 +330,6 @@
         background-color: var(--bg-color);
         max-height: 100vh;
         width: 100%;
-    }
-    .global-controls {
-        position: fixed;
-        bottom: 1rem;
-        left: 50%;
-        transform: translateX(-50%);
-        z-index: 10;
-        display: flex;
-        gap: 0.5em;
     }
     .location-hover-info {
         &:before {
@@ -486,34 +428,9 @@
         font-size: 0.5rem;
         pointer-events: painted;
     }
-    .featured-image + .color-overlay {
-        opacity: 40%;
-    }
-
-    .region {
-    }
-    .color-overlay {
-        fill: url(#gradient-3);
-        pointer-events: none;
-        opacity: 80%;
-        // mix-blend-mode: hard-light;
-        transition: opacity 200ms ease-out;
-        &.featured {
-            opacity: 40%;
-        }
-    }
-    .underlay {
-        fill: #001d8f;
-        stroke: #602eb969;
-        filter: drop-shadow(1px 1px 2px rgba(8, 25, 117, 0.28));
-        stroke-linecap: round;
-        stroke-linejoin: round;
-    }
 }
 .connection-hex {
-    // width: 10%;
-    // height: auto;
-    position: fixed;
+    position: absolute;
     $connections: (
         up: (
             top: 0%,

@@ -58,12 +58,9 @@ export const LocationUIFactory = function (
         },
         description: {
             contentCallback: (locationData) => {
-                return (
-                    locationData.flavorData?.description ||
-                    `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At quis risus sed vulputate odio ut enim. Habitant morbi tristique senectus et netus et. Ornare massa eget egestas purus viverra. Lorem donec massa sapien faucibus et. Aliquet risus feugiat in ante. Ut enim blandit volutpat maecenas volutpat blandit aliquam. Adipiscing enim eu turpis egestas.`
-                );
+                return locationData.flavorData?.description || Helpers.returnFillerText();
             },
-            defaultValue: defaultData.flavorData.description,
+            defaultValue: defaultData.flavorData.description || Helpers.returnFillerText(),
             contentFormat: "text",
         },
         "connections-title": {

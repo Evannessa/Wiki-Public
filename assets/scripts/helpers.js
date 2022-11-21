@@ -1,4 +1,7 @@
 export default class Helpers {
+    static returnFillerText() {
+        return `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At quis risus sed vulputate odio ut enim. Habitant morbi tristique senectus et netus et. Ornare massa eget egestas purus viverra. Lorem donec massa sapien faucibus et. Aliquet risus feugiat in ante. Ut enim blandit volutpat maecenas volutpat blandit aliquam. Adipiscing enim eu turpis egestas.`;
+    }
     static htmlToElement(html) {
         let template = document.createElement("template");
         html = html.trim(); // Never return a text node of whitespace as the result
@@ -44,11 +47,12 @@ export default class Helpers {
     static toggleCollapsible(collapsibleElement) {
         collapsibleElement.classList.toggle("active");
         var content = collapsibleElement.nextElementSibling;
-        if (content.style.maxHeight) {
-            content.style.maxHeight = null;
-        } else {
-            content.style.maxHeight = content.scrollHeight + "px";
-        }
+        content.classList.toggle("active");
+        // if (content.style.maxHeight) {
+        //     content.style.maxHeight = null;
+        // } else {
+        //     content.style.maxHeight = content.scrollHeight + "px";
+        // }
     }
 
     /**

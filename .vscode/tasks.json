@@ -1,0 +1,34 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "serve",
+            "type": "shell",
+            "command": "bundle exec jekyll serve -l",
+            "problemMatcher": []
+        },
+      {
+            "label": "serve incremental",
+            "type": "shell",
+            "command": "bundle exec jekyll serve -l --incremental",
+            "problemMatcher": []
+        },
+        {
+            "label": "echo",
+            "type": "shell",
+            "command": "echo Hello"
+        },
+        {
+            "label": "dpo to json _data",
+            "type": "shell",
+            "command": "cp CityOfMyth.dpo _data/com_areas.json",
+            "problemMatcher": []
+        },
+  {
+            "label": "dpo to json /assets",
+            "type": "shell",
+            "command": "cp CityOfMyth.dpo assets/data/com_areas.json",
+            "problemMatcher": []
+        }
+    ]
+}
