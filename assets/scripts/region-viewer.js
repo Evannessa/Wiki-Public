@@ -276,7 +276,8 @@ export const regionViewerModule = (function () {
                         document.getElementById(target).classList.add("active");
                         document.getElementById(target).classList.remove("removed");
                         //Also if it's closed, expand the toggle
-                        if (selectedLocationUI.getContainer().classList.contains("expanded")) {
+                        console.log(selectedLocationUI.getContainer());
+                        if (!selectedLocationUI.getContainer().classList.contains("expanded")) {
                             expandSidebar();
                         }
                     },
