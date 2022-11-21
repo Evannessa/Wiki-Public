@@ -2,5 +2,6 @@
     "gotoSymbolStack.currentStackPosition": 0,
     "gotoSymbolStack.maxStackPosition": 0,
     "gotoSymbolStack.filePositionInfo": [],
-    "todoist.projectId": 2297684255
+    "todoist.projectId": 2297684255,
+    "liquid.format.enable": true
 }

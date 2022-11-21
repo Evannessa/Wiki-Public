@@ -248,6 +248,25 @@ export const regionViewerModule = (function () {
         selectedLocationContainer: "",
         actions: {
             click: {
+                switchTab: {
+                    handler: (event) => {
+                        //TODO: Refactor this so that the tabs are being cached
+                        let tab = event.currentTarget;
+                        let target = tab.dataset.target;
+                        let tabs = Array.from(document.querySelectorAll(".tab"));
+                        let contentSections = Array.from(document.querySelectorAll(".tab-content"));
+                        tabs.forEach((tab) => {
+                            tab.classList.remove("active");
+                        });
+                        contentSections.forEach((section) => {
+                            section.classList.remove("active");
+                            section.classList.add("removed");
+                        });
+                        tab.classList.add("active");
+                        document.getElementById(target).classList.add("active");
+                        document.getElementById(target).classList.remove("removed");
+                    },
+                },
                 toggle: {
                     handler: (event) => {
                         let currentTarget = event.currentTarget;
