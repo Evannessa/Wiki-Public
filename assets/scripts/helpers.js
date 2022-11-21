@@ -41,6 +41,16 @@ export default class Helpers {
         dependentElement.classList.toggle("highlighted");
     }
 
+    static toggleCollapsible(collapsibleElement) {
+        collapsibleElement.classList.toggle("active");
+        var content = collapsibleElement.nextElementSibling;
+        if (content.style.maxHeight) {
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    }
+
     /**
      * Toggle a button's text content, and hide an element
      * @param {HTMLOrSVGElement} actionElement - the element we're adding an event listener to
@@ -152,6 +162,7 @@ export default class Helpers {
                 return `
                 <button
                     class='${child.direction ? child.direction : ""}'
+                    data-variant='color-hover'
                     data-link='${child.id}'
                     data-guid-link='${child.guid}'
                     data-click-action="navigate"
@@ -162,5 +173,16 @@ export default class Helpers {
             })
             .map((child) => Helpers.htmlToElement(child));
         return dataArray;
+    }
+    /* Set the width of the side navigation to 250px and the left margin of the page content to 250px */
+    static openNav(nav, main) {
+        nav.style.width = "30vw";
+        main.style.marginLeft = "30vw";
+    }
+
+    /* Set the width of the side navigation to 0 and the left margin of the page content to 0 */
+    static closeNav(nav, main) {
+        nav.style.width = "0";
+        main.style.marginLeft = "0";
     }
 }

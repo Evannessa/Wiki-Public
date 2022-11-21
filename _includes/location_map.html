@@ -1,56 +1,80 @@
-<section class="location-map" data-path="{{include.path}}">
-    <svg class="location-map__svg location__container parent-list" viewbox="0 -10 100 100" data-type="region">
-
-    </svg>
-    <div class="global-controls">
-        <button class="toggle" data-click-action="toggle" data-scope="global">
-            Show Image
-        </button>
-        <button class="reset" data-click-action="reset" data-scope="global">
-            Reset Zoom
-        </button>
-        <button class="backOne" data-click-action="backOne" data-scope="global">
-            Back One
-        </button>
-    </div>
-    <div class="location-info expanded">
+  <div class="location-info expanded">
         <div class="location-info__header">
             <h1 class="location-info__title">
                 {{include.title}}
             </h1>
-            <button class="expand" data-click-action="expand">
-                >
+            <button class="expand" data-click-action="expand" data-variant="color-hover">
+
             </button>
         </div>
-        <div class="location-info__content">
-            {%- comment -%}
-                <img class="location-info__img" src="" alt="">
-            {%- endcomment -%}
-            <p class="location-info__tags bold"></p>
-            <p class="location-info__description"></p>
-            <h3 class="location-info__children-title"></h3>
-            <ul class="location-info__children"></ul>
-            <h3 class="location-info__connections-title"></h3>
-            <ul class="location-info__connections"></ul>
-            <h3 class="location-info__cast-title"></h3>
+        {% include map-ui.html prefix="location-info" hasControls=true %}
+        {%- comment -%} <div class="location-info__content">
+            <div class="location-info__card map-info-card">
+                <div class="location-info__portrait">
+
+
+                </div>
+            <div class="location-info__card-content">
+                <p class="location-info__tags bold"></p>
+                <p class="location-info__description"></p>
+            </div>
+            </div>
+            <button class="collapsible" data-click-action="open" data-variant="color-hover">
+                <span class="location-info__children-title"></span>
+            </button>
+            <div class="content">
+                <ul class="location-info__children"></ul>
+           </div>
+            <button class="collapsible" data-click-action="open" data-variant="color-hover">
+            <span class="location-info__connections-title"></span>
+            </button>
+            <div class="content">
+                <ul class="location-info__connections"></ul>
+            </div>
+            <button class="collapsible" data-variant="color-hover" data-click-action="open">
+                <h3 class="location-info__cast-title"></h3>
+            </button>
             <ul class="location-info__cast"></ul>
-            <h3 class="location-info__factions-title"></h3>
+            <button class="collapsible" data-variant="color-hover" data-click-action="open">
+                <h3 class="location-info__factions-title"></h3>
+            </button>
             <ul class="location-info__factions"></ul>
-        </div>
+        </div> {%- endcomment -%}
 
     </div>
+<section class="location-map" data-path="{{include.path}}">
+    <svg class="location-map__svg location__container parent-list" viewbox="0 -10 100 100" data-type="region">
+
+    </svg>
+
     <div class="child-location location-hover-info can-be-hidden hidden" data-default-visibility="hidden">
-        <h2 class="child-location__title"></h2>
-        <p class="child-location__tags"></p>
-        <p class="child-location__description"></p>
-        <h3 class="child-location__connections-title"></h3>
+        {%- comment -%} <h2 class="child-location__title"></h2> {%- endcomment -%}
+        {% include map-ui.html prefix="child-location" %}
+        {%- comment -%} <div class="child-location__card map-info-card">
+                <div class="child-location__portrait">
+
+                </div>
+            <div class="child-info__card-content">
+                <p class="child-location__tags"></p>
+                <p class="child-location__description"></p>
+            </div>
+        </div>
+            <button class="collapsible" data-variant="color-hover" data-click-action="open">
+            <h3 class="child-location__connections-title"></h3>
+        </button>
         <p class="child-location__connections"></p>
-        <h3 class="child-location__children-title"></h3>
+            <button class="collapsible" data-variant="color-hover" data-click-action="open">
+            <h3 class="child-location__children-title"></h3>
+        </button>
         <p class="child-location__children"></p>
-        <h3 class="child-location__cast-title"></h3>
+            <button class="collapsible" data-variant="color-hover" data-click-action="open">
+            <h3 class="child-location__cast-title"></h3>
+            </button>
         <ul class="child-location__cast"></ul>
-        <h3 class="child-location__factions-title"></h3>
-        <ul class="child-location__factions"></ul>
+            <button class="collapsible" data-variant="color-hover" data-click-action="open">
+            <h3 class="child-location__factions-title"></h3>
+            </button>
+        <ul class="child-location__factions"></ul> {%- endcomment -%}
     </div>
 </section>
 <script src="/assets/scripts/modal.js" type="module"></script>

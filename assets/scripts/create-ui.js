@@ -34,18 +34,36 @@ export const LocationUIFactory = function (
             defaultValue: defaultData.id,
             contentFormat: "text",
         },
+        "card-title": {
+            contentCallback: (locationData) => {
+                const { id: name } = locationData;
+                return name;
+            },
+            defaultValue: defaultData.id,
+            contentFormat: "text",
+        },
+        portrait: {
+            contentCallback: (locationData) => {
+                return dataToImage(locationData.imageData?.mainImage, locationData.id);
+            },
+            defaultValue: dataToImage(defaultData.imageData?.mainImage, defaultData.id),
+            contentFormat: "singleElement",
+        },
         tags: {
             contentCallback: (locationData) => {
-                return locationData.tags;
+                return locationData.flavorData?.tags;
             },
             defaultValue: "none",
             contentFormat: "text",
         },
         description: {
             contentCallback: (locationData) => {
-                return locationData.description;
+                return (
+                    locationData.flavorData?.description ||
+                    `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At quis risus sed vulputate odio ut enim. Habitant morbi tristique senectus et netus et. Ornare massa eget egestas purus viverra. Lorem donec massa sapien faucibus et. Aliquet risus feugiat in ante. Ut enim blandit volutpat maecenas volutpat blandit aliquam. Adipiscing enim eu turpis egestas.`
+                );
             },
-            defaultValue: defaultData.description,
+            defaultValue: defaultData.flavorData.description,
             contentFormat: "text",
         },
         "connections-title": {
@@ -151,7 +169,11 @@ export const LocationUIFactory = function (
             .map((child) => Helpers.htmlToElement(child));
         return dataArray;
     }
-
+    function dataToImage(imagePath, alt) {
+        return Helpers.htmlToElement(`<img class="card-portrait__img"
+                            src="${imagePath}"
+                            alt="${alt}"/>`);
+    }
     function dataToButtons(dataArray = []) {
         function returnImage(child) {
             let string = child.imageData
@@ -166,6 +188,7 @@ export const LocationUIFactory = function (
                 return `
                 <button
                     class='${child.direction ? child.direction : ""}'
+                    data-variant='color-hover'
                     data-link='${child.id}'
                     data-guid-link='${child.guid}'
                     data-click-action="navigate"
@@ -193,10 +216,18 @@ export const LocationUIFactory = function (
         const suffixes = Object.keys(uiData);
         suffixes.forEach((suffix) => {
             const uiElement = uiData[suffix].element;
-            if (uiElement.classList.contains("removed")) uiElement.classList.remove("removed");
+            if (!uiElement) return;
+            if (uiElement.classList.contains("removed")) {
+                uiElement.classList.remove("removed");
+            }
+            if (uiElement.parentNode.classList.contains("removed")) {
+                uiElement.parentNode.classList.remove("removed");
+            }
         });
+
         suffixes.forEach((suffix) => {
             const uiElement = uiData[suffix].element;
+            if (!uiElement) return;
 
             const uiContentFormat = uiData[suffix].contentFormat;
             Helpers.removeChildren(uiElement);
@@ -206,8 +237,9 @@ export const LocationUIFactory = function (
                 const hideOnEmpty = uiData[suffix].hideOnEmpty;
                 if (hideOnEmpty && hideOnEmpty.length > 0) {
                     hideOnEmpty.forEach((objKey) => {
-                        let obj = uiData[objKey];
+                        const obj = uiData[objKey];
                         obj.element.classList.add("removed");
+                        obj.element.parentNode.classList.add("removed");
                         uiElement.classList.add("removed");
                     });
                 }
@@ -219,6 +251,8 @@ export const LocationUIFactory = function (
                 content.forEach((el) => {
                     if (typeof el === "object" && el instanceof Element) uiElement.appendChild(el);
                 });
+            } else if (uiContentFormat === "singleElement") {
+                if (typeof content === "object" && content instanceof Element) uiElement.appendChild(content);
             }
         });
     };

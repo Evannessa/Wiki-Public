@@ -273,9 +273,23 @@ export const regionViewerModule = (function () {
                 },
                 expand: {
                     handler: (event) => {
-                        Helpers.toggleClassOnAction(event.currentTarget, document.querySelector(".location-info"), {
-                            action: "expand",
-                        });
+                        //TODO: refactor to keep track of these elsewhere
+                        let nav = document.querySelector(".location-info");
+                        let main = document.querySelector(".location-map .location-map");
+                        if (nav.classList.contains("expanded")) {
+                            Helpers.closeNav(nav, main);
+                        } else {
+                            Helpers.openNav(nav, main);
+                        }
+                        // Helpers.toggleClassOnAction(event.currentTarget, document.querySelector(".location-info"), {
+                        // action: "expand",
+                        // });
+                    },
+                },
+                open: {
+                    handler: (event) => {
+                        let collapsibleElement = event.currentTarget;
+                        Helpers.toggleCollapsible(collapsibleElement);
                     },
                 },
                 selectLocation: {
@@ -504,7 +518,7 @@ export const regionViewerModule = (function () {
                 const sourceElement = document.querySelector(`[data-guid='${data.guid}']`);
                 destinationIds.forEach((guid) => {
                     const destinationElement = document.querySelector(`[data-guid='${guid}']`);
-                    drawPaths(sourceElement, destinationElement, container);
+                    // drawPaths(sourceElement, destinationElement, container);
                 });
             }
         });
@@ -515,7 +529,7 @@ export const regionViewerModule = (function () {
         const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
         svg.setAttribute("width", "100%");
         svg.setAttribute("height", "100%");
-        const viewboxValues = type === "region" ? "0 -10 100 100" : "0 0 100 100";
+        const viewboxValues = type === "region" ? "0 0 100 100" : "0 0 100 100";
         svg.setAttribute("viewBox", viewboxValues);
         svg.setAttributeNS("http://www.w3.org/2000/xmlns/", "xmlns:xlink", "http://www.w3.org/1999/xlink");
         const trimmedParent = parentName.replace(/\s/g, "_");

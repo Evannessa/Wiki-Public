@@ -1,0 +1,50 @@
+        <div class="{{include.prefix}}__content">
+            <div class="{{include.prefix}}__card map-info-card">
+                {%- if {{include.hasControls}} -%}
+                   <div class="global-controls controls">
+                    {% include icon-button.html clickAction="toggle" scope="global" fileName="gallery_thumbnail.svg" class="toggle" %}
+                    {% include icon-button.html clickAction="reset" scope="global" fileName="zoom_out_map.svg" class="reset" %}
+                    {% include icon-button.html clickAction="backOne" scope="global" fileName="undo.svg" class="backOne" %}
+                   </div>
+                {%- endif -%}
+                <div class="{{include.prefix}}__portrait card-portrait">
+
+
+                </div>
+            <div class="{{include.prefix}}__card-content card-content">
+                <h3 class="{{include.prefix}}__card-title card-title"></h3>
+                <p class="{{include.prefix}}__tags bold"></p>
+                <button class="collapsible"
+                    data-click-action="open"
+                    data-variant="color-hover">
+                    <span>Read More</span></button>
+                <div class="content">
+                    <p class="{{include.prefix}}__description"></p>
+                </div>
+            </div>
+            </div>
+            <button class="collapsible" data-click-action="open" data-variant="color-hover">
+                <span class="{{include.prefix}}__children-title"></span>
+            </button>
+            <div class="content">
+                <ul class="{{include.prefix}}__children"></ul>
+           </div>
+            <button class="collapsible" data-click-action="open" data-variant="color-hover">
+            <span class="{{include.prefix}}__connections-title"></span>
+            </button>
+            <div class="content">
+                <ul class="{{include.prefix}}__connections"></ul>
+            </div>
+            <button class="collapsible" data-variant="color-hover" data-click-action="open">
+                <span class="{{include.prefix}}__cast-title"></span>
+            </button>
+            <div class="content">
+                <ul class="{{include.prefix}}__cast"></ul>
+            </div>
+            <button class="collapsible" data-variant="color-hover" data-click-action="open">
+                <span class="{{include.prefix}}__factions-title"></span>
+            </button>
+            <div class="content">
+                <ul class="{{include.prefix}}__factions"></ul>
+            </div>
+</div>

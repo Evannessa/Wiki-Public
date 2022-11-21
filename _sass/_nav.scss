@@ -19,15 +19,18 @@ nav {
         }
     }
     @media (min-width: 1000px) {
-        display: flex;
-        position: fixed;
-        width: 100%;
-        background-color: rgba(39, 33, 70, 0.75);
-        box-shadow: 0 4px 8px 0px rgba(24, 20, 46, 0.6);
-        margin: 0;
-        margin-bottom: 3rem;
-        z-index: 200;
-        min-height: 2rem;
+        $layout: var(--page-layout);
+        @if $layout != "locations_map" {
+            display: flex;
+            position: fixed;
+            width: 100%;
+            background-color: rgba(39, 33, 70, 0.75);
+            box-shadow: 0 4px 8px 0px rgba(24, 20, 46, 0.6);
+            margin: 0;
+            margin-bottom: 3rem;
+            z-index: 200;
+            min-height: 2rem;
+        }
     }
 
     .nav-section {
@@ -54,11 +57,14 @@ nav {
         }
     }
     @media (min-width: 1000px) {
-        .main-nav-toggle {
-            display: none;
+        @if var(--page-layout) != "locations_map" {
+            .main-nav-toggle {
+                display: none;
+            }
         }
     }
 }
+
 ul.nav-section {
     &.mobile {
         //mobile navigation
@@ -83,9 +89,12 @@ ul.nav-section {
             transition: transform 200ms ease-out;
             transform: translateX(100%);
         }
+
         @media screen and (min-width: 1000px) {
             // hide entirely if screen is big
-            display: none;
+            @if var(--page-layout) != "locations_map" {
+                display: none;
+            }
         }
     }
     &.desktop {
@@ -106,8 +115,10 @@ ul.nav-section {
         }
         @media screen and (min-width: 1000px) {
             //show all menu items
-            section.menu-item:not(:first-of-type) {
-                display: flex;
+            @if var(--page-layout) != "locations_map" {
+                section.menu-item:not(:first-of-type) {
+                    display: flex;
+                }
             }
         }
     }

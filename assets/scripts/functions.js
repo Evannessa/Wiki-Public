@@ -9,13 +9,6 @@ let partnersHeader;
 let title;
 let mainImage;
 let anchors;
-// let modalImg;
-// Add an event listener listening for scroll
-//TODO: Implement this later
-// window.addEventListener("scroll", function () {
-//     debounce(navHighlighter, 100);
-// });
-
 //stackoverflow.com/questions/36532307/rem-px-in-javascript
 // https:
 function convertRemToPixels(rem) {
@@ -61,7 +54,7 @@ function navHighlighter() {
 }
 
 document.addEventListener("DOMContentLoaded", function (event) {
-    if (document.querySelector("main").dataset.layout !== "locations__map") {
+    if (document.querySelector("main").dataset.layout !== "locations_map") {
         console.log("Functions.js fully loaded");
         onLoad(event);
     }
