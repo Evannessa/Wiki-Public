@@ -253,7 +253,7 @@ export const regionViewerModule = (function () {
                         let currentTarget = event.currentTarget;
                         selectedLocationElements.imageContainer.classList.toggle("hidden");
                         selectedLocationElements.imageContainer.classList.toggle("image-mode");
-                        Helpers.toggleButtonText(currentTarget, "Hide Image", "Show Image");
+                        // Helpers.toggleButtonText(currentTarget, "Hide Image", "Show Image");
                         // hide the children
                         selectedLocationElements.hexChildren.forEach((hex) => {
                             Helpers.toggleClassOnAction(currentTarget, hex, { action: "remove" });

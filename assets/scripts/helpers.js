@@ -176,13 +176,15 @@ export default class Helpers {
     }
     /* Set the width of the side navigation to 250px and the left margin of the page content to 250px */
     static openNav(nav, main) {
-        nav.style.width = "30vw";
-        main.style.marginLeft = "30vw";
+        nav.classList.add("expanded");
+        // nav.style.width = "30vw";
+        // main.style.marginLeft = "30vw";
     }
 
     /* Set the width of the side navigation to 0 and the left margin of the page content to 0 */
     static closeNav(nav, main) {
-        nav.style.width = "0";
-        main.style.marginLeft = "0";
+        nav.classList.remove("expanded");
+        // nav.style.width = "0";
+        // main.style.marginLeft = "0";
     }
 }
