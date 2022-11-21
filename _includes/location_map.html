@@ -1,4 +1,4 @@
-<div class="location-info expanded">
+<div class="location-info expanded can-be-expanded">
     <div class="location-info__header">
         <div class="global-controls controls">
             {% assign icon1 = 'gallery_thumbnail' %}
@@ -19,13 +19,20 @@
                 class="backOne"
                 tooltipText="back to previous location"
                 %}
+            {% include icon-button.html clickAction="expand" scope="global"
+                iconName="menu_open"
+                class="expand"
+                tooltipText="expand or close sidebar"
+                %}
         </div>
-        <h1 class="location-info__title">
+        {%- comment -%}
+            <h1 class="location-info__title">
             {{include.title}}
-        </h1>
-        <button class="expand" data-click-action="expand" data-variant="color-hover"></button>
+            </h1>
+            <button class="expand" data-click-action="expand" data-variant="color-hover"></button>
+        {%- endcomment -%}
     </div>
-    {% include map-ui.html prefix="location-info" hasControls=true hasTabs=true %}
+    {% include map-ui.html prefix="location-info" hasControls=true hasTabs=true%}
 
 </div>
 <section class="location-map" data-path="{{include.path}}">

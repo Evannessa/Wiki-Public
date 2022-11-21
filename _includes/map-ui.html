@@ -1,5 +1,5 @@
 <div class="{{include.prefix}}__content tabbed-sidebar">
-    <div class="{{include.prefix}}__card map-info-card">
+    <div class="{{include.prefix}}__card map-info-card flatten">
 
         <div class="{{include.prefix}}__portrait card-portrait"></div>
         <div class="{{include.prefix}}__card-content card-content">
@@ -10,21 +10,9 @@
     </div>
 
     <section class="tab-section">
-        {%- if include.hasTabs -%}
-            <div class="tabs">
-                <button class="tab active" data-target="Lore" data-click-action="switchTab" data-variant="glow-hover">
-                    Lore
-                </button>
-                <button class="tab" data-target="Geography" data-click-action="switchTab" data-variant="glow-hover">
-                    Geography
-                </button>
-                <button class="tab" data-target="Cast" data-click-action="switchTab" data-variant="glow-hover">
-                    Cast
-                </button>
-            </div>
-        {%- endif -%}
 
-        <div class="tab-section__content">
+
+        <div class="tab-section__content flatten">
             <div class="tab-content active" id="Lore">
                 <p class="{{include.prefix}}__description"></p>
             </div>
@@ -57,5 +45,18 @@
                 </div>
             </div>
         </div>
+        {%- if include.hasTabs -%}
+            <div class="tabs">
+                <button class="tab active" data-target="Lore" data-click-action="switchTab" data-variant="glow-hover">
+                    Lore
+                </button>
+                <button class="tab" data-target="Geography" data-click-action="switchTab" data-variant="glow-hover">
+                    Geography
+                </button>
+                <button class="tab" data-target="Cast" data-click-action="switchTab" data-variant="glow-hover">
+                    Cast
+                </button>
+            </div>
+        {%- endif -%}
     </section>
 </div>

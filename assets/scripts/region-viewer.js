@@ -199,6 +199,16 @@ export const regionViewerModule = (function () {
         //image elements should have "default-hidden"
     }
 
+    function expandSidebar() {
+        let nav = document.querySelector(".location-info");
+        let main = document.querySelector(".location-map .location-map");
+        if (nav.classList.contains("expanded")) {
+            Helpers.closeNav(nav, main);
+        } else {
+            Helpers.openNav(nav, main);
+        }
+    }
+
     function selectLocation(locationEl, locationData, fromParent) {
         if (!locationData) locationData = getLocationDataFromElement(locationEl);
         const childContainer = createChildGrid(locationData);
@@ -265,6 +275,10 @@ export const regionViewerModule = (function () {
                         tab.classList.add("active");
                         document.getElementById(target).classList.add("active");
                         document.getElementById(target).classList.remove("removed");
+                        //Also if it's closed, expand the toggle
+                        if (selectedLocationUI.getContainer().classList.contains("expanded")) {
+                            expandSidebar();
+                        }
                     },
                 },
                 toggle: {
