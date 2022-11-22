@@ -28,8 +28,8 @@ button,
     &[data-variant="glow-hover"] {
         &:hover,
         &:focus,
-        &:focus-within,
-        &.active {
+        &:focus-within {
+            // &.active {
             // transform: unset;
             @extend .secondary-text-shadow;
             // color: var(--color-accent);
@@ -39,12 +39,15 @@ button,
         color: var(--color-primary-300);
         &:hover,
         &:focus,
-        &:focus-within,
-        &.active {
+        &:focus-within {
             // transform: unset;
             // @extend .secondary-text-shadow;
             color: var(--color-secondary-300);
         }
+    }
+    &[data-variant="bg-img"] {
+        color: white;
+        background-image: var(--bg-img);
     }
     .btn-img {
         min-width: unset;

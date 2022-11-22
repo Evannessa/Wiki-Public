@@ -1,6 +1,8 @@
 <div id="search">
     <div class="input-wrapper" style="display: flex;">
-        <label class="outer-label" for="search-box">Search</label>
+        <label class="outer-label" for="search-box">
+            Search
+        </label>
         <input
             id="search-box"
             name="search-box"
@@ -9,48 +11,57 @@
                 >
     </div>
     <section class="filter-section--wrapper">
-        <button class="expand-button">Filters</button>
-   <section class="filter-section toggle-list">
-        {% assign allTags = site.notes | map: "tags" | uniq %}
-		<hr>
-        <fieldset class="active-filters">
-            <legend>Active Filters</legend>
-            <span class="filter-span active">
+        <button class="expand-button" data-variant="color-hover">
+            Filters
+        </button>
+        <section class="filter-section toggle-list">
+            {% assign allTags = site.notes | map: "tags" | uniq %}
+            <hr>
+            <fieldset class="active-filters">
+                <legend>
+                    Active Filters
+                </legend>
+                <span class="filter-span active"></span>
+            </fieldset>
 
-            </span>
-        </fieldset>
-
-		<hr>
-        <fieldset class="global-filters">
-			<legend>Global Toggles</legend>
-            <span class="filter-span global"><input
+            <hr>
+            <fieldset class="global-filters">
+                <legend>
+                    Global Toggles
+                </legend>
+                <span class="filter-span global">
+                    <input
                     id="show-deceased"
                     name="show-deceased"
                     onchange="toggleAll(event)"
                     type="checkbox" />
-                <label for="show-deceased">Show Deceased</label>
-            </span>
-        </fieldset>
-		<hr>
-		{% unless include.hideClanFilters %}
-			{% include filter-set.html allTags=allTags filter="Clans/" groupId="clan" filterByString="Clan" %}
-		{% endunless %}
+                    <label for="show-deceased">
+                        Show Deceased
+                    </label>
+                </span>
+            </fieldset>
+            <hr>
+            {% unless include.hideClanFilters %}
+                {% include filter-set.html allTags=allTags filter="Clans/" groupId="clan" filterByString="Clan" %}
+            {% endunless %}
 
-		<hr>
+            <hr>
 
-        {%- comment -%}Location Filters{%- endcomment -%}
-			{% include filter-set.html allTags=allTags filter="Location/" groupId="location" filterByString="Residence"%}
+            {%- comment -%}
+                Location Filters
+            {%- endcomment -%}
+            {% include filter-set.html allTags=allTags filter="Location/" groupId="location" filterByString="Residence"%}
 
-			{% include filter-set.html allTags=allTags filter="Faction/" groupId="faction" filterByString="Faction"%}
+            {% include filter-set.html allTags=allTags filter="Faction/" groupId="faction" filterByString="Faction"%}
 
 
-		<hr>
-{% include filter-set.html allTags=allTags filter="Age/" groupId="age" filterByString="Age"%}
-			{% include filter-set.html allTags=allTags filter="Condition/" groupId="condition" filterByString="Status"%}
-			<hr>
-			{% include filter-set.html allTags=allTags filter="Special/" groupId="special" filterByString="Special"%}
-			</section>
-	</section>
-    </div>
+            <hr>
+            {% include filter-set.html allTags=allTags filter="Age/" groupId="age" filterByString="Age"%}
+            {% include filter-set.html allTags=allTags filter="Condition/" groupId="condition" filterByString="Status"%}
+            <hr>
+            {% include filter-set.html allTags=allTags filter="Special/" groupId="special" filterByString="Special"%}
+        </section>
+    </section>
+</div>
 
 <script src="/assets/scripts/search.js"></script>

@@ -600,6 +600,8 @@ function positionInGenerations() {
 
             //set our x position based on where we are in the horizontalPositions array for our generation
             ourElement.setAttribute("x", `${ourXPosition}%`);
+
+            ourElement.dataset.generation = genIndex;
         });
     });
 }

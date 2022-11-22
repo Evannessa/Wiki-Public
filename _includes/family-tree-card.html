@@ -40,16 +40,7 @@
 				</a>
                 {% endif %}
         </svg>
-        <rect height="100" rx="15" width="100" /> {%- comment -%}Aspect ratios for the SVG, determines how the object is positioned and fit within, sort of like objectFit property{%- endcomment -%}
-            {%- comment -%}This one's like top {%- endcomment -%}
-        {% assign aspectRatio = "xMidYMin slice" %}
-        {% if include.imagePosition == "center" %}
-		{%- comment -%}This one's like center {%- endcomment -%}
-            {% assign aspectRatio = "xMidYMid slice" %}
-        {% elsif include.imagePosition == "left" %}
-            {% assign aspectRatio = "xMinYMid slice" %}
-        {% endif %}
-        {%- comment -%}The image {%- endcomment -%}
+         <circle class="portrait-bg" cx="50" cy="50" r="70" />
 
         <image class="family-member" xlink:href="{{include.source}}" clip-path="url(#myClip)" preserveaspectratio="{{aspectRatio}}" /> {%- comment -%}The display name{%- endcomment -%}
 			{% if person.tags contains "Condition/Deceased" %}

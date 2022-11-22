@@ -13,17 +13,33 @@
 
 
         <div class="tab-section__content flatten">
-            <div class="tab-content padding-medium active" id="Lore">
+
+            <div class="tab-content
+                [ padding-medium fade-overlay active ] " id="Lore">
                 <p class="{{include.prefix}}__description padding-medium"></p>
             </div>
+
+            {%- comment -%}
+                Geography
+            {%- endcomment -%}
             <div class="tab-content" id="Geography">
-                <button class="collapsible active" data-click-action="open" data-variant="color-hover">
+                <button class="collapsible active"
+                data-click-action="open"
+                data-variant="bg-img"
+                style="--bg-img: url(/assets/locations/maps/CosmosBG.webp)">
                     <span class="{{include.prefix}}__children-title"></span>
                 </button>
                 <div class="content active">
                     <ul class="{{include.prefix}}__children"></ul>
                 </div>
-                <button class="collapsible" data-click-action="open" data-variant="color-hover">
+                {%- comment -%}
+                    Connections
+                {%- endcomment -%}
+                <button class="collapsible"
+                data-click-action="open"
+                data-variant="bg-img"
+                style="--bg-img: url(/assets/locations/maps/CosmosBG.webp)">
+                    >
                     <span class="{{include.prefix}}__connections-title"></span>
                 </button>
                 <div class="content">
@@ -31,13 +47,19 @@
                 </div>
             </div>
             <div class="tab-content" id="Cast">
-                <button class="collapsible" data-variant="color-hover" data-click-action="open">
+                <button class="collapsible"
+                data-click-action="open"
+                data-variant="bg-img"
+                style="--bg-img: url(/assets/locations/village.JPG)">
                     <span class="{{include.prefix}}__cast-title"></span>
                 </button>
                 <div class="content">
                     <ul class="{{include.prefix}}__cast"></ul>
                 </div>
-                <button class="collapsible" data-variant="color-hover" data-click-action="open">
+                <button class="collapsible"
+                data-click-action="open"
+                data-variant="bg-img"
+                style="--bg-img: url(/assets/locations/LostLake2.jpg)">
                     <span class="{{include.prefix}}__factions-title"></span>
                 </button>
                 <div class="content">
@@ -47,7 +69,9 @@
         </div>
         {%- if include.hasTabs -%}
             <div class="tabs">
-                <button class="tab flex-1 active" data-target="Lore" data-click-action="switchTab" data-variant="glow-hover">
+                <button class="tab flex-1 active"
+                data-target="Lore"
+                data-click-action="switchTab" data-variant="glow-hover">
                     {% include font-icon.html icon="auto_stories" %}
                     Lore
                 </button>

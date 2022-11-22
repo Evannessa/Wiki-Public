@@ -282,6 +282,15 @@ svg.family-tree {
             height: 100%;
             width: 100%;
             filter: drop-shadow(3px 5px 2px #00000066);
+            clip-path: circle(50%);
+        }
+        $colors: (hsl(337, 100%, 65%), cyan, gold, lime, mediumslateblue, dodgerblue);
+        @for $gen from 1 to 6 {
+            &[data-generation="#{$gen - 1}"] {
+                .portrait-bg {
+                    fill: nth($colors, $gen);
+                }
+            }
         }
         &:hover {
             .hover-info {
