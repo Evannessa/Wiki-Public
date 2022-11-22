@@ -283,7 +283,8 @@ svg.family-tree {
             width: 100%;
             filter: drop-shadow(3px 5px 2px #00000066);
             clip-path: circle(50%);
-            mix-blend-mode: luminosity;
+            mix-blend-mode: screen;
+            // mix-blend-mode: luminosity;
         }
         .portrait-outline {
             stroke: white;
@@ -291,7 +292,7 @@ svg.family-tree {
             fill: none;
         }
 
-        $colors: (url(#_Linear1), url(#_Linear2), url(#_Linear3), url(#_Linear4), url(#_Linear5), dodgerblue);
+        $colors: (url(#_Linear1-flipped), url(#_Linear2), url(#_Linear3), url(#_Linear4), url(#_Linear5), dodgerblue);
         @for $gen from 1 to 6 {
             &[data-generation="#{$gen - 1}"] {
                 .portrait-outline {
