@@ -294,20 +294,45 @@ svg.family-tree {
         $colors: (url(#_Linear1), url(#_Linear2), url(#_Linear3), url(#_Linear4), url(#_Linear5), dodgerblue);
         @for $gen from 1 to 6 {
             &[data-generation="#{$gen - 1}"] {
+                .portrait-outline {
+                    fill: nth($colors, $gen);
+                    stroke-width: 8px;
+                    &__outer-fill {
+                        stroke: none;
+                        fill: nth($colors, $gen);
+                        filter: url(#inner-shadow)
+                            drop-shadow(-3px -3px 6px rgb(67, 59, 128))
+                            drop-shadow(2px 2px 8px rgb(17, 13, 39));
+                    }
+                    &__inner {
+                        stroke: #211c40;
+                        stroke-width: 5px;
+                        fill: nth($colors, $gen);
+
+                        // filter: drop-shadow(-8px 8px 3px rgba(0, 0, 0, 0.5))
+                        // drop-shadow(2px 2px 8px rgba(0, 0, 0, 0.5));
+                        filter: drop-shadow(-2px -2px 8px rgba(0, 0, 0, 0.5))
+                            drop-shadow(2px 2px 8px rgba(0, 0, 0, 0.5));
+                    }
+                }
+
                 .title-backdrop {
                     fill: white;
-                    stroke: nth($colors, $gen);
-                    stroke-width: 4px;
+                    stroke: none;
+                    // stroke: nth($colors, $gen);
+                    // stroke-width: 4px;
                     // transform: scaleX(1.5);
                 }
                 .visible-title {
                     fill: nth($colors, $gen);
+                    font-weight: bold;
+                    font-size: 1.5rem;
                 }
                 .portrait-bg {
-                    fill: nth($colors, $gen);
-                    // stroke: white;
-                    // stroke-width: 6px;
-                    filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.75));
+                    stroke: nth($colors, $gen);
+                    fill: white;
+                    stroke-width: 6px;
+                    // filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.75));
                 }
             }
         }
@@ -379,20 +404,30 @@ svg.family-tree {
         &.fade {
             opacity: 10%;
         }
+        $colors: (url(#_Linear1), url(#_Linear2), url(#_Linear3), url(#_Linear4), url(#_Linear5), dodgerblue);
+        @for $gen from 1 to 6 {
+            &[data-generation="#{$gen - 1}"] {
+                stroke: nth($colors, $gen);
+                // stroke: url()
+            }
+        }
         &.partner {
-            stroke: hsl(337, 100%, 65%);
+            // stroke: url(#_Linear1);
+            // stroke: hsl(337, 100%, 65%);
             &.highlight {
-                stroke: hsl(337, 100%, 65%);
+                // stroke: hsl(337, 100%, 65%);
             }
         }
         &.parent {
+            // stroke: url(#_Linear1);
             stroke: hsl(337, 100%, 65%);
             &.highlight {
-                stroke: hsl(337, 100%, 65%);
+                // stroke: hsl(337, 100%, 65%);
             }
         }
         &.child {
-            stroke: #73fbd3;
+            // stroke: url(#_Linear1);
+            // stroke: #73fbd3;
         }
         &.sibling {
         }

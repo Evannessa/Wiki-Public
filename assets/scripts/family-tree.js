@@ -807,7 +807,8 @@ function drawConnections(topElement, bottomElement, relationType, unionName = ""
             topElement.dataset.title,
             bottomEl.dataset.title,
             relationType,
-            unionName
+            unionName,
+            bottomEl.dataset.generation
         );
     }
 }
@@ -816,7 +817,17 @@ function getElementByTitle(memberTitle) {
     return document.querySelector(`svg[data-title='${memberTitle}']`);
 }
 
-function createLine(sourceX, sourceY, destinationX, destinationY, sourceName, childName, relationType, unionName = "") {
+function createLine(
+    sourceX,
+    sourceY,
+    destinationX,
+    destinationY,
+    sourceName,
+    childName,
+    relationType,
+    unionName = "",
+    generation
+) {
     let newLine = document.createElementNS("http://www.w3.org/2000/svg", "path");
     //newLine.setAttribute('id', 'line2');
     newLine.setAttribute("stroke", "white");
@@ -837,6 +848,7 @@ function createLine(sourceX, sourceY, destinationX, destinationY, sourceName, ch
 		Q ${destinationX} ${midpointY}
 		${destinationX} ${destinationY}`
     );
+    newLine.dataset.generation = generation;
 
     if (unionName) {
         newLine.dataset.unionName = unionName;
