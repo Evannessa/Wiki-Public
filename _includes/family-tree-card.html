@@ -40,7 +40,8 @@
 				</a>
                 {% endif %}
         </svg>
-         <circle class="portrait-bg" cx="50" cy="50" r="70" />
+         <circle class="portrait-bg" cx="50" cy="55" r="65" />
+         <circle class="portrait-outline" cx="50" cy="50" r="51" />
 
         <image class="family-member" xlink:href="{{include.source}}" clip-path="url(#myClip)" preserveaspectratio="{{aspectRatio}}" /> {%- comment -%}The display name{%- endcomment -%}
 			{% if person.tags contains "Condition/Deceased" %}
@@ -59,7 +60,8 @@
             {% assign name = include.ourTitle | remove: {{ourClan}} %}
         {% endif %}
 
-        <text class="visible-title" filter="url(#solid)" x="50" y="110">{{name}}</text>
+        <rect class="title-backdrop" x="0" y="90" width="100" height="40" rx="15"/>
+        <text class="visible-title" x="50" y="115">{{name}}</text>
 
     </svg>
 </a>

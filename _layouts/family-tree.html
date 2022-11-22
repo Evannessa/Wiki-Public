@@ -28,7 +28,9 @@ layout: default
                 </button>
             </section>
             <section class="button-group">
-                <p class="instructions">Jump to Generation...</p>
+                <p class="instructions">
+                    Jump to Generation...
+                </p>
                 <button class="jump-gen" data-gen="0">
                     Gen 1 - 2
                 </button>
@@ -44,27 +46,74 @@ layout: default
             </section>
 
             <div class="instructions-wrapper">
-                <p class="instructions">Use
-					Pan:
-                    <span>arrow keys</span>
+                <p class="instructions">
+                    Use
+                    Pan:
+                    <span>
+                        arrow keys
+                    </span>
                     or
-                    <span>WASD</span>
+                    <span>
+                        WASD
+                    </span>
                 </p>
                 <p class="instructions">
                     Zoom:
-                    <span>+</span>
+                    <span>
+                        +
+                    </span>
                     or
-                    <span>-</span>
+                    <span>
+                        -
+                    </span>
                 </p>
-                <p class="instructions"><span>Hover</span> portrait to highlight family</p>
-                <p class="instructions"><span>Click</span> portrait to open page</p>
+                <p class="instructions">
+                    <span>
+                        Hover
+                    </span>
+                    portrait to highlight family
+                </p>
+                <p class="instructions">
+                    <span>
+                        Click
+                    </span>
+                    portrait to open page
+                </p>
             </div>
 
         </div>
 
     </div>
     <svg class="family-tree" viewbox="0 0 100 100" data-offset-x="{{page.startingOffsetX}}" data-offset-y="{{page.startingOffsetY}}" data-starting-scale="{{page.startingScale}}">
+        <defs>
+            <linearGradient id="_Linear1" x1="0" y1="0" x2="1" y2="0" gradientUnits="objectBoundingBox" gradientTransform="rotate(45deg)">
+                <stop offset="0" style="stop-color:rgb(255,30,106);stop-opacity:1"/>
+                <stop offset="1" style="stop-color:rgb(255,204,43);stop-opacity:1"/>
+            </linearGradient>
+            <linearGradient id="_Linear2" x1="0" y1="0" x2="1" y2="0" gradientUnits="objectBoundingBox" gradientTransform="rotate(45deg)">
+                <stop offset="0" style="stop-color:rgb(218,69,140);stop-opacity:1"/>
+                <stop offset="1" style="stop-color:rgb(253,119,84);stop-opacity:1"/>
+            </linearGradient>
+            <linearGradient id="_Linear3" x1="0" y1="0" x2="1" y2="0" gradientUnits="objectBoundingBox" gradientTransform="rotate(45deg)">
+                <stop offset="0" style="stop-color:rgb(253,80,177);stop-opacity:1"/>
+                <stop offset="1" style="stop-color:rgb(134,6,233);stop-opacity:1"/>
+            </linearGradient>
+            <linearGradient id="_Linear4" x1="0" y1="0" x2="1" y2="0" gradientUnits="objectBoundingBox" gradientTransform="rotate(45deg)">
+                <stop offset="0" style="stop-color:rgb(50,233,254);stop-opacity:1"/>
+                <stop offset="1" style="stop-color:rgb(197,21,247);stop-opacity:1"/>
+            </linearGradient>
+            <linearGradient id="_Linear5" x1="0" y1="0" x2="1" y2="0" gradientUnits="objectBoundingBox" gradientTransform="rotate(45deg)">
+                <stop offset="0" style="stop-color:rgb(57,155,252);stop-opacity:1"/>
+                <stop offset="1" style="stop-color:rgb(105,251,188);stop-opacity:1"/>
+            </linearGradient>
+            <linearGradient id="lgrad0" x1="100%" y1="100%" x2="0%" y2="0%" >
 
+                <stop offset="0%" style="stop-color:rgb(238,130,238);stop-opacity:1.00" />
+                <stop offset="100%" style="stop-color:rgb(0,209,255);stop-opacity:1.00" />
+
+            </linearGradient>
+        </defs>
+        <rect x="0" y="0" width="100%" height="100%" fill="url(#lgrad)"/>
         {% assign people = site.notes | "where_exp": "note", "note.tags contains page.clanName and note.tags contains 'Category/Individual'"%}
         {% for person in people %}
             {%assign clan = person.Clan %}

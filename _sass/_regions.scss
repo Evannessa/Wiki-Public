@@ -135,6 +135,13 @@
                 pointer-events: none;
             }
             &:not(.keyedLocation) {
+                &:not(.blank) {
+                    path {
+                        fill: transparent;
+                        stroke: var(--color-primary-base);
+                        stroke-width: 2px;
+                    }
+                }
                 path {
                     pointer-events: visiblePainted;
                     cursor: pointer;

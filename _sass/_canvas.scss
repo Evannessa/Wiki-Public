@@ -283,12 +283,31 @@ svg.family-tree {
             width: 100%;
             filter: drop-shadow(3px 5px 2px #00000066);
             clip-path: circle(50%);
+            mix-blend-mode: luminosity;
         }
-        $colors: (hsl(337, 100%, 65%), cyan, gold, lime, mediumslateblue, dodgerblue);
+        .portrait-outline {
+            stroke: white;
+            stroke-width: 6px;
+            fill: none;
+        }
+
+        $colors: (url(#_Linear1), url(#_Linear2), url(#_Linear3), url(#_Linear4), url(#_Linear5), dodgerblue);
         @for $gen from 1 to 6 {
             &[data-generation="#{$gen - 1}"] {
+                .title-backdrop {
+                    fill: white;
+                    stroke: nth($colors, $gen);
+                    stroke-width: 4px;
+                    // transform: scaleX(1.5);
+                }
+                .visible-title {
+                    fill: nth($colors, $gen);
+                }
                 .portrait-bg {
                     fill: nth($colors, $gen);
+                    // stroke: white;
+                    // stroke-width: 6px;
+                    filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.75));
                 }
             }
         }
