@@ -548,7 +548,7 @@ function distributeIntoGenerations() {
 }
 
 /**
- * position the characters within each generation
+ * position the characters within each generation, applying X and Y attributes accordingly
  */
 function positionInGenerations() {
     charactersByGeneration.forEach((gen) => {
@@ -573,9 +573,11 @@ function positionInGenerations() {
         } else {
             // let currentNumber = 0.5;
             let currentNumber = 1.5;
-            let incrementBy = 100 / positionArray.length;
+            let svgSize = document.querySelector(".family-tree").getBoundingClientRect().width * 0.01;
+            let incrementBy = 100 / positionArray.length; // + svgSize;
             //divide the length of the child array into equal segments to be turned into percentages
             for (let i = 0; i < positionArray.length; i++) {
+                console.log(currentNumber, incrementBy);
                 positionArray[i] = currentNumber;
                 currentNumber += incrementBy;
             }
@@ -662,6 +664,12 @@ function formUnions() {
     });
 }
 
+/**
+ *  Draw a line between romantic partners without any children
+ * @param {SVGElement} partner1 - the first partner
+ * @param {SVGAElement} partner2 - the second partner
+ * @returns
+ */
 function drawLine(partner1, partner2) {
     if (!partner1 || !partner2) {
         return;
@@ -681,6 +689,12 @@ function drawLine(partner1, partner2) {
     svgElement.prepend(line);
 }
 
+/**
+ * get the average position between elements
+ * @param {Array} elementArray - the elements between which we want to get the average
+ * @param {*} type - if we're trying to get the average X or average Y position
+ * @returns the average position
+ */
 function getAveragePositions(elementArray, type) {
     let accumulator = 0;
     elementArray.forEach((element) => {

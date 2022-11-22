@@ -114,6 +114,12 @@
         margin-bottom: unset;
     }
 }
+foreignObject {
+    div.bg-blur {
+        backdrop-filter: blur(20px);
+        padding: 3rem;
+    }
+}
 //the map itself
 .location-map .location-map {
     font-size: 1rem;
@@ -137,6 +143,7 @@
             &:not(.keyedLocation) {
                 &:not(.blank) {
                     path {
+                        // fill: url(#mainImagePattern);
                         fill: transparent;
                         stroke: var(--color-primary-base);
                         stroke-width: 2px;
@@ -248,6 +255,7 @@
         pointer-events: none;
         cursor: default;
         path {
+            // fill: url(#mainImagePattern);
             fill: transparent;
             // fill: var(--bg-color);
         }

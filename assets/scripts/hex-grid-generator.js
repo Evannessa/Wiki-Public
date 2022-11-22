@@ -54,9 +54,7 @@ function createHex(xPosition, yPosition, columnNumber, rowNumber, className, svg
     let locationType = "region";
     let parentName = "";
     const emptyTileUnderlayImg =
-        className === "main"
-            ? "/assets/locations/maps/icons_and_symbols/CircleHexBlank.webp"
-            : "/assets/locations/maps/icons_and_symbols/CircleHexBlank.webp";
+        className === "main" ? "/assets/locations/DarkHillsOcean.jpg" : "/assets/locations/DarkHillsOcean.jpg";
     if (!svgContainer.classList.contains("parent-list")) {
         locationType = svgContainer.dataset?.type;
         parentName = svgContainer.dataset?.parent;
@@ -208,8 +206,15 @@ function generateIcons() {
     function returnIconHTML(suffix, index, className = "main") {
         return `
         <svg class="icon-container icon-container__${className}">
+        <defs>
+        <clipPath id="${suffix}${index}${className}">
+        <path  class="main" d="M3.000000000000001 48.49742261192856Q0 43.30127018922193 3.000000000000001 38.1051177665153L22 5.196152422706632Q25 0 31 0L69 0Q75 0 78 5.196152422706632L97 38.1051177665153Q100 43.30127018922193 97 48.49742261192856L78 81.40638795573723Q75 86.60254037844386 69 86.60254037844386L31 86.60254037844386Q25 86.60254037844386 22 81.40638795573723Z"></path>
+        </clipPath>
+        </defs>
         <foreignObject width="100%" height="100%">
+        <div class="bg-blur" width="100%" height="100%" style="clip-path: url(#${suffix}${index}${className})">
         <img src="${iconBasePath}-${index}-${suffix}.webp" width="50%" height="50%" class="icon"/>
+        </div>
         </foreignObject>
         </svg>
         `;

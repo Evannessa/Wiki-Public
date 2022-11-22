@@ -22,7 +22,7 @@
         width: 100%;
         height: 100%;
         background: #262b59;
-        background-image: url(/assets/patterns/rose-petals.svg);
+        background-image: url(/assets/patterns/bahaus-bg-2.webp);
         background-size: cover;
         background-position: center;
         background-attachment: fixed;
@@ -267,6 +267,10 @@ svg.family-tree {
     }
 }
 svg.family-tree {
+    // background-image: url(/assets/patterns/bauhaus-bg.webp);
+    // background-size: cover;
+    // background-position: center;
+    // background-repeat: no-repeat;
     .family-member-group {
         overflow: visible;
         transition: opacity 200ms ease-out;
