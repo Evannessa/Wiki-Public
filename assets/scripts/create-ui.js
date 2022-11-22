@@ -156,7 +156,9 @@ export const LocationUIFactory = function (
         dataArray = dataArray
             .map((child) => {
                 if (child.hasPage) {
-                    return `<div><a class="map-link" href='/${child.id}'>
+                    let path = `/assets/clans/${child.clan}/${child.imageUrl}.webp`;
+                    return `<div class="map-cast-card"><a class="map-link" href='/${child.pageUrl}'>
+                            ${Helpers.returnImage(path, child.id)}
                             ${child.id}
                         </a></div>`;
                 } else {

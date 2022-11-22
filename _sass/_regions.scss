@@ -81,6 +81,15 @@
     &__description {
         font-size: small;
     }
+    .map-cast-card {
+        img {
+            border-radius: 50%;
+            width: 2rem;
+            height: 2rem;
+            object-fit: cover;
+            object-position: top;
+        }
+    }
     &.can-be-expanded {
         width: 0;
         .flatten {
@@ -91,7 +100,7 @@
         transition: width 150ms ease-out;
         width: 40vw;
         .flatten {
-            width: unset;
+            width: 100%;
         }
         // padding-left: 1em;
         @media (min-width: 992px) {
@@ -116,6 +125,9 @@
     overflow: hidden;
     //wrapper for the individual location containers
     .location__container {
+        background-image: linear-gradient(45deg, #19062b, #330b84c4), var(--bg-img);
+        background-size: cover;
+        background-position: center;
         padding: 3rem;
         .hex {
             // pointer-events: visiblePainted;
@@ -275,9 +287,7 @@
         // display: none;
     }
 }
-.hex path {
-    stroke: var(--bg-color);
-}
+
 .location-info,
 .child-location-info {
     &__content {
@@ -501,6 +511,7 @@
             }
         }
     }
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
     img {
         opacity: 20%;
         transition: opacity 150ms ease-in-out;

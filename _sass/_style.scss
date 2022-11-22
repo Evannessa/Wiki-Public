@@ -98,6 +98,23 @@ main {
     font-size: xx-small;
 }
 
+.padding-small {
+    padding: 0.25em;
+}
+.padding-medium {
+    padding: 0.5em;
+}
+.padding-large {
+    padding: 1em;
+}
+
+.flex-1 {
+    flex: 1;
+}
+
+.flex-2 {
+    flex: 2;
+}
 // #endregion
 
 p > img {

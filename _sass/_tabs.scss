@@ -32,7 +32,14 @@
         text-orientation: sideways-right;
         writing-mode: vertical-lr;
         .tab {
-            flex: 1; //so they grow to fill the space
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-evenly;
+            font-size: small;
+            // flex: 1; //so they grow to fill the space
+            span {
+                font-size: 1em;
+            }
             // transform: rotate(-180deg);
             //given rotation, border properties are all reversed
             opacity: 70%;

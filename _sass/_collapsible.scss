@@ -1,16 +1,41 @@
 .collapsible {
     position: relative;
-    background-color: var(--color-primary-base);
-    background-image: url(/assets/locations/maps/CosmosBG.webp);
-    background-size: cover;
-    background-blend-mode: soft-light;
-    color: var(--color-primary-darkest);
-    border-radius: unset;
+    // background-color: var(--color-primary-base);
+    // background-color: var(--color-primary-base);
+    // background-blend-mode: soft-light;
+    color: #d53a9d;
+    background-image: linear-gradient(to left, #743ad5, #d53a9d);
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url(/assets/locations/maps/CosmosBG.webp);
+        opacity: 60%;
+        z-index: 80;
+        background-size: cover;
+    }
+    // color: var(--color-primary-darkest);
+    // border-radius: unset;
     // background-color: #777;
+    // &.border-gradient {
+    // border-image: linear-gradient(to left, turquoise, greenyellow) 1 0;
+    // border: 5px solid;
+    // border-image-slice: 1;
+    // border-width: 2px;
+    // }
+    // &.border-gradient-purple {
+    // border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
+    // }
 
+    span {
+        font-size: small;
+    }
     span,
     &:after {
-        color: var(--color-primary-darkest);
+        // color: var(--color-primary-darkest);
         &[data-variant="ghost"] {
             color: var(--color-primary-base);
             transition: color 200ms ease-in;
@@ -19,7 +44,7 @@
     cursor: pointer;
     padding: 0.5em;
     width: 100%;
-    border: none;
+    // border: none;
     text-align: left;
     outline: none;
     font-size: 1rem;

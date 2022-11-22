@@ -156,21 +156,39 @@
                         "cast": [
                             {
                                 "guid": "b46ab816-be70-472a-a336-7319cef566d6",
-                                "id": "Not Koa",
-                                "hasPage": false,
-                                "description": "A handsome mask-maker who is secretly an elder fey. Though the shop's name is \"Koa's Mask Shop\", his name is not Koa."
+                                "id": "Rose",
+                                "hasPage": true,
+                                "description": "",
+                                "pageUrl": "rose",
+                                "imageUrl": "Rose",
+                                "clan": "Divine"
                             },
                             {
                                 "guid": "ce077add-9c59-4613-8a7a-3e049431324c",
-                                "id": "laksha",
+                                "id": "Lily",
                                 "hasPage": true,
-                                "description": ""
+                                "description": "",
+                                "pageUrl": "lily",
+                                "imageUrl": "Lily",
+                                "clan": "Divine"
                             },
                             {
                                 "guid": "01bf01db-0deb-460d-aff2-1c8a61ad049b",
-                                "id": "the-king-arachaelies",
+                                "id": "Carnation",
                                 "hasPage": true,
-                                "description": ""
+                                "description": "",
+                                "pageUrl": "carnation",
+                                "imageUrl": "Carnation",
+                                "clan": "Divine"
+                            },
+                            {
+                                "guid": "05d97e25-c1a7-4b6c-a18e-9a86eb8726bd",
+                                "hasPage": true,
+                                "description": "",
+                                "pageUrl": "iris",
+                                "imageUrl": "Iris",
+                                "id": "Iris",
+                                "clan": "Divine"
                             }
                         ]
                     },
@@ -214,7 +232,7 @@
                     "parent": "",
                     "imageData": {
                         "guid": "4348e037-d7f4-4af2-a96c-35c1f119d2c9",
-                        "mainImage": "..\\..\\locations\\Starshead.webp",
+                        "mainImage": "..\\..\\locations\\DarkHillsOcean.jpg",
                         "otherImages": ""
                     },
                     "flavorData": {},
@@ -790,13 +808,27 @@
                         "description": "text",
                         "defaultValue": "text"
                     }
+                },
+                {
+                    "typeStr": "text",
+                    "guid": "c70255f3-8a8e-405d-9768-c57b1f65d77d",
+                    "name": "characterAssetPath",
+                    "description": "base link for characters",
+                    "defaultValue": "",
+                    "iconName": "newText",
+                    "configurable": {
+                        "name": "text",
+                        "description": "text",
+                        "defaultValue": "text"
+                    }
                 }
             ],
             "lines": [
                 {
                     "guid": "4e5b9692-d008-470d-a7bb-044e35d9c1ca",
                     "id": "0",
-                    "baseAssetPath": "/assets/locations/"
+                    "baseAssetPath": "/assets/locations/",
+                    "characterAssetPath": "/assets/clans/"
                 }
             ],
             "hidden": false,
@@ -997,6 +1029,47 @@
                         "name": "text",
                         "description": "text",
                         "defaultValue": "longtext"
+                    }
+                },
+                {
+                    "typeStr": "text",
+                    "guid": "427a52f3-596e-461d-b65e-f1ffd20a2093",
+                    "name": "pageUrl",
+                    "description": "url path for page",
+                    "defaultValue": "",
+                    "iconName": "newText",
+                    "configurable": {
+                        "name": "text",
+                        "description": "text",
+                        "defaultValue": "text"
+                    }
+                },
+                {
+                    "typeStr": "text",
+                    "guid": "26698f78-8b0d-454f-a225-a76e5b111dfb",
+                    "name": "imageUrl",
+                    "description": "url to find the image",
+                    "defaultValue": "",
+                    "iconName": "newText",
+                    "configurable": {
+                        "name": "text",
+                        "description": "text",
+                        "defaultValue": "text"
+                    }
+                },
+                {
+                    "typeStr": "enum",
+                    "guid": "cef23799-f911-478d-98a4-d408bc2de92a",
+                    "name": "clan",
+                    "description": "clan name",
+                    "options": "Divine, Ruto",
+                    "defaultValue": "Divine",
+                    "iconName": "newEnum",
+                    "configurable": {
+                        "name": "text",
+                        "description": "text",
+                        "defaultValue": "text",
+                        "options": "text"
                     }
                 }
             ],

@@ -102,7 +102,8 @@
         height: 100%;
         z-index: 0;
         grid-template-rows: 80% minmax(0, 1fr);
-        background-color: #090516;
+        // background-color: #090516;
+        backdrop-filter: unset;
         .spotlight-image-container {
             padding: unset;
         }

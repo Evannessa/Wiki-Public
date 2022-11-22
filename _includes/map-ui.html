@@ -13,8 +13,8 @@
 
 
         <div class="tab-section__content flatten">
-            <div class="tab-content active" id="Lore">
-                <p class="{{include.prefix}}__description"></p>
+            <div class="tab-content padding-medium active" id="Lore">
+                <p class="{{include.prefix}}__description padding-medium"></p>
             </div>
             <div class="tab-content" id="Geography">
                 <button class="collapsible active" data-click-action="open" data-variant="color-hover">
@@ -47,13 +47,16 @@
         </div>
         {%- if include.hasTabs -%}
             <div class="tabs">
-                <button class="tab active" data-target="Lore" data-click-action="switchTab" data-variant="glow-hover">
+                <button class="tab flex-1 active" data-target="Lore" data-click-action="switchTab" data-variant="glow-hover">
+                    {% include font-icon.html icon="auto_stories" %}
                     Lore
                 </button>
-                <button class="tab" data-target="Geography" data-click-action="switchTab" data-variant="glow-hover">
+                <button class="tab flex-2" data-target="Geography" data-click-action="switchTab" data-variant="glow-hover">
+                    {% include font-icon.html icon="villa" %}
                     Geography
                 </button>
-                <button class="tab" data-target="Cast" data-click-action="switchTab" data-variant="glow-hover">
+                <button class="tab flex-1" data-target="Cast" data-click-action="switchTab" data-variant="glow-hover">
+                    {% include font-icon.html icon="groups" %}
                     Cast
                 </button>
             </div>

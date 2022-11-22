@@ -1,6 +1,30 @@
 {
   "recentFiles": [
     {
+      "basename": "Rose",
+      "path": "_notes/Campaign Data/clans/Divine/Rose.md"
+    },
+    {
+      "basename": "Carnation",
+      "path": "_notes/Campaign Data/clans/Divine/Carnation.md"
+    },
+    {
+      "basename": "Lily",
+      "path": "_notes/Campaign Data/clans/Divine/Lily.md"
+    },
+    {
+      "basename": "Iris",
+      "path": "_notes/Campaign Data/clans/Divine/Iris.md"
+    },
+    {
+      "basename": "Angelica",
+      "path": "_notes/Campaign Data/clans/Maternal Family/Angelica.md"
+    },
+    {
+      "basename": "Andrew",
+      "path": "_notes/Campaign Data/clans/Maternal Family/Andrew.md"
+    },
+    {
       "basename": "Desert of the Thorn",
       "path": "_notes/Campaign Data/locations/Desert of the Thorn.md"
     },
@@ -55,10 +79,6 @@
     {
       "basename": "Ester",
       "path": "_notes/Campaign Data/clans/Maternal Family/Ester.md"
-    },
-    {
-      "basename": "Andrew",
-      "path": "_notes/Campaign Data/clans/Maternal Family/Andrew.md"
     },
     {
       "basename": "Boat",

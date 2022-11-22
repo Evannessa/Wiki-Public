@@ -25,7 +25,55 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_notes/Campaign Data/locations/Desert of the Thorn.md",
+                "file": "_notes/Campaign Data/clans/Maternal Family/Andrew.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "8337d97184a21750",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "_notes/Campaign Data/clans/Divine/Rose.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "46c205e63d07458a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "_notes/Campaign Data/clans/Divine/Lily.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "63cd278bba7892aa",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "_notes/Campaign Data/clans/Divine/Carnation.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "c032409e0e023226",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "_notes/Campaign Data/clans/Divine/Rose.md",
                 "mode": "source",
                 "source": false
               }
@@ -68,7 +116,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 5
       }
     ],
     "direction": "vertical"
@@ -142,7 +190,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_notes/Campaign Data/locations/Desert of the Thorn.md",
+                "file": "_notes/Campaign Data/clans/Divine/Rose.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -159,7 +207,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_notes/Campaign Data/locations/Desert of the Thorn.md",
+                "file": "_notes/Campaign Data/clans/Divine/Rose.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -182,7 +230,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_notes/Campaign Data/locations/Desert of the Thorn.md"
+                "file": "_notes/Campaign Data/clans/Divine/Rose.md"
               }
             }
           },
@@ -202,17 +250,17 @@
     "width": 200,
     "collapsed": true
   },
-  "active": "ce67aff77f883fda",
+  "active": "c032409e0e023226",
   "lastOpenFiles": [
+    "_notes/Campaign Data/clans/Divine/Carnation.md",
+    "_notes/Campaign Data/clans/Divine/Lily.md",
+    "_notes/Campaign Data/clans/Divine/Iris.md",
+    "_notes/Campaign Data/clans/Maternal Family/Angelica.md",
+    "_notes/Campaign Data/clans/Divine/Rose.md",
+    "_notes/Campaign Data/clans/Maternal Family/Andrew.md",
+    "_notes/Campaign Data/locations/Desert of the Thorn.md",
     "_notes/Campaign Data/locations/The Ebon-Rain Gardens.md",
     "_notes/Campaign Data/locations/The Fallen Peak.md",
-    "_notes/Campaign Data/locations/Locations List.md",
-    "_notes/Campaign Data/locations/Desert of the Thorn.md",
-    "_notes/Campaign Data/locations/Frozen Hollows of Mist.md",
-    "_notes/Campaign Data/locations/Meadows of Desolation.md",
-    "_notes/Campaign Data/locations/img from artbreeder.jpg",
-    "_notes/Campaign Data/locations/The Woods of Mist.md",
-    "_notes/Campaign Data/locations/The Smoke Slough.md",
-    "_notes/Campaign Data/locations/Starshead Village.md"
+    "_notes/Campaign Data/locations/Locations List.md"
   ]
 }

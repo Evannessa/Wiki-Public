@@ -440,6 +440,10 @@ export const regionViewerModule = (function () {
         }
     }
 
+    function createImageBackground(locationData, parentContainer) {
+        const img = locationData.imageData.mainImage;
+    }
+
     function createImageDisplay(locationData, parentContainer) {
         const img = locationData.imageData.mainImage;
         const extraImages = locationData.imageData.otherImages;
@@ -486,7 +490,7 @@ export const regionViewerModule = (function () {
         let childType = "region";
         if (type === "region") childType = "area";
         else if (type === "area") childType = "site";
-        const svgContainer = createSVG(id, type); //imageData.mainImage);
+        const svgContainer = createSVG(id, type, imageData.mainImage);
 
         createImageDisplay(parentData, svgContainer);
 
@@ -558,7 +562,7 @@ export const regionViewerModule = (function () {
         });
     }
 
-    function createSVG(parentName, type) {
+    function createSVG(parentName, type, img) {
         if (!parentName.trim()) return;
         const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
         svg.setAttribute("width", "100%");
@@ -571,6 +575,7 @@ export const regionViewerModule = (function () {
         svg.classList.add("location__container");
         svg.dataset.parent = parentName;
         svg.dataset.type = type;
+        svg.style.setProperty("--bg-img", `url(${img})`);
         document.querySelector(".location-map .location-map").appendChild(svg);
 
         return svg;

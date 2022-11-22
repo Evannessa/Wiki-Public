@@ -152,6 +152,14 @@ export default class Helpers {
         let popover = parentElement.querySelector(`.popover[data-id='${id}']`);
         popover.classList.toggle("hidden");
     }
+    static returnImage(imagePath, alt) {
+        let string = imagePath
+            ? `<img class="btn-img"
+                            src="${imagePath}"
+                            alt="${alt}"/>`
+            : ``;
+        return string;
+    }
     static dataToButtons(dataArray = []) {
         function returnImage(child) {
             let string = child.imageData
