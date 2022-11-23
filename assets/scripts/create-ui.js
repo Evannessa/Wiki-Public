@@ -159,7 +159,7 @@ export const LocationUIFactory = function (
                     let path = `/assets/clans/${child.clan}/${child.imageUrl}.webp`;
                     return `<div class="map-cast-card"><a class="map-link" href='/${child.pageUrl}'>
                             ${Helpers.returnImage(path, child.id)}
-                            ${child.id}
+                            <span class="card-text">${child.id}</span>
                         </a></div>`;
                 } else {
                     return Helpers.createPopover(child.id, child.id, child.description, { classes: ["map-link"] });

@@ -84,17 +84,12 @@ function createHex(xPosition, yPosition, columnNumber, rowNumber, className, svg
 function addIconsToHex(hexes) {
     const iconHTMLArrays = generateIcons();
     hexes.forEach((tile) => {
-        const iconHTMLArray = iconHTMLArrays.pop();
-        const iconBlurHTML = iconHTMLArray[0]; // blur should be bottom
-        const iconDarkHTML = iconHTMLArray[1]; // dark should be second
+        const iconBlurHTML = iconHTMLArrays.pop();
 
         const mainPath = tile.querySelector("path.main");
-        const overlayPath = tile.querySelector("path.overlay");
 
         const iconObjectBlur = Helpers.htmlToElement(iconBlurHTML);
-        const iconObjectDark = Helpers.htmlToElement(iconDarkHTML);
-        insertAfter(iconObjectBlur, mainPath);
-        insertAfter(iconObjectDark, overlayPath);
+        insert(iconObjectBlur, mainPath);
     });
 }
 
@@ -110,8 +105,9 @@ function adjustHexOffset(offsetX, offsetY, container) {
     });
 }
 
-function insertAfter(newNode, referenceNode) {
-    referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
+function insert(newNode, referenceNode, isAfter = false) {
+    const ref = isAfter ? referenceNode.nextSibling : referenceNode;
+    referenceNode.parentNode.insertBefore(newNode, ref);
 }
 
 /**
@@ -203,7 +199,7 @@ function setTileStyle(tile, style = "blank") {
 }
 function generateIcons() {
     const iconBasePath = "/assets/locations/maps/icons_and_symbols/icons/conversions/constellation";
-    function returnIconHTML(suffix, index, className = "main") {
+    function returnIconHTML(suffix, index, className = "main", icon) {
         return `
         <svg class="icon-container icon-container__${className}">
         <defs>
@@ -213,18 +209,52 @@ function generateIcons() {
         </defs>
         <foreignObject width="100%" height="100%">
         <div class="bg-blur" width="100%" height="100%" style="clip-path: url(#${suffix}${index}${className})">
-        <img src="${iconBasePath}-${index}-${suffix}.webp" width="50%" height="50%" class="icon"/>
+        &nbsp;
+        <span class="material-symbols-outlined">
+            ${icon}
+        </span>
         </div>
         </foreignObject>
         </svg>
         `;
     }
+    let iconNames = [
+        "brightness_1",
+        "brightness_2",
+        "brightness_3",
+        "brightness_4",
+        "brightness_5",
+        "brightness_6",
+        "brightness_7",
+        "clear_night",
+        "dark_mode",
+        "nightlight",
+        "mode_night",
+        "auto_awesome",
+        "wb_sunny",
+        "wb_twilight",
+        "brightness_medium",
+        "sunny_snowing",
+        "flare",
+        "brightness_low",
+        "weather_snowy",
+        "cyclone",
+        "cloudy_snowing",
+        "air",
+        "water",
+        "thunderstorm",
+        "rainy",
+        "looks",
+        "airwave",
+        "partly_cloudy_day",
+    ];
     let iconsArray = [];
-    for (let i = 1; i <= 30; i++) {
-        const iconHTMLBlur = returnIconHTML("blur", i);
-        const iconHTMLDark = returnIconHTML("dark", i, "overlay");
-        const innerArray = [iconHTMLBlur, iconHTMLDark];
-        iconsArray.push(innerArray);
-    }
+    iconsArray = iconNames.map((iconName, index) => returnIconHTML("blur", index, "main", iconName));
+    // for (let i = 1; i <= 30; i++) {
+    //     const iconHTMLBlur = returnIconHTML("blur", i);
+    //     const iconHTMLDark = returnIconHTML("dark", i, "overlay");
+    //     const innerArray = [iconHTMLBlur, iconHTMLDark];
+    //     iconsArray.push(innerArray);
+    // }
     return iconsArray;
 }

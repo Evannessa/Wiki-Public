@@ -40,6 +40,20 @@ export default class Helpers {
         }
     }
 
+    static buildDocumentFragment(container = "", children = []) {
+        let documentFragment = document.createDocumentFragment();
+        let parent = documentFragment;
+        if (container) {
+            documentFragment.appendChild(container);
+            parent = container;
+        }
+        if (children.length > 0) {
+            children.forEach((child) => parent.appendChild(child));
+        }
+        return documentFragment;
+        // ancestor.appendChild(documentFragment);
+    }
+
     static highlightAnotherElement(actionElement, dependentElement) {
         dependentElement.classList.toggle("highlighted");
     }
@@ -160,7 +174,7 @@ export default class Helpers {
             : ``;
         return string;
     }
-    static dataToButtons(dataArray = []) {
+    static dataToButtons(dataArray = [], returnHtml = false) {
         function returnImage(child) {
             let string = child.imageData
                 ? `<img class="btn-img"
@@ -169,21 +183,25 @@ export default class Helpers {
                 : ``;
             return string;
         }
-        dataArray = dataArray
-            .map((child) => {
-                return `
+        dataArray = dataArray.map((child) => {
+            return `
                 <button
                     class='${child.direction ? child.direction : ""}'
                     data-variant='color-hover'
                     data-link='${child.id}'
                     data-guid-link='${child.guid}'
                     data-click-action="navigate"
-                    data-hover-action="highlightHex">
+                    data-hover-action="highlightHex"
+                    data-direction='${child.direction ? child.direction : ""}'
+
+                    >
                     ${returnImage(child)}
                             <span class="btn-text">${child.id}</span>
                 </button>`;
-            })
-            .map((child) => Helpers.htmlToElement(child));
+        });
+        if (!returnHtml) {
+            dataArray = dataArray.map((child) => Helpers.htmlToElement(child));
+        }
         return dataArray;
     }
     /* Set the width of the side navigation to 250px and the left margin of the page content to 250px */

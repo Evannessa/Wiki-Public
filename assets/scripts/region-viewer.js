@@ -6,6 +6,11 @@ import { populateLocations } from "./hex-grid-generator.js";
 import Helpers from "./helpers.js";
 
 export const regionViewerModule = (function () {
+    const hexHoverData = {
+        hovering: false,
+        keydown: false,
+        current: "",
+    };
     let previousLocationData = [];
     let locationHeirarchyStack = [];
     let lightbox;
@@ -17,6 +22,26 @@ export const regionViewerModule = (function () {
     let locationData;
     let globalData;
     let hoveredHexes = [];
+    const directionElements = {
+        up: {
+            parent: "",
+            children: [],
+        },
+        down: {
+            parent: "",
+            children: [],
+        },
+        left: {
+            parent: "",
+            children: [],
+        },
+        right: {
+            parent: "",
+            children: [],
+        },
+    };
+
+    function updateHexHoverData() {}
 
     const selectedLocationElements = {
         element: "", // the hex element containing data for current location
@@ -72,10 +97,8 @@ export const regionViewerModule = (function () {
         locationIDs = locationData.map((location) => location.id);
         state.locations = { byId: normalizedLocations, allIds: locationIDs };
 
-        console.table(locationData, ["id", "children", "connections"]);
         globalData = getLocationsByProperty("type", "global")[0];
         globalData.baseAssetPath = data.sheets.find((sheet) => sheet.name === "ourMetadata").lines[0].baseAssetPath;
-        console.dir(globalData);
 
         createUIElements(locationData);
     }
@@ -86,8 +109,9 @@ export const regionViewerModule = (function () {
         const { id, guid, imageData } = globalData;
         const container = document.querySelector(".location__container.parent-list"),
             image = imageData.mainImage;
-        const children = getLocationsByProperty("parent", guid);
 
+        const children = getLocationsByProperty("parent", guid);
+        initializeConnectionAreas();
         createImageDisplay(globalData, container);
 
         createLocationGrid(
@@ -144,7 +168,8 @@ export const regionViewerModule = (function () {
             // Helpers.toggleClassOnAction(locationEl, dependentElement)
         } else {
             if (!event.ctrlKey) {
-                Helpers.toggleClassOnAction(locationEl, dependentElement, { action: "hide" });
+                //TODO - put this back
+                // Helpers.toggleClassOnAction(locationEl, dependentElement, { action: "hide" });
             }
             // Helpers.toggleClassOnAction(locationEl, dependentElement)
         }
@@ -210,6 +235,8 @@ export const regionViewerModule = (function () {
     }
 
     function selectLocation(locationEl, locationData, fromParent) {
+        clearConnectionAreas(); //clear the arrays and remove the connection button children
+
         if (!locationData) locationData = getLocationDataFromElement(locationEl);
         const childContainer = createChildGrid(locationData);
 
@@ -219,38 +246,22 @@ export const regionViewerModule = (function () {
             //if the previous element is also our parent, push it to the location heirarchy stack
             locationHeirarchyStack.push({ ...selectedLocationElements });
         }
-        console.log(locationData);
         const { connections } = locationData;
-
         if (connections) {
-            //TODO: add this back in later
             addConnectionButtons(connections, childContainer);
         }
+
         cacheLocationElements(locationEl, childContainer);
+
         selectedLocationUI.updateUIData(locationData);
 
         const dependentElement = document.querySelector(".location-hover-info");
         dependentElement.classList.add("hidden");
 
-        //draw paths between connection
-        // let { hexChildren } = selectedLocationElements;
-        // hexChildren.forEach((hex, index) => {
-        //     const data = getLocationDataFromElement(hex);
-        //     if (data.connections) {
-        //         console.log("Our connections are", data.connections);
-        //         const destinationIds = data.connections.map((con) => con.guid);
-        //         destinationIds.forEach((guid) => {
-        //             let destination = state.locations.byId[guid];
-        //             console.log("Destination is", { destination });
-        //             let destinationElement = documeny.querySelector(`[data-guid='${guid}']`);
-        //             drawPaths(hex, destinationElement, container, childContainer);
-        //         });
-        //     }
-        // if (index + 1 < hexChildren.length)
-        // drawPaths(hex, hexChildren[index + 1], childContainer)
-        // });
         setDefaultVisibilityState();
-
+        Object.values(directionElements)
+            .map((obj) => obj.parent)
+            .forEach((p) => addListeners(p));
         addListeners(selectedLocationElements.container);
         addListeners(selectedLocationUI.getContainer());
     }
@@ -335,6 +346,7 @@ export const regionViewerModule = (function () {
                 },
                 navigate: {
                     handler: (event) => {
+                        console.log("Navigate button clicked");
                         const current = event.currentTarget;
                         // const targetName = current.dataset.link;
                         const targetId = current.dataset.guidLink;
@@ -459,13 +471,17 @@ export const regionViewerModule = (function () {
         lightboxHTML.classList.add("inset");
     }
 
-    function createForeignObject(parentContainer) {
+    function createForeignObject(
+        parentContainer,
+        classString = "image-display can-be-hidden hidden",
+        defaultVisiblity = "hidden"
+    ) {
         let html = `<svg
     viewBox="0 0 100 100"
     width="100%"
     height="100%"
-    class="image-display can-be-hidden hidden"
-    data-default-visibility="hidden"
+    class="${classString}"
+    data-default-visibility="${defaultVisiblity}"
     >
     <foreignobject>
     </foreignobject>
@@ -531,22 +547,56 @@ export const regionViewerModule = (function () {
         }
         return svgContainer;
     }
-    function addConnectionButtons(connections) {
+
+    function initializeConnectionAreas() {
+        let directions = ["up", "down", "left", "right"];
+        directions.forEach((direction) => {
+            let html = `<section class="connection-button__container ${direction}" data-direction="${direction}"></section>`;
+            const el = Helpers.htmlToElement(html);
+            directionElements[direction].parent = el;
+        });
+    }
+
+    function clearConnectionAreas() {
+        for (const key in directionElements) {
+            const { parent, children } = directionElements[key];
+            Helpers.removeChildren(parent);
+            children.length = 0;
+        }
+    }
+
+    function addConnectionButtons(connections, childContainer) {
         let elements = connections.map((con) => {
             return {
                 ...con.element,
                 direction: con.direction,
+                dataset: {
+                    direction: con.direction,
+                },
             };
         });
         let connectionButtons = Helpers.dataToButtons(elements);
-        console.log(connectionButtons);
+
+        const outerContainerElement = childContainer;
+        // const containerElement = createForeignObject(
+        //     outerContainerElement,
+        //     "connections-wrapper",
+        //     "visible"
+        // ).querySelector("foreignObject");
         const containerElement = document.querySelector(".location-map .location-map");
 
-        connectionButtons.forEach((btn) => {
-            btn.classList.add("connection-hex");
-            containerElement.appendChild(btn);
+        connectionButtons.forEach((btnEl) => {
+            directionElements[btnEl.dataset.direction].children.push(btnEl);
+            btnEl.classList.add("connection-hex");
         });
-        // containerElement.appendChild(connectionButtons);
+
+        for (let key in directionElements) {
+            const { parent, children } = directionElements[key];
+            directionElements[key].fragment = Helpers.buildDocumentFragment(parent, children);
+        }
+        let fragments = Object.values(directionElements).map((el) => el.fragment);
+        let shadow = Helpers.buildDocumentFragment("", fragments);
+        containerElement.appendChild(shadow);
     }
 
     function createConnections(childLocations, container) {
@@ -683,7 +733,8 @@ export const regionViewerModule = (function () {
         childLists.forEach((list) => {
             list.remove();
         });
-        selectedLocationUI.resetToDefault(); //updateUIData(parentElement)
+        selectedLocationUI.resetToDefault();
+        clearConnectionAreas();
         setDefaultVisibilityState();
     }
     //remove just the last list, going up the heirarchy
