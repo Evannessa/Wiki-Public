@@ -109,6 +109,9 @@ export const regionViewerModule = (function () {
         const container = document.querySelector(".location__container.parent-list"),
             image = imageData.mainImage;
 
+        //TODO: cache this somewhere
+        document.querySelector(".decor.bottom-card h3").textContent = locationData.id;
+
         const children = getLocationsByProperty("parent", guid);
         initializeConnectionAreas();
         createImageDisplay(globalData, container);
@@ -234,11 +237,15 @@ export const regionViewerModule = (function () {
     }
 
     function selectLocation(locationEl, locationData, fromParent) {
-        clearConnectionAreas(); //clear the arrays and remove the connection button children
-
         if (!locationData) locationData = getLocationDataFromElement(locationEl);
         const childContainer = createChildGrid(locationData);
 
+        //TODO: cache thi somewhere else
+        //update the image
+        document.querySelector(".decor.bottom-card img").src = locationData.imageData.mainImage;
+        document.querySelector(".decor.bottom-card h3").textContent = locationData.id;
+
+        clearConnectionAreas(); //clear the arrays and remove the connection button children
         previousLocationData.push({ ...selectedLocationElements }); // push the previous elements
         let locationAncestors = [...previousLocationData];
         if (locationData.parent === locationAncestors.pop()?.element?.dataset?.guid) {

@@ -452,7 +452,7 @@ foreignObject {
     }
     .decor.bottom-card {
         @extend .card-styles;
-        z-index: 0;
+        z-index: 1;
         top: 60%;
         transform: translateY(-50%) rotateZ(-30deg);
         padding: 2em 2em;
@@ -464,6 +464,12 @@ foreignObject {
             border-radius: inherit;
             outline: 4px double var(--border-color);
         }
+    }
+    .bottom-card__title {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
     }
     .location-hover-info {
         @extend .card-styles;
@@ -479,11 +485,12 @@ foreignObject {
             background-size: cover;
             /*! margin: 2em; */
             opacity: 70%;
-            // mask-image: url("/assets/locations/GrungeBG.webp");
-            // mask-size: cover;
+            mask-image: url("/assets/locations/grunge-frame.webp");
+            mask-size: contain;
             // // mask-position: right;
-            // mask-repeat: none;
-            // mask-type: luminance;
+            mask-position: center;
+            mask-repeat: none;
+            mask-mode: alpha;
             z-index: -1;
         }
         // height: 100%;
