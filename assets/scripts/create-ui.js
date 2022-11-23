@@ -156,8 +156,8 @@ export const LocationUIFactory = function (
         return `${propertyName}`;
         // return `${propertyName} in ${parentName}`;
     }
-    const resetToDefault = () => {
-        updateUIData(defaultData, true);
+    const resetToDefault = (hasImageElement = false) => {
+        updateUIData(defaultData, true, hasImageElement);
     };
     function dataToLinks(dataArray = []) {
         dataArray = dataArray
@@ -218,7 +218,9 @@ export const LocationUIFactory = function (
         cardData.element = cardElement;
         cardData.imgElement = cardElement.querySelector("img");
         cardData.titleElement = cardElement.querySelector("h3");
-        resetToDefault();
+        console.log({ cardData: cardData });
+        const hasImageElement = cardData.imgElement;
+        resetToDefault(hasImageElement);
     };
 
     const updateCardTitle = (locationData) => {
@@ -229,13 +231,14 @@ export const LocationUIFactory = function (
         const imagePath = Helpers.encodeURI(locationData.imageData.mainImage);
         if (hasImageElement) {
             //TODO: Cache this somewhere
-            cardData.element.querySelector("img").src = imagePath;
+            cardData.imgElement.src = imagePath;
         } else {
             cardData.element.style.setProperty("--bg-img", `url(${imagePath})`);
         }
         // else imagePath = Helpers.encodeURI(cardData.defaultBgImg);
     };
     const updateUIData = (locationData, reset = false, hasImageElement = false) => {
+        console.log({ cardData });
         updateUIBackgrounds(locationData, hasImageElement);
         //TODO: Refactor these bits to be a part of the general UI Data
         if (hasImageElement) {

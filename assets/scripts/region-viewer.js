@@ -134,6 +134,7 @@ export const regionViewerModule = (function () {
             true,
             document.querySelector(".decor.bottom-card")
         );
+        console.log(selectedLocationUI);
 
         selectedLocationUI.initializeUIData();
 
@@ -719,7 +720,7 @@ export const regionViewerModule = (function () {
         childLists.forEach((list) => {
             list.remove();
         });
-        selectedLocationUI.resetToDefault();
+        selectedLocationUI.resetToDefault(true);
         clearConnectionAreas();
         setDefaultVisibilityState();
     }
