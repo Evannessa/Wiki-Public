@@ -64,7 +64,6 @@ export const regionViewerModule = (function () {
                 connection.element = connectedElement;
                 // debugger;
             }
-            console.log(loc.connections);
             const children = locationData.filter((childLoc) => childLoc.parent === loc.guid);
             const parentName = locationData.find((parentLoc) => parentLoc.guid === loc.parent)?.id || "";
 
@@ -625,7 +624,7 @@ export const regionViewerModule = (function () {
         svg.classList.add("location__container");
         svg.dataset.parent = parentName;
         svg.dataset.type = type;
-        svg.style.setProperty("--bg-img", `url(${img})`);
+        svg.style.setProperty("--bg-img", `url(${Helpers.encodeURI(img)})`);
         document.querySelector(".location-map .location-map").appendChild(svg);
 
         return svg;

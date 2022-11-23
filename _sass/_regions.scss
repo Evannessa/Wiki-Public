@@ -434,6 +434,7 @@ foreignObject {
     }
 
     .card-styles {
+        --border-color: #6065b17a;
         height: 60%;
         backdrop-filter: blur(5px);
         position: absolute;
@@ -446,7 +447,7 @@ foreignObject {
         border-radius: 12px;
         overflow: hidden;
         transform: translateY(-50%) rotateZ(-10deg);
-        border: 1px solid #6065b17a;
+        border: 1px solid var(--border-color);
         box-shadow: 3px 3px 5px hsla(261, 63%, 16%, 0.578);
     }
     .decor.bottom-card {
@@ -455,30 +456,18 @@ foreignObject {
         top: 60%;
         transform: translateY(-50%) rotateZ(-30deg);
         padding: 2em 2em;
+        border: 1px solid #6065b17a;
         img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             border-radius: inherit;
-            outline: 4px double currentColor;
+            outline: 4px double var(--border-color);
         }
     }
     .location-hover-info {
         @extend .card-styles;
-        // height: 60%;
-        // backdrop-filter: blur(5px);
-        // position: absolute;
-        // top: 50%;
-        // z-index: 10;
-        // right: 1rem;
-        // text-align: right;
-        // max-width: 215px;
-        // padding: 0.5em 1em;
-        // border-radius: 12px;
-        // overflow: hidden;
-        // transform: translateY(-50%) rotateZ(-10deg);
-        // border: 1px solid #6065b17a;
-        // box-shadow: 3px 3px 5px hsla(261, 63%, 16%, 0.578);
+
         &:before {
             content: " ";
             position: absolute;
@@ -486,8 +475,10 @@ foreignObject {
             left: 0;
             width: 100%;
             height: 100%;
-            // background-image: url("/assets/locations/BlueShallows.jpg");
-            // background-size: cover;
+            background-image: var(--bg-img);
+            background-size: cover;
+            /*! margin: 2em; */
+            opacity: 70%;
             // mask-image: url("/assets/locations/GrungeBG.webp");
             // mask-size: cover;
             // // mask-position: right;

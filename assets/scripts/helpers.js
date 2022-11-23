@@ -123,6 +123,12 @@ export default class Helpers {
             element.removeEventListener(eventName, event);
         });
     }
+
+    static encodeURI(str) {
+        return encodeURIComponent(str).replace(/[!'()*]/g, function (c) {
+            return "%" + c.charCodeAt(0).toString(16);
+        });
+    }
     static addEventListenerToOne(element, eventNames, callback) {
         let eventArray = eventNames.split(" ");
         eventArray.forEach((eventName) => {
