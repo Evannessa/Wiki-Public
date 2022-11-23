@@ -1,0 +1,54 @@
+{
+    "baseAssetPath": "/assets/locations/maps/",
+    "tabs": [
+        {
+            "icon": "auto_stories",
+            "id": "Lore",
+            "bgImg": "lore.webp",
+            "classes": "active flex-1",
+            "subSections": [
+                {
+                    "type": "paragraph",
+                    "id": "Description",
+                    "classes": "active padding-medium"
+                }
+            ]
+        },
+        {
+            "icon": "villa",
+            "id": "Geography",
+            "bgImg": "inner-locations-1.webp",
+            "subSections": [
+                {
+                    "type": "collapsible",
+                    "id": "Children",
+                    "bgImg": "inner-locations-1.webp"
+                },
+                {
+                    "type": "collapsible",
+                    "id": "Connections",
+                    "bgImg": "connections.webp",
+                    "classes": "flex-2"
+                }
+            ]
+        },
+        {
+            "icon": "groups",
+            "id": "Cast",
+            "classes": "flex-1",
+            "bgImg": "factions.webp",
+            "subSections": [
+                {
+                    "type": "collapsible",
+                    "id": "People",
+                    "bgImg": "cast.webp"
+                },
+                {
+                    "type": "collapsible",
+                    "id": "Factions",
+                    "bgImg": "factions.webp"
+                }
+            ]
+        }
+    ]
+}

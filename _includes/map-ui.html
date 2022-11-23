@@ -1,89 +1,21 @@
-<div class="{{include.prefix}}__content {{include.class}}">
+<div class="{{include.prefix}}__content {{include.classes}}" style="--bg-img: url(/assets/locations/maps/inner-locations.webp)">
     <div class="{{include.prefix}}__card map-info-card flatten">
-
-        <div class="{{include.prefix}}__portrait card-portrait"></div>
+        {%- if include.hasPortrait -%}
+            <div class="{{include.prefix}}__portrait card-portrait"></div>
+        {%- endif -%}
         <div class="{{include.prefix}}__card-content card-content">
             <h3 class="{{include.prefix}}__card-title card-title"></h3>
             <p class="{{include.prefix}}__tags bold"></p>
-
+            {% if include.hasTabs != true %}
+                <p class="{{include.prefix}}__description bold"></p>
+            {% endif %}
         </div>
     </div>
+    {% if include.hasTabs %}
+        {% assign tabsData = site.data.location_tabs %}
+        {% include tabbed_section.html tabsData=tabsData prefix=include.prefix %}
+        {% else %}
 
-    <section class="tab-section">
+    {% endif %}
 
-
-        <div class="tab-section__content flatten">
-
-            <div class="tab-content
-                [ padding-medium fade-overlay active ] " id="Lore">
-                <p class="{{include.prefix}}__description padding-medium"></p>
-            </div>
-
-            {%- comment -%}
-                Geography
-            {%- endcomment -%}
-            <div class="tab-content" id="Geography">
-                <button class="collapsible active"
-                data-click-action="open"
-                data-variant="bg-img"
-                style="--bg-img: url(/assets/locations/maps/CosmosBG.webp)">
-                    <span class="{{include.prefix}}__children-title"></span>
-                </button>
-                <div class="content active">
-                    <ul class="{{include.prefix}}__children"></ul>
-                </div>
-                {%- comment -%}
-                    Connections
-                {%- endcomment -%}
-                <button class="collapsible"
-                data-click-action="open"
-                data-variant="bg-img"
-                style="--bg-img: url(/assets/locations/maps/CosmosBG.webp)">
-                    >
-                    <span class="{{include.prefix}}__connections-title"></span>
-                </button>
-                <div class="content">
-                    <ul class="{{include.prefix}}__connections"></ul>
-                </div>
-            </div>
-            <div class="tab-content" id="Cast">
-                <button class="collapsible"
-                data-click-action="open"
-                data-variant="bg-img"
-                style="--bg-img: url(/assets/locations/village.JPG)">
-                    <span class="{{include.prefix}}__cast-title"></span>
-                </button>
-                <div class="content">
-                    <ul class="{{include.prefix}}__cast"></ul>
-                </div>
-                <button class="collapsible"
-                data-click-action="open"
-                data-variant="bg-img"
-                style="--bg-img: url(/assets/locations/LostLake2.jpg)">
-                    <span class="{{include.prefix}}__factions-title"></span>
-                </button>
-                <div class="content">
-                    <ul class="{{include.prefix}}__factions"></ul>
-                </div>
-            </div>
-        </div>
-        {%- if include.hasTabs -%}
-            <div class="tabs">
-                <button class="tab flex-1 active"
-                data-target="Lore"
-                data-click-action="switchTab" data-variant="glow-hover">
-                    {% include font-icon.html icon="auto_stories" %}
-                    Lore
-                </button>
-                <button class="tab flex-2" data-target="Geography" data-click-action="switchTab" data-variant="glow-hover">
-                    {% include font-icon.html icon="villa" %}
-                    Geography
-                </button>
-                <button class="tab flex-1" data-target="Cast" data-click-action="switchTab" data-variant="glow-hover">
-                    {% include font-icon.html icon="groups" %}
-                    Cast
-                </button>
-            </div>
-        {%- endif -%}
-    </section>
 </div>

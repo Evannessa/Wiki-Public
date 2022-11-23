@@ -278,10 +278,11 @@ export const regionViewerModule = (function () {
                 switchTab: {
                     handler: (event) => {
                         //TODO: Refactor this so that the tabs are being cached
-                        let tab = event.currentTarget;
-                        let target = tab.dataset.target;
-                        let tabs = Array.from(document.querySelectorAll(".tab"));
-                        let contentSections = Array.from(document.querySelectorAll(".tab-content"));
+
+                        const tab = event.currentTarget;
+                        const target = tab.dataset.target;
+                        const tabs = Array.from(document.querySelectorAll(".tab"));
+                        const contentSections = Array.from(document.querySelectorAll(".tab-content"));
                         tabs.forEach((tab) => {
                             tab.classList.remove("active");
                         });
@@ -290,10 +291,12 @@ export const regionViewerModule = (function () {
                             section.classList.add("removed");
                         });
                         tab.classList.add("active");
-                        document.getElementById(target).classList.add("active");
-                        document.getElementById(target).classList.remove("removed");
+                        const contentSection = document.getElementById(target);
+                        // contentSection.style.setProperty("--bg-img", value);
+                        contentSection.classList.add("active");
+                        contentSection.classList.remove("removed");
+
                         //Also if it's closed, expand the toggle
-                        console.log(selectedLocationUI.getContainer());
                         if (!selectedLocationUI.getContainer().classList.contains("expanded")) {
                             expandSidebar();
                         }

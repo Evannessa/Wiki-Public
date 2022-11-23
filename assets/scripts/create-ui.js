@@ -215,7 +215,6 @@ export const LocationUIFactory = function (
         console.log(locationData.imageData.mainImage);
         const imagePath = Helpers.encodeURI(locationData.imageData.mainImage);
         getContainer().style.setProperty("--bg-img", `url(${imagePath})`);
-        console.log(getContainer().style);
         const suffixes = Object.keys(uiData);
         suffixes.forEach((suffix) => {
             const uiElement = uiData[suffix].element;

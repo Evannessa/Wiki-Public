@@ -26,7 +26,7 @@
                 %}
         </div>
     </div>
-    {% include map-ui.html prefix="location-info" hasControls=true hasTabs=true class="tabbed-sidebar" %}
+    {% include map-ui.html prefix="location-info" hasControls=true hasTabs=true hasPortrait=true classes="tabbed-sidebar" %}
 
 </div>
 <section class="location-map" data-path="{{include.path}}">
@@ -39,11 +39,14 @@
 
     </svg>
 
-    <div class="child-location location-hover-info can-be-hidden hidden" data-default-visibility="hidden">
-        {% include map-ui.html prefix="child-location-info" class="preview-sidebar" %}
+    <div class="child-location location-hover-info" data-default-visibility="visible">
+        {% include map-ui.html prefix="child-location-info" classes="top-card"%}
     </div>
-    <div class="decor bottom-card"><img src="{{include.img}}" alt=""/>
-    <h3 class="bottom-card__title">{{include.title}}</h3>
+    <div class="decor bottom-card">
+        <img src="{{include.img}}" alt=""/>
+        <h3 class="bottom-card__title">
+            {{include.title}}
+        </h3>
     </div>
 </section>
 <script src="/assets/scripts/modal.js" type="module"></script>

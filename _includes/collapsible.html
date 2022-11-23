@@ -1,0 +1,11 @@
+  <button class="collapsible {{include.classes}}"
+                data-click-action="open"
+                data-variant="bg-img"
+                data-name="{{include.name}}"
+                style="--bg-img: url({{include.bgImg}})">
+                    {{include.headerHTML}}
+                </button>
+                <div class="content"
+                style="--bg-img: url({{include.bgImg}})">
+                    {{include.contentHTML}}
+</div>

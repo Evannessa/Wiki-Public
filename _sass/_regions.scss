@@ -4,6 +4,7 @@
 }
 
 .location-info {
+    display: grid;
     height: 100vh;
     width: 0%;
     position: static;
@@ -411,8 +412,8 @@ foreignObject {
                     object-position: center;
                     // border-radius: 50%;
                     // mask
-                    mask-image: url(/assets/locations/GrungeMaskH.png);
-                    // mask-image: url(/assets/locations/maps/portrait-mask.png);
+                    // mask-image: url(/assets/locations/GrungeMaskH.png);
+                    mask-image: url(/assets/locations/maps/portrait-mask.webp);
                     mask-mode: alpha;
                     mask-position: center;
                     // mask-size: cover;
@@ -487,7 +488,7 @@ foreignObject {
             background-size: cover;
             /*! margin: 2em; */
             opacity: 70%;
-            mask-image: url("/assets/locations/GrungeMaskV.png");
+            mask-image: url("/assets/locations/GrungeMaskV2.png");
             // mask-size: cover;
             mask-size: 100% 100%;
             // // mask-position: right;

@@ -1,0 +1,49 @@
+<section class="tab-section">
+    {% assign tabsData = include.tabsData %}
+    <div class="tab-section__content flatten">
+        {% for item in tabsData.tabs %}
+            {% capture sectionBGImg %}
+                {{tabsData.baseAssetPath}}{{item.bgImg}}
+            {% endcapture %}
+            <div class="tab-content
+                        [ padding-medium fade-overlay {{item.subSections[0].classes}} ] "
+                         id="{{item.id}}"
+                         style="--bg-img: url({{sectionBGImg}})"
+                         >
+                {%- for subSection in item.subSections -%}
+                    {%- assign ourId = subSection.id | downcase -%}
+                    {%- if subSection.type == "paragraph" -%}
+                        <p class="{{include.prefix}}__{{ourId}} {{subSection.classes}}"></p>
+                    {%- elsif subSection.type == "collapsible" -%}
+                        {% capture header %}
+                            <span class="{{include.prefix}}__{{ourId}}-title"></span>
+                        {% endcapture %}
+                        {% capture content %}
+                            <ul class="{{include.prefix}}__{{ourId}}"></ul>
+                        {% endcapture %}
+                        {% capture bgImg %}
+                            {{tabsData.baseAssetPath}}{{subSection.bgImg}}
+                        {% endcapture %}
+                        {% include collapsible.html
+                    headerHTML=header
+                    contentHTML=content
+                    bgImg=bgImg
+                    %}
+                    {%- endif -%}
+
+                {%- endfor -%}
+            </div>
+        {% endfor %}
+    </div>
+    <div class="tabs">
+        {%- for item in tabsData.tabs -%}
+
+            <button class="tab {{item.classes}}"
+                    data-target="{{item.id}}"
+                data-click-action="switchTab" data-variant="glow-hover">
+                {% include font-icon.html icon=item.icon %}
+                {{item.id}}
+            </button>
+        {%- endfor -%}
+    </div>
+</section>
