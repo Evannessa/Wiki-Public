@@ -1,15 +1,23 @@
 <div class="{{include.prefix}}__content {{include.classes}}" style="--blank-img: url(/assets/locations/maps/inner-locations.webp)">
     <div class="{{include.prefix}}__card map-info-card flatten">
-        {%- if include.hasPortrait -%}
-            <div class="{{include.prefix}}__portrait card-portrait"></div>
-        {%- endif -%}
-        <div class="{{include.prefix}}__card-content card-content">
-            <h3 class="{{include.prefix}}__card-title card-title"></h3>
-            <p class="{{include.prefix}}__tags bold"></p>
-            {% if include.hasTabs != true %}
+        {% if include.hasTabs %}
+            {%- if include.hasPortrait -%}
+                <div class="{{include.prefix}}__portrait card-portrait"></div>
+            {%- endif -%}
+            <div class="{{include.prefix}}__card-content card-content">
+                <h3 class="{{include.prefix}}__card-title card-title"></h3>
+                <p class="{{include.prefix}}__tags bold"></p>
+            </div>
+        {% else %}
+            <div class="card-header">
+                <h3 class="{{include.prefix}}__card-title card-title"></h3>
+                <p class="{{include.prefix}}__tags bold"></p>
+            </div>
+            <div class="{{include.prefix}}__card-content card-content">
                 <p class="{{include.prefix}}__description bold"></p>
-            {% endif %}
-        </div>
+            </div>
+        {% endif %}
+
     </div>
     {% if include.hasTabs %}
         {% assign tabsData = site.data.location_tabs %}

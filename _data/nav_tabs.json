@@ -1,0 +1,23 @@
+[
+    {
+        "id": "home",
+        "path": "",
+        "icon": "home"
+    },
+    {
+        "text": "Characters",
+        "hasDropdown": false,
+        "path": "search-characters"
+    },
+    {
+        "text": "Family Trees",
+        "path": "trees-ruto",
+        "tagName": "Category/Family-Tree",
+        "isPages": true
+    },
+    {
+        "text": "Locations",
+        "path": "locations-list",
+        "category": "search-locations"
+    }
+]

@@ -253,6 +253,13 @@ export const regionViewerModule = (function () {
         selectedLocationContainer: "",
         actions: {
             click: {
+                fold: {
+                    handler: (event) => {
+                        //TODO: Refactor this so that the element's being cached
+                        let infoCard = document.querySelector(".location-info__content");
+                        infoCard.classList.toggle("flat");
+                    },
+                },
                 switchTab: {
                     handler: (event) => {
                         //TODO: Refactor this so that the tabs are being cached

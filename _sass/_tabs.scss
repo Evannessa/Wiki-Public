@@ -1,6 +1,9 @@
 .tabbed-sidebar {
     display: grid;
-    grid-template-rows: 40% minmax(0, 60%);
+    grid-template-rows: 40% minmax(0, 1fr);
+    &.full-height {
+        grid-template-rows: 40% minmax(0, 1fr);
+    }
     .tab-section {
         overflow: visible;
         grid-row: 2/3;
@@ -31,6 +34,8 @@
         flex-wrap: nowrap;
         text-orientation: sideways-right;
         writing-mode: vertical-lr;
+        max-height: 60vh;
+        bottom: 0;
         .tab {
             display: flex;
             align-items: flex-start;

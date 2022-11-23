@@ -12,20 +12,13 @@
             </span>
         </button>
     {% endif %}
-    {% include menu-item.html path="" icon="home" %}
-
-    {% include menu-item.html
-    hasDropdown=false text="Characters" hasDropdown=true tagName="Special/PC"
-    path="search-characters" %}
-
-    {% include menu-item.html hasDropdown=true
-    dropdownGrid=true text="Family Trees" path="trees-ruto" tagName="Category/Family-Tree" isPages=true %}
-
-    {% include menu-item.html path="locations-list" hasDropdown=true text="Locations"
-    category="search-locations" %}
-
-    {% include menu-item.html
-    path="lore-map-of-content" hasDropdown=true text="Lore"
-    tagName="info/lore" %}
-
+    {%- for item in site.data.nav_tabs -%}
+        {% include menu-item.html
+         icon=item.icon
+         text=item.text
+         path=item.path
+         tagName=item.tagName
+         category=item.category
+         hasDropdown=item.hasDropdown %}
+    {%- endfor -%}
 </ul>
