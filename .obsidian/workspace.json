@@ -56,30 +56,6 @@
             }
           },
           {
-            "id": "63cd278bba7892aa",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "_notes/Campaign Data/clans/Divine/Carnation.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "c032409e0e023226",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "_notes/Campaign Data/clans/Divine/Rose.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
             "id": "a130a37d3b7e25be",
             "type": "leaf",
             "state": {
@@ -116,7 +92,7 @@
             }
           }
         ],
-        "currentTab": 5
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -190,7 +166,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_notes/Campaign Data/clans/Divine/Rose.md",
+                "file": "_notes/Campaign Data/locations/Locations List.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -207,7 +183,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_notes/Campaign Data/clans/Divine/Rose.md",
+                "file": "_notes/Campaign Data/locations/Locations List.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -230,7 +206,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_notes/Campaign Data/clans/Divine/Rose.md"
+                "file": "_notes/Campaign Data/locations/Locations List.md"
               }
             }
           },
@@ -250,13 +226,13 @@
     "width": 200,
     "collapsed": true
   },
-  "active": "c032409e0e023226",
+  "active": "a130a37d3b7e25be",
   "lastOpenFiles": [
-    "_notes/Campaign Data/clans/Divine/Carnation.md",
     "_notes/Campaign Data/clans/Divine/Lily.md",
+    "_notes/Campaign Data/clans/Divine/Carnation.md",
+    "_notes/Campaign Data/clans/Divine/Rose.md",
     "_notes/Campaign Data/clans/Divine/Iris.md",
     "_notes/Campaign Data/clans/Maternal Family/Angelica.md",
-    "_notes/Campaign Data/clans/Divine/Rose.md",
     "_notes/Campaign Data/clans/Maternal Family/Andrew.md",
     "_notes/Campaign Data/locations/Desert of the Thorn.md",
     "_notes/Campaign Data/locations/The Ebon-Rain Gardens.md",

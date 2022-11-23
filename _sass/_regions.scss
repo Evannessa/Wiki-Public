@@ -410,8 +410,10 @@ foreignObject {
                     object-fit: cover;
                     object-position: center;
                     // border-radius: 50%;
-                    mask-image: url(/assets/locations/maps/portrait-mask.png);
-                    mask-mode: luminance;
+                    // mask
+                    mask-image: url(/assets/locations/GrungeMaskH.png);
+                    // mask-image: url(/assets/locations/maps/portrait-mask.png);
+                    mask-mode: alpha;
                     mask-position: center;
                     // mask-size: cover;
                     // object-fit: contain;
@@ -485,8 +487,9 @@ foreignObject {
             background-size: cover;
             /*! margin: 2em; */
             opacity: 70%;
-            mask-image: url("/assets/locations/grunge-frame.webp");
-            mask-size: contain;
+            mask-image: url("/assets/locations/GrungeMaskV.png");
+            // mask-size: cover;
+            mask-size: 100% 100%;
             // // mask-position: right;
             mask-position: center;
             mask-repeat: none;
