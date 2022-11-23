@@ -124,11 +124,15 @@ export const regionViewerModule = (function () {
 
         cacheLocationElements("", container); //store the current location information once it's all created
 
+        // document.querySelector(".decor.bottom-card img").src = locationData.imageData.mainImage;
+        // document.querySelector(".decor.bottom-card h3").textContent = locationData.id;
         selectedLocationUI = new LocationUIFactory(
             "location-info",
             globalData,
             document.querySelector(".location-info"),
-            state
+            state,
+            true,
+            document.querySelector(".decor.bottom-card")
         );
 
         selectedLocationUI.initializeUIData();
@@ -138,7 +142,8 @@ export const regionViewerModule = (function () {
             globalData,
             document.querySelector(".location-hover-info"),
             state,
-            false
+            false,
+            document.querySelector(".top-card")
         );
         hoveredLocationUI.initializeUIData();
 
@@ -161,41 +166,17 @@ export const regionViewerModule = (function () {
 
     function displayInfo(event, _locationEl = "") {
         const locationEl = _locationEl ? _locationEl : event.currentTarget;
-        const dependentElement = document.querySelector(".location-hover-info");
+        const dependentElement = document.querySelector(".location-hover-info .top-card");
         const isLeave = event.type === "mouseout" || event.type === "mouseleave";
         let location = getLocationDataFromElement(locationEl);
         if (!isLeave) {
-            hoveredLocationUI.updateUIData(location);
-            Helpers.toggleClassOnAction(locationEl, dependentElement, { action: "show" });
-            // Helpers.toggleClassOnAction(locationEl, dependentElement)
+            hoveredLocationUI.updateUIData(location, false, false);
+            dependentElement.classList.add("highlighted");
         } else {
-            if (!event.ctrlKey) {
-                //TODO - put this back
-                // Helpers.toggleClassOnAction(locationEl, dependentElement, { action: "hide" });
-            }
-            // Helpers.toggleClassOnAction(locationEl, dependentElement)
+            // hoveredLocationUI.updateUIData(location, false, true);
+            dependentElement.classList.remove("highlighted");
         }
     }
-
-    function createInfoModal() {}
-    // function togglePointerEvents(hex){
-    //     block
-
-    // }
-    // function toggleLockedDisplays(event, currentTarget){
-    //     let isRelease = event.type === "keyUp"
-    //     if(isRelease){
-
-    //     }else{
-    //         selectedLocationElements.hexChildren.forEach
-
-    //     }
-
-    //     if(event.currentTarget){
-
-    //     }
-
-    // }
 
     function getExtraImagesFromString(baseFilePath, stringNames) {
         // if (!stringNames && !stringNames.trim() && !stringNames === "") {
@@ -240,11 +221,6 @@ export const regionViewerModule = (function () {
         if (!locationData) locationData = getLocationDataFromElement(locationEl);
         const childContainer = createChildGrid(locationData);
 
-        //TODO: cache thi somewhere else
-        //update the image
-        document.querySelector(".decor.bottom-card img").src = locationData.imageData.mainImage;
-        document.querySelector(".decor.bottom-card h3").textContent = locationData.id;
-
         clearConnectionAreas(); //clear the arrays and remove the connection button children
         previousLocationData.push({ ...selectedLocationElements }); // push the previous elements
         let locationAncestors = [...previousLocationData];
@@ -259,7 +235,8 @@ export const regionViewerModule = (function () {
 
         cacheLocationElements(locationEl, childContainer);
 
-        selectedLocationUI.updateUIData(locationData);
+        if (!locationData) locationData = globalData;
+        selectedLocationUI.updateUIData(locationData, false, true);
 
         const dependentElement = document.querySelector(".location-hover-info");
         dependentElement.classList.add("hidden");

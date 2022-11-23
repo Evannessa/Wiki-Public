@@ -8,13 +8,20 @@ export const LocationUIFactory = function (
     defaultData,
     containerElement,
     allLocations,
-    fullStringTitle = true
+    fullStringTitle = true,
+    cardElement
 ) {
     // let containerElement = containerElement;
 
     function getContainer() {
         return containerElement;
     }
+    const cardData = {
+        defaultBgImg: "/assets/locations/maps/inner-locations.webp",
+        element: "",
+        imgElement: "",
+        titleElement: "",
+    };
     const uiData = {
         title: {
             contentCallback: (locationData) => {
@@ -208,13 +215,33 @@ export const LocationUIFactory = function (
         suffixes.forEach((suffix) => {
             uiData[suffix].element = document.querySelector(`.${prefix}__${suffix}`);
         });
+        cardData.element = cardElement;
+        cardData.imgElement = cardElement.querySelector("img");
+        cardData.titleElement = cardElement.querySelector("h3");
         resetToDefault();
     };
 
-    const updateUIData = (locationData, reset = false) => {
-        console.log(locationData.imageData.mainImage);
+    const updateCardTitle = (locationData) => {
+        cardData.titleElement.textContent = locationData.id;
+    };
+
+    const updateUIBackgrounds = (locationData, hasImageElement = false) => {
         const imagePath = Helpers.encodeURI(locationData.imageData.mainImage);
-        getContainer().style.setProperty("--bg-img", `url(${imagePath})`);
+        if (hasImageElement) {
+            //TODO: Cache this somewhere
+            cardData.element.querySelector("img").src = imagePath;
+        } else {
+            cardData.element.style.setProperty("--bg-img", `url(${imagePath})`);
+        }
+        // else imagePath = Helpers.encodeURI(cardData.defaultBgImg);
+    };
+    const updateUIData = (locationData, reset = false, hasImageElement = false) => {
+        updateUIBackgrounds(locationData, hasImageElement);
+        //TODO: Refactor these bits to be a part of the general UI Data
+        if (hasImageElement) {
+            updateCardTitle(locationData);
+        }
+
         const suffixes = Object.keys(uiData);
         suffixes.forEach((suffix) => {
             const uiElement = uiData[suffix].element;
