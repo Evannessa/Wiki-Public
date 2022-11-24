@@ -1,7 +1,6 @@
 button,
 .btn {
     backdrop-filter: blur(2px);
-    padding: 0.5em 1em;
     border-radius: 5px;
     color: var(--color-primary-300);
     // color: white;
@@ -13,10 +12,28 @@ button,
     transition: transform 150ms ease-in;
     position: relative;
     // overflow: hidden;
-    &[data-click-action="navigate"] {
+    &[data-click-action="navigate"]:not(.connection-hex) {
         padding: unset;
-        border-radius: 15px;
-        max-height: 70px;
+        border-radius: 18px;
+        // max-height: 70px;
+        max-width: 90%;
+        aspect-ratio: 3.5/1;
+        .btn-text {
+            mask-image: url(/assets/locations/maps/grunge-strokes-3.webp);
+            mask-size: 100% auto;
+            mask-position: center;
+            color: white;
+            background: linear-gradient(
+                to left,
+                transparent,
+                rgba(33, 42, 77, 0.63) 25%,
+                rgba(14, 24, 44, 0.62) 50%,
+                transparent
+            );
+            backdrop-filter: blur(5px);
+            padding: 0.5em 1em;
+            font-size: 1.15rem;
+        }
     }
     &:not([data-variant]) {
         &:hover,
@@ -50,6 +67,7 @@ button,
         }
     }
     &[data-variant="bg-img"] {
+        backdrop-filter: unset;
         color: white;
         // background-image: var(--bg-img);
     }
@@ -65,7 +83,6 @@ button,
         outline: none;
     }
     .btn-text {
-        color: var(--color-primary-bg);
         position: absolute;
         top: 50%;
         left: 50%;
@@ -75,8 +92,6 @@ button,
         width: 100%;
         border-radius: 8px;
         font-size: 0.75rem;
-        padding: 0.5em 1em;
-        backdrop-filter: blur(5px);
     }
 }
 .icon-button {

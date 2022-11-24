@@ -98,7 +98,6 @@ export const regionViewerModule = (function () {
 
         globalData = getLocationsByProperty("type", "global")[0];
         globalData.baseAssetPath = data.sheets.find((sheet) => sheet.name === "ourMetadata").lines[0].baseAssetPath;
-        console.log(globalData);
 
         createUIElements(locationData);
     }
@@ -177,7 +176,8 @@ export const regionViewerModule = (function () {
             dependentElement.classList.add("highlighted");
         } else {
             // hoveredLocationUI.updateUIData(location, false, true);
-            dependentElement.classList.remove("highlighted");
+            //TODO: put back
+            // dependentElement.classList.remove("highlighted");
         }
     }
 
@@ -548,13 +548,19 @@ export const regionViewerModule = (function () {
         return svgContainer;
     }
     function addAccentColor(svgContainer, locationData) {
-        console.log(locationData);
         let ourData = locationData.imageData ? { ...locationData } : { ...globalData };
-        console.log(ourData);
-        let color = ourData.imageData.color;
-        console.dir({ color });
+        const { color, gradient, titleColor } = ourData.imageData;
+        // let color = ourData.imageData.color;
+        // let gradient = ourData.imageData.gradient;
         if (color) {
             svgContainer.style.setProperty("--accent-color", color);
+        }
+        let outerMap = document.querySelector(".location-map .location-map");
+        if (gradient) {
+            outerMap.style.setProperty("--ui-gradient", gradient);
+        }
+        if (titleColor) {
+            outerMap.style.setProperty("--title-color", titleColor);
         }
     }
 
@@ -737,6 +743,12 @@ export const regionViewerModule = (function () {
         });
         return pathExists;
     }
+    function resetGradient() {
+        const mapElement = document.querySelector(".location-map .location-map");
+
+        mapElement.style.setProperty("--ui-gradient", globalData.imageData.gradient);
+        mapElement.style.setProperty("--title-color", globalData.imageData.titleColor);
+    }
 
     function resetZoom() {
         let childLists = Array.from(document.querySelectorAll(".location__container:not(.parent-list)"));
@@ -746,6 +758,7 @@ export const regionViewerModule = (function () {
         selectedLocationUI.resetToDefault(true);
         clearConnectionAreas();
         setDefaultVisibilityState();
+        resetGradient();
     }
     //remove just the last list, going up the heirarchy
     function backOne() {

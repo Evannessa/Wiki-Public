@@ -6,7 +6,7 @@
                 {{tabsData.baseAssetPath}}{{item.bgImg}}
             {% endcapture %}
             <div class="tab-content
-                        [ padding-medium fade-overlay {{item.subSections[0].classes}} ] "
+                        [ padding-medium fade-overlay {{item.classes}} ] "
                          id="{{item.id}}"
                          style="--bg-img: url({{sectionBGImg}})"
                          >
@@ -28,6 +28,7 @@
                     headerHTML=header
                     contentHTML=content
                     bgImg=bgImg
+                    classes=subSection.classes
                     %}
                     {%- endif -%}
 

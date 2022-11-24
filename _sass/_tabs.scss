@@ -86,6 +86,7 @@
             background-image: var(--bg-img), linear-gradient(45deg, var(--gradient-1), var(--gradient-2));
             background-blend-mode: color-dodge;
             pointer-events: none;
+            z-index: -1;
             // filter: hue-rotate(200deg);
 
             // filter: hue-rotate(50deg);

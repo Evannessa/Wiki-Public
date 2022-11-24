@@ -71,11 +71,15 @@
     &__connections {
         display: grid;
         // flex-wrap: wrap;
-        grid-auto-rows: 50px;
-        gap: 0.4em;
+        // grid-auto-rows: 50px;
+        // gap: 0.4em;
+        grid-auto-rows: minmax(0, 20px);
+        gap: 5rem;
+        justify-items: center;
     }
     &__description {
-        font-size: small;
+        font-size: medium;
+        line-height: 200%;
     }
     .location-info__cast {
         width: 80%;
@@ -131,9 +135,27 @@
 }
 .child-location {
     display: flex;
+    .card-title {
+        color: var(--title-color);
+        // mask-image: url(/assets/locations/maps/grunge-strokes-3.webp);
+        // background-color: rgba(14, 9, 32, 0.435);
+        // mask-size: 100% 100%;
+        mix-blend-mode: color-dodge;
+        // color: white;
+        // mix-blend-mode: overlay;
+        text-shadow: 2px 2px 3px #454c6f;
+        padding: 0.5em 0em;
+        width: 100%;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
     &-info {
         &__description {
             grid-row: 2/3;
+            font-size: 1rem;
+            text-overflow: clip;
         }
     }
     // grid-template-rows: 60%;
@@ -158,6 +180,11 @@
             gap: 1rem;
             margin-bottom: 1rem;
             justify-content: center;
+            .card-title {
+                // /* if we can clip, do it */
+                // -webkit-text-fill-color: transparent;
+                // -webkit-background-clip: text;
+            }
 
             .card-content {
                 display: flex;
@@ -166,6 +193,11 @@
                 justify-content: center;
                 // max-height: 20vh;
                 overflow: auto;
+                h1,
+                h2,
+                h3 {
+                    letter-spacing: 0.1rem;
+                }
                 h1,
                 h2,
                 h3,
@@ -296,7 +328,8 @@
             --gradient-1: rgb(15, 0, 180);
             --gradient-2: rgb(143, 0, 171);
             // background-image: var(--blank-img), -webkit-linear-gradient(45deg, var(--gradient-1), var(--gradient-2));
-            background-image: linear-gradient(45deg, var(--gradient-1), var(--gradient-2));
+            // background-image: linear-gradient(45deg, var(--gradient-1), var(--gradient-2));
+            background-image: var(--ui-gradient);
             background-repeat: no-repeat;
             // background-blend-mode: color-dodge;
             pointer-events: none;
@@ -380,6 +413,7 @@
         white-space: nowrap;
         width: 100%;
         max-height: 70px;
+
         img.btn-img {
             width: 100%;
             // max-height: 70px;

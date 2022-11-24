@@ -133,7 +133,9 @@
                         "guid": "5e788e51-a202-48d2-92e8-397bac25f3ef",
                         "mainImage": "..\\..\\locations\\HeavensCrown.jpg",
                         "otherImages": "",
-                        "color": "#71BD00"
+                        "color": "#71BD00",
+                        "gradient": "linear-gradient(45deg, rgb(15, 0, 180), rgb(143, 0, 171))",
+                        "titleColor": "hsl(234, 56%, 58%)"
                     },
                     "flavorData": {
                         "guid": "949bfad3-5d2c-4e5f-9486-ca706b7a7306",
@@ -219,7 +221,9 @@
                         "guid": "6ebd794a-996b-4c6f-9335-e1f35315aac6",
                         "mainImage": "..\\..\\locations\\TheEmberlands.JPG",
                         "otherImages": "",
-                        "color": "#BD0071"
+                        "color": "#BD0071",
+                        "gradient": "linear-gradient(45deg, rgb(15, 0, 180), rgb(143, 0, 171))",
+                        "titleColor": "#BD0071"
                     },
                     "flavorData": {},
                     "encounterData": {},
@@ -236,7 +240,9 @@
                         "guid": "4348e037-d7f4-4af2-a96c-35c1f119d2c9",
                         "mainImage": "..\\..\\locations\\DarkHillsOcean.jpg",
                         "otherImages": "",
-                        "color": "hsl(241, 100%, 68%)"
+                        "color": "hsl(241, 100%, 68%)",
+                        "gradient": "linear-gradient(45deg, rgb(15, 0, 180), rgb(143, 0, 171))",
+                        "titleColor": "hsl(234, 56%, 58%)"
                     },
                     "flavorData": {},
                     "encounterData": {},
@@ -253,7 +259,9 @@
                         "guid": "4fa28576-7810-44ec-870f-1a787a1cd961",
                         "mainImage": "..\\..\\locations\\SolriseStrand.jpg",
                         "otherImages": "",
-                        "color": "#0096FA"
+                        "color": "#0096FA",
+                        "gradient": "linear-gradient(45deg, #2bc0e4, #eaecc6)",
+                        "titleColor": "hsl(234, 56%, 58%)"
                     },
                     "flavorData": {
                         "guid": "6d5f2224-a1bd-43d4-9172-bc1dedbfa36d",
@@ -277,7 +285,9 @@
                         "guid": "7e6ab31a-090a-4f36-bf4b-6a86dc2f85e9",
                         "mainImage": "..\\..\\locations\\StarfallFlats.JPG",
                         "otherImages": "",
-                        "color": "#0096FA"
+                        "color": "#0096FA",
+                        "gradient": "linear-gradient(45deg, rgb(15, 0, 180), rgb(143, 0, 171))",
+                        "titleColor": "hsl(234, 56%, 58%)"
                     },
                     "flavorData": {},
                     "encounterData": {},
@@ -294,7 +304,9 @@
                         "guid": "1fb78c1a-3f56-4b9f-a2af-b31d85be9d52",
                         "mainImage": "..\\..\\locations\\EbonRainForest2.JPG",
                         "otherImages": "",
-                        "color": "hsl(241, 100%, 68%)"
+                        "color": "hsl(241, 100%, 68%)",
+                        "gradient": "linear-gradient(45deg, rgb(15, 0, 180), rgb(143, 0, 171))",
+                        "titleColor": "hsl(234, 56%, 58%)"
                     },
                     "flavorData": {},
                     "encounterData": {},
@@ -311,7 +323,9 @@
                         "guid": "582230c7-7e1a-44a2-8ae5-c92980145bbd",
                         "mainImage": "..\\..\\locations\\LostLake1.jpg",
                         "otherImages": "",
-                        "color": "#0585A5"
+                        "color": "#0585A5",
+                        "gradient": "linear-gradient(45deg, rgb(15, 0, 180), rgb(143, 0, 171))",
+                        "titleColor": "hsl(234, 56%, 58%)"
                     },
                     "flavorData": {},
                     "encounterData": {},
@@ -328,7 +342,9 @@
                         "guid": "51a44cfc-d3b4-434c-850f-ce65a0ce5490",
                         "mainImage": "..\\..\\locations\\SolriseHills2.jpg",
                         "otherImages": "",
-                        "color": "#71BD00"
+                        "color": "#71BD00",
+                        "gradient": "linear-gradient(45deg, #59c173, #a17fe0, #5d26c1)",
+                        "titleColor": "hsl(234, 56%, 58%)"
                     },
                     "flavorData": {},
                     "encounterData": {},
@@ -345,7 +361,9 @@
                         "guid": "7de30bf6-7305-4227-8f8b-1311061c3131",
                         "mainImage": "..\\..\\locations\\Shante'sShallows.jpg",
                         "otherImages": "",
-                        "color": "hsl(241, 100%, 68%)"
+                        "color": "hsl(241, 100%, 68%)",
+                        "gradient": "linear-gradient(45deg, rgb(15, 0, 180), rgb(143, 0, 171))",
+                        "titleColor": "hsl(234, 56%, 58%)"
                     },
                     "flavorData": {},
                     "encounterData": {},
@@ -362,7 +380,9 @@
                         "guid": "709f6787-ce3b-4437-8712-6ae76e7917ff",
                         "mainImage": "..\\..\\locations\\TombstoneTidepools.JPG",
                         "otherImages": "",
-                        "color": "hsl(241, 100%, 68%)"
+                        "color": "hsl(241, 100%, 68%)",
+                        "gradient": "linear-gradient(45deg, rgb(15, 0, 180), rgb(143, 0, 171))",
+                        "titleColor": "hsl(234, 56%, 58%)"
                     },
                     "flavorData": {},
                     "encounterData": {},
@@ -379,7 +399,9 @@
                         "guid": "b7a51395-acd3-4017-bf74-9d01a971c95c",
                         "mainImage": "..\\..\\locations\\BlueVeins.JPG",
                         "otherImages": "",
-                        "color": "hsl(241, 100%, 68%)"
+                        "color": "hsl(241, 100%, 68%)",
+                        "gradient": "linear-gradient(45deg, rgb(15, 0, 180), rgb(143, 0, 171))",
+                        "titleColor": "hsl(234, 56%, 58%)"
                     },
                     "flavorData": {},
                     "encounterData": {},
@@ -396,7 +418,9 @@
                         "guid": "3bd7d080-c27a-4d5c-bcda-78bd620d6dcf",
                         "mainImage": "..\\..\\locations\\MoonseekPoint.JPG",
                         "otherImages": "",
-                        "color": "hsl(241, 100%, 68%)"
+                        "color": "hsl(241, 100%, 68%)",
+                        "gradient": "linear-gradient(45deg, rgb(15, 0, 180), rgb(143, 0, 171))",
+                        "titleColor": "hsl(234, 56%, 58%)"
                     },
                     "flavorData": {},
                     "encounterData": {},
@@ -413,7 +437,9 @@
                         "guid": "e4b1e89f-4c42-43a7-9fef-e637df233f73",
                         "mainImage": "..\\..\\locations\\StarfallStairway.JPG",
                         "otherImages": "",
-                        "color": "hsl(241, 100%, 68%)"
+                        "color": "hsl(241, 100%, 68%)",
+                        "gradient": "linear-gradient(45deg, rgb(15, 0, 180), rgb(143, 0, 171))",
+                        "titleColor": "hsl(234, 56%, 58%)"
                     },
                     "flavorData": {},
                     "encounterData": {},
@@ -430,7 +456,9 @@
                         "guid": "159a7ade-64a6-418a-8aa8-6173a8780c34",
                         "mainImage": "..\\..\\locations\\Titan'sTeeth.JPG",
                         "otherImages": "",
-                        "color": "hsl(241, 100%, 68%)"
+                        "color": "hsl(241, 100%, 68%)",
+                        "gradient": "linear-gradient(45deg, rgb(15, 0, 180), rgb(143, 0, 171))",
+                        "titleColor": "hsl(234, 56%, 58%)"
                     },
                     "flavorData": {
                         "guid": "caf28e64-14de-4ace-baf5-260c2495c46e",
@@ -454,7 +482,9 @@
                         "guid": "2a71b1ab-feda-4f54-beef-66c8c636b0e5",
                         "mainImage": "..\\..\\locations\\TheShadedWay.jpg",
                         "otherImages": "",
-                        "color": "hsl(241, 100%, 68%)"
+                        "color": "hsl(241, 100%, 68%)",
+                        "gradient": "linear-gradient(45deg, rgb(15, 0, 180), rgb(143, 0, 171))",
+                        "titleColor": "hsl(234, 56%, 58%)"
                     },
                     "flavorData": {},
                     "encounterData": {},
@@ -471,7 +501,9 @@
                         "guid": "969312fb-24d2-4ac6-9fc3-86fb5a16b04c",
                         "mainImage": "..\\..\\locations\\PetrichorPastures.JPG",
                         "otherImages": "",
-                        "color": "hsl(241, 100%, 68%)"
+                        "color": "hsl(241, 100%, 68%)",
+                        "gradient": "linear-gradient(45deg, rgb(15, 0, 180), rgb(143, 0, 171))",
+                        "titleColor": "hsl(234, 56%, 58%)"
                     },
                     "flavorData": {},
                     "encounterData": {},
@@ -488,7 +520,9 @@
                         "guid": "1b7848f1-cf89-46c3-ab6d-292cf6c1828f",
                         "mainImage": "..\\..\\locations\\Slyvain'sHut.jpg",
                         "otherImages": "",
-                        "color": "hsl(241, 100%, 68%)"
+                        "color": "hsl(241, 100%, 68%)",
+                        "gradient": "linear-gradient(45deg, rgb(15, 0, 180), rgb(143, 0, 171))",
+                        "titleColor": "hsl(234, 56%, 58%)"
                     },
                     "flavorData": {},
                     "encounterData": {},
@@ -505,7 +539,9 @@
                         "guid": "54a98ea8-e0a4-4fe5-9679-5e08f824a9de",
                         "mainImage": "..\\..\\locations\\TheGate.jpg",
                         "otherImages": "",
-                        "color": "hsl(241, 100%, 68%)"
+                        "color": "hsl(241, 100%, 68%)",
+                        "gradient": "linear-gradient(45deg, rgb(15, 0, 180), rgb(143, 0, 171))",
+                        "titleColor": "hsl(234, 56%, 58%)"
                     },
                     "flavorData": {},
                     "encounterData": {},
@@ -522,7 +558,9 @@
                         "guid": "2221e469-808b-472e-9e3c-02782d2541b6",
                         "mainImage": "..\\..\\locations\\LycheeLake.jpg",
                         "otherImages": "",
-                        "color": "hsl(241, 100%, 68%)"
+                        "color": "hsl(241, 100%, 68%)",
+                        "gradient": "linear-gradient(45deg, rgb(15, 0, 180), rgb(143, 0, 171))",
+                        "titleColor": "hsl(234, 56%, 58%)"
                     },
                     "flavorData": {},
                     "encounterData": {},
@@ -539,7 +577,9 @@
                         "guid": "d8249562-9901-414e-aff0-fd85a096263f",
                         "mainImage": "..\\..\\locations\\Starshead.JPG",
                         "otherImages": "",
-                        "color": "hsl(241, 100%, 68%)"
+                        "color": "hsl(241, 100%, 68%)",
+                        "gradient": "linear-gradient(45deg, rgb(15, 0, 180), rgb(143, 0, 171))",
+                        "titleColor": "hsl(234, 56%, 58%)"
                     },
                     "flavorData": {},
                     "encounterData": {},
@@ -556,7 +596,9 @@
                         "guid": "2daaeb3f-bc88-4e30-8be7-90f922854b03",
                         "mainImage": "..\\..\\locations\\PetrasPath.jpg",
                         "otherImages": "",
-                        "color": "hsl(241, 100%, 68%)"
+                        "color": "hsl(241, 100%, 68%)",
+                        "gradient": "linear-gradient(45deg, rgb(15, 0, 180), rgb(143, 0, 171))",
+                        "titleColor": "hsl(234, 56%, 58%)"
                     },
                     "flavorData": {},
                     "encounterData": {},
@@ -573,7 +615,9 @@
                         "guid": "03457522-694e-44e0-940d-254a8c2fac5d",
                         "mainImage": "..\\..\\locations\\TheLostRiver.jpg",
                         "otherImages": "",
-                        "color": "hsl(241, 100%, 68%)"
+                        "color": "hsl(241, 100%, 68%)",
+                        "gradient": "linear-gradient(45deg, rgb(15, 0, 180), rgb(143, 0, 171))",
+                        "titleColor": "hsl(234, 56%, 58%)"
                     },
                     "flavorData": {},
                     "encounterData": {},
@@ -590,7 +634,9 @@
                         "guid": "e8bdec90-ff7b-460c-9aa4-f6066174d806",
                         "mainImage": "..\\..\\locations\\Balta'sBayou.jpg",
                         "otherImages": "",
-                        "color": "hsl(241, 100%, 68%)"
+                        "color": "hsl(241, 100%, 68%)",
+                        "gradient": "linear-gradient(45deg, rgb(15, 0, 180), rgb(143, 0, 171))",
+                        "titleColor": "hsl(234, 56%, 58%)"
                     },
                     "flavorData": {},
                     "encounterData": {},
@@ -607,7 +653,9 @@
                         "guid": "7e340445-8969-4b2d-b101-f976a429583f",
                         "mainImage": "..\\..\\locations\\TheDawnWilds.jpg",
                         "otherImages": "",
-                        "color": "hsl(241, 100%, 68%)"
+                        "color": "hsl(241, 100%, 68%)",
+                        "gradient": "linear-gradient(45deg, rgb(15, 0, 180), rgb(143, 0, 171))",
+                        "titleColor": "hsl(234, 56%, 58%)"
                     },
                     "flavorData": {},
                     "encounterData": {},
@@ -624,7 +672,9 @@
                         "guid": "73b2d0c4-8eae-4a07-8ff6-5ec712156ee5",
                         "mainImage": "..\\..\\locations\\SwampHouse.jpg",
                         "otherImages": "",
-                        "color": "hsl(241, 100%, 68%)"
+                        "color": "hsl(241, 100%, 68%)",
+                        "gradient": "linear-gradient(45deg, rgb(15, 0, 180), rgb(143, 0, 171))",
+                        "titleColor": "hsl(234, 56%, 58%)"
                     },
                     "flavorData": {},
                     "encounterData": {},
@@ -641,7 +691,9 @@
                         "guid": "bcef4ae1-9bdc-4b8b-94f8-06d0d41b9914",
                         "mainImage": "..\\..\\locations\\Oculustra.jpg",
                         "otherImages": "",
-                        "color": "hsl(241, 100%, 68%)"
+                        "color": "hsl(241, 100%, 68%)",
+                        "gradient": "linear-gradient(45deg, rgb(15, 0, 180), rgb(143, 0, 171))",
+                        "titleColor": "hsl(234, 56%, 58%)"
                     },
                     "flavorData": {},
                     "encounterData": {},
@@ -658,12 +710,14 @@
                         "guid": "b943593d-d003-4b1c-b28b-2b87361f6f05",
                         "mainImage": "..\\..\\locations\\Sola'sSpring.jpg",
                         "otherImages": "",
-                        "color": "hsl(241, 100%, 68%)"
+                        "color": "hsl(241, 100%, 68%)",
+                        "gradient": "linear-gradient(45deg, rgb(15, 0, 180), rgb(143, 0, 171))",
+                        "titleColor": "hsl(234, 56%, 58%)"
                     },
                     "flavorData": {},
                     "encounterData": {},
                     "column": 2,
-                    "row": 2,
+                    "row": 1,
                     "connections": []
                 },
                 {
@@ -675,7 +729,9 @@
                         "guid": "8a67daf2-dbde-4198-88b6-3555e81d6e30",
                         "mainImage": "..\\..\\locations\\StarstoneGrottos.jpg",
                         "otherImages": "",
-                        "color": "hsl(241, 100%, 68%)"
+                        "color": "hsl(241, 100%, 68%)",
+                        "gradient": "linear-gradient(45deg, rgb(15, 0, 180), rgb(143, 0, 171))",
+                        "titleColor": "hsl(234, 56%, 58%)"
                     },
                     "flavorData": {},
                     "encounterData": {},
@@ -692,7 +748,9 @@
                         "guid": "66db0792-b6ee-4d79-8751-c72236a155a6",
                         "mainImage": "..\\..\\locations\\TheSouldeep.png",
                         "otherImages": "",
-                        "color": "hsl(241, 100%, 68%)"
+                        "color": "hsl(241, 100%, 68%)",
+                        "gradient": "linear-gradient(45deg, rgb(15, 0, 180), rgb(143, 0, 171))",
+                        "titleColor": "hsl(234, 56%, 58%)"
                     },
                     "flavorData": {},
                     "encounterData": {},
@@ -709,11 +767,32 @@
                         "guid": "16085ef1-4476-4393-b053-0041f3517345",
                         "mainImage": "..\\..\\locations\\SunsetForest.jpg",
                         "otherImages": "",
-                        "color": "hsl(241, 100%, 68%)"
+                        "color": "hsl(241, 100%, 68%)",
+                        "gradient": "linear-gradient(45deg, rgb(15, 0, 180), rgb(143, 0, 171))",
+                        "titleColor": "hsl(234, 56%, 58%)"
                     },
                     "flavorData": {},
                     "encounterData": {},
                     "column": 2,
+                    "row": 2,
+                    "connections": []
+                },
+                {
+                    "guid": "d8e81670-f5df-46b6-88cc-3fce6269a2e2",
+                    "id": "Bloomingfield",
+                    "type": "area",
+                    "parent": "8874b03e-c96a-49b8-81fc-7015d4712799",
+                    "imageData": {
+                        "guid": "fd722aae-51d4-48cf-8df6-7334048f7523",
+                        "mainImage": "..\\..\\locations\\Village_landscape_26.jpg",
+                        "otherImages": "",
+                        "color": "hsl(241, 100%, 68%)",
+                        "gradient": "linear-gradient(45deg, rgb(15, 0, 180), rgb(143, 0, 171))",
+                        "titleColor": "hsl(234, 56%, 58%)"
+                    },
+                    "flavorData": {},
+                    "encounterData": {},
+                    "column": 3,
                     "row": 2,
                     "connections": []
                 }
@@ -819,6 +898,32 @@
                     "name": "color",
                     "description": "color (hsla or hex) for the hex and image highlights",
                     "defaultValue": "hsl(241, 100%, 68%)",
+                    "iconName": "newText",
+                    "configurable": {
+                        "name": "text",
+                        "description": "text",
+                        "defaultValue": "text"
+                    }
+                },
+                {
+                    "typeStr": "text",
+                    "guid": "ba4feddd-e48f-4a5d-bc4c-2a250827bb81",
+                    "name": "gradient",
+                    "description": "gradient for ui elements",
+                    "defaultValue": "linear-gradient(45deg, rgb(15, 0, 180), rgb(143, 0, 171))",
+                    "iconName": "newText",
+                    "configurable": {
+                        "name": "text",
+                        "description": "text",
+                        "defaultValue": "text"
+                    }
+                },
+                {
+                    "typeStr": "text",
+                    "guid": "532bbeb9-7a8e-491a-bff6-88b4fa2c4d26",
+                    "name": "titleColor",
+                    "description": "color of title text for card",
+                    "defaultValue": "hsl(234, 56%, 58%)",
                     "iconName": "newText",
                     "configurable": {
                         "name": "text",

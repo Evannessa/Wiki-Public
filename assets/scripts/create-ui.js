@@ -198,7 +198,9 @@ export const LocationUIFactory = function (
                     data-link='${child.id}'
                     data-guid-link='${child.guid}'
                     data-click-action="navigate"
-                    data-hover-action="highlightHex">
+                    data-hover-action="highlightHex"
+                    style="--title-color: ${child.imageData.titleColor}; --bg-img: url(${child.imageData.mainImage});"
+                    >
                     ${returnImage(child)}
                             <span class="btn-text">${child.id}</span>
                 </button>`;
@@ -229,11 +231,13 @@ export const LocationUIFactory = function (
 
     const updateUIBackgrounds = (locationData, hasImageElement = false) => {
         const imagePath = Helpers.encodeURI(locationData.imageData.mainImage);
+        const titleColor = locationData.imageData.titleColor;
         if (hasImageElement) {
             //TODO: Cache this somewhere
             cardData.imgElement.src = imagePath;
         } else {
             cardData.element.style.setProperty("--bg-img", `url(${imagePath})`);
+            cardData.element.style.setProperty("--title-color", titleColor);
         }
         // else imagePath = Helpers.encodeURI(cardData.defaultBgImg);
     };

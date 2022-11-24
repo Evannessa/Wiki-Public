@@ -10,7 +10,7 @@
                 {
                     "type": "paragraph",
                     "id": "Description",
-                    "classes": "active padding-medium"
+                    "classes": "active padding-large"
                 }
             ]
         },
@@ -22,7 +22,8 @@
                 {
                     "type": "collapsible",
                     "id": "Children",
-                    "bgImg": "inner-locations-1.webp"
+                    "bgImg": "inner-locations-1.webp",
+                    "classes": "active"
                 },
                 {
                     "type": "collapsible",
@@ -41,7 +42,8 @@
                 {
                     "type": "collapsible",
                     "id": "Cast",
-                    "bgImg": "cast.webp"
+                    "bgImg": "cast.webp",
+                    "classes": "active"
                 },
                 {
                     "type": "collapsible",
