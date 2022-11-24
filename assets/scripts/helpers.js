@@ -124,6 +124,9 @@ export default class Helpers {
         });
     }
 
+    static toggleButtonActive(btnElement) {
+        btnElement.classList.toggle("active");
+    }
     static encodeURI(str) {
         return encodeURIComponent(str).replace(/[!'()*]/g, function (c) {
             return "%" + c.charCodeAt(0).toString(16);

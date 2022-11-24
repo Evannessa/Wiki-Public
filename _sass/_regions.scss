@@ -56,7 +56,7 @@ foreignObject {
                             text-shadow var(--fade-out-duration) ease-in var(--fade-out-delay);
                     }
                     &:hover {
-                        --accent-color: hsl(241, 100%, 68%);
+                        // --accent-color: hsl(241, 100%, 68%);
                         path {
                             stroke: var(--accent-color);
                             transition: stroke var(--fade-in-duration) ease-in;

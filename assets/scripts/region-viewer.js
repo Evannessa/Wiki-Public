@@ -98,6 +98,7 @@ export const regionViewerModule = (function () {
 
         globalData = getLocationsByProperty("type", "global")[0];
         globalData.baseAssetPath = data.sheets.find((sheet) => sheet.name === "ourMetadata").lines[0].baseAssetPath;
+        console.log(globalData);
 
         createUIElements(locationData);
     }
@@ -109,6 +110,7 @@ export const regionViewerModule = (function () {
         const container = document.querySelector(".location__container.parent-list"),
             image = imageData.mainImage;
 
+        addAccentColor(container, locationData);
         //TODO: cache this somewhere
         document.querySelector(".decor.bottom-card h3").textContent = locationData.id;
 
@@ -222,6 +224,7 @@ export const regionViewerModule = (function () {
         if (!locationData) locationData = getLocationDataFromElement(locationEl);
         const childContainer = createChildGrid(locationData);
 
+        addAccentColor(childContainer, locationData);
         clearConnectionAreas(); //clear the arrays and remove the connection button children
         previousLocationData.push({ ...selectedLocationElements }); // push the previous elements
         let locationAncestors = [...previousLocationData];
@@ -256,6 +259,8 @@ export const regionViewerModule = (function () {
                 fold: {
                     handler: (event) => {
                         //TODO: Refactor this so that the element's being cached
+                        const btnElement = event.currentTarget;
+                        Helpers.toggleButtonActive(btnElement);
                         let infoCard = document.querySelector(".location-info__content");
                         infoCard.classList.toggle("flat");
                     },
@@ -531,15 +536,26 @@ export const regionViewerModule = (function () {
         let { children, rowsAndColumns, connections } = parentData;
         let { svgContainer } = elementData;
 
-        //TODO refactor this to go elsewhere and follow the SRP
-
         populateLocations(children, rowsAndColumns, svgContainer, globalData.baseAssetPath);
         createConnections(children, svgContainer);
+
+        // if (!parentData) parentData = globalData;
+        // console.log(globalData);
 
         if (parentElement) {
             selectedLocationUI.updateUIData(parentElement);
         }
         return svgContainer;
+    }
+    function addAccentColor(svgContainer, locationData) {
+        console.log(locationData);
+        let ourData = locationData.imageData ? { ...locationData } : { ...globalData };
+        console.log(ourData);
+        let color = ourData.imageData.color;
+        console.dir({ color });
+        if (color) {
+            svgContainer.style.setProperty("--accent-color", color);
+        }
     }
 
     function initializeConnectionAreas() {

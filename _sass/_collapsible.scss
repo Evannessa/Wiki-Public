@@ -1,6 +1,6 @@
 .collapsible {
     position: relative;
-    background-image: linear-gradient(to left, #743ad5, #d53a9d);
+    // background-image: linear-gradient(to left, #743ad5, #d53a9d);
     margin-bottom: 0.5em;
     // &:before {
     //     content: "";
@@ -98,7 +98,7 @@
     }
 
     &.active {
-        max-height: 400px;
+        max-height: 300px;
         // transform: scaleY(1);
         transition: max-height 200ms ease-out;
         // transition: transform 100ms ease-out;

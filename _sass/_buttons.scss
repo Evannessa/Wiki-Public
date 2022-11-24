@@ -34,6 +34,10 @@ button,
             @extend .secondary-text-shadow;
             // color: var(--color-accent);
         }
+        &.active {
+            color: var(--accent-color);
+            text-shadow: 0px 0px 4px var(--accent-color);
+        }
     }
     &[data-variant="color-hover"] {
         color: var(--color-primary-300);
@@ -47,7 +51,7 @@ button,
     }
     &[data-variant="bg-img"] {
         color: white;
-        background-image: var(--bg-img);
+        // background-image: var(--bg-img);
     }
     .btn-img {
         min-width: unset;

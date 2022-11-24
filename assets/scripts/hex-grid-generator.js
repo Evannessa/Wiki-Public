@@ -17,7 +17,9 @@ export function populateLocations(locationData, gridData = { rows: 5, columns: 5
     cutCorners(rows, columns, svgContainer);
     const hexes = Array.from(svgContainer.querySelectorAll(".hex:not(.keyedLocation):not(.blank):not(.overlay)"));
     addIconsToHex(hexes);
+    // addAccentColor(svgContainer, locationData);
 }
+
 function generateHexGrid(columns, rows, className, svgContainer) {
     let columnCounter = 0;
     let rowCounter = 0;
