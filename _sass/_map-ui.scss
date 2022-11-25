@@ -252,7 +252,21 @@
     justify-content: center;
     .map-info-card {
         display: grid;
-        grid-template-rows: minmax(0, 30%) minmax(0, 70%);
+        grid-template-rows: minmax(0, 20%) minmax(0, 80%);
+        .card-content {
+            justify-content: flex-start;
+            overflow: visible;
+            max-height: 100%;
+            p {
+                background-color: rgba(20, 19, 61, 0.417);
+                padding: 0.5em 1em;
+                mask-image: url(/assets/locations/GrungeMaskV2.png);
+                mask-position: center;
+                mask-size: 102% 102%;
+                overflow: hidden;
+                max-height: 100%;
+            }
+        }
         .card-header {
             h1,
             h2,
@@ -268,6 +282,8 @@
             }
             p {
                 font-size: small;
+                font-weight: bold;
+                font-style: italic;
             }
         }
     }

@@ -48,10 +48,14 @@
         background-color: transparent;
         position: fixed;
         display: grid;
-        grid-template-columns: 50% 5% 45%;
-        &.single {
-            grid-template-columns: 5% 95%;
+        .toggle-button {
+            position: absolute;
+            right: 100%;
         }
+        // grid-template-columns: 50% 5% 45%;
+        // &.single {
+        //     grid-template-columns: 5% 95%;
+        // }
         grid-template-rows: minmax(40vh, 60vh);
         // min-height: 40vh;
         top: 50%;

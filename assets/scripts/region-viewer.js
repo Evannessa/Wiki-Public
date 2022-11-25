@@ -8,6 +8,16 @@ import hoverHandler from "./hover-handler.js";
 import Helpers from "./helpers.js";
 
 export const regionViewerModule = (function () {
+    function toggleImageView(event) {
+        let currentTarget = event.currentTarget;
+        selectedLocationElements.imageContainer.classList.toggle("hidden");
+        selectedLocationElements.imageContainer.classList.toggle("image-mode");
+        // Helpers.toggleButtonText(currentTarget, "Hide Image", "Show Image");
+        // hide the children
+        selectedLocationElements.hexChildren.forEach((hex) => {
+            Helpers.toggleClassOnAction(currentTarget, hex, { action: "remove" });
+        });
+    }
     const previousLocationData = {};
     let rootLocationData = {};
     let locationHeirarchyStack = []; // for parents/ancstors specifically
@@ -64,14 +74,7 @@ export const regionViewerModule = (function () {
                 },
                 toggle: {
                     handler: (event) => {
-                        let currentTarget = event.currentTarget;
-                        selectedLocationElements.imageContainer.classList.toggle("hidden");
-                        selectedLocationElements.imageContainer.classList.toggle("image-mode");
-                        // Helpers.toggleButtonText(currentTarget, "Hide Image", "Show Image");
-                        // hide the children
-                        selectedLocationElements.hexChildren.forEach((hex) => {
-                            Helpers.toggleClassOnAction(currentTarget, hex, { action: "remove" });
-                        });
+                        toggleImageView(event);
                     },
                 },
                 reset: {
@@ -157,15 +160,20 @@ export const regionViewerModule = (function () {
             press: {
                 handleHotkey: {
                     handler: (event) => {
-                        //if we're hovering a hex, select that location first
-                        const current = uiHandlers.hoverHandler.getHoverDataProperty("current");
-                        if (current) {
-                            // const locationEl = getLocationDataFromElement(current);
-                            selectLocation(current, "", "fromParent");
-                        }
-                        uiHandlers.tabsHandler.handleHotkey(event);
-                        if (!uiHandlers.selectedLocationUI.getContainer().classList.contains("expanded")) {
-                            expandSidebar();
+                        if (event.key === "i") {
+                            //toggle image
+                            toggleImageView(event);
+                        } else {
+                            //if we're hovering a hex, select that location first
+                            const current = uiHandlers.hoverHandler.getHoverDataProperty("current");
+                            if (current) {
+                                // const locationEl = getLocationDataFromElement(current);
+                                selectLocation(current, "", "fromParent");
+                            }
+                            uiHandlers.tabsHandler.handleHotkey(event);
+                            if (!uiHandlers.selectedLocationUI.getContainer().classList.contains("expanded")) {
+                                expandSidebar();
+                            }
                         }
                     },
                 },
