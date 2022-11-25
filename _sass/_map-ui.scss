@@ -253,6 +253,23 @@
     .map-info-card {
         display: grid;
         grid-template-rows: minmax(0, 30%) minmax(0, 70%);
+        .card-header {
+            h1,
+            h2,
+            h3,
+            p {
+                margin-top: unset;
+                margin-bottom: unset;
+            }
+            h1,
+            h2,
+            h3 {
+                font-size: 1.25rem;
+            }
+            p {
+                font-size: small;
+            }
+        }
     }
 }
 .card-styles {

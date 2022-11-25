@@ -1,31 +1,26 @@
 import Helpers from "./helpers.js";
 export class Modal {
-
-    constructor() {
-
-    }
+    constructor() {}
     initialize(modalType = "information", data = {}, insetParent) {
         const { mainImageSrc, otherImageSrcArray = [] } = data;
-        console.log(data)
+        console.log(data);
         if (modalType === "imageGallery") {
-            this.lightbox = this.createLightboxHTML(mainImageSrc, otherImageSrcArray, data, modalType, insetParent)
+            this.lightbox = this.createLightboxHTML(mainImageSrc, otherImageSrcArray, data, modalType, insetParent);
         } else {
-            console.log("Creating information modal")
-            this.lightbox = this.createLightboxHTML(mainImageSrc, otherImageSrcArray, data, modalType)
+            console.log("Creating information modal");
+            this.lightbox = this.createLightboxHTML(mainImageSrc, otherImageSrcArray, data, modalType);
         }
         if (this.lightbox) {
-            if (!insetParent) insetParent = document.querySelector("main")
-            insetParent.append(this.lightbox)
-            console.log(insetParent, this.lightbox)
+            if (!insetParent) insetParent = document.querySelector("main");
+            insetParent.append(this.lightbox);
+
             insetParent.querySelector(".loading-image").addEventListener("load", (event) => {
                 let img = event.currentTarget;
                 if (img.complete) {
-
-                    console.log("Loading Image finished loading")
-                    this.lightbox.querySelector(".spotlight-image").setAttribute("src", img.getAttribute("src"))
-
+                    console.log("Loading Image finished loading");
+                    this.lightbox.querySelector(".spotlight-image").setAttribute("src", img.getAttribute("src"));
                 }
-            })
+            });
             return this.lightbox;
         }
     }
@@ -42,18 +37,15 @@ export class Modal {
            <${tags.tag} class="info-modal__tags">${tags.value}</${tags.tag}j
            <${connections.wrapper} class="info-modal__connections">${connections.value}</${connections.wrapper}>
            </div>
-            `
+            `;
     }
 
-
     htmlToElement(html) {
-        let template = document.createElement('template');
+        let template = document.createElement("template");
         html = html.trim(); // Never return a text node of whitespace as the result
         template.innerHTML = html;
         return template.content.firstChild;
     }
-
-
 
     /**
      * Returns an HTML element created with image soures from the gallery interacted with
@@ -62,16 +54,14 @@ export class Modal {
      * @returns an HTML Element created with data from images in clicked gallery
      */
     createLightboxHTML(mainImageSrc, otherImageSrcArray = [], data, modalType) {
-
-        const hasOtherImages = otherImageSrcArray.length > 0
+        const hasOtherImages = otherImageSrcArray.length > 0;
         function returnOtherImageDiv() {
             if (hasOtherImages) {
                 return `	<div class="other-images">
-	</div>`
+	</div>`;
             }
             return ` `;
         }
-
 
         const lightboxHTML = `
 <div class="lightbox ${modalType}">
@@ -81,46 +71,43 @@ export class Modal {
 		<img class="loading-image" src="${mainImageSrc}" style="opacity: 0%;"/>
 	</div>
     ${returnOtherImageDiv()}
-`
-        const lightbox = htmlToElement(lightboxHTML)
+`;
+        const lightbox = htmlToElement(lightboxHTML);
         let otherImages;
         if (hasOtherImages) {
-            this.mainImage = lightbox.querySelector(".spotlight-image")
-            otherImages = this.createImageList(otherImageSrcArray, mainImageSrc)
+            this.mainImage = lightbox.querySelector(".spotlight-image");
+            otherImages = this.createImageList(otherImageSrcArray, mainImageSrc);
             otherImages.forEach((img) => {
-                lightbox.querySelector(".other-images").append(img)
-            })
+                lightbox.querySelector(".other-images").append(img);
+            });
         }
         if (lightbox) {
-            this.mainImage = lightbox.querySelector(".spotlight-image")
+            this.mainImage = lightbox.querySelector(".spotlight-image");
             this.closeButton = lightbox.querySelector(".lightbox-close-button");
             this.closeButton.addEventListener("click", (event) => {
-                lightbox.remove()
-            })
+                lightbox.remove();
+            });
         }
 
-        return lightbox
+        return lightbox;
     }
 
     createImageList(imgSrcArray = [], currentMainSrc) {
         let imgArray = imgSrcArray.map((src) => {
-            return htmlToElement(`<img class="thumbnail-image" src="${src}" />`)
-        })
+            return htmlToElement(`<img class="thumbnail-image" src="${src}" />`);
+        });
         imgArray.forEach((item) => {
-
             item.addEventListener("click", (event) => {
                 let currentTarget = event.currentTarget;
-                let src = currentTarget.getAttribute("src")
-                this.mainImage.setAttribute("src", src)
+                let src = currentTarget.getAttribute("src");
+                this.mainImage.setAttribute("src", src);
                 currentMainSrc = this.mainImage.getAttribute("src");
-                imgArray.forEach((img) => img.classList.remove("current"))
+                imgArray.forEach((img) => img.classList.remove("current"));
                 if (currentMainSrc === src) {
-                    item.classList.add("current")
+                    item.classList.add("current");
                 }
-
-            })
-        })
-        return imgArray
+            });
+        });
+        return imgArray;
     }
 }
-

@@ -200,7 +200,6 @@ export default class Helpers {
                     data-link='${child.id}'
                     data-guid-link='${child.guid}'
                     data-click-action="navigate"
-                    data-hover-action="highlightHex"
                     data-direction='${child.direction ? child.direction : ""}'
 
                     >

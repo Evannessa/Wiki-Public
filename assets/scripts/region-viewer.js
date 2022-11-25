@@ -8,8 +8,9 @@ import hoverHandler from "./hover-handler.js";
 import Helpers from "./helpers.js";
 
 export const regionViewerModule = (function () {
-    let previousLocationData = [];
-    let locationHeirarchyStack = [];
+    const previousLocationData = {};
+    let rootLocationData = {};
+    let locationHeirarchyStack = []; // for parents/ancstors specifically
     let lightbox;
     const uiHandlers = {
         selectedLocationUI: "",
@@ -81,7 +82,7 @@ export const regionViewerModule = (function () {
                 },
                 backOne: {
                     handler: () => {
-                        backOne();
+                        backToParent();
                     },
                 },
                 expand: {
@@ -106,7 +107,7 @@ export const regionViewerModule = (function () {
                     handler: (event) => {
                         event.preventDefault();
                         const locationEl = event.currentTarget;
-                        selectLocation(locationEl);
+                        selectLocation(locationEl, "", "fromParent");
                     },
                 },
                 navigate: {
@@ -114,7 +115,15 @@ export const regionViewerModule = (function () {
                         const current = event.currentTarget;
                         const targetId = current.dataset.guidLink;
                         const locationEl = document.querySelector(`[data-guid='${targetId}']`);
-                        selectLocation(locationEl);
+                        if (!locationEl) {
+                            locationData = getLocationsByProperty("guid", targetId)[0];
+                        }
+                        let method = "fromParent";
+                        console.log(current.classList);
+                        if (current.classList.contains("connection-hex")) {
+                            method = "fromConnection";
+                        }
+                        selectLocation(locationEl, locationData, method);
                     },
                 },
                 showTooltip: {
@@ -152,8 +161,7 @@ export const regionViewerModule = (function () {
                         const current = uiHandlers.hoverHandler.getHoverDataProperty("current");
                         if (current) {
                             // const locationEl = getLocationDataFromElement(current);
-                            console.log(current);
-                            selectLocation(current);
+                            selectLocation(current, "", "fromParent");
                         }
                         uiHandlers.tabsHandler.handleHotkey(event);
                         if (!uiHandlers.selectedLocationUI.getContainer().classList.contains("expanded")) {
@@ -161,12 +169,6 @@ export const regionViewerModule = (function () {
                         }
                     },
                 },
-                // handleHoverHotkey: {
-                //     handler: (event) => {
-                //         console.log(event.currentTarget, event.target);
-                //         uiHandlers.tabsHandler.handleHotkey(event);
-                //     },
-                // },
             },
             release: {
                 handleKeyRelease: {
@@ -185,6 +187,7 @@ export const regionViewerModule = (function () {
         container: "", // the container of all the hex elements
         imageContainer: "", //the container for the main "image" represnting the selected location
         hexChildren: "",
+        currentLocationData: "",
     };
     const locationDataPath = document.querySelector(".location-map .location-map").dataset.path;
     fetch(`/assets/data/${locationDataPath}`)
@@ -275,7 +278,8 @@ export const regionViewerModule = (function () {
             { svgContainer: container }
         );
 
-        cacheLocationElements("", container); //store the current location information once it's all created
+        cacheLocationElements("", container, globalData); //store the current location information once it's all created
+        rootLocationData = { ...selectedLocationElements };
 
         // document.querySelector(".decor.bottom-card img").src = locationData.imageData.mainImage;
         // document.querySelector(".decor.bottom-card h3").textContent = locationData.id;
@@ -343,7 +347,6 @@ export const regionViewerModule = (function () {
     function getExtraImagesFromString(baseFilePath, stringNames) {
         // if (!stringNames && !stringNames.trim() && !stringNames === "") {
         const stringNameArray = stringNames.split(",");
-        console.log(stringNames, stringNameArray);
         if (stringNameArray[0] === "") {
             return [];
         }
@@ -379,24 +382,111 @@ export const regionViewerModule = (function () {
         }
     }
 
-    function selectLocation(locationEl, locationData, fromParent) {
+    function populateHeirarchyFromData(childData) {
+        let current = { ...childData };
+        let heirarchyData = [current];
+        while (current.parent) {
+            const parentData = getLocationsByProperty("guid", current.parent)[0];
+            heirarchyData.push(parentData);
+            current = parentData;
+        }
+        heirarchyData.reverse();
+        console.log(heirarchyData);
+        heirarchyData.forEach((data) => {
+            if (data.type === "global") {
+                restorePreviousMap(true);
+            } else {
+                selectLocation("", data, "fromParent");
+            }
+        });
+    }
+
+    function clearAndStorePreviousLocation(method, childData) {
+        if (method === "fromConnection") {
+            console.log("From connection");
+            //if we're jumping to a connection, we need to handle its parents somehow
+            //first clear the heirarchy, reseting things to root
+            clearHeirarchy();
+            //then add the parent data?
+            populateHeirarchyFromData(childData);
+            return;
+        }
+
+        previousLocationData.container = selectedLocationElements.container;
+        previousLocationData.imageContainer = selectedLocationElements.imageContainer;
+        previousLocationData.currentLocationData = selectedLocationElements.currentLocationData;
+        selectedLocationElements.container.remove();
+        selectedLocationElements.imageContainer.remove();
+
+        if (method === "fromParent") {
+            //if it is specifically from the parent, store the parent so we can zoom out as needed
+            const { container, imageContainer, currentLocationData } = previousLocationData;
+            locationHeirarchyStack.push({ container, imageContainer, currentLocationData });
+        }
+    }
+
+    /**
+     * Restore a parent map, or zoom out to the root
+     * @param {Boolean} restoreRoot - are we zooming all the way out, or just jumping up to parent
+     */
+    function restorePreviousMap(restoreRoot = false) {
+        let previousMap;
+        if (locationHeirarchyStack.length === 0) {
+            previousMap = rootLocationData;
+        } else {
+            previousMap = restoreRoot ? locationHeirarchyStack.shift() : locationHeirarchyStack.pop();
+        }
+        const atRoot = restoreRoot || locationHeirarchyStack.length == 0; //we've popped the final item in the stack, or we were reseting to root anyway
+        const { container, imageContainer, currentLocationData } = previousMap;
+
+        document.querySelector(".location-map .location-map").appendChild(container);
+        document.querySelector(".location-map .location-map").appendChild(imageContainer);
+        if (atRoot) {
+            //if going back to root, remove everything in the stack, and recache our location elements
+            clearHeirarchy();
+        } else {
+            restoreUIData(false, currentLocationData);
+        }
+    }
+
+    function clearHeirarchy() {
+        locationHeirarchyStack = [];
+        let { container, currentLocationData } = rootLocationData;
+        //if we're at root, recache the location elements once again
+        cacheLocationElements("", container, currentLocationData);
+        restoreUIData(true, currentLocationData);
+    }
+    function restoreUIData(restoreRoot, data) {
+        if (restoreRoot) uiHandlers.selectedLocationUI.resetToDefault(true);
+        else uiHandlers.selectedLocationUI.updateUIData(data, false, true);
+        clearConnectionAreas();
+        setDefaultVisibilityState();
+        resetGradient();
+    }
+
+    /**
+     *
+     * @param {HTMLorSVGElement} locationEl - the element we clicked upon that we're 'zooming in' to
+     * @param {Object} locationData  - the location data of the particular location
+     * @param {String} method - the method we're using, to determine if we need to build a new map, or restore a previous one
+     */
+    function selectLocation(locationEl, locationData, method) {
         if (!locationData) locationData = getLocationDataFromElement(locationEl);
+        if (method !== "rebuild") {
+            clearAndStorePreviousLocation(method, locationData);
+        }
+
         const childContainer = createChildGrid(locationData);
 
         addAccentColor(childContainer, locationData);
         clearConnectionAreas(); //clear the arrays and remove the connection button children
-        previousLocationData.push({ ...selectedLocationElements }); // push the previous elements
-        let locationAncestors = [...previousLocationData];
-        if (locationData.parent === locationAncestors.pop()?.element?.dataset?.guid) {
-            //if the previous element is also our parent, push it to the location heirarchy stack
-            locationHeirarchyStack.push({ ...selectedLocationElements });
-        }
+
         const { connections } = locationData;
         if (connections) {
             addConnectionButtons(connections, childContainer);
         }
 
-        cacheLocationElements(locationEl, childContainer);
+        cacheLocationElements(locationEl, childContainer, locationData);
 
         if (!locationData) locationData = globalData;
         uiHandlers.selectedLocationUI.updateUIData(locationData, false, true);
@@ -411,32 +501,20 @@ export const regionViewerModule = (function () {
         addListeners(selectedLocationElements.container);
         addListeners(uiHandlers.selectedLocationUI.getContainer());
     }
-    let establishedPaths = [];
 
-    //if it's a sibling, replace. If it's a child, overlay it on top of the parent
-    function replaceOrOverlayNewGrid(locationData, newGrid, svgAncestor) {
-        let { parent, type } = locationData;
-        const previousGridElement = previousLocationData[previousLocationData.length - 1].element;
-        if (locationData.parent && previousGridElement.dataset.guid === locationData.parent) {
-            //it's our parent. overlay us on top.
-            svgAncestor.append(newGrid);
-        } else {
-            //otherwise, remove the previous element first
-            previousGridElement.remove();
-            svgAncestor.append(newGrid);
-        }
-    }
     /**
      * update our current location
      * @param {HTMLorSVGElement} selectedElement - the element with the location data
      * @param {HTMLOrSVGElement} newContainer - the container for the child objects
      */
-    function cacheLocationElements(selectedElement, newContainer) {
+    function cacheLocationElements(selectedElement, newContainer, locationData) {
         // add copy of the previous data onto stack for puposes of going back
         selectedLocationElements.container = newContainer;
         selectedLocationElements.element = selectedElement;
-        selectedLocationElements.imageContainer = newContainer.querySelector(".image-display");
+        selectedLocationElements.imageContainer = Array.from(document.querySelectorAll(".lightbox")).pop();
         selectedLocationElements.hexChildren = Array.from(newContainer.querySelectorAll(".hex"));
+        selectedLocationElements.currentLocationData = locationData;
+
         //TODO: this should be placed elsewhere. Single Responsibility Principle
         if (selectedLocationElements.hexChildren.length === 0) {
             selectedLocationElements.imageContainer.classList.remove("hidden");
@@ -483,10 +561,6 @@ export const regionViewerModule = (function () {
         }
     }
 
-    function createImageBackground(locationData, parentContainer) {
-        const img = locationData.imageData.mainImage;
-    }
-
     function createImageDisplay(locationData, parentContainer) {
         const img = locationData.imageData.mainImage;
         const extraImages = locationData.imageData.otherImages;
@@ -497,9 +571,13 @@ export const regionViewerModule = (function () {
 
         const modalData = { mainImageSrc: img, otherImageSrcArray };
         const imageHolder = createForeignObject(parentContainer);
-        const insetParent = imageHolder.querySelector("foreignObject");
+        const insetParent = document.querySelector(".location-map .location-map"); //imageHolder.querySelector("foreignObject");
+
         const lightboxHTML = modal.initialize("imageGallery", modalData, insetParent);
-        lightboxHTML.classList.add("inset");
+        let classes = ["inset", "hidden", "can-be-hidden"];
+        classes.forEach((className) => {
+            lightboxHTML.classList.add(className);
+        });
     }
 
     function createForeignObject(
@@ -524,9 +602,6 @@ export const regionViewerModule = (function () {
         return element;
     }
 
-    function filterChildLocations(parentName, type) {
-        return locationData[`${type}s`].filter((item) => item.parent == parentName);
-    }
     /**
      * Creates a child container w/ data from the clicked parent
      * @param {SVGElement} parentData - the parent 'region' for an area or 'area' for a site
@@ -572,7 +647,6 @@ export const regionViewerModule = (function () {
         createConnections(children, svgContainer);
 
         // if (!parentData) parentData = globalData;
-        // console.log(globalData);
 
         if (parentElement) {
             uiHandlers.selectedLocationUI.updateUIData(parentElement);
@@ -626,11 +700,7 @@ export const regionViewerModule = (function () {
         let connectionButtons = Helpers.dataToButtons(elements);
 
         const outerContainerElement = childContainer;
-        // const containerElement = createForeignObject(
-        //     outerContainerElement,
-        //     "connections-wrapper",
-        //     "visible"
-        // ).querySelector("foreignObject");
+
         const containerElement = document.querySelector(".location-map .location-map");
 
         connectionButtons.forEach((btnEl) => {
@@ -679,102 +749,6 @@ export const regionViewerModule = (function () {
         return svg;
     }
 
-    /**
-     * If connected one way, connect the other way
-     * @param {SVGElement} place - the place whose connections we want to generate "backlinks" from
-     */
-    function intializeReverseConnections(place) {
-        const connectedElements = returnConnectedElements(place);
-
-        const ourName = place.dataset.name;
-        connectedElements.forEach((element) => {
-            //get comma-separated string of
-            let currentConnections = returnConnectionsAsArray(element);
-            currentConnections.push(ourName);
-            currentConnections = currentConnections.join(", "); //add our name and join back into string
-            element.dataset.connections = currentConnections;
-            // element.dataset.connections =
-        });
-    }
-
-    /**
-     * Draw SVG Paths between the Source and the Destination elements
-     * @param {SVGElement} source
-     * @param {SVGElement} destination
-     */
-    function drawPaths(source, destination, container) {
-        let svgElement = container; //document.querySelector(".parent-list");
-
-        let sourceY = parseFloat(source.getAttribute("y")) + 5;
-        let sourceX = parseFloat(source.getAttribute("x")) + 5; //+ parseFloat(pointa.getAttribute("cx"));
-        let destinationY = parseFloat(destination.getAttribute("y")) + 5; //+ parseFloat(pointb.getAttribute("cy"));
-        let destinationX = parseFloat(destination.getAttribute("x")) + 5; //+ parseFloat(pointb.getAttribute("cx"));
-        let newLine = document.createElementNS("http://www.w3.org/2000/svg", "path");
-
-        console.log(source.getBBox(), destination.getBBox());
-        console.log(source.getBoundingClientRect(), destination.getBoundingClientRect());
-        //newLine.setAttribute('id', 'line2');
-        newLine.setAttribute("stroke", "white");
-        newLine.setAttribute("vector-effect", "non-scaling-stroke");
-        //Q x, y (first x and y are control point), second x y are next coordinate
-        sourceY = parseFloat(sourceY) + source.getBoundingClientRect().height / 2;
-        sourceX = parseFloat(sourceX) + source.getBoundingClientRect().width / 2;
-        destinationX = parseFloat(destinationX);
-        destinationY = parseFloat(destinationY);
-
-        let midpointX = (sourceX + destinationX) / 2;
-        let midpointY = (sourceY + destinationY) / 2;
-        newLine.setAttribute(
-            "d",
-            `M ${sourceX} ${sourceY}
-		${midpointX} ${midpointY}
-		${destinationX} ${destinationY}`
-        );
-        newLine.classList.add("passage");
-
-        svgElement.append(newLine);
-
-        const connectionName = intializeConnectionName(source, destination);
-        establishedPaths.push(connectionName);
-        newLine.dataset.passageName = connectionName;
-    }
-
-    /**
-     * Get all of the connections this element has to other locations
-     * @param {SVGElement} source - the SVG Element whose passages we want to get
-     * @returns an arrray of "path" elements representing the connections this element has
-     */
-    function getConnectedPassageElements(source) {
-        const placeName = source.dataset.name;
-        let passageElements = Array.from(document.querySelectorAll(`.passage`));
-        passageElements = passageElements.filter((element) => {
-            return element.dataset.passageName.includes(placeName);
-        });
-        return passageElements;
-    }
-
-    /**
-     * return a string name combining the two locations
-     * @param {SVGElement} source - the source svg element
-     * @param {SVGElement} destination - the destination svg element
-     * @returns a String determining the combined name of our connections
-     */
-    function intializeConnectionName(source, destination) {
-        return source.id + " to " + destination.id;
-    }
-
-    /**
-     * Return true or false depending on if a connection already exists between these two elements
-     * @param {HTMLOrSVGElement} source - the element that started the connection
-     * @param {SVGElement} destination - the element at the end of the connection
-     * @returns a {Boolean} determining whether or not a connection exists between these two elements
-     */
-    function connectionExists(source, destination) {
-        const pathExists = establishedPaths.some((path) => {
-            return path.includes(source.id) && path.includes(destination.id);
-        });
-        return pathExists;
-    }
     function resetGradient() {
         const mapElement = document.querySelector(".location-map .location-map");
 
@@ -783,38 +757,11 @@ export const regionViewerModule = (function () {
     }
 
     function resetZoom() {
-        let childLists = Array.from(document.querySelectorAll(".location__container:not(.parent-list)"));
-        childLists.forEach((list) => {
-            list.remove();
-        });
-        uiHandlers.selectedLocationUI.resetToDefault(true);
-        clearConnectionAreas();
-        setDefaultVisibilityState();
-        resetGradient();
-    }
-    //remove just the last list, going up the heirarchy
-    function backOne() {
-        let childLists = Array.from(document.querySelectorAll(".location__container:not(.parent-list)"));
-        childLists[childLists.length - 1].remove();
-        let previous = previousLocationData.pop();
-        selectLocation(previous.element);
-        // selectedLocationUI.resetToDefault()//updateUIData(parentElement)
+        restorePreviousMap(true);
     }
 
-    function hideAllLocationsAndPassages() {
-        console.log("hiding?");
-        const elements = Array.from(document.querySelectorAll(".area, .site, .region, .passage"));
-        elements.forEach((el) => {
-            el.classList.add("hidden");
-        });
-    }
-
-    function getDescendantPassages(descendants) {
-        let allPassages = [];
-        descendants.forEach((descendant) => {
-            allPassages = [...allPassages, ...getConnectedPassageElements(descendant)];
-        });
-        return allPassages;
+    function backToParent() {
+        restorePreviousMap(false);
     }
 
     return {

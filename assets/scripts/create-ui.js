@@ -220,7 +220,6 @@ export const LocationUIFactory = function (
         cardData.element = cardElement;
         cardData.imgElement = cardElement.querySelector("img");
         cardData.titleElement = cardElement.querySelector("h3");
-        console.log({ cardData: cardData });
         const hasImageElement = cardData.imgElement;
         resetToDefault(hasImageElement);
     };
@@ -242,7 +241,6 @@ export const LocationUIFactory = function (
         // else imagePath = Helpers.encodeURI(cardData.defaultBgImg);
     };
     const updateUIData = (locationData, reset = false, hasImageElement = false) => {
-        console.log({ cardData });
         updateUIBackgrounds(locationData, hasImageElement);
         //TODO: Refactor these bits to be a part of the general UI Data
         if (hasImageElement) {
