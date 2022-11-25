@@ -13,3 +13,13 @@ Nomalanga Ruto, 58.
 _Weak relationship with the MC_
 
 Honest and hardworking; always has the family's best interests at heart.
+
+## Personal Life
+
+### Children
+
+-   [[MC]]
+
+### Partners/Spouses
+
+-   [[Genki]]

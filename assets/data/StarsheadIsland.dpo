@@ -525,7 +525,21 @@
                         "titleColor": "hsl(234, 56%, 58%)"
                     },
                     "flavorData": {},
-                    "encounterData": {},
+                    "encounterData": {
+                        "guid": "ba906a9c-1199-4793-a898-5ee3353eb569",
+                        "factions": [],
+                        "cast": [
+                            {
+                                "guid": "32363aad-3e44-449d-9d97-c2947a8afac6",
+                                "hasPage": true,
+                                "description": "",
+                                "pageUrl": "sylvain",
+                                "imageUrl": "Sylvain.webp",
+                                "clan": "Divine",
+                                "id": "Sylvain"
+                            }
+                        ]
+                    },
                     "column": 2,
                     "row": 2,
                     "connections": []

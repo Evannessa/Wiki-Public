@@ -13,20 +13,29 @@ parents:
 
 # Ester
 
-Esther, 69
-
 _Tries to manipulate the MC_
 
 Constantly worries about the wellbeing of other family members
 
-[[Angelica]]
+## Personal Life
 
-[[Sylvain]]
+### Parents
 
-[[Odhiambo]]
+-   [[Grandma]]
+-   [[Grandpa]]
 
-[[Naohisa]]
+### Siblings
 
-[[Andrew]]
+-   [[Andrew]]
+-   [[Angelica]]
+-   [[Genki]]
+-   [[Sylvain]]
 
-[[Isabel]]
+### Children
+
+-   [[Luca]]
+-   [[Isabel]]
+
+### Partners/Spouses
+
+-   [[Mateo]]

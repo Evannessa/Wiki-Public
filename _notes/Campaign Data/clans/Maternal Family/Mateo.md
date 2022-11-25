@@ -10,20 +10,15 @@ partners:
 
 # Mateo
 
-Mateo, 69
-
-_Tries to manipulate the MC_
-
 Constantly worries about the wellbeing of other family members
 
-[[Angelica]]
+## Personal Life
 
-[[Sylvain]]
+### Children
 
-[[Odhiambo]]
+-   [[Isabel]]
+-   [[Luca]]
 
-[[Naohisa]]
+### Partners/Spouses
 
-[[Andrew]]
-
-[[Isabel]]
+-   [[Ester]]

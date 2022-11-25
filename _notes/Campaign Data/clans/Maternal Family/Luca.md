@@ -10,3 +10,14 @@ parents:
 ---
 
 # Luca
+
+## Personal Life
+
+### Parents
+
+-   [[Ester]]
+-   [[Mateo]]
+
+### Siblings
+
+-   [[Isabel]]

@@ -1,54 +1,56 @@
-<div class="location-info expanded can-be-expanded">
-    <div class="location-info__header">
-        <div class="global-controls controls">
-            {% assign icon1 = 'gallery_thumbnail' %}
-            {% assign icon2 = 'zoom_out_map' %}
-            {% assign icon3 = 'undo' %}
-            {% include icon-button.html clickAction="toggle" scope="global"
+<section class="location-map location-map-wrapper outer-wrapper" data-press-action="handleHotkey">
+    <div class="location-info expanded can-be-expanded">
+        <div class="location-info__header">
+            <div class="global-controls controls">
+                {% assign icon1 = 'gallery_thumbnail' %}
+                {% assign icon2 = 'zoom_out_map' %}
+                {% assign icon3 = 'undo' %}
+                {% include icon-button.html clickAction="toggle" scope="global"
                 iconName="gallery_thumbnail"
                 class="toggle"
                 tooltipText="show/hide location image gallery"
             %}
-            {% include icon-button.html clickAction="reset" scope="global"
+                {% include icon-button.html clickAction="reset" scope="global"
                 iconName="zoom_out_map"
                 class="reset"
                 tooltipText="zoom out map entirely"
             %}
-            {% include icon-button.html clickAction="fold" scope="global"
+                {% include icon-button.html clickAction="fold" scope="global"
                 iconName="unfold_less"
                 class="fold"
                 tooltipText="fold the portrait for more content space"
                 %}
-            {% include icon-button.html clickAction="expand" scope="global"
+                {% include icon-button.html clickAction="expand" scope="global"
                 iconName="menu_open"
                 class="expand"
                 tooltipText="expand or close sidebar"
                 %}
+            </div>
+
         </div>
+        {% include map-ui.html prefix="location-info" hasControls=true hasTabs=true hasPortrait=true classes="tabbed-sidebar" %}
 
     </div>
-    {% include map-ui.html prefix="location-info" hasControls=true hasTabs=true hasPortrait=true classes="tabbed-sidebar" %}
+    <section class="location-map" data-path="{{include.path}}">
+        <svg class="location-map__svg location__container parent-list" viewbox="0 -10 100 100" data-type="region" style="--bg-img: url({{include.img}})">
+            <defs>
+                <pattern id="mainImagePattern" patternUnits="userSpaceOnUse" width="100" height="100" x="0" y="0">
+                    <image width="100" height="100" href="{{include.img}}"></image>
+                </pattern>
+            </defs>
 
-</div>
-<section class="location-map" data-path="{{include.path}}">
-    <svg class="location-map__svg location__container parent-list" viewbox="0 -10 100 100" data-type="region" style="--bg-img: url({{include.img}})">
-        <defs>
-            <pattern id="mainImagePattern" patternUnits="userSpaceOnUse" width="100" height="100" x="0" y="0">
-                <image width="100" height="100" href="{{include.img}}"></image>
-            </pattern>
-        </defs>
+        </svg>
 
-    </svg>
-
-    <div class="child-location location-hover-info" data-default-visibility="visible">
-        {% include map-ui.html prefix="child-location-info" classes="top-card" %}
-    </div>
-    <div class="decor bottom-card">
-        <img src="{{include.img}}" alt=""/>
-        <h3 class="bottom-card__title">
-            {{include.title}}
-        </h3>
-    </div>
+        <div class="child-location location-hover-info" data-default-visibility="visible">
+            {% include map-ui.html prefix="child-location-info" classes="top-card" %}
+        </div>
+        <div class="decor bottom-card">
+            <img src="{{include.img}}" alt=""/>
+            <h3 class="bottom-card__title">
+                {{include.title}}
+            </h3>
+        </div>
+    </section>
 </section>
 <script src="/assets/scripts/modal.js" type="module"></script>
 <script src="/assets/scripts/region-viewer.js" type="module"></script>

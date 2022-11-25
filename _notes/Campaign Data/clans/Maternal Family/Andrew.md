@@ -17,10 +17,16 @@ _Likes the MC_
 
 A shady character with many dark secrets
 
----
+## Personal Life
 
-1 Maternal Cousins
+### Parents
 
-**Aunt Esther's Kids:**
+-   [[Grandma]]
+-   [[Grandpa]]
 
-**Daughters: 1**
+### Siblings
+
+-   [[Angelica]]
+-   [[Ester]]
+-   [[Genki]]
+-   [[Sylvain]]

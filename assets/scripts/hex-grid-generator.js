@@ -137,6 +137,7 @@ function injectLocationData(locationData, svgContainer, baseAssetPath) {
         ourSVG.dataset.guid = guid;
         ourSVG.dataset.hoverAction = "displayInfo";
         ourSVG.dataset.clickAction = "selectLocation";
+        ourSVG.dataset.pressAction = "handleHoverHotkey";
 
         ourSVG.querySelector("foreignObject .popover").classList.remove("removed");
         ourSVG.querySelector("foreignObject .popover p").textContent = id.trim();

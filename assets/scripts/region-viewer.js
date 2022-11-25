@@ -3,25 +3,25 @@ import { Modal } from "./modal.js";
 import { LocationHelpers } from "./location-functions.js";
 import { LocationUIFactory } from "./create-ui.js";
 import { populateLocations } from "./hex-grid-generator.js";
+import { TabsHandler } from "./tabs.js";
+import hoverHandler from "./hover-handler.js";
 import Helpers from "./helpers.js";
 
 export const regionViewerModule = (function () {
-    const hexHoverData = {
-        hovering: false,
-        keydown: false,
-        current: "",
-    };
     let previousLocationData = [];
     let locationHeirarchyStack = [];
     let lightbox;
-    let selectedLocationUI;
-    let hoveredLocationUI;
+    const uiHandlers = {
+        selectedLocationUI: "",
+        hoveredLocationUI: "",
+        tabsHandler: "",
+        hoverHandler: "",
+    };
     const state = {};
     let normalizedLocations;
     let locationIDs;
     let locationData;
     let globalData;
-    let hoveredHexes = [];
     const directionElements = {
         up: {
             parent: "",
@@ -40,8 +40,145 @@ export const regionViewerModule = (function () {
             children: [],
         },
     };
-
-    function updateHexHoverData() {}
+    const locationActionsData = {
+        selectedLocationContainer: "",
+        actions: {
+            click: {
+                fold: {
+                    handler: (event) => {
+                        //TODO: Refactor this so that the element's being cached
+                        const btnElement = event.currentTarget;
+                        Helpers.toggleButtonActive(btnElement);
+                        let infoCard = document.querySelector(".location-info__content");
+                        infoCard.classList.toggle("flat");
+                    },
+                },
+                switchTab: {
+                    handler: (event) => {
+                        const tab = event.currentTarget;
+                        const target = tab.dataset.target;
+                        switchTabWrapper(target);
+                        // uiHandlers.tabsHandler.switchTab(target);
+                    },
+                },
+                toggle: {
+                    handler: (event) => {
+                        let currentTarget = event.currentTarget;
+                        selectedLocationElements.imageContainer.classList.toggle("hidden");
+                        selectedLocationElements.imageContainer.classList.toggle("image-mode");
+                        // Helpers.toggleButtonText(currentTarget, "Hide Image", "Show Image");
+                        // hide the children
+                        selectedLocationElements.hexChildren.forEach((hex) => {
+                            Helpers.toggleClassOnAction(currentTarget, hex, { action: "remove" });
+                        });
+                    },
+                },
+                reset: {
+                    handler: () => {
+                        // backOne()
+                        resetZoom();
+                    },
+                },
+                backOne: {
+                    handler: () => {
+                        backOne();
+                    },
+                },
+                expand: {
+                    handler: (event) => {
+                        //TODO: refactor to keep track of these elsewhere
+                        let nav = document.querySelector(".location-info");
+                        let main = document.querySelector(".location-map .location-map");
+                        if (nav.classList.contains("expanded")) {
+                            Helpers.closeNav(nav, main);
+                        } else {
+                            Helpers.openNav(nav, main);
+                        }
+                    },
+                },
+                open: {
+                    handler: (event) => {
+                        let collapsibleElement = event.currentTarget;
+                        Helpers.toggleCollapsible(collapsibleElement);
+                    },
+                },
+                selectLocation: {
+                    handler: (event) => {
+                        event.preventDefault();
+                        const locationEl = event.currentTarget;
+                        selectLocation(locationEl);
+                    },
+                },
+                navigate: {
+                    handler: (event) => {
+                        const current = event.currentTarget;
+                        const targetId = current.dataset.guidLink;
+                        const locationEl = document.querySelector(`[data-guid='${targetId}']`);
+                        selectLocation(locationEl);
+                    },
+                },
+                showTooltip: {
+                    handler: (event) => {
+                        const current = event.currentTarget;
+                        const parentElement = current.parentNode;
+                        let id = current.dataset.id;
+                        Helpers.togglePopover(id, parentElement);
+                    },
+                },
+            },
+            hover: {
+                displayInfo: {
+                    handler: (event) => {
+                        uiHandlers.hoverHandler.updateHoverData(event);
+                        let locationEl = event.currentTarget;
+                        let shouldHide = event.type === "mouseleave";
+                        displayInfo(locationEl, shouldHide);
+                    },
+                },
+                highlightHex: {
+                    handler: (event) => {
+                        const actionElement = event.currentTarget;
+                        const targetId = actionElement.dataset.guidLink;
+                        const hex = document.querySelector(`[data-guid='${targetId}']`);
+                        Helpers.toggleClassOnAction(actionElement, hex, { action: "highlight" });
+                        displayInfo(hex, false);
+                    },
+                },
+            },
+            press: {
+                handleHotkey: {
+                    handler: (event) => {
+                        //if we're hovering a hex, select that location first
+                        const current = uiHandlers.hoverHandler.getHoverDataProperty("current");
+                        if (current) {
+                            // const locationEl = getLocationDataFromElement(current);
+                            console.log(current);
+                            selectLocation(current);
+                        }
+                        uiHandlers.tabsHandler.handleHotkey(event);
+                        if (!uiHandlers.selectedLocationUI.getContainer().classList.contains("expanded")) {
+                            expandSidebar();
+                        }
+                    },
+                },
+                // handleHoverHotkey: {
+                //     handler: (event) => {
+                //         console.log(event.currentTarget, event.target);
+                //         uiHandlers.tabsHandler.handleHotkey(event);
+                //     },
+                // },
+            },
+            release: {
+                handleKeyRelease: {
+                    handler: (event) => {
+                        // let shouldHide = uiHandlers.hoverHandler.updateHoverData(event);
+                        // // let locationEl = event.currentTarget
+                        // displayInfo("", shouldHide);
+                    },
+                },
+            },
+        },
+    };
 
     const selectedLocationElements = {
         element: "", // the hex element containing data for current location
@@ -100,6 +237,21 @@ export const regionViewerModule = (function () {
         globalData.baseAssetPath = data.sheets.find((sheet) => sheet.name === "ourMetadata").lines[0].baseAssetPath;
 
         createUIElements(locationData);
+        uiHandlers.tabsHandler = new TabsHandler({
+            lore: {
+                hotkey: 76, // l key
+                target: "Lore",
+            },
+            geography: {
+                hotkey: 71, // g key
+                target: "Geography",
+            },
+            cast: {
+                hotkey: 67, // c key
+                target: "Cast",
+            },
+        });
+        uiHandlers.tabsHandler.initializeTabs();
     }
     /**
      * initialize the UI elements for our map
@@ -127,7 +279,7 @@ export const regionViewerModule = (function () {
 
         // document.querySelector(".decor.bottom-card img").src = locationData.imageData.mainImage;
         // document.querySelector(".decor.bottom-card h3").textContent = locationData.id;
-        selectedLocationUI = new LocationUIFactory(
+        uiHandlers.selectedLocationUI = new LocationUIFactory(
             "location-info",
             globalData,
             document.querySelector(".location-info"),
@@ -135,11 +287,10 @@ export const regionViewerModule = (function () {
             true,
             document.querySelector(".decor.bottom-card")
         );
-        console.log(selectedLocationUI);
 
-        selectedLocationUI.initializeUIData();
+        uiHandlers.selectedLocationUI.initializeUIData();
 
-        hoveredLocationUI = new LocationUIFactory(
+        uiHandlers.hoveredLocationUI = new LocationUIFactory(
             "child-location-info",
             globalData,
             document.querySelector(".location-hover-info"),
@@ -147,7 +298,10 @@ export const regionViewerModule = (function () {
             false,
             document.querySelector(".top-card")
         );
-        hoveredLocationUI.initializeUIData();
+        uiHandlers.hoveredLocationUI.initializeUIData();
+
+        uiHandlers.hoverHandler = new hoverHandler(selectedLocationElements.hexChildren);
+        uiHandlers.hoverHandler.initializeHoverData();
 
         setDefaultVisibilityState();
         addListeners();
@@ -166,19 +320,24 @@ export const regionViewerModule = (function () {
         return getAllLocations().filter((location) => location[propertyName] === propertyValue);
     }
 
-    function displayInfo(event, _locationEl = "") {
-        const locationEl = _locationEl ? _locationEl : event.currentTarget;
-        const dependentElement = document.querySelector(".location-hover-info .top-card");
-        const isLeave = event.type === "mouseout" || event.type === "mouseleave";
-        let location = getLocationDataFromElement(locationEl);
-        if (!isLeave) {
-            hoveredLocationUI.updateUIData(location, false, false);
+    function displayInfo(locationEl, shouldHide = false) {
+        // const locationEl = _locationEl ? _locationEl : event.currentTarget;
+        const dependentElement = document.querySelector(".location-hover-info .top-card"); //TODO: refactor this to be cached
+
+        if (!shouldHide) {
+            let location = getLocationDataFromElement(locationEl);
+            uiHandlers.hoveredLocationUI.updateUIData(location, false, false);
             dependentElement.classList.add("highlighted");
         } else {
             // hoveredLocationUI.updateUIData(location, false, true);
-            //TODO: put back
-            // dependentElement.classList.remove("highlighted");
+            dependentElement.classList.remove("highlighted");
         }
+    }
+
+    function switchTabWrapper(key) {
+        uiHandlers.tabsHandler.switchTab(key);
+
+        //Also if it's closed, expand the toggle
     }
 
     function getExtraImagesFromString(baseFilePath, stringNames) {
@@ -240,7 +399,7 @@ export const regionViewerModule = (function () {
         cacheLocationElements(locationEl, childContainer);
 
         if (!locationData) locationData = globalData;
-        selectedLocationUI.updateUIData(locationData, false, true);
+        uiHandlers.selectedLocationUI.updateUIData(locationData, false, true);
 
         const dependentElement = document.querySelector(".location-hover-info");
         dependentElement.classList.add("hidden");
@@ -250,144 +409,8 @@ export const regionViewerModule = (function () {
             .map((obj) => obj.parent)
             .forEach((p) => addListeners(p));
         addListeners(selectedLocationElements.container);
-        addListeners(selectedLocationUI.getContainer());
+        addListeners(uiHandlers.selectedLocationUI.getContainer());
     }
-    const locationActionsData = {
-        selectedLocationContainer: "",
-        actions: {
-            click: {
-                fold: {
-                    handler: (event) => {
-                        //TODO: Refactor this so that the element's being cached
-                        const btnElement = event.currentTarget;
-                        Helpers.toggleButtonActive(btnElement);
-                        let infoCard = document.querySelector(".location-info__content");
-                        infoCard.classList.toggle("flat");
-                    },
-                },
-                switchTab: {
-                    handler: (event) => {
-                        //TODO: Refactor this so that the tabs are being cached
-
-                        const tab = event.currentTarget;
-                        const target = tab.dataset.target;
-                        const tabs = Array.from(document.querySelectorAll(".tab"));
-                        const contentSections = Array.from(document.querySelectorAll(".tab-content"));
-                        tabs.forEach((tab) => {
-                            tab.classList.remove("active");
-                        });
-                        contentSections.forEach((section) => {
-                            section.classList.remove("active");
-                            section.classList.add("removed");
-                        });
-                        tab.classList.add("active");
-                        const contentSection = document.getElementById(target);
-                        // contentSection.style.setProperty("--bg-img", value);
-                        contentSection.classList.add("active");
-                        contentSection.classList.remove("removed");
-
-                        //Also if it's closed, expand the toggle
-                        if (!selectedLocationUI.getContainer().classList.contains("expanded")) {
-                            expandSidebar();
-                        }
-                    },
-                },
-                toggle: {
-                    handler: (event) => {
-                        let currentTarget = event.currentTarget;
-                        selectedLocationElements.imageContainer.classList.toggle("hidden");
-                        selectedLocationElements.imageContainer.classList.toggle("image-mode");
-                        // Helpers.toggleButtonText(currentTarget, "Hide Image", "Show Image");
-                        // hide the children
-                        selectedLocationElements.hexChildren.forEach((hex) => {
-                            Helpers.toggleClassOnAction(currentTarget, hex, { action: "remove" });
-                        });
-                    },
-                },
-                reset: {
-                    handler: () => {
-                        // backOne()
-                        resetZoom();
-                    },
-                },
-                backOne: {
-                    handler: () => {
-                        backOne();
-                    },
-                },
-                expand: {
-                    handler: (event) => {
-                        //TODO: refactor to keep track of these elsewhere
-                        let nav = document.querySelector(".location-info");
-                        let main = document.querySelector(".location-map .location-map");
-                        if (nav.classList.contains("expanded")) {
-                            Helpers.closeNav(nav, main);
-                        } else {
-                            Helpers.openNav(nav, main);
-                        }
-                        // Helpers.toggleClassOnAction(event.currentTarget, document.querySelector(".location-info"), {
-                        // action: "expand",
-                        // });
-                    },
-                },
-                open: {
-                    handler: (event) => {
-                        let collapsibleElement = event.currentTarget;
-                        Helpers.toggleCollapsible(collapsibleElement);
-                    },
-                },
-                selectLocation: {
-                    handler: (event) => {
-                        event.preventDefault();
-                        const locationEl = event.currentTarget;
-                        selectLocation(locationEl);
-                    },
-                },
-                navigate: {
-                    handler: (event) => {
-                        console.log("Navigate button clicked");
-                        const current = event.currentTarget;
-                        // const targetName = current.dataset.link;
-                        const targetId = current.dataset.guidLink;
-                        // const locationEl = document.querySelector(`[data-id='${targetName}']`);
-                        const locationEl = document.querySelector(`[data-guid='${targetId}']`);
-                        selectLocation(locationEl);
-                    },
-                },
-                showTooltip: {
-                    handler: (event) => {
-                        const current = event.currentTarget;
-                        const parentElement = current.parentNode;
-                        let id = current.dataset.id;
-                        Helpers.togglePopover(id, parentElement);
-                        // showTooltip(tooltip)
-                    },
-                },
-            },
-            hover: {
-                displayInfo: {
-                    handler: (event) => {
-                        displayInfo(event);
-                    },
-                },
-                highlightHex: {
-                    handler: (event) => {
-                        const isLeave = event.type === "mouseout" || event.type === "mouseleave";
-                        // if (!isLeave) {
-                        const actionElement = event.currentTarget;
-                        // const targetName = actionElement.dataset.link;
-                        const targetId = actionElement.dataset.guidLink;
-                        // const hex = document.querySelector(`[data-id='${targetName}']`);
-                        const hex = document.querySelector(`[data-guid='${targetId}']`);
-                        Helpers.toggleClassOnAction(actionElement, hex, { action: "highlight" });
-                        displayInfo(event, hex);
-                        // Helpers.highlightAnotherElement(actionElement, hex)
-                    },
-                },
-            },
-        },
-    };
-
     let establishedPaths = [];
 
     //if it's a sibling, replace. If it's a child, overlay it on top of the parent
@@ -428,13 +451,22 @@ export const regionViewerModule = (function () {
     function addListeners(parentElement = document) {
         const clickElements = Array.from(parentElement.querySelectorAll("[data-click-action]"));
         const hoverElements = Array.from(parentElement.querySelectorAll("[data-hover-action]"));
+        const pressElements = [document.documentElement];
+        // const releaseElements = [document.documentElement];
+        document.documentElement.dataset.pressAction = "handleHotkey";
+        // document.documentElement.dataset.releaseAction = "handleKeyRelease";
+
         const elementSets = {
             click: { elements: clickElements, eventNames: "click" },
             hover: { elements: hoverElements, eventNames: "mouseenter mouseleave" },
+            press: { elements: pressElements, eventNames: "keydown" },
+            // release: { elements: releaseElements, eventNames: "keyup" },
         };
+
         for (const key in elementSets) {
             let datasetProperty = key + "Action";
             const { elements, eventNames } = elementSets[key];
+
             Helpers.clearEventListenersFromAll(elements, eventNames);
             Helpers.addEventListenerToAll(elements, eventNames, (event) => {
                 let action = event.currentTarget.dataset[datasetProperty];
@@ -543,7 +575,7 @@ export const regionViewerModule = (function () {
         // console.log(globalData);
 
         if (parentElement) {
-            selectedLocationUI.updateUIData(parentElement);
+            uiHandlers.selectedLocationUI.updateUIData(parentElement);
         }
         return svgContainer;
     }
@@ -755,7 +787,7 @@ export const regionViewerModule = (function () {
         childLists.forEach((list) => {
             list.remove();
         });
-        selectedLocationUI.resetToDefault(true);
+        uiHandlers.selectedLocationUI.resetToDefault(true);
         clearConnectionAreas();
         setDefaultVisibilityState();
         resetGradient();

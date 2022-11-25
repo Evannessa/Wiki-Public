@@ -10,3 +10,21 @@ parents:
 partners:
     - Taza
 ---
+
+# MC
+
+## Personal Life
+
+### Parents
+
+-   [[Genki]]
+-   [[Nomalanga Ruto]]
+
+### Children
+
+-   [[Petra]]
+-   [[Lourenco]]
+
+### Partners/Spouses
+
+-   [[Taza]]

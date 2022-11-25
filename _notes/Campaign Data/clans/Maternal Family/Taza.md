@@ -7,3 +7,16 @@ Clan: Ruto
 partners:
     - MC
 ---
+
+# Taza
+
+## Personal Life
+
+### Children
+
+-   [[Petra]]
+-   [[Lourenco]]
+
+### Partners/Spouses
+
+-   [[MC]]

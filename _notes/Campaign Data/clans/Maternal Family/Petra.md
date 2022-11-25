@@ -9,8 +9,19 @@ parents:
     - Taza
 ---
 
-Petra, 16
+# Petra
 
 _Friendly towards the MC_
 
 Mature and down-to-earth; they look out for other family members
+
+## Personal Life
+
+### Parents
+
+-   [[MC]]
+-   [[Taza]]
+
+### Siblings
+
+-   [[Lourenco]]
