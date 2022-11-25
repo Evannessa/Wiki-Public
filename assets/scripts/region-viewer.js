@@ -425,11 +425,12 @@ export const regionViewerModule = (function () {
         previousLocationData.currentLocationData = selectedLocationElements.currentLocationData;
         selectedLocationElements.container.remove();
         selectedLocationElements.imageContainer.remove();
-
-        if (method === "fromParent") {
+        console.log("Previous location is", selectedLocationElements.currentLocationData.id);
+        if (method === "fromParent" && previousLocationData.currentLocationData.guid === childData.parent) {
             //if it is specifically from the parent, store the parent so we can zoom out as needed
             const { container, imageContainer, currentLocationData } = previousLocationData;
             locationHeirarchyStack.push({ container, imageContainer, currentLocationData });
+            console.log(locationHeirarchyStack.map((data) => data.currentLocationData.id));
         }
     }
 
@@ -453,7 +454,9 @@ export const regionViewerModule = (function () {
             //if going back to root, remove everything in the stack, and recache our location elements
             clearHeirarchy();
         } else {
-            restoreUIData(false, currentLocationData);
+            selectLocation("", currentLocationData, "rebuild", container);
+            // restoreUIData(false, currentLocationData);
+            // cacheLocationElements("", container, currentLocationData);
         }
     }
 
@@ -478,13 +481,15 @@ export const regionViewerModule = (function () {
      * @param {Object} locationData  - the location data of the particular location
      * @param {String} method - the method we're using, to determine if we need to build a new map, or restore a previous one
      */
-    function selectLocation(locationEl, locationData, method) {
+    function selectLocation(locationEl, locationData, method, childContainer) {
         if (!locationData) locationData = getLocationDataFromElement(locationEl);
         if (method !== "rebuild") {
             clearAndStorePreviousLocation(method, locationData);
         }
 
-        const childContainer = createChildGrid(locationData);
+        if (!childContainer) {
+            childContainer = createChildGrid(locationData);
+        }
 
         addAccentColor(childContainer, locationData);
         clearConnectionAreas(); //clear the arrays and remove the connection button children
