@@ -6,9 +6,6 @@ tags:
 partners:
     - Genki
 Clan: Ruto
-parents:
-    - Grandpa
-    - Grandma
 ---
 
 Nomalanga Ruto, 58.

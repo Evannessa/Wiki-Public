@@ -22,8 +22,8 @@
         width: 100%;
         height: 100%;
         background: #262b59;
-        background-image: url(/assets/patterns/bahaus-bg-2.webp);
-        background-size: cover;
+        // background-image: url(/assets/patterns/blurry-gradient-haikei.svg);
+        background-size: contain;
         background-position: center;
         background-attachment: fixed;
     }
@@ -58,7 +58,8 @@
         transform: translate(0%, -50%);
         right: 0%;
         text-align: center;
-        z-index: 900;
+        z-index: 800;
+        height: 100%;
         border-radius: 8px;
         align-items: center;
         max-width: 20vw;
@@ -274,6 +275,12 @@ svg.family-tree {
     .family-member-group {
         overflow: visible;
         transition: opacity 200ms ease-out;
+        &:hover {
+            .glow {
+                opacity: 100%;
+                transition: opacity 200ms ease-in;
+            }
+        }
         &.fade {
             opacity: 20%;
         }
@@ -287,32 +294,46 @@ svg.family-tree {
             width: 100%;
             filter: drop-shadow(3px 5px 2px #00000066);
             clip-path: circle(50%);
-            mix-blend-mode: screen;
-            // mix-blend-mode: luminosity;
+            // mix-blend-mode: screen;
         }
         .portrait-outline {
             stroke: white;
             stroke-width: 6px;
             fill: none;
         }
+        .portrait-outline__inner {
+            // mix-blend-mode: overlay;
+        }
 
-        $colors: (url(#_Linear1-flipped), url(#_Linear2), url(#_Linear3), url(#_Linear4), url(#_Linear5), dodgerblue);
+        $colors: (url(#_Linear1), url(#_Linear2), url(#_Linear3), url(#_Linear4), url(#_Linear5), dodgerblue);
         @for $gen from 1 to 6 {
             &[data-generation="#{$gen - 1}"] {
                 .portrait-outline {
-                    fill: nth($colors, $gen);
-                    stroke-width: 8px;
+                    stroke: nth($colors, $gen);
+                    stroke-width: 2px;
+                    fill: transparent;
+                    // stroke-dasharray: 5 10;
+                    // stroke-dashoffset: 1000;
+                    &__glow {
+                        stroke: nth($colors, $gen);
+                        stroke-width: 2px;
+                        filter: blur(4px);
+                        fill: none;
+                        opacity: 0%;
+                    }
                     &__outer-fill {
                         stroke: none;
                         fill: nth($colors, $gen);
-                        filter: url(#inner-shadow)
-                            drop-shadow(-3px -3px 6px rgb(67, 59, 128))
-                            drop-shadow(2px 2px 8px rgb(17, 13, 39));
+                        filter: url(#inner-shadow);
+                        // drop-shadow(-3px -3px 6px rgb(67, 59, 128))
+                        // drop-shadow(2px 2px 8px rgb(17, 13, 39));
                     }
                     &__inner {
-                        stroke: #211c40;
-                        stroke-width: 5px;
-                        fill: nth($colors, $gen);
+                        // stroke: #211c40;
+                        fill: #211c40;
+                        stroke: none;
+                        // stroke-width: 5px;
+                        // fill: nth($colors, $gen);
 
                         // filter: drop-shadow(-8px 8px 3px rgba(0, 0, 0, 0.5))
                         // drop-shadow(2px 2px 8px rgba(0, 0, 0, 0.5));
@@ -322,11 +343,18 @@ svg.family-tree {
                 }
 
                 .title-backdrop {
-                    fill: white;
-                    stroke: none;
-                    // stroke: nth($colors, $gen);
-                    // stroke-width: 4px;
+                    fill: #262b59;
+                    // stroke: none;
+                    stroke: nth($colors, $gen);
+                    stroke-width: 2px;
                     // transform: scaleX(1.5);
+                    &__glow {
+                        fill: none;
+                        stroke: nth($colors, $gen);
+                        stroke-width: 2px;
+                        filter: blur(2px);
+                        opacity: 0%;
+                    }
                 }
                 .visible-title {
                     fill: nth($colors, $gen);
@@ -342,13 +370,16 @@ svg.family-tree {
             }
         }
         &:hover {
+            .glow {
+                opacity: 100%;
+            }
             .hover-info {
                 transform: translateX(110%) scaleX(1);
                 transition-delay: 100ms;
             }
         }
         .hover-info {
-            pointer-events: visible;
+            pointer-events: all;
             transform: translateX(0) scaleX(0);
             overflow: visible;
             transition: transform 170ms ease-out;
@@ -400,6 +431,11 @@ svg.family-tree {
     path {
         fill: none;
         stroke: #446dac;
+        stroke-dasharray: 1 7;
+        stroke-width: 2px;
+        // stroke-dasharray: 10, 10, 5, 10;
+        stroke-linejoin: round;
+        stroke-linecap: round;
         transition: stroke 200ms ease-in, opacity 200ms ease-out;
         &.highlight {
             // stroke:  hsl(234, 56%, 58%);

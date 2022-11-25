@@ -7,6 +7,9 @@ partners:
     - Nomalanga Ruto
 Clan: Ruto
 firstName: Genki
+parents:
+    - Grandpa
+    - Grandma
 ---
 
 Genki Vorontsov-Larson, 64.

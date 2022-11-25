@@ -846,6 +846,8 @@ function createLine(
     //newLine.setAttribute('id', 'line2');
     newLine.setAttribute("stroke", "white");
     newLine.setAttribute("vector-effect", "non-scaling-stroke");
+    // newLine.setAttribute("marker-start", "url(#dot)");
+    // newLine.setAttribute("marker-end", "url(#dot)");
     //Q x, y (first x and y are control point), second x y are next coordinate
     sourceY = parseFloat(sourceY);
     sourceX = parseFloat(sourceX);

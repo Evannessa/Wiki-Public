@@ -99,15 +99,15 @@ layout: default
             </filter>
             <linearGradient id="_Linear1" x1="0" y1="0" x2="1" y2="0" gradientUnits="objectBoundingBox" gradientTransform="rotate(45deg)">
                 <stop offset="0" style="stop-color:rgb(255,30,106);stop-opacity:1"/>
-                <stop offset="1" style="stop-color:rgb(255,204,43);stop-opacity:1"/>
+                <stop offset="1" style="stop-color:rgb(255, 124, 43);stop-opacity:1"/>
             </linearGradient>
             <linearGradient id="_Linear1-flipped" x1="0" y1="0" x2="1" y2="0" gradientUnits="objectBoundingBox" gradientTransform="rotate(-45deg)">
-                <stop offset="0" style="stop-color:rgb(255,30,106);stop-opacity:1"/>
-                <stop offset="1" style="stop-color:rgb(255,204,43);stop-opacity:1"/>
+                <stop offset="0" style="stop-color:rgb(30, 240, 255);stop-opacity:1"/>
+                <stop offset="1" style="stop-color:rgb(43, 255, 174);stop-opacity:1"/>
             </linearGradient>
             <linearGradient id="_Linear2" x1="0" y1="0" x2="1" y2="0" gradientUnits="objectBoundingBox" gradientTransform="rotate(45deg)">
-                <stop offset="0" style="stop-color:rgb(218,69,140);stop-opacity:1"/>
-                <stop offset="1" style="stop-color:rgb(87, 84, 253);stop-opacity:1"/>
+                <stop offset="0" style="stop-color:rgb(69, 111, 218);stop-opacity:1"/>
+                <stop offset="1" style="stop-color:rgb(199, 84, 253);stop-opacity:1"/>
             </linearGradient>
             <linearGradient id="_Linear3" x1="0" y1="0" x2="1" y2="0" gradientUnits="objectBoundingBox" gradientTransform="rotate(45deg)">
                 <stop offset="0" style="stop-color:rgb(80, 175, 253);stop-opacity:1"/>
@@ -115,7 +115,7 @@ layout: default
             </linearGradient>
             <linearGradient id="_Linear4" x1="0" y1="0" x2="1" y2="0" gradientUnits="objectBoundingBox" gradientTransform="rotate(45deg)">
                 <stop offset="0" style="stop-color:rgb(50,233,254);stop-opacity:1"/>
-                <stop offset="1" style="stop-color:rgb(197,21,247);stop-opacity:1"/>
+                <stop offset="1" style="stop-color:rgb(21, 134, 247);stop-opacity:1"/>
             </linearGradient>
             <linearGradient id="_Linear5" x1="0" y1="0" x2="1" y2="0" gradientUnits="objectBoundingBox" gradientTransform="rotate(45deg)">
                 <stop offset="0" style="stop-color:rgb(57,155,252);stop-opacity:1"/>
@@ -127,6 +127,15 @@ layout: default
                 <stop offset="100%" style="stop-color:rgb(0,209,255);stop-opacity:1.00" />
 
             </linearGradient>
+ <marker
+      id="dot"
+      viewBox="0 0 10 10"
+      refX="5"
+      refY="5"
+      markerWidth="5"
+      markerHeight="5">
+      <circle cx="5" cy="5" r="5" fill="cyan" />
+    </marker>
         </defs>
         <rect x="0" y="0" width="100%" height="100%" fill="url(#lgrad)"/>
         {% assign people = site.notes | "where_exp": "note", "note.tags contains page.clanName and note.tags contains 'Category/Individual'"%}

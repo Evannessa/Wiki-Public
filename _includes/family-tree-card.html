@@ -42,9 +42,10 @@
         </svg>
          {%- comment -%} <circle class="portrait-bg" cx="50" cy="75" r="65" /> {%- endcomment -%}
          {%- comment -%} <rect class="portrait-bg" x="-25" y="50" width="150" height="100" rx="15" /> {%- endcomment -%}
-         {%- comment -%} <circle class="portrait-outline" cx="50" cy="50" r="70" /> {%- endcomment -%}
+         <circle class="portrait-outline" cx="50" cy="50" r="82" />
          <circle class="portrait-outline__outer-fill" cx="50" cy="50" r="75" />
          <circle class="portrait-outline__inner" cx="50" cy="50" r="52" />
+         <circle class="portrait-outline__glow glow" cx="50" cy="50" r="82" />
 
         <image class="family-member" xlink:href="{{include.source}}" clip-path="url(#myClip)" preserveaspectratio="{{aspectRatio}}" /> {%- comment -%}The display name{%- endcomment -%}
 			{% if person.tags contains "Condition/Deceased" %}
@@ -63,7 +64,8 @@
             {% assign name = include.ourTitle | remove: {{ourClan}} %}
         {% endif %}
 
-        {%- comment -%} <rect class="title-backdrop" x="-25" y="90" width="150" height="40" rx="15"/> {%- endcomment -%}
+        <rect class="title-backdrop__glow glow" x="-30" y="105" width="160" height="40" rx="20"/>
+        <rect class="title-backdrop" x="-30" y="105" width="160" height="40" rx="20"/>
         <text class="visible-title" x="50" y="135">{{name}}</text>
 
     </svg>
