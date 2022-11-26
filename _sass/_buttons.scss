@@ -71,6 +71,16 @@ button,
         color: white;
         // background-image: var(--bg-img);
     }
+    &[data-variant="bg-color-hover"] {
+        background-color: var(--color-primary-base);
+        color: #212121;
+        display: inline-flex;
+        align-items: center;
+        padding: 0.5em 0.25em;
+        &:hover {
+            background-color: var(--color-secondary-base);
+        }
+    }
     .btn-img {
         min-width: unset;
         max-width: 100%;

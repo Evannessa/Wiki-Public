@@ -1,8 +1,13 @@
-.hidden-overflow-wide-main {
-    max-width: 95%;
-    max-height: 100vh;
-    overflow-y: hidden;
+main[data-layout="family-tree"] {
+    max-width: 100%;
+    width: 100%;
+    margin: unset;
 }
+// .hidden-overflow-wide-main {
+//     max-width: 95%;
+//     max-height: 100vh;
+//     overflow-y: hidden;
+// }
 
 .svg-container {
     position: relative;
@@ -207,13 +212,6 @@
             border: none;
             border-radius: 8px;
             cursor: pointer;
-            background-color: hsl(234, 56%, 58%);
-            color: #212121;
-            transition: color 100ms ease-out background-color 100ms ease-out;
-            &:hover {
-                background-color: hsl(234, 45%, 27%);
-                color: white;
-            }
         }
         .tree-nav {
             grid-column: 3/4;
@@ -272,10 +270,8 @@ svg.family-tree {
     }
 }
 svg.family-tree {
-    // background-image: url(/assets/patterns/bauhaus-bg.webp);
-    // background-size: cover;
-    // background-position: center;
-    // background-repeat: no-repeat;
+    padding-inline: 2rem;
+
     .family-member-group {
         overflow: visible;
         transition: opacity 200ms ease-out;

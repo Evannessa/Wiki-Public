@@ -76,6 +76,10 @@
         grid-auto-rows: minmax(0, 20px);
         gap: 5rem;
         justify-items: center;
+        background-color: hsla(261, 55%, 24%, 0.424);
+        backdrop-filter: blur(2px);
+        ul {
+        }
     }
     &__description {
         font-size: medium;

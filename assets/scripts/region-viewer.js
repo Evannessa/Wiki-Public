@@ -143,7 +143,7 @@ export const regionViewerModule = (function () {
                     handler: (event) => {
                         uiHandlers.hoverHandler.updateHoverData(event);
                         let locationEl = event.currentTarget;
-                        let shouldHide = event.type === "mouseleave";
+                        let shouldHide = event.type === "mouseleave" || event.type === "mouseout";
                         displayInfo(locationEl, shouldHide);
                     },
                 },
@@ -336,12 +336,12 @@ export const regionViewerModule = (function () {
         // const locationEl = _locationEl ? _locationEl : event.currentTarget;
         const dependentElement = document.querySelector(".location-hover-info .top-card"); //TODO: refactor this to be cached
 
+        let location = getLocationDataFromElement(locationEl);
         if (!shouldHide) {
-            let location = getLocationDataFromElement(locationEl);
             uiHandlers.hoveredLocationUI.updateUIData(location, false, false);
             dependentElement.classList.add("highlighted");
         } else {
-            // hoveredLocationUI.updateUIData(location, false, true);
+            uiHandlers.hoveredLocationUI.updateUIData(location, false, false);
             dependentElement.classList.remove("highlighted");
         }
     }
@@ -374,10 +374,12 @@ export const regionViewerModule = (function () {
             } else if (defaultVisiblity === "visible") {
                 el.classList.remove("hidden");
             }
+            if (defaultVisiblity === "highlighted") {
+                el.classList.add("highlighted");
+            } else if (defaultVisiblity === "faded") {
+                el.classList.remove("highlighted");
+            }
         });
-        //hex children should have "default-visible"
-        // ui elements should have "default-hidden"
-        //image elements should have "default-hidden"
     }
 
     function expandSidebar() {
@@ -504,8 +506,8 @@ export const regionViewerModule = (function () {
         if (!locationData) locationData = globalData;
         uiHandlers.selectedLocationUI.updateUIData(locationData, false, true);
 
-        const dependentElement = document.querySelector(".location-hover-info");
-        dependentElement.classList.add("hidden");
+        // const dependentElement = document.querySelector(".location-hover-info");
+        // dependentElement.classList.add("hidden");
 
         setDefaultVisibilityState();
         Object.values(directionElements)

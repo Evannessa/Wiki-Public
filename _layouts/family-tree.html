@@ -14,33 +14,35 @@ layout: default
         </button>
         <div class="controls">
             <section class="button-group">
-                <button id="reset-button" title="reset view">
+                <button id="reset-button" title="reset view" data-variant="bg-color-hover">
                     <span class="material-symbols-outlined">
                         restart_alt
                     </span>
                     Reset View
                 </button>
-                <button id="save-button" title="save view">
+                {%- comment -%}
+                    <button id="save-button" title="save view">
                     <span class="material-symbols-outlined">
-                        save
+                    save
                     </span>
                     Save Current View
-                </button>
+                    </button>
+                {%- endcomment -%}
             </section>
             <section class="button-group">
                 <p class="instructions">
                     Jump to Generation...
                 </p>
-                <button class="jump-gen" data-gen="0">
+                <button class="jump-gen" data-gen="0" data-variant="bg-color-hover">
                     Gen 1 - 2
                 </button>
-                <button class="jump-gen" data-gen="1">
+                <button class="jump-gen" data-gen="1"data-variant="bg-color-hover">
                     Gen 2 - 3
                 </button>
-                <button class="jump-gen" data-gen="2">
+                <button class="jump-gen" data-gen="2" data-variant="bg-color-hover">
                     Gen 3 - 4
                 </button>
-                <button class="jump-gen" data-gen="3">
+                <button class="jump-gen" data-gen="3" data-variant="bg-color-hover">
                     Gen 4 - 5
                 </button>
             </section>
@@ -127,15 +129,15 @@ layout: default
                 <stop offset="100%" style="stop-color:rgb(0,209,255);stop-opacity:1.00" />
 
             </linearGradient>
- <marker
+            <marker
       id="dot"
       viewBox="0 0 10 10"
       refX="5"
       refY="5"
       markerWidth="5"
       markerHeight="5">
-      <circle cx="5" cy="5" r="5" fill="cyan" />
-    </marker>
+                <circle cx="5" cy="5" r="5" fill="cyan" />
+            </marker>
         </defs>
         <rect x="0" y="0" width="100%" height="100%" fill="url(#lgrad)"/>
         {% assign people = site.notes | "where_exp": "note", "note.tags contains page.clanName and note.tags contains 'Category/Individual'"%}
