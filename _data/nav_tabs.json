@@ -17,7 +17,7 @@
     },
     {
         "text": "Locations",
-        "path": "locations-list",
+        "path": "starshead-map",
         "category": "search-locations"
     }
 ]
