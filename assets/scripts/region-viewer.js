@@ -413,6 +413,7 @@ export const regionViewerModule = (function () {
 
     function clearAndStorePreviousLocation(method, childData) {
         if (method === "fromConnection") {
+            removeTopElements();
             console.log("From connection");
             //if we're jumping to a connection, we need to handle its parents somehow
             //first clear the heirarchy, reseting things to root
@@ -425,15 +426,21 @@ export const regionViewerModule = (function () {
         previousLocationData.container = selectedLocationElements.container;
         previousLocationData.imageContainer = selectedLocationElements.imageContainer;
         previousLocationData.currentLocationData = selectedLocationElements.currentLocationData;
-        selectedLocationElements.container.remove();
-        selectedLocationElements.imageContainer.remove();
-        console.log("Previous location is", selectedLocationElements.currentLocationData.id);
+        removeTopElements();
+
+        // console.log("Previous location is", selectedLocationElements.currentLocationData.id);
+
         if (method === "fromParent" && previousLocationData.currentLocationData.guid === childData.parent) {
             //if it is specifically from the parent, store the parent so we can zoom out as needed
             const { container, imageContainer, currentLocationData } = previousLocationData;
             locationHeirarchyStack.push({ container, imageContainer, currentLocationData });
             console.log(locationHeirarchyStack.map((data) => data.currentLocationData.id));
         }
+    }
+
+    function removeTopElements() {
+        selectedLocationElements.container.remove();
+        selectedLocationElements.imageContainer.remove();
     }
 
     /**
@@ -447,11 +454,13 @@ export const regionViewerModule = (function () {
         } else {
             previousMap = restoreRoot ? locationHeirarchyStack.shift() : locationHeirarchyStack.pop();
         }
+        removeTopElements();
         const atRoot = restoreRoot || locationHeirarchyStack.length == 0; //we've popped the final item in the stack, or we were reseting to root anyway
         const { container, imageContainer, currentLocationData } = previousMap;
+        let parentContainer = document.querySelector(".location-map .location-map");
 
-        document.querySelector(".location-map .location-map").appendChild(container);
-        document.querySelector(".location-map .location-map").appendChild(imageContainer);
+        parentContainer.appendChild(container);
+        parentContainer.appendChild(imageContainer);
         if (atRoot) {
             //if going back to root, remove everything in the stack, and recache our location elements
             clearHeirarchy();
