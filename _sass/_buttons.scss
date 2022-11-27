@@ -13,10 +13,28 @@ button,
     position: relative;
     // overflow: hidden;
     &[data-click-action="navigate"]:not(.connection-hex) {
+        &:after {
+            position: absolute;
+            content: "";
+            width: 100%;
+            height: 100%;
+            opacity: 0%;
+            top: 0;
+            left: 0;
+            border-radius: 15px;
+            box-shadow: inset 0px 0px 15px hsla(250, 70%, 06%, 0.65);
+            transition: opacity 200ms ease-in-out;
+            z-index: 20;
+        }
+        &:hover {
+            &:after {
+                opacity: 100%;
+            }
+        }
         padding: unset;
         border-radius: 18px;
-        // max-height: 70px;
-        max-width: 90%;
+        max-height: 80px;
+        // max-width: 90%;
         aspect-ratio: 3.5/1;
         .btn-text {
             mask-image: url(/assets/locations/maps/grunge-strokes-3.webp);
@@ -68,7 +86,8 @@ button,
     }
     &[data-variant="bg-img"] {
         backdrop-filter: unset;
-        color: white;
+        color: #ee9aff;
+        border-radius: 5px;
         // background-image: var(--bg-img);
     }
     &[data-variant="bg-color-hover"] {

@@ -26,14 +26,15 @@
         position: absolute;
         left: 100%;
         display: flex;
-        flex-direction: row;
+        // flex-direction: row;
         width: fit-content;
         max-width: fit-content;
         height: 100%;
         // height: fit-content;
         flex-wrap: nowrap;
+
         text-orientation: sideways-right;
-        writing-mode: vertical-lr;
+        writing-mode: vertical-lr !important;
         max-height: 60vh;
         bottom: 0;
         .tab {
@@ -41,12 +42,25 @@
             align-items: flex-start;
             justify-content: space-evenly;
             font-size: small;
-            // flex: 1; //so they grow to fill the space
+            max-width: 2em;
+            flex-direction: column;
+            align-items: center;
+            @supports (writing-mode: sideways-rl) {
+                flex-direction: row;
+                writing-mode: sideways-rl;
+            }
+            .tab-text {
+                // width: 100%;
+                // transform: rotate(90deg);
+                // display: flex;
+                // justify-content: space-evenly;
+            }
             span {
                 font-size: 1em;
+                writing-mode: vertical-lr;
+                text-orientation: sideways-right;
             }
-            // transform: rotate(-180deg);
-            //given rotation, border properties are all reversed
+
             opacity: 70%;
             padding: 1vw 1vh;
             border: unset;

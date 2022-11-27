@@ -152,8 +152,9 @@ export const regionViewerModule = (function () {
                         const actionElement = event.currentTarget;
                         const targetId = actionElement.dataset.guidLink;
                         const hex = document.querySelector(`[data-guid='${targetId}']`);
-                        Helpers.toggleClassOnAction(actionElement, hex, { action: "highlight" });
-                        displayInfo(hex, false);
+                        // Helpers.toggleClassOnAction(actionElement, hex, { action: "highlight" });
+                        let shouldHide = event.type === "mouseleave" || event.type === "mouseout";
+                        displayInfo(hex, shouldHide);
                     },
                 },
             },
@@ -439,8 +440,8 @@ export const regionViewerModule = (function () {
     }
 
     function removeTopElements() {
-        selectedLocationElements.container.remove();
-        selectedLocationElements.imageContainer.remove();
+        selectedLocationElements.container?.remove();
+        selectedLocationElements.imageContainer?.remove();
     }
 
     /**

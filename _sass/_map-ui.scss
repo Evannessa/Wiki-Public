@@ -67,19 +67,27 @@
             font-size: small;
         }
     }
-    &__children,
-    &__connections {
+    ul {
         display: grid;
-        // flex-wrap: wrap;
-        // grid-auto-rows: 50px;
-        // gap: 0.4em;
-        grid-auto-rows: minmax(0, 20px);
-        gap: 5rem;
+        grid-auto-rows: minmax(0, 80px);
+        gap: 2rem;
         justify-items: center;
         background-color: hsla(261, 55%, 24%, 0.424);
         backdrop-filter: blur(2px);
-        ul {
-        }
+        width: 100%;
+        padding: 0.5em 2rem;
+        border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 8px;
+    }
+    &__children,
+    &__connections {
+        display: grid;
+        grid-auto-rows: minmax(0, 80px);
+        gap: 2rem;
+        justify-items: center;
+        background-color: hsla(261, 55%, 24%, 0.424);
+        backdrop-filter: blur(2px);
+        width: 100%;
     }
     &__description {
         font-size: medium;
@@ -113,6 +121,10 @@
             object-position: top;
         }
     }
+    position: fixed;
+    right: 100%;
+    transform: translateX(0%);
+    max-width: 90vw;
     &.can-be-expanded {
         width: 0;
         .flatten {
@@ -120,14 +132,24 @@
         }
     }
     &.expanded {
+        transform: translateX(100%);
+        width: 100vw;
         transition: width 150ms ease-out;
-        width: 40vw;
         .flatten {
             width: 100%;
         }
-        // padding-left: 1em;
-        @media (min-width: 992px) {
-            // padding: 1.5em 2em;
+    }
+
+    @media (min-width: 768px) {
+        max-width: 50vw;
+        position: static;
+        right: unset;
+        &.expanded,
+        &.can-be-expanded {
+            transform: unset;
+        }
+        &.expanded {
+            width: 40vw;
         }
     }
 
@@ -137,16 +159,12 @@
         margin-bottom: unset;
     }
 }
+
 .child-location {
     display: flex;
     .card-title {
         color: var(--title-color);
-        // mask-image: url(/assets/locations/maps/grunge-strokes-3.webp);
-        // background-color: rgba(14, 9, 32, 0.435);
-        // mask-size: 100% 100%;
         mix-blend-mode: color-dodge;
-        // color: white;
-        // mix-blend-mode: overlay;
         text-shadow: 2px 2px 3px #454c6f;
         padding: 0.5em 0em;
         width: 100%;
@@ -162,7 +180,6 @@
             text-overflow: clip;
         }
     }
-    // grid-template-rows: 60%;
 }
 .location-info,
 .child-location-info {
@@ -233,23 +250,42 @@
                     height: 100%;
                     object-fit: cover;
                     object-position: center;
-                    // border-radius: 50%;
-                    // mask
-                    // mask-image: url(/assets/locations/GrungeMaskH.png);
+                    -webkit-mask-image: url(/assets/locations/maps/portrait-mask.webp);
                     mask-image: url(/assets/locations/maps/portrait-mask.webp);
                     mask-mode: alpha;
+                    -webkit-mask-position: center;
                     mask-position: center;
-                    // mask-size: cover;
-                    // object-fit: contain;
+                    -webkit-mask-size: contain;
                     mask-size: contain;
                     max-height: 100%;
+                    -webkit-mask-repeat: no-repeat;
                     mask-repeat: no-repeat;
                 }
             }
         }
     }
 }
+.card-styles {
+    --border-color: #6065b17a;
+    --shadow-color-dark: hsla(261, 63%, 16%, 0.578);
+    --shadow-color-light: rgba(50, 50, 93, 0.25);
+    height: 60%;
+    backdrop-filter: blur(5px);
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+    right: 1rem;
+    text-align: right;
+    padding: 0.5em 1em;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-color-light) 0px 6px 12px -2px, var(--shadow-color-dark) 0px 3px 7px -3px;
+    aspect-ratio: 2.35/3.5;
+    max-height: 45vh;
+}
 .top-card {
+    @extend .card-styles;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -257,6 +293,8 @@
     .map-info-card {
         display: grid;
         grid-template-rows: minmax(0, 20%) minmax(0, 80%);
+        opacity: 0%;
+        transition: opacity 150ms ease-out;
         .card-content {
             justify-content: flex-start;
             overflow: visible;
@@ -264,8 +302,11 @@
             p {
                 background-color: rgba(20, 19, 61, 0.417);
                 padding: 0.5em 1em;
+                -webkit-mask-image: url(/assets/locations/GrungeMaskV2.png);
                 mask-image: url(/assets/locations/GrungeMaskV2.png);
+                -webkit-mask-position: center;
                 mask-position: center;
+                -webkit-mask-size: 102% 102%;
                 mask-size: 102% 102%;
                 overflow: hidden;
                 max-height: 100%;
@@ -291,31 +332,42 @@
             }
         }
     }
-}
-.card-styles {
-    --border-color: #6065b17a;
-    height: 60%;
-    backdrop-filter: blur(5px);
-    position: absolute;
-    top: 50%;
-    z-index: 10;
-    right: 1rem;
-    text-align: right;
-    max-width: 215px;
-    padding: 0.5em 1em;
-    border-radius: 12px;
-    overflow: hidden;
-    transform: translateY(-50%) rotateZ(-10deg);
-    border: 1px solid var(--border-color);
-    box-shadow: 3px 3px 5px hsla(261, 63%, 16%, 0.578);
-}
-.decor.bottom-card {
-    @extend .card-styles;
-    z-index: 1;
-    top: 60%;
-    transform: translateY(-50%) rotateZ(-30deg);
-    padding: 2em 2em;
-    border: 1px solid #6065b17a;
+    &:before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: "";
+        width: 100%;
+        height: 100%;
+        opacity: 100%;
+        background-image: var(--ui-gradient);
+        background-repeat: no-repeat;
+        pointer-events: none;
+        z-index: 2;
+        background-size: 100%;
+        -webkit-mask-image: var(--blank-img);
+        mask-image: var(--blank-img);
+        -webkit-mask-size: 100%;
+        mask-size: 100%;
+        -webkit-mask-repeat: no-repeat;
+        mask-repeat: no-repeat;
+        -webkit-mask-position: center;
+        mask-position: center;
+        transition: opacity 200ms ease-out;
+    }
+
+    &.highlighted {
+        &:after {
+            opacity: 70%;
+        }
+        .map-info-card {
+            opacity: 100%;
+            transition: opacity 250ms ease-in;
+        }
+        &:before {
+            opacity: 0%;
+        }
+    }
     &:after {
         transition: opacity 200ms ease-out;
         content: " ";
@@ -326,94 +378,21 @@
         height: 100%;
         background-image: var(--bg-img);
         background-size: cover;
+        background-repeat: no-repeat;
         /*! margin: 2em; */
         opacity: 0%;
+        -webkit-mask-image: url("/assets/locations/GrungeMaskV2.png");
         mask-image: url("/assets/locations/GrungeMaskV2.png");
         // mask-size: cover;
+        -webkit-mask-size: 100% 100%;
         mask-size: 100% 100%;
         // // mask-position: right;
+        -webkit-mask-position: center;
         mask-position: center;
-        mask-repeat: none;
+        -webkit-mask-repeat: no-repeat;
+        mask-repeat: no-repeat;
         mask-mode: alpha;
         z-index: -1;
-    }
-    img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        border-radius: inherit;
-        outline: 4px double var(--border-color);
-    }
-}
-.bottom-card__title {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-}
-.location-hover-info {
-    .top-card {
-        @extend .card-styles;
-        &:before {
-            position: absolute;
-            top: 0;
-            left: 0;
-            content: "";
-            width: 100%;
-            height: 100%;
-            opacity: 100%;
-            --gradient-1: rgb(15, 0, 180);
-            --gradient-2: rgb(143, 0, 171);
-            // background-image: var(--blank-img), -webkit-linear-gradient(45deg, var(--gradient-1), var(--gradient-2));
-            // background-image: linear-gradient(45deg, var(--gradient-1), var(--gradient-2));
-            background-image: var(--ui-gradient);
-            background-repeat: no-repeat;
-            // background-blend-mode: color-dodge;
-            pointer-events: none;
-            z-index: 2;
-            background-size: 100%;
-            mask-image: var(--blank-img);
-            mask-size: 100%;
-            mask-position: center;
-            transition: opacity 200ms ease-out;
-        }
-        .map-info-card {
-            opacity: 0%;
-            transition: opacity 150ms ease-out;
-        }
-        &.highlighted {
-            &:after {
-                opacity: 70%;
-            }
-            .map-info-card {
-                opacity: 100%;
-                transition: opacity 250ms ease-in;
-            }
-            &:before {
-                opacity: 0%;
-            }
-        }
-        &:after {
-            transition: opacity 200ms ease-out;
-            content: " ";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: var(--bg-img);
-            background-size: cover;
-            /*! margin: 2em; */
-            opacity: 0%;
-            mask-image: url("/assets/locations/GrungeMaskV2.png");
-            // mask-size: cover;
-            mask-size: 100% 100%;
-            // // mask-position: right;
-            mask-position: center;
-            mask-repeat: none;
-            mask-mode: alpha;
-            z-index: -1;
-        }
     }
 
     h1,
@@ -434,30 +413,78 @@
         font-size: 1rem;
         text-align: left;
     }
-    .child-location__connections,
-    .child-location__children {
-        display: grid;
-        grid-auto-rows: 50px;
-        // display: flex;
-        // flex-direction: column;
-        gap: 0.5rem;
-        button {
-            flex: 1 1 0;
-        }
-    }
-    button[data-click-action="navigate"] {
-        flex: 1;
-        white-space: nowrap;
-        width: 100%;
-        max-height: 70px;
+}
 
-        img.btn-img {
-            width: 100%;
-            // max-height: 70px;
-            height: 100%;
+.bottom-card {
+    @extend .card-styles;
+    z-index: 1;
+    padding: 1em 1em;
+    border: 1px solid #6065b17a;
+    &:after {
+        transition: opacity 200ms ease-out;
+        content: " ";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: var(--bg-img);
+        background-size: cover;
+        opacity: 0%;
+        -webkit-mask-image: url("/assets/locations/GrungeMaskV2.png");
+        mask-image: url("/assets/locations/GrungeMaskV2.png");
+        -webkit-mask-size: 100% 100%;
+        mask-size: 100% 100%;
+        -webkit-mask-position: center;
+        mask-position: center;
+        -webkit-mask-repeat: none;
+        mask-repeat: none;
+        mask-mode: alpha;
+        z-index: -1;
+    }
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: inherit;
+        // outline: 4px double var(--border-color);
+    }
+}
+.top-card {
+    top: 80%;
+    transform: rotateZ(10deg);
+    left: 50%;
+}
+.bottom-card {
+    top: 80%;
+    left: 20%;
+    transform: rotateZ(-10deg);
+    &__title {
+        position: absolute;
+        bottom: 0;
+        top: 0;
+        color: black;
+    }
+}
+@media (min-width: 768px) {
+    .top-card {
+        top: 50%;
+        left: unset;
+        transform: translateY(-50%) rotateZ(-10deg);
+    }
+    .bottom-card {
+        top: 60%;
+        left: unset;
+        transform: translateY(-50%) rotateZ(-30deg);
+        &__title {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
         }
     }
 }
+
 .location__controls {
     position: absolute;
     bottom: 1rem;

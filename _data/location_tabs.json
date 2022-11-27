@@ -5,7 +5,7 @@
             "icon": "auto_stories",
             "id": "Lore",
             "bgImg": "lore.webp",
-            "classes": "active flex-1",
+            "classes": "flex-1",
             "subSections": [
                 {
                     "type": "paragraph",
@@ -18,6 +18,7 @@
             "icon": "villa",
             "id": "Geography",
             "bgImg": "inner-locations-1.webp",
+            "classes": "active flex-2",
             "subSections": [
                 {
                     "type": "collapsible",
@@ -28,8 +29,7 @@
                 {
                     "type": "collapsible",
                     "id": "Connections",
-                    "bgImg": "connections.webp",
-                    "classes": "flex-2"
+                    "bgImg": "connections.webp"
                 }
             ]
         },

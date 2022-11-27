@@ -52,6 +52,7 @@ function navHighlighter() {
         }
     });
 }
+document.addEventListener("load", function (event) {});
 
 document.addEventListener("DOMContentLoaded", function (event) {
     if (document.querySelector("main").dataset.layout !== "locations_map") {
