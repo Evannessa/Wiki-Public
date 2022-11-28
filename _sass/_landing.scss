@@ -11,7 +11,25 @@ main[data-layout="landing-page"] {
     background-image: url(/assets/locations/sunrise-mountain.jpg);
     background-size: cover;
     background-position: center;
+    position: relative;
+    &:after {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        transform: translate(0);
+        background: radial-gradient(circle at 50%, transparent, var(--color-primary-darkest));
+        z-index: 10;
+    }
     &__title {
-        font-size: xx-large;
+        font-size: 5rem;
+        color: unset;
+        text-shadow: unset;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
     }
 }

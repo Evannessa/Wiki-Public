@@ -24,6 +24,9 @@
         .card__content {
             a {
                 font-size: clamp(0.25rem, 0.5rem, 1rem);
+                @media (min-width: 768px) {
+                    font-size: clamp(0.5rem, 1rem, 1.5rem);
+                }
             }
         }
     }

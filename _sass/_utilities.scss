@@ -576,6 +576,20 @@ button.icon-button {
     justify-content: center;
     align-items: center;
 }
+$justify: (center, stretch, space-between, space-evenly, flex-start, flex-end);
+$align: (center, flex-start, flex-end, stretch, flex-end);
+
+@each $var in $justify {
+    .flex-justify-#{$var} {
+        justify-content: #{$var};
+    }
+}
+@each $var in $align {
+    .flex-align-#{$var} {
+        align-items: #{$var};
+    }
+}
+
 .flex-justify {
     &-stretch {
         justify-content: stretch;
@@ -792,14 +806,23 @@ button.icon-button {
     }
 }
 
-.window-padding {
-    padding: clamp(0.5rem, 0.5rem + 1vw, 1rem) clamp(0.5rem, 0.5rem + 1vh, 1rem);
-}
+// .window-padding {
+//     padding: clamp(0.5rem, 0.5rem + 1vw, 1rem) clamp(0.5rem, 0.5rem + 1vh, 1rem);
+// }
 
 .window-gap {
     display: flex;
     flex-direction: column;
     gap: 1rem;
+}
+.input-wrapper {
+    display: flex;
+    gap: 0.5rem;
+    padding: 0.25rem;
+    &[data-variant="search"] {
+        background-color: var(--color-primary-darkest);
+        border-radius: 999px;
+    }
 }
 
 .input-and-label-wrapper {

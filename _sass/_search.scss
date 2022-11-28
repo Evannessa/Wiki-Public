@@ -193,21 +193,19 @@ details summary > * {
     display: flex;
     flex-direction: column;
     padding-top: 1rem;
-
     .outer-label {
-        margin-right: 1rem;
-        text-transform: uppercase;
+        color: var(--color-accent-base);
     }
 }
 
 #search-box {
-    color: white;
-    background-color: #2b2452;
+    color: var(--color-primary-200);
+    background-color: var(--color-primary-700);
     border-radius: 8px;
     border: none;
     padding: 0.25rem;
     padding-left: 0.75rem;
-    margin-bottom: 1rem;
+    flex: 2;
 }
 
 .is-hidden {

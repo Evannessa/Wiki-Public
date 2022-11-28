@@ -1,13 +1,14 @@
 <div id="search">
-    <div class="input-wrapper" style="display: flex;">
-        <label class="outer-label" for="search-box">
-            Search
+    <div class="input-wrapper flex-align-center" data-variant="search">
+        <label class="outer-label flex-row flex-align-center" for="search-box">
+            {% include font-icon.html icon="search" %}
         </label>
         <input
             id="search-box"
             name="search-box"
             oninput="filterSearch(event)"
             type="text"
+            placeholder="Who are you looking for?"
                 >
     </div>
     <section class="filter-section--wrapper">
