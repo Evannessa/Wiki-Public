@@ -2,7 +2,7 @@
 layout: default
 ---
 
-{% assign trees = site.pages | "where_exp", "page": "page.tags contains 'Category/Family-Tree'" %}
+{% assign trees = site.pages | where_exp: "page", "page.tags contains 'Category/Family-Tree'" %}
 
 <div class="svg-container">
     <div class="button-wrapper single">
@@ -140,7 +140,7 @@ layout: default
             </marker>
         </defs>
         <rect x="0" y="0" width="100%" height="100%" fill="url(#lgrad)"/>
-        {% assign people = site.notes | "where_exp": "note", "note.tags contains page.clanName and note.tags contains 'Category/Individual'"%}
+        {% assign people = site.notes | where_exp: "note", "note.tags contains page.clanName and note.tags contains 'Category/Individual'"%}
         {% for person in people %}
             {%assign clan = person.Clan %}
             {% assign parents = person.parents | jsonify  %}
