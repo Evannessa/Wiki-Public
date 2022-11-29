@@ -20,8 +20,10 @@
     }
 
     .location-info__header {
-        background-color: rgba(14, 9, 32, 0.435);
-        border-right: 1px solid rgba(255, 192, 203, 0.258);
+        @extend .dark-background;
+        // background-color: rgba(14, 9, 32, 0.435);
+        --border-color: #6065b17a;
+        border-right: 1px solid var(--border-color);
         display: grid;
         grid-template-rows: 40% 60%;
         padding: unset;
@@ -163,9 +165,9 @@
 .child-location {
     display: flex;
     .card-title {
-        color: var(--title-color);
-        mix-blend-mode: color-dodge;
-        text-shadow: 2px 2px 3px #454c6f;
+        color: var(--color-primary-200);
+        // mix-blend-mode: color-dodge;
+        // text-shadow: 2px 2px 3px #454c6f;
         padding: 0.5em 0em;
         width: 100%;
         display: inline-flex;
@@ -451,21 +453,44 @@
     }
 }
 .top-card {
-    top: 80%;
-    transform: rotateZ(10deg);
+    top: 0%;
+    transform: rotateZ(-30deg);
     left: 50%;
 }
 .bottom-card {
     top: 80%;
     left: 20%;
-    transform: rotateZ(-10deg);
+    transform: rotateZ(30deg);
     &__title {
         position: absolute;
         bottom: 0;
-        top: 0;
-        color: black;
+        // color: black;
+        color: var(--color-primary-200);
+        // background-color: #1a0230b3;
+        width: 100%;
+        height: min-content;
+        font-size: 1em;
+        text-align: center;
     }
 }
+@media (min-width: 450px) {
+    .top-card {
+        top: -10%;
+    }
+}
+@media (min-width: 576px) {
+    .top-card {
+        top: 80%;
+        transform: rotateZ(10deg);
+        left: 50%;
+    }
+    .bottom-card {
+        top: 80%;
+        left: 20%;
+        transform: rotateZ(-10deg);
+    }
+}
+
 @media (min-width: 768px) {
     .top-card {
         top: 50%;
@@ -478,6 +503,7 @@
         transform: translateY(-50%) rotateZ(-30deg);
         &__title {
             position: absolute;
+            top: unset;
             bottom: 0;
             left: 50%;
             transform: translateX(-50%);

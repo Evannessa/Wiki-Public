@@ -202,7 +202,7 @@ export const LocationUIFactory = function (
                     style="--title-color: ${child.imageData.titleColor}; --bg-img: url(${child.imageData.mainImage});"
                     >
                     ${returnImage(child)}
-                            <span class="btn-text">${child.id}</span>
+                            <span class="btn-text dark-background">${child.id}</span>
                 </button>`;
             })
             .map((child) => Helpers.htmlToElement(child));

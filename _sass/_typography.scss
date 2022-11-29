@@ -5,6 +5,19 @@
     src: url("/assets/fonts/Aquawax Black Trial.ttf");
     // src: url("/assets/fonts/LEMONMILK-Bold.otf");
 }
+.dark-background {
+    color: var(--color-primary-200);
+    background-color: hsla(250, 36%, 20%, 0.45);
+    padding: 0.5em 1em;
+    background: linear-gradient(
+        to left,
+        transparent,
+        hsla(250, 40%, 12%, 0.6) 25%,
+        hsla(250, 40%, 11%, 0.6) 50%,
+        transparent
+    );
+}
+
 .text-shadow h1,
 h2,
 h3,

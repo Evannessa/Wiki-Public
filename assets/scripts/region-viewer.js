@@ -31,7 +31,7 @@ export const regionViewerModule = (function () {
     const state = {};
     let normalizedLocations;
     let locationIDs;
-    let locationData;
+    let allLocations;
     let globalData;
     const directionElements = {
         up: {
@@ -118,6 +118,7 @@ export const regionViewerModule = (function () {
                         const current = event.currentTarget;
                         const targetId = current.dataset.guidLink;
                         const locationEl = document.querySelector(`[data-guid='${targetId}']`);
+                        let locationData;
                         if (!locationEl) {
                             locationData = getLocationsByProperty("guid", targetId)[0];
                         }
@@ -144,7 +145,7 @@ export const regionViewerModule = (function () {
                         uiHandlers.hoverHandler.updateHoverData(event);
                         let locationEl = event.currentTarget;
                         let shouldHide = event.type === "mouseleave" || event.type === "mouseout";
-                        displayInfo(locationEl, shouldHide);
+                        displayInfo(locationEl, {}, shouldHide);
                     },
                 },
                 highlightHex: {
@@ -152,9 +153,11 @@ export const regionViewerModule = (function () {
                         const actionElement = event.currentTarget;
                         const targetId = actionElement.dataset.guidLink;
                         const hex = document.querySelector(`[data-guid='${targetId}']`);
+                        const locationData = getLocationsByProperty("guid", targetId)[0];
+                        console.log(locationData);
                         // Helpers.toggleClassOnAction(actionElement, hex, { action: "highlight" });
                         let shouldHide = event.type === "mouseleave" || event.type === "mouseout";
-                        displayInfo(hex, shouldHide);
+                        displayInfo(hex, locationData, shouldHide);
                     },
                 },
             },
@@ -205,16 +208,16 @@ export const regionViewerModule = (function () {
             processData(data);
         });
     function addChildren() {
-        locationData = locationData.map((loc) => {
+        allLocations = allLocations.map((loc) => {
             // let connections = [];
             let connectedElement;
             for (let connection of loc.connections) {
-                connectedElement = locationData.find((conLoc) => conLoc.guid === connection.destinationId);
+                connectedElement = allLocations.find((conLoc) => conLoc.guid === connection.destinationId);
                 connection.element = connectedElement;
                 // debugger;
             }
-            const children = locationData.filter((childLoc) => childLoc.parent === loc.guid);
-            const parentName = locationData.find((parentLoc) => parentLoc.guid === loc.parent)?.id || "";
+            const children = allLocations.filter((childLoc) => childLoc.parent === loc.guid);
+            const parentName = allLocations.find((parentLoc) => parentLoc.guid === loc.parent)?.id || "";
 
             return {
                 ...loc,
@@ -226,9 +229,9 @@ export const regionViewerModule = (function () {
     }
 
     function processData(data) {
-        locationData = data.sheets[0].lines;
+        allLocations = data.sheets[0].lines;
         const baseAssetPath = data.sheets.find((sheet) => sheet.name === "ourMetadata").lines[0].baseAssetPath;
-        locationData = locationData.map((loc) => {
+        allLocations = allLocations.map((loc) => {
             let oldImage = loc.imageData.mainImage;
             const newImage = oldImage
                 ? baseAssetPath + "/" + oldImage.split("\\").pop()
@@ -238,17 +241,17 @@ export const regionViewerModule = (function () {
 
         addChildren();
 
-        normalizedLocations = locationData.reduce((data, item) => {
+        normalizedLocations = allLocations.reduce((data, item) => {
             data[item.id] = item;
             return data;
         }, {});
-        locationIDs = locationData.map((location) => location.id);
+        locationIDs = allLocations.map((location) => location.id);
         state.locations = { byId: normalizedLocations, allIds: locationIDs };
 
         globalData = getLocationsByProperty("type", "global")[0];
         globalData.baseAssetPath = data.sheets.find((sheet) => sheet.name === "ourMetadata").lines[0].baseAssetPath;
 
-        createUIElements(locationData);
+        createUIElements(allLocations);
         uiHandlers.tabsHandler = new TabsHandler({
             lore: {
                 hotkey: 76, // l key
@@ -333,11 +336,11 @@ export const regionViewerModule = (function () {
         return getAllLocations().filter((location) => location[propertyName] === propertyValue);
     }
 
-    function displayInfo(locationEl, shouldHide = false) {
-        // const locationEl = _locationEl ? _locationEl : event.currentTarget;
+    function displayInfo(locationEl, locationData, shouldHide = false) {
+        // let location = locationEl ? locationEl : event.currentTarget;
         const dependentElement = document.querySelector(".location-hover-info .top-card"); //TODO: refactor this to be cached
 
-        let location = getLocationDataFromElement(locationEl);
+        let location = locationEl ? getLocationDataFromElement(locationEl) : locationData;
         if (!shouldHide) {
             uiHandlers.hoveredLocationUI.updateUIData(location, false, false);
             dependentElement.classList.add("highlighted");
@@ -351,6 +354,9 @@ export const regionViewerModule = (function () {
         uiHandlers.tabsHandler.switchTab(key);
 
         //Also if it's closed, expand the toggle
+        if (!uiHandlers.selectedLocationUI.getContainer().classList.contains("expanded")) {
+            expandSidebar();
+        }
     }
 
     function getExtraImagesFromString(baseFilePath, stringNames) {
@@ -494,6 +500,7 @@ export const regionViewerModule = (function () {
      * @param {String} method - the method we're using, to determine if we need to build a new map, or restore a previous one
      */
     function selectLocation(locationEl, locationData, method, childContainer) {
+        console.log(locationData);
         if (!locationData) locationData = getLocationDataFromElement(locationEl);
         if (method !== "rebuild") {
             clearAndStorePreviousLocation(method, locationData);
@@ -689,6 +696,8 @@ export const regionViewerModule = (function () {
         let outerMap = document.querySelector(".location-map .location-map");
         if (gradient) {
             outerMap.style.setProperty("--ui-gradient", gradient);
+            let style = window.getComputedStyle(outerMap);
+            console.log(style.getPropertyValue("--ui-gradient"), gradient);
         }
         if (titleColor) {
             outerMap.style.setProperty("--title-color", titleColor);
@@ -790,7 +799,7 @@ export const regionViewerModule = (function () {
     }
 
     return {
-        locationData,
+        locationData: allLocations,
         getLocationsByProperty,
     };
 })();

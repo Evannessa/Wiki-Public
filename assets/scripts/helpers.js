@@ -200,11 +200,12 @@ export default class Helpers {
                     data-link='${child.id}'
                     data-guid-link='${child.guid}'
                     data-click-action="navigate"
+                    data-hover-action="highlightHex"
                     data-direction='${child.direction ? child.direction : ""}'
 
                     >
                     ${returnImage(child)}
-                            <span class="btn-text">${child.id}</span>
+                            <span class="btn-text dark-background" data-variant='on-hover'>${child.id}</span>
                 </button>`;
         });
         if (!returnHtml) {

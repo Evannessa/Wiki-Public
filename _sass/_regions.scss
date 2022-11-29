@@ -286,11 +286,11 @@ foreignObject {
             @each $position, $value in $direction {
                 #{$position}: $value;
                 img {
-                    @if ($position == "up" or $position == "$down") {
-                        width: 100%;
-                    } @else {
-                        height: 100%;
-                    }
+                    // @if ($position == "up" or $position == "$down") {
+                    //     width: 100%;
+                    // } @else {
+                    //     height: 100%;
+                    // }
                     // max-width: 100%;
                     // max-height: 100%;
                     // width: 100%;
@@ -300,16 +300,33 @@ foreignObject {
     }
 }
 .connection-hex {
-    width: 4rem;
-    height: 4rem;
-    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    width: 6rem;
+    height: 6rem;
+    padding: unset;
+    transform: rotateZ(-45deg);
+    transform-origin: center;
+    overflow: hidden;
+    // clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
     .btn-text {
+        transform-origin: top left;
+        transform: rotateZ(45deg) translate(-50%, -50%);
+        display: inline-flex;
+        justify-content: center;
         backdrop-filter: unset;
         pointer-events: none;
+        font-size: 1rem;
     }
-    img {
+    img.btn-img {
+        transform-origin: center;
+        transform: rotateZ(45deg) translateX(-50%);
         opacity: 20%;
         transition: opacity 150ms ease-in-out;
+        width: 200%;
+        height: 200%;
+        object-fit: cover;
+        max-width: 200%;
+        max-height: 200%;
+        object-position: center;
     }
     &:hover {
         img {
