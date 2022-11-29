@@ -146,3 +146,16 @@ button,
     box-shadow: 0px 2px 8px var(--color-accent-600);
     white-space: nowrap;
 }
+.circle-button {
+    padding: 1rem;
+    background-color: var(--color-accent-400);
+    border: unset;
+    border-radius: 50%;
+    display: grid;
+    place-content: center;
+    width: 2rem;
+    height: 2rem;
+    &.inner {
+        align-self: flex-end;
+    }
+}

@@ -39,6 +39,8 @@ html {
     --shadow-color-dark: hsla(261, 63%, 16%, 0.578);
     --shadow-color-light: rgba(50, 50, 93, 0.25);
     --glass-border: 1px solid var(--border-color);
+    --bg-color: hsl(236, 30%, 11%);
+    --bg-color-glass: hsl(236, 30%, 11%, 0.5);
     @each $color, $shades in $colors {
         @each $shade, $value in $shades {
             --color-#{$color}-#{$shade}: #{$value};

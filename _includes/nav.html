@@ -1,24 +1,44 @@
-<ul class="nav-section {{ include.navType }}">
-    {% if include.navType == "mobile" %}
-        <button class="main-nav-toggle inner">
-            <span class="material-symbols-outlined">
-                close
-            </span>
-        </button>
-    {% else %}
-        <button class="main-nav-toggle outer padding-small">
-            <span class="material-symbols-outlined">
-                menu
-            </span>
-        </button>
-    {% endif %}
-    {%- for item in site.data.nav_tabs -%}
-        {% include menu-item.html
+{% if include.navType == "mobile" %}
+    {% assign flexClass = "flex-column flex-align-start flex-justify-space-evenly" %}
+{% else %}
+    {% assign flexClass = "flex-row flex-justify-space-evenly" %}
+{% endif %}
+{%- capture navClasses -%}
+    nav-section {{flexClass}} {{include.navType}}
+{%- endcapture -%}
+
+{% capture toggleOuterButton %}
+    <button class="main-nav-toggle outer padding-small">
+        {% include font-icon.html icon="menu" %}
+    </button>
+{% endcapture %}
+
+{% capture toggleInnerButton %}
+    <button class="main-nav-toggle inner">
+        {% include font-icon.html icon="close" %}
+    </button>
+{% endcapture %}
+{% capture nav_content %}
+    <ul class="{{navClasses}}">
+        {% if include.navType == "desktop" %}
+            {{toggleOuterButton}}
+        {% else %}
+            {{toggleInnerButton}}
+        {% endif %}
+        {%- for item in site.data.nav_tabs -%}
+            {% include menu-item.html
          icon=item.icon
          text=item.text
          path=item.path
          tagName=item.tagName
          category=item.category
          hasDropdown=item.hasDropdown %}
-    {%- endfor -%}
-</ul>
+        {%- endfor -%}
+    </ul>
+{% endcapture %}
+
+{% if include.navType == "mobile" %}
+    {% include drawer.html classes="main-nav-mobile" content=nav_content innerButton=toggleInnerButton %}
+{% else %}
+    {{nav_content}}
+{% endif %}

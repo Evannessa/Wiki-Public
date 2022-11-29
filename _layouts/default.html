@@ -1,67 +1,24 @@
 <!DOCTYPE html>
 <html>
-	{% include head.html %}
-	<body>
+    {% include head.html %}
+    <body>
 
-		<nav data-layout="{{page.layout}}" style="--page-layout: {{page.layout}}">
+        <nav data-layout="{{page.layout}}" style="--page-layout: {{page.layout}}">
 
-			{% include nav.html isTopNav=true navType="desktop" %}
-			{% include nav.html isTopNav=false navType="mobile" %}
-		</nav>
-{% include breadcrumbs.html %}
-		<div class="wrapper">
-			<main data-layout="{{page.layout}}">{{ content }}</main>
-		</div>
+            {% include nav.html isTopNav=true navType="desktop" %}
+            {% include nav.html isTopNav=false navType="mobile" %}
+        </nav>
+        {% include breadcrumbs.html %}
+        <div class="wrapper">
+            <main data-layout="{{page.layout}}">
+                {{ content }}
+            </main>
+        </div>
 
-
-
-
-
-
+        <script src="/assets/scripts/toggle-ui.js" type="module"></script>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<script src="/assets/scripts/toggle-ui.js"></script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-{% include lazyload.html %}
-	</body>
+        {% include lazyload.html %}
+    </body>
 
 </html>

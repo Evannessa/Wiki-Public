@@ -1,8 +1,13 @@
-<section class="drawer" data-variant="side">
+<section class="drawer {{include.classes}}" data-variant="{{include.variant}}">
     {% if include.sideButton %}
         {%- comment -%}
             For buttons along the side that attach the toggle, absolutely positioned
         {%- endcomment -%}
+        <button class="drawer__toggle-button">
+            {% include font-icon.html icon="chevron_right" %}
+        </button>
     {% endif %}
-    {{include.content}}
+    <section class="drawer__content-wrapper">
+        {{include.content}}
+    </section>
 </section>

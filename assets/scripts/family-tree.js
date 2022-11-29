@@ -1,4 +1,6 @@
 import { setZoomEventListeners, setTransformString, toggleSidebar } from "./zoom.js";
+
+import { SideDrawer } from "./drawers.js";
 // import { setTransformString } from "./zoom.js";
 
 export let defaultTransform;
@@ -23,9 +25,8 @@ window.onload = function (event) {
     svgElement = document.querySelector(`.family-tree`);
     svgElement.closest("main").classList.add("hidden-overflow-wide-main");
 
-    toggleButton = document.querySelector(`.toggle-button`);
-    toggleButton.addEventListener("click", toggleSidebar);
-
+    let drawer = new SideDrawer();
+    drawer.cacheDrawerElements({ drawer: ".drawer.family-tree-controls" });
     resetButton = document.querySelector(`#reset-button`);
 
     membersObject = {};

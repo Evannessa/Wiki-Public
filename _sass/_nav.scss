@@ -34,7 +34,6 @@ nav {
 
     .nav-section {
         display: flex;
-        align-items: center;
         // min-height: 2rem;
     }
 }
@@ -65,21 +64,21 @@ nav {
 }
 
 ul.nav-section {
-    &.mobile {
-        @extend .side-drawer;
-        //mobile navigation
-        // vertical bar
+    // &.mobile {
+    //     @extend .drawer;
+    //     //mobile navigation
+    //     // vertical bar
 
-        .dropdown {
-            left: 100%;
-        }
-        @media screen and (min-width: 1000px) {
-            // hide entirely if screen is big
-            @if var(--page-layout) != "locations_map" {
-                display: none;
-            }
-        }
-    }
+    //     .dropdown {
+    //         left: 100%;
+    //     }
+    //     @media screen and (min-width: 1000px) {
+    //         // hide entirely if screen is big
+    //         @if var(--page-layout) != "locations_map" {
+    //             display: none;
+    //         }
+    //     }
+    // }
     &.desktop {
         padding: 0.5rem 0.5rem;
         // border-top-right-radius: 8px;

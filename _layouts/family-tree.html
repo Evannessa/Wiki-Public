@@ -5,13 +5,7 @@ layout: default
 {% assign trees = site.pages | where_exp: "page", "page.tags contains 'Category/Family-Tree'" %}
 
 <div class="svg-container">
-    <div class="button-wrapper single">
-
-        <button class="toggle-button">
-            <span class="material-symbols-outlined">
-                chevron_left
-            </span>
-        </button>
+    {% capture drawer__content %}
         <div class="controls">
             <section class="button-group">
                 <button id="reset-button" title="reset view" data-variant="bg-color-hover">
@@ -84,8 +78,20 @@ layout: default
             </div>
 
         </div>
+    {% endcapture %}
+    {% include drawer.html variant="right" content=drawer__content sideButton=true classes="family-tree-controls" %}
+    {%- comment -%}
+        <div class="button-wrapper single">
 
-    </div>
+        <button class="toggle-button">
+        <span class="material-symbols-outlined">
+        chevron_left
+        </span>
+        </button>
+
+
+        </div>
+    {%- endcomment -%}
     <svg class="family-tree" viewbox="0 0 100 100" data-offset-x="{{page.startingOffsetX}}" data-offset-y="{{page.startingOffsetY}}" data-starting-scale="{{page.startingScale}}">
         <defs>
             <filter id="inner-shadow" x="-20%" y="-20%" width="140%" height="140%" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" color-interpolation-filters="linearRGB">
@@ -169,5 +175,6 @@ layout: default
     </svg>
 </div>
 
+<script src="/assets/scripts/drawers.js" type="module"></script>
 <script src="/assets/scripts/zoom.js" type="module"></script>
 <script src="/assets/scripts/family-tree.js" type="module"></script>
