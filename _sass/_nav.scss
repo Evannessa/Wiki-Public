@@ -24,10 +24,9 @@ nav {
             display: flex;
             position: fixed;
             width: 100%;
-            background-color: rgba(39, 33, 70, 0.75);
-            box-shadow: 0 4px 8px 0px rgba(24, 20, 46, 0.6);
+            border-bottom: var(--glass-border);
+            box-shadow: 0px 5px 10px rgba(15, 9, 47, 0.25);
             margin: 0;
-            margin-bottom: 3rem;
             z-index: 200;
             min-height: 2rem;
         }
@@ -129,8 +128,8 @@ ul.nav-section {
     display: flex;
     justify-content: space-evenly;
     width: 100%;
-    @supports (backdrop-filter: blur(12px)) {
-        backdrop-filter: blur(12px);
+    @supports (backdrop-filter: blur(4px)) {
+        backdrop-filter: blur(4px);
     }
 }
 
@@ -153,7 +152,7 @@ ul.nav-section {
         text-transform: uppercase;
         font-family: "Aquawax", seif;
         font-size: 1rem;
-        color: var(--color-accent-base);
+        color: var(--color-accent-400);
         white-space: nowrap;
     }
 

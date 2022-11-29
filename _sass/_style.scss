@@ -38,10 +38,6 @@ main {
     min-height: 100%;
 }
 
-/* #region  Global and Type Selectors */
-
-/* Composition */
-
 /** #region Utility**/
 #breadcrumbs {
     display: none;
@@ -148,12 +144,6 @@ p > img {
         cursor: pointer;
     }
 }
-
-// .is-shown-deceased {
-// 	transform: scale(0);
-// 	position: absolute !important;
-// 	left: -999px;
-// }
 
 .hide {
     transform: scale(0);

@@ -8,7 +8,8 @@ main[data-layout="landing-page"] {
     height: 100vh;
     display: grid;
     place-content: center;
-    background-image: url(/assets/locations/sunrise-mountain.jpg);
+    // background-image: url(/assets/locations/sunrise-mountain.jpg);
+    background-image: url(/assets/locations/LostLake2.webp);
     background-size: cover;
     background-position: center;
     position: relative;
@@ -20,16 +21,99 @@ main[data-layout="landing-page"] {
         top: 0;
         left: 0;
         transform: translate(0);
-        background: radial-gradient(circle at 50%, transparent, var(--color-primary-darkest));
+        background: radial-gradient(circle at 50%, transparent, black);
+        /* var(--color-primary-darkest));*/
         z-index: 10;
     }
     &__title {
-        font-size: 5rem;
-        color: unset;
-        text-shadow: unset;
+        font-size: 2rem;
+        @media (min-width: 992px) {
+            font-size: 5rem;
+        }
         display: flex;
         justify-content: center;
         align-items: center;
         text-align: center;
+        // color: var(--color-accent-2-base);
+        // text-shadow: 5px 5px 6px var(--color-primary-darkest);
+        background: linear-gradient(45deg, var(--color-accent-2-base), var(--color-accent-base));
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-shadow: unset;
+        color: transparent;
+        // &:after{
+        //  position: absolute;
+        //  content: "";
+        // width: 100%;
+        // height: 100%;
+        // top: 0;
+        // left: 0;
+        // transform: translate(0);
+        // }
+    }
+}
+article {
+    @media (min-width: 992px) {
+        max-width: 80%;
+        margin: auto;
+    }
+}
+article section.landing-section {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-template-rows: minmax(0, 20%) 80%;
+    max-height: 100vh;
+    height: 100vh;
+    img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        @media (min-width: 992px) {
+            border-radius: 50%;
+            padding: 3rem;
+            aspect-ratio: 1/1;
+            height: auto;
+        }
+    }
+    h2 {
+        grid-row: 1/2;
+        grid-column: 1/2;
+    }
+    p {
+        grid-row: 2/3;
+        grid-column: 1/3;
+        z-index: 1;
+        max-width: 90%;
+        margin: 0 auto;
+        @media (min-width: 992px) {
+            grid-column: 1/2;
+        }
+    }
+    img {
+        grid-row: 1/3;
+        grid-column: 1/3;
+        z-index: 0;
+        @media (min-width: 992px) {
+            grid-column: 2/3;
+            max-width: 50vw;
+            height: auto;
+        }
+    }
+    &:nth-child(even) {
+        grid-template-columns: 60% 40%;
+        p,
+        h2 {
+            grid-column: 1/3;
+            @media (min-width: 992px) {
+                grid-column: 2/3;
+            }
+        }
+        img {
+            grid-column: 1/3;
+            @media (min-width: 992px) {
+                grid-column: 1/2;
+            }
+        }
     }
 }

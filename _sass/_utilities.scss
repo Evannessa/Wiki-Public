@@ -820,8 +820,8 @@ $align: (center, flex-start, flex-end, stretch, flex-end);
     gap: 0.5rem;
     padding: 0.25rem;
     &[data-variant="search"] {
-        background-color: var(--color-primary-darkest);
-        border-radius: 999px;
+        // background-color: var(--color-primary-darkest);
+        // border-radius: 999px;
     }
 }
 

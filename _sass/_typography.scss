@@ -46,6 +46,7 @@ h1 {
     text-shadow: #ff05658a 0px 0px 3px, #ff0565a3 0px 0px 5px;
     @media (min-width: 992px) {
         margin-top: 4rem;
+        font-size: calc(clamp(2rem, calc(3rem - 1vw), 6vw));
     }
 
     > a {
@@ -64,19 +65,23 @@ button {
 }
 
 h2 {
-    color: var(--color-accent-base);
+    color: var(--color-accent-300);
     @media (min-width: 992px) {
         margin-top: 4rem;
     }
-    text-shadow: hsla(234, 56%, 58%, 0.647) 0px 0px 3px, hsla(234, 56%, 58%, 0.569) 0px 0px 5px;
+    @extend .secondary-text;
+    @extend .secondary-text-shadow;
 }
 
 h3 {
     --color-h3: hsl(234, 56%, 58%);
     margin-bottom: 1rem;
     font-weight: 400;
-    color: var(--color-h3);
-    text-shadow: hsla(234, 56%, 58%, 0.647) 0px 0px 3px, hsla(234, 56%, 58%, 0.569) 0px 0px 5px;
+
+    @extend .secondary-text;
+    @extend .secondary-text-shadow;
+    // color: var(--color-h3);
+    // text-shadow: hsla(234, 56%, 58%, 0.647) 0px 0px 3px, hsla(234, 56%, 58%, 0.569) 0px 0px 5px;
     // text-shadow: 0px 0px 5px var(--color-h3);
 }
 
@@ -106,11 +111,11 @@ button {
 }
 
 .secondary-text {
-    color: var(--color-accent-base);
+    color: var(--color-accent-400);
 }
 
 .secondary-text-shadow {
-    text-shadow: #5864d0a5 0px 0px 3px, #5864d091 0px 0px 5px;
+    text-shadow: hsla(234, 76%, 58%, 0.647) 0px 0px 3px, hsla(234, 76%, 58%, 0.569) 0px 0px 5px;
 }
 
 *,
