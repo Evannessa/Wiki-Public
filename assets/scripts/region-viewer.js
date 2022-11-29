@@ -696,8 +696,6 @@ export const regionViewerModule = (function () {
         let outerMap = document.querySelector(".location-map .location-map");
         if (gradient) {
             outerMap.style.setProperty("--ui-gradient", gradient);
-            let style = window.getComputedStyle(outerMap);
-            console.log(style.getPropertyValue("--ui-gradient"), gradient);
         }
         if (titleColor) {
             outerMap.style.setProperty("--title-color", titleColor);

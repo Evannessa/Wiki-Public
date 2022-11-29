@@ -66,29 +66,13 @@ nav {
 
 ul.nav-section {
     &.mobile {
+        @extend .side-drawer;
         //mobile navigation
         // vertical bar
-        padding: 1rem;
-        max-width: 50%;
-        border-right: 1px solid whitesmoke;
-        display: flex;
-        flex-direction: column;
-        position: fixed;
-        align-items: flex-start;
-        justify-content: flex-start;
-        right: 100%;
-        transform: translateY(0%);
-        transition: transform 200ms ease-in;
-        height: 100%;
-        box-shadow: 4px 0px 8px rgba(39, 33, 70, 0.45);
+
         .dropdown {
             left: 100%;
         }
-        &.expanded {
-            transition: transform 200ms ease-out;
-            transform: translateX(100%);
-        }
-
         @media screen and (min-width: 1000px) {
             // hide entirely if screen is big
             @if var(--page-layout) != "locations_map" {

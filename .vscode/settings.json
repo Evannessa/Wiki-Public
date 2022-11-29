@@ -4,5 +4,8 @@
     "gotoSymbolStack.filePositionInfo": [],
     "todoist.projectId": 2297684255,
     "liquid.format.enable": true,
-    "cSpell.words": ["Moonseek", "Ruto", "Starfall", "Starshead", "webp"]
+    "cSpell.words": ["Moonseek", "Ruto", "Starfall", "Starshead", "webp"],
+    "files.associations": {
+        "*.html": "liquid"
+    }
 }

@@ -74,7 +74,7 @@ export default class Helpers {
      * @param {HTMLOrSVGElement} actionElement - the element we're adding an event listener to
      * @param {HTMLOrSVGElement} dependentElement - the element that's being manipulated
      */
-    static toggleClassOnAction(actionElement, dependentElement, options = { action: "hide" }) {
+    static toggleClassOnAction(actionElement, dependentElement, options = { action: "hide", toggleButtonText: false }) {
         const { content1, content2, toggleButtonText, action } = options;
         if (toggleButtonText) {
             Helpers.toggleButtonText(actionElement, content1, content2);
@@ -82,14 +82,12 @@ export default class Helpers {
 
         if (action === "hide") {
             dependentElement.classList.add("hidden");
-            // Helpers.toggleHiddenClass(dependentElement)
         } else if (action === "show") {
             dependentElement.classList.remove("hidden");
         } else if (action === "expand") {
             Helpers.toggleExpandClass(dependentElement);
         } else if (action === "remove") {
             Helpers.toggleHiddenClass(dependentElement);
-            // dependentElement.classList.toggle("removed")
         } else if (action === "highlight") {
             dependentElement.classList.toggle("highlighted");
         }
@@ -214,16 +212,12 @@ export default class Helpers {
         return dataArray;
     }
     /* Set the width of the side navigation to 250px and the left margin of the page content to 250px */
-    static openNav(nav, main) {
+    static openNav(nav) {
         nav.classList.add("expanded");
-        // nav.style.width = "30vw";
-        // main.style.marginLeft = "30vw";
     }
 
     /* Set the width of the side navigation to 0 and the left margin of the page content to 0 */
-    static closeNav(nav, main) {
+    static closeNav(nav) {
         nav.classList.remove("expanded");
-        // nav.style.width = "0";
-        // main.style.marginLeft = "0";
     }
 }

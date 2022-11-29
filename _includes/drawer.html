@@ -1,0 +1,8 @@
+<section class="drawer" data-variant="side">
+    {% if include.sideButton %}
+        {%- comment -%}
+            For buttons along the side that attach the toggle, absolutely positioned
+        {%- endcomment -%}
+    {% endif %}
+    {{include.content}}
+</section>

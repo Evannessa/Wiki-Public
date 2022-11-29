@@ -1,0 +1,21 @@
+.side-drawer {
+    position: fixed;
+    padding: 1rem;
+    max-width: 50%;
+    border-right: 1px solid var(--glass-border);
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    align-items: flex-start;
+    justify-content: flex-start;
+    right: 100%;
+    transform: translateY(0%);
+    transition: transform 200ms ease-in;
+    height: 100%;
+    box-shadow: 4px 0px 8px rgba(39, 33, 70, 0.45);
+    transition: transform 200ms ease-in;
+    &.expanded {
+        transition: transform 200ms ease-out;
+        transform: translateX(100%);
+    }
+}

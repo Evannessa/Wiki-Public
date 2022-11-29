@@ -134,7 +134,7 @@
                         "mainImage": "..\\..\\locations\\HeavensCrown.jpg",
                         "otherImages": "",
                         "color": "#71BD00",
-                        "gradient": "linear-gradient(45deg, #59c173, #a17fe0, #5d26c1)",
+                        "gradient": "linear-gradient(45deg, rgb(15, 0, 180), rgb(143, 0, 171))",
                         "titleColor": "hsl(234, 56%, 58%)"
                     },
                     "flavorData": {
