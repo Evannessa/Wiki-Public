@@ -1,23 +1,23 @@
 <div id="search">
-    <div class="input-wrapper" style="display: flex;">
-        <label class="outer-label" for="search-box">
-            Search
+    <div class="input-wrapper flex-align-center" data-variant="search">
+        <label class="outer-label flex-row flex-align-center" for="search-box">
+            {% include font-icon.html icon="search" %}
         </label>
         <input
             id="search-box"
             name="search-box"
             oninput="filterSearch(event)"
             type="text"
+            placeholder="Who are you looking for?"
                 >
     </div>
     <section class="filter-section--wrapper">
         <button class="expand-button" data-variant="color-hover">
             Filters
         </button>
-        <section class="filter-section toggle-list">
+        <section class="filter-section toggle-list flow">
             {% assign allTags = site.notes | map: "tags" | uniq %}
-            <hr>
-            <fieldset class="active-filters">
+            <fieldset class="active-filters can-be-hidden hidden">
                 <legend>
                     Active Filters
                 </legend>
@@ -52,14 +52,13 @@
             {%- endcomment -%}
             {% include filter-set.html allTags=allTags filter="Location/" groupId="location" filterByString="Residence"%}
 
-            {% include filter-set.html allTags=allTags filter="Faction/" groupId="faction" filterByString="Faction"%}
-
-
             <hr>
             {% include filter-set.html allTags=allTags filter="Age/" groupId="age" filterByString="Age"%}
             {% include filter-set.html allTags=allTags filter="Condition/" groupId="condition" filterByString="Status"%}
             <hr>
-            {% include filter-set.html allTags=allTags filter="Special/" groupId="special" filterByString="Special"%}
+            {%- comment -%}
+                {% include filter-set.html allTags=allTags filter="Special/" groupId="special" filterByString="Special"%}
+            {%- endcomment -%}
         </section>
     </section>
 </div>

@@ -6,7 +6,7 @@
 @import "../_sass/variables";
 @import "../_sass/typography";
 @import "../_sass/layouts";
-// @import "../_sass/utilities";
+@import "../_sass/utilities";
 @import "../_sass/popovers";
 @import "../_sass/buttons";
 @import "../_sass/loader";
@@ -38,10 +38,6 @@ body {
 main {
     min-height: 100%;
 }
-
-/* #region  Global and Type Selectors */
-
-/* Composition */
 
 /** #region Utility**/
 #breadcrumbs {
@@ -149,12 +145,6 @@ p > img {
         cursor: pointer;
     }
 }
-
-// .is-shown-deceased {
-// 	transform: scale(0);
-// 	position: absolute !important;
-// 	left: -999px;
-// }
 
 .hide {
     transform: scale(0);

@@ -4,6 +4,7 @@ Clan: Ruto
 tags:
     - Category/Individual
     - Clans/Ruto
+    - Age/Teenager
 parents:
     - MC
     - Taza

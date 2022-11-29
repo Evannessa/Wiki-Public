@@ -10,16 +10,16 @@ SearchData.currentQueries = [];
 SearchData.checkedFilters = [];
 
 document.addEventListener("DOMContentLoaded", () => {
-    console.log("Search has been loaded")
-    expandButton = document.querySelector(".expand-button")
-    filterSectionWrapper = document.querySelector(".filter-section--wrapper")
-    filterSection = document.querySelector(".filter-section")
+    console.log("Search has been loaded");
+    expandButton = document.querySelector(".expand-button");
+    filterSectionWrapper = document.querySelector(".filter-section--wrapper");
+    filterSection = document.querySelector(".filter-section");
     galleryCards = document.querySelectorAll(".card");
     deceasedFilter = document.querySelector("#Deceased");
-    activeFilterList = document.querySelector(".active-filters")
+    activeFilterList = document.querySelector(".active-filters");
     expandButton.addEventListener("click", (event) => {
-        filterSectionWrapper.classList.toggle("expanded")
-    })
+        filterSectionWrapper.classList.toggle("expanded");
+    });
     deceasedPeople = Array.from(galleryCards).filter((card) =>
         card.innerText.toLowerCase().includes("condition/deceased")
     );
@@ -33,10 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // disable the status filter
 });
 
-function initializeElements(parentElement) {
-
-
-}
+function initializeElements(parentElement) {}
 
 function doesMatchFilter(filter, className) {
     galleryCards.forEach((card) => {
@@ -63,17 +60,23 @@ function toggleAll(event) {
         }
     });
 }
-
+function convert(text) {
+    return text.toLowerCase().replace(/-/, " ");
+}
 function filterSearch(event) {
     let searchBox = event.currentTarget;
     let query = searchBox.value.toLowerCase(); // get the search box's value
     let filterText = [...SearchData.currentQueries];
     galleryCards.forEach((card) => {
         let match = true;
+
         if (filterText.length > 0) {
-            match = filterText.some((text) => card.innerText.toLowerCase().includes(text));
+            console.log(card.innerText.toLowerCase().replace(/-/g, " "), query);
+
+            match = filterText.some((text) => convert(card.innerText).includes(text));
         }
-        let meetsQuery = card.innerText.toLowerCase().includes(query);
+        console.log(card.innerText.toLowerCase().replace(/-/g, " "), query);
+        let meetsQuery = convert(card.innerText).includes(query);
         if (match && meetsQuery) {
             card.classList.remove("is-hidden");
         } else {
@@ -87,24 +90,22 @@ function filterAll() {
     // let filterChip = event.currentTarget;
     let searchBoxQuery = document.querySelector("#search-box").value.toLowerCase();
 
-    let checkboxes = Array.from(document.querySelectorAll("input[type='checkbox']:checked:not(#show-deceased):not(.active-filter)"))
-
-    let filterChipIDs = checkboxes.map(
-        (box) => box.getAttribute("id")
+    let checkboxes = Array.from(
+        document.querySelectorAll("input[type='checkbox']:checked:not(#show-deceased):not(.active-filter)")
     );
 
-    let filterText = checkboxes.map(
-        (box) => {
-            return box.parentNode.querySelector("label").textContent.toLowerCase()
-            // if (getCheckboxLabel !== undefined) {
-            //     console.log("Checkbox label", getCheckboxLabel)
-            //     return getCheckboxLabel(box).toLowerCase()
-            // } else {
+    let filterChipIDs = checkboxes.map((box) => box.getAttribute("id"));
 
-            //     return " ";
-            // }
-        }
-    );
+    let filterText = checkboxes.map((box) => {
+        return box.parentNode.querySelector("label").textContent.toLowerCase();
+        // if (getCheckboxLabel !== undefined) {
+        //     console.log("Checkbox label", getCheckboxLabel)
+        //     return getCheckboxLabel(box).toLowerCase()
+        // } else {
+
+        //     return " ";
+        // }
+    });
     // let filterText = Array.from(document.querySelectorAll("input[type='checkbox']:checked:not(#show-deceased)")).map(
     //     (box) => getCheckboxLabel(box).toLowerCase()
     // );
@@ -117,7 +118,7 @@ function filterAll() {
         noFilters = true;
     }
 
-    console.log("After filter chip change", filterText);
+    console.log("After filter chip change", filterText, filterChipIDs);
     // go through the cards and filter the ones that match the current queries
 
     updateActiveFilterList();
@@ -129,7 +130,7 @@ function filterAll() {
         // there is one
         galleryCards.forEach((card) => {
             if (searchBoxQuery) {
-                meetsQuery = card.innerText.toLowerCase().includes(searchBoxQuery);
+                meetsQuery = convert(card.innerText).includes(searchBoxQuery);
             }
             if (meetsQuery) {
                 card.classList.remove("is-hidden");
@@ -138,9 +139,9 @@ function filterAll() {
     } else {
         galleryCards.forEach((card) => {
             let meetsQuery = true; // default value in case there isn't a query
-            let match = filterText.some((text) => card.innerText.toLowerCase().includes(text));
+            let match = filterText.some((text) => convert(card.innerText).includes(text));
             if (searchBoxQuery) {
-                meetsQuery = card.innerText.toLowerCase().includes(searchBoxQuery);
+                meetsQuery = convert(card.innerText).includes(searchBoxQuery);
             }
             if (match && meetsQuery) {
                 // if the filter is mattched
@@ -153,12 +154,11 @@ function filterAll() {
 }
 
 function htmlToElement(html) {
-    var template = document.createElement('template');
+    var template = document.createElement("template");
     html = html.trim(); // Never return a text node of whitespace as the result
     template.innerHTML = html;
     return template.content.firstChild;
 }
-
 
 function createFilterSpanFromString(text) {
     let string = `
@@ -171,8 +171,8 @@ function createFilterSpanFromString(text) {
                     type="checkbox" />
                 <label for="${text}-active">${text}</label>
                 </span>
-    `
-    return htmlToElement(string)
+    `;
+    return htmlToElement(string);
 }
 function removeAllChildNodes(parent) {
     while (parent.firstChild && parent.firstChild.classList.has("filter-span")) {
@@ -181,27 +181,28 @@ function removeAllChildNodes(parent) {
 }
 function removeAllFilterSpans(parent) {
     Array.from(parent.querySelectorAll(".filter-span")).forEach((el) => {
-        el.remove()
-    })
+        el.remove();
+    });
 }
 function updateActiveFilterList() {
-    removeAllFilterSpans(activeFilterList)
+    removeAllFilterSpans(activeFilterList);
     SearchData.checkedFilters.forEach((id) => {
-        let filterChip = document.querySelector(`#${id}`)
-        console.log(filterChip, id)
-        let query = getCheckboxLabel(filterChip)
-        let newFilterSpan = createFilterSpanFromString(query)
-        activeFilterList.append(newFilterSpan)
+        let filterChip = document.querySelector(`#${id}`);
+        let query = getCheckboxLabel(filterChip);
+        let newFilterSpan = createFilterSpanFromString(query);
+        activeFilterList.append(newFilterSpan);
         newFilterSpan.querySelector("input").addEventListener("change", () => {
-            filterChip.click()
-            // let event = new Event('change', { bubbles: true });
-            // filterChip.dispatchEvent(event);
-            // filterChip.checked = false //setAttribute("checked", true)
-        })
-    })
+            filterChip.click();
+        });
+    });
+    if (SearchData.checkedFilters.length === 0) {
+        activeFilterList.classList.add("hidden");
+    } else {
+        activeFilterList.classList.remove("hidden");
+    }
 }
 function capitalize(text) {
-    return text.charAt
+    return text.charAt;
 }
 // https : //
 // stackoverflow.com/questions/19434241/how-i-can-get-the-text-of-a-checkbox

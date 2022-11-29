@@ -7,13 +7,13 @@ permalink: /search-locations
 
 <section class="gallery-section">
 	<h2>Individual Locations</h2>
-    {% assign locations = site.notes | "where_exp": "note", "note.layout contains
+    {% assign locations = site.notes | where_exp: "note", "note.layout contains
     'location'" %}
     <!-- {% include search.html %} -->
     <div class="card-container card-container--gallery" id="individual-locations">
         {% for card in locations %} {% include card-no-img.html %} {% endfor %}
     </div>
-    {% assign location-lists = site.notes | "where_exp": "note", "note.layout contains 'location-list'"%}
+    {% assign location-lists = site.notes | where_exp: "note", "note.layout contains 'location-list'"%}
 	<h2>Locations with Sublocations</h2>
 <div class="card-container card-container--gallery" id="location-lists">
         {% for card in location-lists %} {% include card-no-img.html %} {% endfor %}

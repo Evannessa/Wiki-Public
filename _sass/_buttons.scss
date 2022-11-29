@@ -81,7 +81,7 @@ button,
         &:focus-within {
             // transform: unset;
             // @extend .secondary-text-shadow;
-            color: var(--color-secondary-300);
+            color: var(--color-accent-2-400);
         }
     }
     &[data-variant="bg-img"] {

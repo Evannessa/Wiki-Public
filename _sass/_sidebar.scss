@@ -9,34 +9,31 @@ aside {
 }
 
 aside {
+    overflow: visible;
+    grid-row: 1/2;
+    grid-column: 1/2;
+    position: fixed;
+    height: 40%;
+    width: 100%;
+    top: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     right: 0;
     background-color: rgba(39, 33, 70, 0.75);
+    overflow: visible;
+    padding: 0.5em 1em;
 
     @supports (backdrop-filter: blur(12px)) {
         backdrop-filter: blur(12px);
     }
-
-    // box-shadow: -2px 0px 8px 0px rgba(0, 0, 0, 0.4);
-    overflow: visible;
-
+    @media (min-width: 992px) {
+        height: 30%;
+    }
     @media (min-width: 1000px) {
         height: 100vh;
     }
 
-    // @media (min-width: 1440px) {
-    // 	right: 10%;
-    // }
-
-    // @media (min-width: 2000px) {
-    // 	right: 15%;
-    // }
-
-    // @media (min-width: 2300px) {
-    // 	right: 20%;
-    // }
     &.primary {
         justify-content: center;
     }
@@ -44,23 +41,34 @@ aside {
     .featured-image {
         position: relative;
         display: flex;
+        flex-direction: column;
         height: 100%;
         justify-content: center;
         align-items: center;
         z-index: 900;
+
         @media (min-width: 1000px) {
+            flex-direction: row;
             height: fit-content;
         }
 
         img {
             object-fit: contain;
-            max-height: 80%;
-            border-radius: $border-radius;
+            max-height: 70%;
+            @media (min-width: 992px) {
+                max-height: 80%;
+            }
             outline: 2px double var(--color-accent-base);
             outline-offset: -1rem;
             transition: all 200ms ease-in;
-            box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.5);
+            outline-offset: -1rem;
+            border-radius: 50%;
+            aspect-ratio: 1/1;
+            box-shadow: inset 0px 4px 16px rgba(0, 0, 0, 0.5);
+
             @media (min-width: 1000px) {
+                border-radius: $border-radius;
+                box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.5);
                 max-width: 100%;
                 display: block;
                 max-height: 100%;
@@ -87,19 +95,24 @@ aside {
     }
 
     .floating-title {
-        position: absolute;
-        bottom: 0;
-        right: 0;
-        margin-block-start: unset;
-        margin-block-end: unset;
-        margin-inline-start: unset;
-        margin-inline-end: unset;
-        font-size: large;
-        border-radius: 8px;
-        box-shadow: 2px 5px 9px 4px #150a2975;
-        background-color: rgba(33, 28, 64, 0.902);
-        align-self: center;
+        font-size: medium;
+        margin: unset;
+        @extend .secondary-text;
+        @extend .secondary-text-shadow;
         @media (min-width: 1000px) {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            margin-block-start: unset;
+            margin-block-end: unset;
+            margin-inline-start: unset;
+            margin-inline-end: unset;
+            font-size: large;
+            border-radius: 8px;
+            box-shadow: 2px 5px 9px 4px #150a2975;
+            background-color: rgba(33, 28, 64, 0.902);
+            align-self: center;
+            padding: 0.25em 0.5em;
             transform: translate(1rem, 3rem);
             align-self: flex-end;
             padding: 0.25rem 1rem 0.25rem 1rem;
