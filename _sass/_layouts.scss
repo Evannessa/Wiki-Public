@@ -13,6 +13,18 @@ main {
             max-width: unset;
         }
     }
+    $sidebarLayouts: ("search-page", "family-tree");
+    @each $layout in $sidebarLayouts {
+        &[data-layout="#{$layout}"] {
+            display: flex;
+            flex-direction: row;
+            margin-inline: unset;
+            max-width: 100%;
+            .main-content {
+                min-width: 75%;
+            }
+        }
+    }
 }
 
 .list,
@@ -135,21 +147,17 @@ main {
         }
     }
 }
-
+.elevation-0 {
+    background-color: hsl(236, 30%, 11%);
+}
+.elevation-1 {
+    background-color: hsl(236, 39%, 15%);
+}
+.elevation-2 {
+    background-color: hsl(236, 39%, 21%);
+}
 .wrapper {
-    // background-color: #1d1928; //$color-background;
-    background-color: #141525;
-    // background: rgb(24, 20, 46);
-    // background: linear-gradient(
-    //     90deg,
-    //     rgba(24, 20, 46, 0) 0%,
-    //     rgba(24, 20, 46, 0.6) 16%,
-    //     hsla(249, 39%, 13%, 0.8) 26%,
-    //     hsla(249, 39%, 13%, 0.9) 47%,
-    //     hsla(249, 39%, 18%, 0.902) 67%,
-    //     rgba(40, 34, 74, 0.6) 80%,
-    //     rgba(24, 20, 46, 0) 100%
-    // );
+    @extend .elevation-0;
 }
 body {
     background-color: #1d1928; //$color-background;

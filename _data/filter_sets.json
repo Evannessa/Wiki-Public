@@ -1,0 +1,22 @@
+[
+    {
+        "filter": "Clans/",
+        "groupId": "clan",
+        "filterByString": "Clan"
+    },
+    {
+        "filter": "Location/",
+        "groupId": "location",
+        "filterByString": "Residence"
+    },
+    {
+        "filter": "Age/",
+        "groupId": "age",
+        "filterByString": "Age"
+    },
+    {
+        "filter": "Condition/",
+        "groupId": "condition",
+        "filterByString": "Status"
+    }
+]

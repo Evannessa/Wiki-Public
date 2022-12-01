@@ -38,6 +38,8 @@
         max-height: 60vh;
         bottom: 0;
         .tab {
+            background-color: transparent;
+            box-shadow: unset;
             display: flex;
             align-items: flex-start;
             justify-content: space-evenly;

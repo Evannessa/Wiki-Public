@@ -72,7 +72,8 @@ export class Modal {
 	</div>
     ${returnOtherImageDiv()}
 `;
-        const lightbox = htmlToElement(lightboxHTML);
+        const lightbox = Helpers.htmlToElement(lightboxHTML);
+
         let otherImages;
         if (hasOtherImages) {
             this.mainImage = lightbox.querySelector(".spotlight-image");
@@ -94,7 +95,7 @@ export class Modal {
 
     createImageList(imgSrcArray = [], currentMainSrc) {
         let imgArray = imgSrcArray.map((src) => {
-            return htmlToElement(`<img class="thumbnail-image" src="${src}" />`);
+            return Helpers.htmlToElement(`<img class="thumbnail-image" src="${src}" />`);
         });
         imgArray.forEach((item) => {
             item.addEventListener("click", (event) => {

@@ -220,4 +220,38 @@ export default class Helpers {
     static closeNav(nav) {
         nav.classList.remove("expanded");
     }
+    static addListeners(actionsData, parentElement = document) {
+        const clickElements = Array.from(parentElement.querySelectorAll("[data-click-action]"));
+        const hoverElements = Array.from(parentElement.querySelectorAll("[data-hover-action]"));
+        const changeElements = Array.from(parentElement.querySelectorAll("[data-change-action]"));
+        const pressElements = [document.documentElement];
+        document.documentElement.dataset.pressAction = "handleHotkey";
+
+        const elementSets = {
+            click: { elements: clickElements, eventNames: "click" },
+            change: { elements: changeElements, eventNames: "change" },
+            hover: { elements: hoverElements, eventNames: "mouseenter mouseleave" },
+            press: { elements: pressElements, eventNames: "keydown" },
+        };
+
+        for (const key in elementSets) {
+            let datasetProperty = key + "Action";
+            const { elements, eventNames } = elementSets[key];
+
+            Helpers.clearEventListenersFromAll(elements, eventNames);
+            Helpers.addEventListenerToAll(elements, eventNames, (event) => {
+                let action = event.currentTarget.dataset[datasetProperty];
+
+                Helpers.handleAction(event, key, action, actionsData);
+            });
+        }
+    }
+    static handleAction(event, actionType, action, actionsData) {
+        const currentTarget = event.currentTarget;
+        const actionData = actionsData[actionType][action];
+        if (actionData.hasOwnProperty("handler")) {
+            const options = { currentTarget };
+            actionData["handler"](event, options);
+        }
+    }
 }

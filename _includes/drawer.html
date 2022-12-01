@@ -1,9 +1,9 @@
-<section class="drawer {{include.classes}}" data-variant="{{include.variant}}">
+<section class="drawer {{include.classes}}" data-variant="{{include.variant}}" data-always-fixed="{{include.alwaysFixed}}">
     {% if include.sideButton %}
         {%- comment -%}
             For buttons along the side that attach the toggle, absolutely positioned
         {%- endcomment -%}
-        <button class="drawer__toggle-button">
+        <button class="drawer__toggle-button" data-variant="color-hover">
             {% include font-icon.html icon="chevron_right" %}
         </button>
     {% endif %}

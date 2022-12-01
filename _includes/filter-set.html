@@ -1,11 +1,15 @@
 {% assign allTags = include.allTags %}
 <fieldset id="{{include.groupId}}-filters">
-    <legend>{{include.filterByString}}</legend>
+    <legend>
+        {{include.filterByString}}
+    </legend>
     {% assign ourTags = allTags | where_exp:"item", "item contains include.filter" %}
     {% for tag in ourTags %}
         <span class="filter-span">
-            <input type="checkbox" name="{{tag}}" id="{{tag | remove: include.filter | escape}}" onchange="filterAll(event)">
-            <label for="{{tag | remove: include.filter | escae}}" data-name="{{tag | remove: include.filter}}">{{tag | remove: include.filter | replace: "-", " " | replace: "_", " "}}</label>
+            <input type="checkbox" name="{{tag}}" id="{{tag | remove: include.filter | escape}}" data-change-action="filterAll">
+            <label for="{{tag | remove: include.filter | escae}}" data-name="{{tag | remove: include.filter}}">
+                {{tag | remove: include.filter | replace: "-", " " | replace: "_", " "}}
+            </label>
         </span>
     {% endfor %}
 </fieldset>

@@ -11,56 +11,6 @@
             placeholder="Who are you looking for?"
                 >
     </div>
-    <section class="filter-section--wrapper">
-        <button class="expand-button" data-variant="color-hover">
-            Filters
-        </button>
-        <section class="filter-section toggle-list flow">
-            {% assign allTags = site.notes | map: "tags" | uniq %}
-            <fieldset class="active-filters can-be-hidden hidden">
-                <legend>
-                    Active Filters
-                </legend>
-                <span class="filter-span active"></span>
-            </fieldset>
 
-            <hr>
-            <fieldset class="global-filters">
-                <legend>
-                    Global Toggles
-                </legend>
-                <span class="filter-span global">
-                    <input
-                    id="show-deceased"
-                    name="show-deceased"
-                    onchange="toggleAll(event)"
-                    type="checkbox" />
-                    <label for="show-deceased">
-                        Show Deceased
-                    </label>
-                </span>
-            </fieldset>
-            <hr>
-            {% unless include.hideClanFilters %}
-                {% include filter-set.html allTags=allTags filter="Clans/" groupId="clan" filterByString="Clan" %}
-            {% endunless %}
-
-            <hr>
-
-            {%- comment -%}
-                Location Filters
-            {%- endcomment -%}
-            {% include filter-set.html allTags=allTags filter="Location/" groupId="location" filterByString="Residence"%}
-
-            <hr>
-            {% include filter-set.html allTags=allTags filter="Age/" groupId="age" filterByString="Age"%}
-            {% include filter-set.html allTags=allTags filter="Condition/" groupId="condition" filterByString="Status"%}
-            <hr>
-            {%- comment -%}
-                {% include filter-set.html allTags=allTags filter="Special/" groupId="special" filterByString="Special"%}
-            {%- endcomment -%}
-        </section>
-    </section>
 </div>
-
-<script src="/assets/scripts/search.js"></script>
+<script src="/assets/scripts/search.js" type="module"></script>

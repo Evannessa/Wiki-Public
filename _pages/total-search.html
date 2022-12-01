@@ -1,16 +1,23 @@
 ---
-layout: default
+layout: search-page
 title: Characters
 id: characters
 permalink: /search-characters
 ---
 
-<section class="gallery-section">
+<section class="gallery-section main-content">
     {% assign people = site.notes | where_exp: "note", "note.tags contains
-    'Category/Individual'" %} {% include search.html %}
+    'Category/Individual'" %}
+    {% include search.html %}
     <div class="card-container card-container--gallery">
         {% for card in people %}
             {% include card.html %}
         {% endfor %}
     </div>
 </section>
+{% capture filter_content %}
+    {% include filter-section.html %}
+{% endcapture %}
+{% include drawer.html variant="right" sideButton=true  content=filter_content classes="filter-section__wrapper" %}
+
+<script src="/assets/scripts/search.js" type="module"></script>

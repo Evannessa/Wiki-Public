@@ -1,3 +1,6 @@
+import { SideDrawer } from "./drawers.js";
+import Helpers from "./helpers.js";
+
 let galleryCards;
 let activeFilterList;
 let expandButton;
@@ -8,18 +11,31 @@ var SearchData = {};
 
 SearchData.currentQueries = [];
 SearchData.checkedFilters = [];
+const searchActions = {
+    change: {
+        filterAll: {
+            handler: () => {
+                filterAll();
+            },
+        },
+    },
+};
 
 document.addEventListener("DOMContentLoaded", () => {
     console.log("Search has been loaded");
-    expandButton = document.querySelector(".expand-button");
-    filterSectionWrapper = document.querySelector(".filter-section--wrapper");
-    filterSection = document.querySelector(".filter-section");
+
+    let filterDrawer = new SideDrawer();
+    filterDrawer.cacheDrawerElements({
+        drawer: ".drawer.filter-section__wrapper",
+        toggleButtonOuter: ".drawer__toggle-button",
+    });
+
+    // filterSectionWrapper = document.querySelector(".filter-section--wrapper");
+    // filterSection = document.querySelector(".filter-section");
     galleryCards = document.querySelectorAll(".card");
     deceasedFilter = document.querySelector("#Deceased");
     activeFilterList = document.querySelector(".active-filters");
-    expandButton.addEventListener("click", (event) => {
-        filterSectionWrapper.classList.toggle("expanded");
-    });
+
     deceasedPeople = Array.from(galleryCards).filter((card) =>
         card.innerText.toLowerCase().includes("condition/deceased")
     );
@@ -29,7 +45,9 @@ document.addEventListener("DOMContentLoaded", () => {
         card.classList.add("is-hidden-deceased");
     });
 
-    deceasedFilter.disabled = true;
+    if (deceasedFilter) deceasedFilter.disabled = true;
+
+    Helpers.addListeners(searchActions);
     // disable the status filter
 });
 
@@ -62,6 +80,9 @@ function toggleAll(event) {
 }
 function convert(text) {
     return text.toLowerCase().replace(/-/, " ");
+}
+function trim(text) {
+    return text.replace(/[\n\r]+|[\s]{2,}/g, " ").trim();
 }
 function filterSearch(event) {
     let searchBox = event.currentTarget;
@@ -97,7 +118,7 @@ function filterAll() {
     let filterChipIDs = checkboxes.map((box) => box.getAttribute("id"));
 
     let filterText = checkboxes.map((box) => {
-        return box.parentNode.querySelector("label").textContent.toLowerCase();
+        return trim(box.parentNode.querySelector("label").textContent.toLowerCase());
         // if (getCheckboxLabel !== undefined) {
         //     console.log("Checkbox label", getCheckboxLabel)
         //     return getCheckboxLabel(box).toLowerCase()
@@ -118,7 +139,6 @@ function filterAll() {
         noFilters = true;
     }
 
-    console.log("After filter chip change", filterText, filterChipIDs);
     // go through the cards and filter the ones that match the current queries
 
     updateActiveFilterList();

@@ -1,4 +1,5 @@
 import { SideDrawer } from "./drawers.js";
+import Card from "./cards.js";
 
 document.addEventListener("DOMContentLoaded", function (event) {
     console.log("Toggle UI Has been loaded");
@@ -9,7 +10,15 @@ document.addEventListener("DOMContentLoaded", function (event) {
         toggleButtonOuter: ".main-nav-toggle.outer",
         toggleButtonInner: ".main-nav-toggle.inner",
     });
+    handleCards();
 });
+function handleCards() {
+    let cards = Array.from(document.querySelectorAll(".card"));
+    cards.forEach((cardEl) => {
+        let card = new Card();
+        card.initializeCard(cardEl);
+    });
+}
 
 function registerSideViewGalleryListeners() {
     let sideView = document.querySelector(".side-view");

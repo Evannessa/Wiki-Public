@@ -1,4 +1,6 @@
+import Card from "./cards.js";
 var dialog;
+
 let modalImg;
 let allHeaders;
 let pageNav;
@@ -52,7 +54,6 @@ function navHighlighter() {
         }
     });
 }
-document.addEventListener("load", function (event) {});
 
 document.addEventListener("DOMContentLoaded", function (event) {
     if (document.querySelector("main").dataset.layout !== "locations_map") {
@@ -62,6 +63,12 @@ document.addEventListener("DOMContentLoaded", function (event) {
 });
 
 function onLoad(event) {
+    let cards = document.querySelectorAll(".card");
+    cards.forEach((cardEl) => {
+        let card = new Card();
+        card.initializeCard(cardEl);
+    });
+
     dialog = document.querySelector("dialog");
     modalImg = dialog?.querySelector("img");
     parentsHeader = document.querySelector("#parents");
