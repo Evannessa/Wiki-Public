@@ -41,6 +41,9 @@ html {
     --glass-border: 1px solid var(--border-color);
     --bg-color: hsl(236, 30%, 11%);
     --bg-color-glass: hsl(236, 30%, 11%, 0.5);
+    --bg-color-el-1: hsl(236, 35%, 13%);
+    --bg-color-glass-el-1: hsl(236, 35%, 13%, 0.5);
+    --bg-color-el-2: hsl(236, 30%, 21%);
     @each $color, $shades in $colors {
         @each $shade, $value in $shades {
             --color-#{$color}-#{$shade}: #{$value};

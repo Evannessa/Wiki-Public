@@ -133,6 +133,16 @@
             width: 0;
         }
     }
+    &.can-be-expanded:not(.expanded) {
+        .flatten {
+            .tab-content {
+                overflow: hidden;
+            }
+            .padding-medium {
+                padding: 0;
+            }
+        }
+    }
     &.expanded {
         transform: translateX(100%);
         width: 100vw;

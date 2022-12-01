@@ -3,14 +3,14 @@
     right: 100%;
     z-index: 800;
 
-    height: 100%;
+    height: 100vh;
 
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
 
-    background-color: var(--bg-color-glass);
+    background-color: var(--bg-color-glass-el-1);
     border-right: 1px solid var(--glass-border);
     box-shadow: 4px 0px 8px rgba(39, 33, 70, 0.45);
 
@@ -21,6 +21,7 @@
     backdrop-filter: blur(12px);
 
     @media (min-width: 992px) {
+        background-color: var(--bg-color-el-1);
         width: 25vw;
         min-width: 25vw;
         position: static;
@@ -38,7 +39,9 @@
     &__content-wrapper {
         width: 100%;
         height: 100%;
-        padding: 1rem;
+        padding: var(--space-4);
+
+        // padding: var(--space-4);
     }
 
     &__toggle-button {

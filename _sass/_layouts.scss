@@ -147,17 +147,9 @@ main {
         }
     }
 }
-.elevation-0 {
-    background-color: hsl(236, 30%, 11%);
-}
-.elevation-1 {
-    background-color: hsl(236, 39%, 15%);
-}
-.elevation-2 {
-    background-color: hsl(236, 39%, 21%);
-}
+
 .wrapper {
-    @extend .elevation-0;
+    background-color: var(--bg-color);
 }
 body {
     background-color: #1d1928; //$color-background;

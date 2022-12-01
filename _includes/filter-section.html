@@ -1,12 +1,8 @@
 <section class="filter-section toggle-list flow">
+    <h3>
+        Filters
+    </h3>
     {% assign allTags = site.notes | map: "tags" | uniq %}
-    <fieldset class="active-filters can-be-hidden hidden">
-        <legend>
-            Active Filters
-        </legend>
-        <span class="filter-span active"></span>
-    </fieldset>
-    <hr>
     {%- for set in site.data.filter_sets -%}
         {% include filter-set.html filter=set.filter groupId=set.groupId filterByString=set.filterByString allTags=allTags %}
         <hr/>

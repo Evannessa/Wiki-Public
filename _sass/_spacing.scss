@@ -1,0 +1,7 @@
+$spacing: (4px, 8px, 12px, 16px, 24px, 32px, 48px, 64px, 96px, 128px, 192px, 256px, 384px, 512px, 640px, 768px);
+:root {
+    @for $i from 1 through length($list: $spacing) {
+        $space: nth($spacing, $i);
+        --space-#{$i}: #{$space};
+    }
+}
