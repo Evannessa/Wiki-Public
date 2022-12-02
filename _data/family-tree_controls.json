@@ -1,0 +1,22 @@
+[
+    {
+        "clickAction": "resetView",
+        "icon": "refresh"
+    },
+    {
+        "clickAction": "jumpGen",
+        "gen": 0,
+        "text": 1
+    },
+    { "clickAction": "jumpGen", "gen": 1, "text": 2 },
+    {
+        "clickAction": "jumpGen",
+        "gen": 2,
+        "text": 3
+    },
+    {
+        "clickAction": "jumpGen",
+        "gen": 3,
+        "text": 4
+    }
+]

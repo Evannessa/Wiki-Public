@@ -1,0 +1,16 @@
+<section class="side-controls">
+    {%- for item in include.controlsData %}
+        <button
+        data-variant="side-control"
+        data-click-action="{{item.clickAction}}"
+        data-gen="{{item.gen}}"
+       >
+            {%- if item.icon -%}
+                {% include font-icon.html icon=item.icon %}
+            {%- else -%}
+                {{item.text}}
+            {%- endif -%}
+        </button>
+    {%- endfor -%}
+
+</section>

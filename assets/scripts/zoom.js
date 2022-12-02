@@ -6,7 +6,7 @@ import { svgElement, jumpToGeneration, toggleButton, resetButton, defaultTransfo
  * set the event listeners for all of the controls
  */
 export function setZoomEventListeners() {
-    resetButton.onclick = () => reset();
+    // resetButton.onclick = () => reset();
     document.querySelectorAll(".jump-gen").forEach((element) => element.addEventListener("click", jumpToGeneration));
     document.addEventListener("keydown", (event) => {
         event.preventDefault();
@@ -62,7 +62,7 @@ const getTransformParameters = (element) => {
     return { scale, x, y };
 };
 //reset back to default transform
-function reset() {
+export function reset() {
     svgElement.style.transform = defaultTransform;
 }
 const getTransformString = (scale, x, y) => `scale(${scale}) translateX(${x}%) translateY(${y}%)`;

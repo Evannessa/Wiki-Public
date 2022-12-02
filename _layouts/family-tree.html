@@ -162,10 +162,16 @@ layout: default
 
         {% endfor %}
     </svg>
-    <button class="help-button drawer__toggle-button outer" data-variant="fab">
+    {%- comment -%}
+        <button class="help-button drawer__toggle-button outer" data-variant="fab">
         {% include font-icon.html icon="help" %}
-    </button>
-    {% include drawer.html variant="right" content=drawer__content sideButton=false innerButton=true classes="family-tree-controls" alwaysFixed=true %}
+        </button>
+    {%- endcomment -%}
+
+    {% include side-controls.html controlsData=site.data.family-tree_controls %}
+    {%- comment -%}
+        {% include drawer.html variant="right" content=drawer__content sideButton=false innerButton=true classes="family-tree-controls" alwaysFixed=true %}
+    {%- endcomment -%}
     {% include hint.html hintText="test" %}
 </div>
 

@@ -25,7 +25,6 @@ export default function Hint() {
         hints.element = document.querySelector(elementSelector);
         hints.buttonElement = document.querySelector(".hint-toggle");
         hints.hintText = hintText;
-        console.log(elementSelector, hintText);
         updateHintText("default");
         addListeners();
     }

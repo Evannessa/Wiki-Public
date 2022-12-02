@@ -1,7 +1,8 @@
-import { setZoomEventListeners, setTransformString, toggleSidebar } from "./zoom.js";
+import { setZoomEventListeners, reset, setTransformString, toggleSidebar } from "./zoom.js";
 import Hint from "./hint-display.js";
 
 import { SideDrawer } from "./drawers.js";
+import Helpers from "./helpers.js";
 // import { setTransformString } from "./zoom.js";
 
 export let defaultTransform;
@@ -21,9 +22,22 @@ let genPositions = [2, 25, 50, 75, 90];
 let unions = [];
 let horizontalPositions = [];
 let hint;
+const actions = {
+    click: {
+        resetView: {
+            handler: (event) => {
+                reset();
+            },
+        },
+        jumpGen: {
+            handler: (event) => {
+                jumpToGeneration(event);
+            },
+        },
+    },
+};
 
 window.onload = function (event) {
-    console.log("Loading family tree");
     svgElement = document.querySelector(`.family-tree`);
     svgElement.closest("main").classList.add("hidden-overflow-wide-main");
 
@@ -49,7 +63,6 @@ window.onload = function (event) {
                         [[+]]
                     or
                         [[-]]
-                        <kbd>Test</kbd>
                         <br/>
                         <strong>Hover</strong> over portrait to highlight family
                 `,
@@ -61,7 +74,9 @@ window.onload = function (event) {
         },
     });
 
-    resetButton = document.querySelector(`#reset-button`);
+    Helpers.addListeners(actions, document);
+
+    // resetButton = document.querySelector(`#reset-button`);
 
     membersObject = {};
     //get each element
