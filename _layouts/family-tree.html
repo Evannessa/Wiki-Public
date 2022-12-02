@@ -162,10 +162,11 @@ layout: default
 
         {% endfor %}
     </svg>
-        <button class="help-button drawer__toggle-button outer" data-variant="fab">
-            {% include font-icon.html icon="help" %}
-        </button>
+    <button class="help-button drawer__toggle-button outer" data-variant="fab">
+        {% include font-icon.html icon="help" %}
+    </button>
     {% include drawer.html variant="right" content=drawer__content sideButton=false innerButton=true classes="family-tree-controls" alwaysFixed=true %}
+    {% include hint.html hintText="test" %}
 </div>
 
 <script src="/assets/scripts/drawers.js" type="module"></script>

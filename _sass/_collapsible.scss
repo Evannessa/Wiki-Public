@@ -3,9 +3,11 @@
 
     span {
         font-size: small;
+        font-family: "Aquawax";
     }
     span,
     &:after {
+        color: var(--color-accent-2-base);
         // color: var(--color-primary-darkest);
         &[data-variant="ghost"] {
             color: var(--color-primary-base);
@@ -37,7 +39,9 @@
         }
         span,
         &:after {
-            color: white;
+            color: var(--color-secondary-base);
+            // color: white;
+            // color: var(--color-accent-2-base);
             &[data-variant="ghost"] {
                 color: var(--color-secondary-base);
             }

@@ -253,4 +253,10 @@ export default class Helpers {
             actionData["handler"](event, options);
         }
     }
+    static symbolReplacer(text) {
+        return text
+            .replaceAll(/\[\[/g, "<span class='keyboard-key'>")
+            .replaceAll(/]]/g, "</span>")
+            .replaceAll(/"Click"/g, `<span class="material-symbols-outlined">mouse</span> Click`);
+    }
 }

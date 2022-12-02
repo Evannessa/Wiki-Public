@@ -6,6 +6,7 @@ import { populateLocations } from "./hex-grid-generator.js";
 import { TabsHandler } from "./tabs.js";
 import hoverHandler from "./hover-handler.js";
 import Helpers from "./helpers.js";
+import Hint from "./hint-display.js";
 
 export const regionViewerModule = (function () {
     function toggleImageView(event) {
@@ -27,6 +28,7 @@ export const regionViewerModule = (function () {
         hoveredLocationUI: "",
         tabsHandler: "",
         hoverHandler: "",
+        hintHandler: "",
     };
     const state = {};
     let normalizedLocations;
@@ -146,6 +148,11 @@ export const regionViewerModule = (function () {
                         let locationEl = event.currentTarget;
                         let shouldHide = event.type === "mouseleave" || event.type === "mouseout";
                         displayInfo(locationEl, {}, shouldHide);
+                        if (!shouldHide) {
+                            uiHandlers.hintHandler.updateHintText("hoverHex");
+                        } else {
+                            uiHandlers.hintHandler.updateHintText("default");
+                        }
                     },
                 },
                 highlightHex: {
@@ -267,6 +274,17 @@ export const regionViewerModule = (function () {
             },
         });
         uiHandlers.tabsHandler.initializeTabs();
+        uiHandlers.hintHandler = new Hint();
+
+        uiHandlers.hintHandler.initializeHints({
+            elementSelector: ".hint-container .hint-text",
+            hintText: {
+                default:
+                    "Press [[L]], [[G]], or [[C]] to switch between the [[L]]ore, [[G]]eography, or [[C]]ast tabs. <br/> Press [[I]] to toggle bewteen the Map and the Image Gallery.",
+                hoverHex:
+                    "You're hovering a location. Click to 'zoom in' on this location or press [[L]] [[G]] or [[C]] to zoom in *and* switch to a specific tab.",
+            },
+        });
     }
     /**
      * initialize the UI elements for our map
@@ -500,7 +518,6 @@ export const regionViewerModule = (function () {
      * @param {String} method - the method we're using, to determine if we need to build a new map, or restore a previous one
      */
     function selectLocation(locationEl, locationData, method, childContainer) {
-        console.log(locationData);
         if (!locationData) locationData = getLocationDataFromElement(locationEl);
         if (method !== "rebuild") {
             clearAndStorePreviousLocation(method, locationData);
@@ -527,6 +544,7 @@ export const regionViewerModule = (function () {
         // dependentElement.classList.add("hidden");
 
         setDefaultVisibilityState();
+        uiHandlers.hintHandler.updateHintText("default");
         Object.values(directionElements)
             .map((obj) => obj.parent)
             .forEach((p) => addListeners(p));

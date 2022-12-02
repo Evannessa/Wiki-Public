@@ -69,7 +69,7 @@
             font-size: small;
         }
     }
-    ul {
+    ul:not(.location-info__cast) {
         display: grid;
         grid-auto-rows: minmax(0, 80px);
         gap: 2rem;
@@ -95,10 +95,7 @@
         font-size: medium;
         line-height: 200%;
     }
-    .location-info__cast {
-        width: 80%;
-        margin: auto;
-    }
+
     .map-cast-card {
         display: flex;
         justify-content: space-between;
@@ -121,6 +118,7 @@
             height: 2rem;
             object-fit: cover;
             object-position: top;
+            aspect-ratio: 1/1;
         }
     }
     position: fixed;
@@ -329,7 +327,7 @@
             }
         }
         .card-header {
-            h3{
+            h3 {
                 font-size: 1rem;
             }
             h1,

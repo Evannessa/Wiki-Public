@@ -10,13 +10,13 @@
         "path": "search-characters"
     },
     {
-        "text": "Family Trees",
+        "text": "Family Tree",
         "path": "trees-ruto",
         "tagName": "Category/Family-Tree",
         "isPages": true
     },
     {
-        "text": "Locations",
+        "text": "Location Map",
         "path": "starshead-map",
         "category": "search-locations"
     }

@@ -2,6 +2,9 @@
     display: grid;
     grid-template-rows: 40% minmax(0, 1fr);
     max-height: 100vh;
+    h1 {
+        font-size: calc(clamp(1.25rem, calc(2rem - 3vw), 6vw));
+    }
 
     .tab-section {
         overflow: visible;

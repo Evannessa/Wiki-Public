@@ -2,6 +2,46 @@
 @import "../_sass/variables";
 @import "../_sass/typography";
 @import "../_sass/sidebar";
+@keyframes fade {
+    0% {
+        opacity: 0%;
+    }
+    100% {
+        opacity: 100%;
+    }
+}
+.hint-container {
+    position: absolute;
+    z-index: 800;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: grid;
+    place-content: center;
+    p {
+        text-align: center;
+        opacity: 80%;
+        // display: inline-flex;
+        // justify-content: flex-start;
+        // align-items: center;
+        font-size: small;
+    }
+    span.keyboard-key {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        aspect-ratio: 1/1;
+        width: 1rem;
+        height: 1rem;
+        margin-left: var(--space-1);
+        background-color: #9a4dff59;
+        padding: var(--space-1);
+        font-size: small;
+        border-radius: 3px;
+    }
+}
+
 main {
     &[data-layout="locations_map"] {
         max-width: unset;
