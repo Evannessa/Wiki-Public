@@ -26,7 +26,7 @@ function generateHexGrid(columns, rows, className, svgContainer) {
     // let gapNumberX = columns === 5 ? 18 : 30;
     // let gapNumberY = columns === 5 ? 20 : 35;
     let gapNumberX = columns === 5 ? 20 : 30;
-    let gapNumberY = columns === 5 ? 22 : 35;
+    let gapNumberY = columns === 5 ? 23 : 35;
     while (rowCounter < rows) {
         let xOffset = columnCounter * gapNumberX;
         let yOffset = rowCounter * gapNumberY;

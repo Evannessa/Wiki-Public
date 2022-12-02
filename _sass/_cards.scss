@@ -1,13 +1,13 @@
 .card-container {
     display: flex;
-    gap: 1rem;
+    gap: var(--space-4);
     flex-direction: column;
     align-items: center;
     scroll-snap-type: y mandatory;
     scroll-snap-align: start;
     position: relative;
     @media (min-width: 992px) {
-        gap: 2rem;
+        gap: var(--space-5);
     }
 
     &--gallery {
@@ -42,15 +42,17 @@
     box-shadow: #0d0b388c 0px 10px 20px, #0000003b 0px 6px 6px;
     border-radius: 12px;
     overflow: hidden;
-    height: clamp(5rem, 10vh, 20rem);
-    width: clamp(5rem, 10vw, 340px);
+    aspect-ratio: 1/1;
+    max-width: 20%;
+    // height: clamp(5rem, 10vh, 20rem);
+    // width: clamp(5rem, 10vw, 340px);
 
     @media (min-width: 992px) {
         grid-template-rows: 75% minmax(0, 25%);
     }
     @media (min-width: 1110px) {
-        height: clamp(12rem, 15vh, 20rem);
-        width: clamp(239px, 15vw, 340px);
+        // height: clamp(12rem, 15vh, 20rem);
+        // width: clamp(239px, 15vw, 340px);
     }
     transition: transform 125ms ease-in;
 

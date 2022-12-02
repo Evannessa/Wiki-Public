@@ -91,8 +91,8 @@ h3 {
     margin-bottom: 1rem;
     font-weight: 400;
 
-    @extend .secondary-text;
-    @extend .secondary-text-shadow;
+    @extend .tertiary-text;
+    @extend .tertiary-text-shadow;
     // color: var(--color-h3);
     // text-shadow: hsla(234, 56%, 58%, 0.647) 0px 0px 3px, hsla(234, 56%, 58%, 0.569) 0px 0px 5px;
     // text-shadow: 0px 0px 5px var(--color-h3);
@@ -129,6 +129,12 @@ button {
 
 .secondary-text-shadow {
     text-shadow: hsla(234, 76%, 58%, 0.647) 0px 0px 3px, hsla(234, 76%, 58%, 0.569) 0px 0px 5px;
+}
+.tertiary-text {
+    color: var(--color-accent-2-base);
+}
+.tertiary-text-shadow {
+    text-shadow: hsla(266, 100%, 65%, 0.65) 0 0 3px, hsla(266, 100%, 65%, 0.65) 0 0 5px;
 }
 
 *,

@@ -184,11 +184,13 @@ foreignObject {
             transition: opacity 200ms ease-out;
         }
         .popover {
+            @extend .dark-background;
+            padding: unset;
             pointer-events: none;
             text-align: center;
             opacity: 0%;
             transition: opacity 200ms ease-out;
-            background-color: hsla(253, 56%, 8%, 0.435);
+            // background-color: hsla(253, 56%, 8%, 0.435);
             border-radius: 20px;
         }
         &.highlighted,

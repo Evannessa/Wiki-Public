@@ -618,7 +618,7 @@ export const regionViewerModule = (function () {
         defaultVisiblity = "hidden"
     ) {
         let html = `<svg
-    viewBox="0 0 100 100"
+    viewBox="0 0 100 101"
     width="100%"
     height="100%"
     class="${classString}"
@@ -767,7 +767,7 @@ export const regionViewerModule = (function () {
         const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
         svg.setAttribute("width", "100%");
         svg.setAttribute("height", "100%");
-        const viewboxValues = type === "region" ? "0 0 100 100" : "0 0 100 100";
+        const viewboxValues = type === "region" ? "0 0 100 101" : "0 0 100 101";
         svg.setAttribute("viewBox", viewboxValues);
         svg.setAttributeNS("http://www.w3.org/2000/xmlns/", "xmlns:xlink", "http://www.w3.org/1999/xlink");
         const trimmedParent = parentName.replace(/\s/g, "_");

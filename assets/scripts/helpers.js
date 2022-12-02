@@ -224,14 +224,13 @@ export default class Helpers {
         const clickElements = Array.from(parentElement.querySelectorAll("[data-click-action]"));
         const hoverElements = Array.from(parentElement.querySelectorAll("[data-hover-action]"));
         const changeElements = Array.from(parentElement.querySelectorAll("[data-change-action]"));
-        const pressElements = [document.documentElement];
-        document.documentElement.dataset.pressAction = "handleHotkey";
+        const inputElements = Array.from(parentElement.querySelectorAll("[data-input-action]"));
 
         const elementSets = {
             click: { elements: clickElements, eventNames: "click" },
             change: { elements: changeElements, eventNames: "change" },
             hover: { elements: hoverElements, eventNames: "mouseenter mouseleave" },
-            press: { elements: pressElements, eventNames: "keydown" },
+            input: { elements: inputElements, eventNames: "input" },
         };
 
         for (const key in elementSets) {

@@ -12,21 +12,11 @@
         border-radius: 8px;
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: space-between;
 
         @media (min-width: 992px) {
-            padding: var(--space-6);
+            // padding: var(--space-8);
         }
-        // &:after {
-        //     pointer-events: none;
-        //     position: absolute;
-        //     content: "";
-        //     width: 100%;
-        //     height: 100vh;
-        //     inset: 0 0 0 0;
-        //     box-shadow: inset 0px 10px 13px rgba(0, 0, 0, 0.25);
-        //     z-index: 200;
-        // }
     }
 }
 .filter-section--wrapper {
@@ -37,11 +27,12 @@
 }
 fieldset {
     border: none;
-    background-color: hsla(249, 54%, 20%, 0.51);
+
     color: $color-pastel-blue;
     border-color: $color-pastel-blue;
     border-radius: $border-radius;
     display: flex;
+    min-height: 54px;
     flex-wrap: wrap;
     // max-width: 50%;
     padding: var(--space-3) var(--space-5);
@@ -189,15 +180,9 @@ fieldset {
     overflow-y: auto;
     max-height: 25vh;
 }
-details summary {
-    cursor: pointer;
-}
 
-details summary > * {
-    display: inline;
-}
 #search {
-    padding: var(--space-4);
+    padding-block: var(--space-4);
     background-color: var(--bg-color-el-1);
 }
 .input-wrapper {
@@ -224,6 +209,7 @@ details summary > * {
         // padding-left: 0.75rem;
         background-color: transparent;
         border: none;
+        color: var(--color-accent-base);
         &::placeholder {
             color: var(--color-accent-base);
         }
@@ -240,6 +226,23 @@ details summary > * {
             transition: color 200ms ease-in;
         }
     }
+}
+#search,
+.drawer.filter-section__wrapper .drawer__content-wrapper {
+    padding-top: var(--space-9);
+    // max-width: 80%;
+    // margin-inline: auto;
+}
+.card-container {
+}
+.input-wrapper,
+.card-container,
+.active-filters {
+    width: 80%;
+    margin-inline: auto;
+}
+#search {
+    // padding-left: var(--space-8);
 }
 
 .is-hidden {

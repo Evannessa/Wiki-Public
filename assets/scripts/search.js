@@ -19,6 +19,13 @@ const searchActions = {
             },
         },
     },
+    input: {
+        filterSearch: {
+            handler: (event) => {
+                filterSearch(event);
+            },
+        },
+    },
 };
 
 document.addEventListener("DOMContentLoaded", () => {

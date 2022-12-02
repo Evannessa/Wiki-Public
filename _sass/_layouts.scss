@@ -344,7 +344,7 @@ main[data-layout="note"] {
                 }
                 .card-container {
                     display: flex;
-                    gap: 2rem;
+                    gap: var(--space-6);
                     flex-direction: column;
                     align-items: center;
                     scroll-snap-type: y mandatory;
