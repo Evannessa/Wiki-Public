@@ -7,6 +7,11 @@
             {% include font-icon.html icon="chevron_right" %}
         </button>
     {% endif %}
+    {% if include.innerButton %}
+        <button class="drawer__toggle-button inner" data-variant="bg-color-hover">
+            {% include font-icon.html icon="close" %}
+        </button>
+    {% endif %}
     <section class="drawer__content-wrapper">
         {{include.content}}
     </section>

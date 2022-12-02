@@ -31,7 +31,7 @@
         &[data-always-fixed="true"] {
             position: fixed;
             button {
-                display: initial;
+                display: flex;
             }
         }
         // max-width: 50%;
@@ -49,6 +49,24 @@
         left: 100%;
         width: 2rem;
         height: 100%;
+        &.inner,
+        &.outer {
+            position: fixed;
+            left: unset;
+            padding: 1rem;
+            background-color: var(--color-primary-base);
+            border: unset;
+            border-radius: 50%;
+            display: grid;
+            place-content: center;
+            width: 2rem;
+            height: 2rem;
+        }
+        &.inner {
+            position: static;
+            display: grid;
+            align-self: flex-end;
+        }
     }
     &.expanded {
         transition: transform 200ms ease-out;

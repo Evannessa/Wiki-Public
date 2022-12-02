@@ -6,7 +6,8 @@
     // src: url("/assets/fonts/LEMONMILK-Bold.otf");
 }
 .dark-background {
-    color: var(--color-primary-200);
+    color: white;
+    // color: var(--color-primary-200);
     background-color: hsla(250, 36%, 20%, 0.45);
     padding: 0.5em 1em;
     background: linear-gradient(

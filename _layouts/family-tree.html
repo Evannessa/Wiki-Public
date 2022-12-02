@@ -6,8 +6,9 @@ layout: default
 
 <div class="svg-container">
     {% capture drawer__content %}
+
         <div class="controls">
-            <section class="button-group">
+            <section class="button-group flex-column flex-justify-center flex-align-center">
                 <button id="reset-button" title="reset view" data-variant="bg-color-hover">
                     <span class="material-symbols-outlined">
                         restart_alt
@@ -23,7 +24,7 @@ layout: default
                     </button>
                 {%- endcomment -%}
             </section>
-            <section class="button-group">
+            <section class="button-group flex-column flex-justify-center flex-align-center">
                 <p class="instructions">
                     Jump to Generation...
                 </p>
@@ -79,18 +80,7 @@ layout: default
 
         </div>
     {% endcapture %}
-    {%- comment -%}
-        <div class="button-wrapper single">
 
-        <button class="toggle-button">
-        <span class="material-symbols-outlined">
-        chevron_left
-        </span>
-        </button>
-
-
-        </div>
-    {%- endcomment -%}
     <svg class="family-tree" viewbox="0 0 100 100" data-offset-x="{{page.startingOffsetX}}" data-offset-y="{{page.startingOffsetY}}" data-starting-scale="{{page.startingScale}}">
         <defs>
             <filter id="inner-shadow" x="-20%" y="-20%" width="140%" height="140%" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" color-interpolation-filters="linearRGB">
@@ -172,8 +162,10 @@ layout: default
 
         {% endfor %}
     </svg>
-
-    {% include drawer.html variant="right" content=drawer__content sideButton=true classes="family-tree-controls" alwaysFixed=true %}
+        <button class="help-button drawer__toggle-button outer" data-variant="fab">
+            {% include font-icon.html icon="help" %}
+        </button>
+    {% include drawer.html variant="right" content=drawer__content sideButton=false innerButton=true classes="family-tree-controls" alwaysFixed=true %}
 </div>
 
 <script src="/assets/scripts/drawers.js" type="module"></script>

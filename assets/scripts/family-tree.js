@@ -26,7 +26,12 @@ window.onload = function (event) {
     svgElement.closest("main").classList.add("hidden-overflow-wide-main");
 
     let drawer = new SideDrawer();
-    drawer.cacheDrawerElements({ drawer: ".drawer.family-tree-controls" });
+    let drawerID = ".family-tree-controls"; //determine the specific drawer so it isn't confused with the nav
+    drawer.cacheDrawerElements({
+        drawer: `.drawer${drawerID}`,
+        toggleButtonOuter: ".help-button.drawer__toggle-button.outer",
+        toggleButtonInner: `${drawerID} .drawer__toggle-button.inner`,
+    });
     resetButton = document.querySelector(`#reset-button`);
 
     membersObject = {};

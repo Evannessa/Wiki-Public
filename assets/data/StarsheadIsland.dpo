@@ -139,11 +139,8 @@
                     },
                     "flavorData": {
                         "guid": "949bfad3-5d2c-4e5f-9486-ca706b7a7306",
-                        "tags": [
-                            "sketchy",
-                            "dangerous"
-                        ],
-                        "description": "",
+                        "tags": [],
+                        "description": "Rolling hills and green grassland as far as the eye can see",
                         "extraTags": ""
                     },
                     "encounterData": {
@@ -225,7 +222,14 @@
                         "gradient": "linear-gradient(45deg, rgb(15, 0, 180), rgb(143, 0, 171))",
                         "titleColor": "#BD0071"
                     },
-                    "flavorData": {},
+                    "flavorData": {
+                        "guid": "8b325243-6b1d-401d-bce1-b0712a6981ef",
+                        "tags": [
+                            ""
+                        ],
+                        "description": "The sky seethes with fire and burning sparks rain down",
+                        "extraTags": ""
+                    },
                     "encounterData": {},
                     "column": 2,
                     "row": 3,
@@ -244,7 +248,14 @@
                         "gradient": "linear-gradient(45deg, rgb(15, 0, 180), rgb(143, 0, 171))",
                         "titleColor": "hsl(234, 56%, 58%)"
                     },
-                    "flavorData": {},
+                    "flavorData": {
+                        "guid": "5a252059-bff6-4eff-9452-74fcee8d77b7",
+                        "tags": [
+                            ""
+                        ],
+                        "description": "A slice of paradise which holds more secrets than it first seems",
+                        "extraTags": ""
+                    },
                     "encounterData": {},
                     "column": 1,
                     "row": 1,
@@ -268,7 +279,7 @@
                         "tags": [
                             ""
                         ],
-                        "description": "",
+                        "description": "Crystal blue seas meet golden sands at the shore of this island",
                         "extraTags": ""
                     },
                     "encounterData": {},
@@ -289,7 +300,14 @@
                         "gradient": "linear-gradient(45deg, rgb(15, 0, 180), rgb(143, 0, 171))",
                         "titleColor": "hsl(234, 56%, 58%)"
                     },
-                    "flavorData": {},
+                    "flavorData": {
+                        "guid": "8e4b3d49-8081-4367-911f-e57175cf847e",
+                        "tags": [
+                            ""
+                        ],
+                        "description": "Shooting stars and glimmering expanses of glowing rock",
+                        "extraTags": ""
+                    },
                     "encounterData": {},
                     "column": 2,
                     "row": 2,
@@ -308,7 +326,14 @@
                         "gradient": "linear-gradient(45deg, rgb(15, 0, 180), rgb(143, 0, 171))",
                         "titleColor": "hsl(234, 56%, 58%)"
                     },
-                    "flavorData": {},
+                    "flavorData": {
+                        "guid": "d7df6b0c-971e-4cd9-ab0e-fa1de0b83e03",
+                        "tags": [
+                            ""
+                        ],
+                        "description": "A lush jungle thick with vegetation",
+                        "extraTags": ""
+                    },
                     "encounterData": {},
                     "column": 4,
                     "row": 2,
@@ -327,7 +352,14 @@
                         "gradient": "linear-gradient(45deg, rgb(15, 0, 180), rgb(143, 0, 171))",
                         "titleColor": "hsl(234, 56%, 58%)"
                     },
-                    "flavorData": {},
+                    "flavorData": {
+                        "guid": "c3eef4df-7cbc-4d52-9ae9-3c3cbdbd2292",
+                        "tags": [
+                            ""
+                        ],
+                        "description": "Peer into the reflection of this strange lake, and peer into another realm",
+                        "extraTags": ""
+                    },
                     "encounterData": {},
                     "column": 3,
                     "row": 3,
@@ -346,7 +378,14 @@
                         "gradient": "linear-gradient(45deg, #59c173, #a17fe0, #5d26c1)",
                         "titleColor": "hsl(234, 56%, 58%)"
                     },
-                    "flavorData": {},
+                    "flavorData": {
+                        "guid": "5de64d2a-c721-4030-8d31-9b99fbfc326d",
+                        "tags": [
+                            ""
+                        ],
+                        "description": "These rolling green hills hold our homes nestled among their slopes",
+                        "extraTags": ""
+                    },
                     "encounterData": {},
                     "column": 4,
                     "row": 3,
@@ -365,7 +404,14 @@
                         "gradient": "linear-gradient(45deg, rgb(15, 0, 180), rgb(143, 0, 171))",
                         "titleColor": "hsl(234, 56%, 58%)"
                     },
-                    "flavorData": {},
+                    "flavorData": {
+                        "guid": "c2d736bb-8592-4e19-b63c-33f56cbce5be",
+                        "tags": [
+                            ""
+                        ],
+                        "description": "Named after the Shadoka's lost first mate, Shantae Aamie, these turquoise shallows are a favorite for the kids to dive into.",
+                        "extraTags": ""
+                    },
                     "encounterData": {},
                     "column": 2,
                     "row": 1,
@@ -384,7 +430,14 @@
                         "gradient": "linear-gradient(45deg, rgb(15, 0, 180), rgb(143, 0, 171))",
                         "titleColor": "hsl(234, 56%, 58%)"
                     },
-                    "flavorData": {},
+                    "flavorData": {
+                        "guid": "c759f7d0-3473-4f43-9ccc-5eb70b4cdb58",
+                        "tags": [
+                            ""
+                        ],
+                        "description": "Rather grimly named for the shape of the sea rocks, these waters are avoided due to superstition, though the kids claim you can find many cool shells and rocks in the pools. ",
+                        "extraTags": ""
+                    },
                     "encounterData": {},
                     "column": 1,
                     "row": 3,
@@ -403,7 +456,14 @@
                         "gradient": "linear-gradient(45deg, rgb(15, 0, 180), rgb(143, 0, 171))",
                         "titleColor": "hsl(234, 56%, 58%)"
                     },
-                    "flavorData": {},
+                    "flavorData": {
+                        "guid": "059331c1-2755-4c1f-960e-27630bb6ebe9",
+                        "tags": [
+                            ""
+                        ],
+                        "description": "The rocks here crack with veins of glowing blue ore. There is a strange magic to it. ",
+                        "extraTags": ""
+                    },
                     "encounterData": {},
                     "column": 2,
                     "row": 1,

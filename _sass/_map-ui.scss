@@ -175,6 +175,7 @@
 .child-location {
     display: flex;
     .card-title {
+        font-size: calc(clamp(1.25rem, calc(2rem - 3vw), 6vw));
         color: var(--color-primary-200);
         // mix-blend-mode: color-dodge;
         // text-shadow: 2px 2px 3px #454c6f;
@@ -302,6 +303,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding: unset;
     .map-info-card {
         display: grid;
         grid-template-rows: minmax(0, 20%) minmax(0, 80%);
@@ -313,18 +315,23 @@
             max-height: 100%;
             p {
                 background-color: rgba(20, 19, 61, 0.417);
-                padding: 0.5em 1em;
-                -webkit-mask-image: url(/assets/locations/GrungeMaskV2.png);
-                mask-image: url(/assets/locations/GrungeMaskV2.png);
-                -webkit-mask-position: center;
-                mask-position: center;
-                -webkit-mask-size: 102% 102%;
-                mask-size: 102% 102%;
+                padding: var(--space-1);
+                text-align: center;
+                color: white;
+                // -webkit-mask-image: url(/assets/locations/GrungeMaskV2.png);
+                // mask-image: url(/assets/locations/GrungeMaskV2.png);
+                // -webkit-mask-position: center;
+                // mask-position: center;
+                // -webkit-mask-size: 102% 102%;
+                // mask-size: 102% 102%;
                 overflow: hidden;
                 max-height: 100%;
             }
         }
         .card-header {
+            h3{
+                font-size: 1rem;
+            }
             h1,
             h2,
             h3,

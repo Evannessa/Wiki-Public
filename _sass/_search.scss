@@ -10,12 +10,22 @@
         overflow-y: auto;
         max-height: 100vh;
         border-radius: 8px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+        // display: flex;
+        // align-items: center;
+        // justify-content: space-between;
+        // column-gap: var(--space-7);
+        display: grid;
+        grid-auto-rows: max-content;
+        grid-template-columns: repeat(4, minmax(0, 25%));
+        .card {
+            max-width: unset;
+        }
 
         @media (min-width: 992px) {
             // padding: var(--space-8);
+        }
+        .card:last-child {
+            margin-right: auto;
         }
     }
 }
@@ -235,11 +245,12 @@ fieldset {
 }
 .card-container {
 }
-.input-wrapper,
+#search,
 .card-container,
 .active-filters {
-    width: 80%;
-    margin-inline: auto;
+    padding-inline: var(--space-8);
+    // width: 80%;
+    // margin-inline: auto;
 }
 #search {
     // padding-left: var(--space-8);

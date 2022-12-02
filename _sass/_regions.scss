@@ -192,6 +192,9 @@ foreignObject {
             transition: opacity 200ms ease-out;
             // background-color: hsla(253, 56%, 8%, 0.435);
             border-radius: 20px;
+            p {
+                color: white;
+            }
         }
         &.highlighted,
         &:hover {
