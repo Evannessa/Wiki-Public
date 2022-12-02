@@ -1,4 +1,5 @@
 import { setZoomEventListeners, setTransformString, toggleSidebar } from "./zoom.js";
+import Hint from "./hint-display.js";
 
 import { SideDrawer } from "./drawers.js";
 // import { setTransformString } from "./zoom.js";
@@ -19,6 +20,7 @@ let charactersByGeneration = [];
 let genPositions = [2, 25, 50, 75, 90];
 let unions = [];
 let horizontalPositions = [];
+let hint;
 
 window.onload = function (event) {
     console.log("Loading family tree");
@@ -32,6 +34,33 @@ window.onload = function (event) {
         toggleButtonOuter: ".help-button.drawer__toggle-button.outer",
         toggleButtonInner: `${drawerID} .drawer__toggle-button.inner`,
     });
+
+    hint = new Hint();
+    hint.initializeHints({
+        elementSelector: ".hint-container .hint-text",
+        hintText: {
+            default: `
+                    To <strong>Pan</strong> Use
+                    [[🠕]] [[🠔]] [[🠗]] [[🠖]]
+                    or
+                        [[W]][[A]][[S]][[D]]
+                        <br/>
+                    To <strong>Zoom</strong> Use
+                        [[+]]
+                    or
+                        [[-]]
+                        <kbd>Test</kbd>
+                        <br/>
+                        <strong>Hover</strong> over portrait to highlight family
+                `,
+            hoverPortrait: `
+                    <strong>Click</strong> portrait to open character's article
+                    <br/>
+                    The highlighted individuals are immediate-family members.
+            `,
+        },
+    });
+
     resetButton = document.querySelector(`#reset-button`);
 
     membersObject = {};
@@ -253,8 +282,6 @@ function registerMemberListeners() {
 
     //for all of the member elements, add a mouse-enter listener
     memberElements.forEach((memberElement) => {
-        //set up
-        //TODO: refactor so this isn't being called every time
         let title = memberElement.dataset.title;
 
         let unionLinks = [...getParentUnions(title), ...getResultingUnions(title)].map((union) => union.name);
@@ -293,6 +320,7 @@ function registerMemberListeners() {
 
         //actual event listener ================================================
         memberElement.addEventListener("mouseenter", (event) => {
+            hint.updateHintText("hoverPortrait");
             //add the fade class to vade out when hovered
             memberElements.forEach((member) => {
                 if (!member.textContent.includes(title)) {
@@ -313,6 +341,7 @@ function registerMemberListeners() {
             });
         });
         memberElement.addEventListener("mouseleave", () => {
+            hint.updateHintText("default");
             memberElements.forEach((member) => member.classList.remove("fade")); //add fade to all members
             allLines.forEach((line) => line.classList.remove("fade"));
 

@@ -255,8 +255,8 @@ export default class Helpers {
     }
     static symbolReplacer(text) {
         return text
-            .replaceAll(/\[\[/g, "<span class='keyboard-key'>")
-            .replaceAll(/]]/g, "</span>")
+            .replaceAll(/\[\[/g, "<kbd class='keyboard-key'>")
+            .replaceAll(/]]/g, "</kbd>")
             .replaceAll(/"Click"/g, `<span class="material-symbols-outlined">mouse</span> Click`);
     }
 }

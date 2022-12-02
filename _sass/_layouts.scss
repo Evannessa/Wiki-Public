@@ -18,15 +18,28 @@
     transform: translateX(-50%);
     display: grid;
     place-content: center;
+    button {
+        position: absolute;
+        top: var(--space-1);
+        right: var(--space-1);
+        z-index: 20;
+        border-radius: 50%;
+        aspect-ratio: 1/1;
+        padding: unset;
+        display: grid;
+        place-content: center;
+    }
     p {
+        pointer-events: none;
         text-align: center;
         opacity: 80%;
-        // display: inline-flex;
-        // justify-content: flex-start;
-        // align-items: center;
         font-size: small;
+        transform: scale(1);
+        &.hidden {
+            transform: scale(0);
+        }
     }
-    span.keyboard-key {
+    kbd.keyboard-key {
         display: inline-flex;
         justify-content: center;
         align-items: center;

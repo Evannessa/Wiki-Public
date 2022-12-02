@@ -27,12 +27,18 @@ export function TabsHandler(data) {
         contentSections: [],
         byKey: {},
     };
+    function getData() {
+        return tabsData;
+    }
     function setCurrent() {}
+    /**
+     * For handling key presses
+     * @param {*} event
+     */
     function handleHotkey(event) {
         let key = event.which;
         for (let tabKey in tabsData) {
             let ourTab = tabsData[tabKey];
-            // debugger;
             if (ourTab.hotkey === key) {
                 switchTab(ourTab.target);
             }
@@ -58,5 +64,6 @@ export function TabsHandler(data) {
         initializeTabs,
         switchTab,
         handleHotkey,
+        getData,
     };
 }

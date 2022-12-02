@@ -175,6 +175,9 @@ export const regionViewerModule = (function () {
                             //toggle image
                             toggleImageView(event);
                         } else {
+                            let hotkeys = Object.values(uiHandlers.tabsHandler.getData()).map((d) => d.hotkey);
+                            console.log(hotkeys);
+                            if (!hotkeys.includes(event.keyCode)) return;
                             //if we're hovering a hex, select that location first
                             const current = uiHandlers.hoverHandler.getHoverDataProperty("current");
                             if (current) {
