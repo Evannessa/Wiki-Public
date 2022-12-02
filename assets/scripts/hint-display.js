@@ -26,7 +26,10 @@ export default function Hint() {
         hints.buttonElement = document.querySelector(".hint-toggle");
         hints.hintText = hintText;
         updateHintText("default");
-        addListeners();
+        // addListeners();
+    }
+    function getActions() {
+        return actions;
     }
     //for replacing certain text with icons/letters
 
@@ -40,5 +43,5 @@ export default function Hint() {
         Helpers.addListeners(actions, document.querySelector(".hint-container"));
     }
 
-    return { initializeHints, updateHintText };
+    return { initializeHints, updateHintText, getActions };
 }

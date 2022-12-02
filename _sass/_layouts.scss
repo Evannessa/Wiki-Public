@@ -23,28 +23,36 @@
     // margin-block: auto;
     // padding-block: var(--space-8);
 }
+.hint-toggle {
+    position: fixed;
+    bottom: var(--space-1);
+    right: var(--space-1);
+    z-index: 20;
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+    padding: unset;
+    display: grid;
+    place-content: center;
+}
 .hint-container {
     position: absolute;
     z-index: 800;
     bottom: var(--space-1);
-    right: var(--space-1);
+    right: var(--space-3);
     display: flex;
+    &[data-variant="centered"] {
+        right: unset;
+        left: 50%;
+        transform: translateX(-50%);
+    }
     // transform: translateY(calc(-1 * var(--space-3)));
-    transform: translateY(-50%);
+    // transform: translateY(-50%);
     // left: 50%;
 
     button {
-        position: fixed;
-        bottom: var(--space-1);
-        right: var(--space-1);
-        z-index: 20;
-        border-radius: 50%;
-        aspect-ratio: 1/1;
-        padding: unset;
-        display: grid;
-        place-content: center;
     }
     p {
+        margin: unset;
         align-self: flex-start;
         pointer-events: none;
         text-align: center;

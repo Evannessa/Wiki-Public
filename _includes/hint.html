@@ -1,7 +1,7 @@
-<div class="hint-container">
-    <button class="fab hint-toggle" title="hide hints" data-click-action="toggleDisplay">
-        {% include font-icon.html icon="help" %}
-    </button>
+<button class="fab hint-toggle" title="hide hints" data-click-action="toggleDisplay">
+    {% include font-icon.html icon="help" %}
+</button>
+<div class="hint-container" data-variant="{{include.variant}}">
     <p class="hint-text">
         {{include.hintText}}
     </p>

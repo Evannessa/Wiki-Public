@@ -25,7 +25,7 @@ let hint;
 const actions = {
     click: {
         resetView: {
-            handler: (event) => {
+            handler: () => {
                 reset();
             },
         },
@@ -73,8 +73,15 @@ window.onload = function (event) {
             `,
         },
     });
+    const allActions = {
+        click: {
+            ...actions.click,
+            ...hint.getActions().click,
+        },
+    };
+    console.log(allActions);
 
-    Helpers.addListeners(actions, document);
+    Helpers.addListeners(allActions, document);
 
     // resetButton = document.querySelector(`#reset-button`);
 
