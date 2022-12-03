@@ -276,10 +276,9 @@ export default class Helpers {
                 }
             });
             elements.forEach((el) => {
-                if (el.dataset && el.dataset[datasetProperty]) {
+                if (el.dataset && el.dataset[datasetProperty] && actionsData[key]) {
                     let action = el.dataset[datasetProperty];
                     if (action) {
-                        console.log(action, key);
                         actionsData[key][action].element = el;
                     }
                     // console.log(actionsData[key][action]);

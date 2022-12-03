@@ -11,7 +11,6 @@ import Hint from "./hint-display.js";
 export const regionViewerModule = (function () {
     function toggleImageView(event, element) {
         let currentTarget = element ? element : event.currentTarget;
-        console.log(element);
         Helpers.toggleClassOnAction(currentTarget, selectedLocationElements.imageContainer, {
             toggleClass: "hidden",
             toggleButtonIcon: true,
@@ -199,9 +198,7 @@ export const regionViewerModule = (function () {
                             let ourAction = Object.values(locationActionsData.actions.click).find(
                                 (d) => d.hotkey === event.keyCode
                             );
-                            console.log(otherHotkeys, ourAction);
-
-                            if (ourAction.hasOwnProperty("handler")) {
+                            if (ourAction?.hasOwnProperty("handler")) {
                                 const { handler, element } = ourAction;
                                 handler(event, element);
                             }
@@ -461,7 +458,6 @@ export const regionViewerModule = (function () {
             current = parentData;
         }
         heirarchyData.reverse();
-        console.log(heirarchyData);
         heirarchyData.forEach((data) => {
             if (data.type === "global") {
                 restorePreviousMap(true);
@@ -493,7 +489,6 @@ export const regionViewerModule = (function () {
             //if it is specifically from the parent, store the parent so we can zoom out as needed
             const { container, imageContainer, currentLocationData } = previousLocationData;
             locationHeirarchyStack.push({ container, imageContainer, currentLocationData });
-            console.log(locationHeirarchyStack.map((data) => data.currentLocationData.id));
         }
     }
 
@@ -816,4 +811,3 @@ export const regionViewerModule = (function () {
         getLocationsByProperty,
     };
 })();
-console.log(regionViewerModule);
