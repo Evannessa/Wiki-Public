@@ -1,4 +1,5 @@
 import Card from "./cards.js";
+import Helpers from "./helpers.js";
 var dialog;
 
 let modalImg;
@@ -11,18 +12,6 @@ let partnersHeader;
 let title;
 let mainImage;
 let anchors;
-//stackoverflow.com/questions/36532307/rem-px-in-javascript
-// https:
-function convertRemToPixels(rem) {
-    return rem * parseFloat(getComputedStyle(document.documentElement).fontSize);
-}
-//stackoverflow.com/questions/12009367/javascript-event-handling-scroll-event-with-a-delay
-function debounce(method, delay) {
-    clearTimeout(method._tId);
-    method._tId = setTimeout(function () {
-        method();
-    }, delay);
-}
 
 //codepen.io/malsu/pen/VwKzoPG
 function navHighlighter() {
@@ -32,14 +21,14 @@ function navHighlighter() {
     // Now we loop through sections to get height, top and ID values for each
     Array.from(allHeaders).forEach((current, index) => {
         const sectionHeight = current.offsetHeight;
-        const sectionTop = current.offsetTop - convertRemToPixels(5);
+        const sectionTop = current.offsetTop - Helpers.convertRemToPixels(5);
         let nextSectionHeight = document.offsetHeight;
         let nextSectionTop;
         sectionId = current.getAttribute("id");
         if (allHeaders[index + 1]) {
             //if there is a next heading
             nextSectionHeight = allHeaders[index + 1].offsetHeight;
-            nextSectionTop = allHeaders[index + 1].offsetTop - convertRemToPixels(5);
+            nextSectionTop = allHeaders[index + 1].offsetTop - Helpers.convertRemToPixels(5);
         }
 
         /*

@@ -50,10 +50,13 @@ foreignObject {
                         left: 50%;
                         transform: translate(-50%, -50%);
                         font-size: 3rem;
-                        color: hsla(261, 63%, 16%, 0.578);
+                        color: var(--border-color);
+                        opacity: 50%;
+                        // color: hsla(261, 63%, 16%, 0.578);
                         text-shadow: 0px 0px 4px transparent;
                         transition: color var(--fade-out-duration) ease-out var(--fade-out-delay),
-                            text-shadow var(--fade-out-duration) ease-in var(--fade-out-delay);
+                            text-shadow var(--fade-out-duration) ease-out var(--fade-out-delay),
+                            opacity var(--fade-out-duration) ease-out var(--fade-out-delay);
                     }
                     &:hover {
                         // --accent-color: hsl(241, 100%, 68%);
@@ -62,10 +65,11 @@ foreignObject {
                             transition: stroke var(--fade-in-duration) ease-in;
                         }
                         .material-symbols-outlined {
+                            opacity: 100%;
                             color: var(--accent-color);
                             text-shadow: 0px 0px 4px var(--accent-color);
                             transition: color var(--fade-in-duration) ease-in,
-                                text-shadow var(--fade-in-duration) ease-in;
+                                text-shadow var(--fade-in-duration) ease-in, opacity var(--fade-in-duration) ease-in;
                         }
                     }
                     path {

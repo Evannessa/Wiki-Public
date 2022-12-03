@@ -267,4 +267,16 @@ export default class Helpers {
             .replaceAll(/]]/g, "</kbd>")
             .replaceAll(/"Click"/g, `<span class="material-symbols-outlined">mouse</span> Click`);
     }
+    //stackoverflow.com/questions/36532307/rem-px-in-javascript
+    // https:
+    static convertRemToPixels(rem) {
+        return rem * parseFloat(getComputedStyle(document.documentElement).fontSize);
+    }
+    //stackoverflow.com/questions/12009367/javascript-event-handling-scroll-event-with-a-delay
+    static debounce(method, delay) {
+        clearTimeout(method._tId);
+        method._tId = setTimeout(function () {
+            method();
+        }, delay);
+    }
 }

@@ -314,7 +314,7 @@
         opacity: 0%;
         transition: opacity 150ms ease-out;
         .card-content {
-            justify-content: flex-start;
+            justify-content: flex-end;
             overflow: visible;
             max-height: 100%;
             p {
@@ -322,12 +322,7 @@
                 padding: var(--space-1);
                 text-align: center;
                 color: white;
-                // -webkit-mask-image: url(/assets/locations/GrungeMaskV2.png);
-                // mask-image: url(/assets/locations/GrungeMaskV2.png);
-                // -webkit-mask-position: center;
-                // mask-position: center;
-                // -webkit-mask-size: 102% 102%;
-                // mask-size: 102% 102%;
+
                 overflow: hidden;
                 max-height: 100%;
             }
