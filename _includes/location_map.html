@@ -2,11 +2,9 @@
     <div class="location-info can-be-expanded">
         <div class="location-info__header">
             <div class="global-controls controls">
-                {% assign icon1 = 'gallery_thumbnail' %}
-                {% assign icon2 = 'zoom_out_map' %}
-                {% assign icon3 = 'undo' %}
                 {% include icon-button.html clickAction="toggle" scope="global"
                 iconName="gallery_thumbnail"
+                altIcon="map"
                 class="toggle"
                 tooltipText="show/hide location image gallery"
             %}
@@ -22,11 +20,13 @@
             %}
                 {% include icon-button.html clickAction="fold" scope="global"
                 iconName="unfold_less"
+                altIcon="unfold_more"
                 class="fold"
                 tooltipText="fold the portrait for more content space"
                 %}
                 {% include icon-button.html clickAction="expand" scope="global"
                 iconName="menu_open"
+                altIcon="close_fullscreen"
                 class="expand"
                 tooltipText="expand or close sidebar"
                 %}

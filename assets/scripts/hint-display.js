@@ -10,6 +10,8 @@ export default function Hint() {
         click: {
             toggleDisplay: {
                 handler: () => {
+                    Helpers.toggleClassOnAction(hints.buttonElement, hints.element, { action: "hide" });
+                    Helpers.toggleButtonActive(hints.buttonElement);
                     hints.element.classList.toggle("hidden");
                 },
             },
@@ -38,9 +40,6 @@ export default function Hint() {
         const text = `<p>` + Helpers.symbolReplacer(hints.hintText[context]) + `</p>`;
         Helpers.removeChildren(hints.element);
         hints.element.appendChild(Helpers.htmlToElement(text));
-    }
-    function addListeners() {
-        Helpers.addListeners(actions, document.querySelector(".hint-container"));
     }
 
     return { initializeHints, updateHintText, getActions };

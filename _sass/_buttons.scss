@@ -69,10 +69,10 @@ button,
             @extend .secondary-text-shadow;
             // color: var(--color-accent);
         }
-        &.active {
-            color: var(--accent-color);
-            text-shadow: 0px 0px 4px var(--accent-color);
-        }
+        // &.active {
+        //     color: var(--accent-color);
+        //     text-shadow: 0px 0px 4px var(--accent-color);
+        // }
     }
     &[data-variant="color-hover"] {
         color: var(--color-primary-300);
@@ -107,6 +107,10 @@ button,
     }
     &[data-variant="side-control"] {
         aspect-ratio: 1/1;
+    }
+    &.active {
+        @extend .secondary-text;
+        @extend .secondary-text-shadow;
     }
     .btn-img {
         min-width: unset;

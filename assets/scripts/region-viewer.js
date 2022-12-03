@@ -11,12 +11,17 @@ import Hint from "./hint-display.js";
 export const regionViewerModule = (function () {
     function toggleImageView(event) {
         let currentTarget = event.currentTarget;
-        selectedLocationElements.imageContainer.classList.toggle("hidden");
+        Helpers.toggleClassOnAction(currentTarget, selectedLocationElements.imageContainer, {
+            toggleClass: "hidden",
+            toggleButtonIcon: true,
+            toggleButtonActive: true,
+        });
+        // selectedLocationElements.imageContainer.classList.toggle("hidden");
         selectedLocationElements.imageContainer.classList.toggle("image-mode");
         // Helpers.toggleButtonText(currentTarget, "Hide Image", "Show Image");
         // hide the children
         selectedLocationElements.hexChildren.forEach((hex) => {
-            Helpers.toggleClassOnAction(currentTarget, hex, { action: "remove" });
+            Helpers.toggleClassOnAction(currentTarget, hex, { toggleClass: "hidden" });
         });
     }
     const previousLocationData = {};
@@ -59,11 +64,16 @@ export const regionViewerModule = (function () {
             click: {
                 fold: {
                     handler: (event) => {
-                        //TODO: Refactor this so that the element's being cached
                         const btnElement = event.currentTarget;
-                        Helpers.toggleButtonActive(btnElement);
+                        // Helpers.toggleButtonActive(btnElement);
+                        // Helpers.toggleButtonIcon(btnElement);
                         let infoCard = document.querySelector(".location-info__content");
-                        infoCard.classList.toggle("flat");
+                        Helpers.toggleClassOnAction(btnElement, infoCard, {
+                            toggleClass: "flat",
+                            toggleButtonActive: true,
+                            toggleButtonIcon: true,
+                        });
+                        // infoCard.classList.toggle("flat");
                     },
                 },
                 switchTab: {
@@ -93,13 +103,18 @@ export const regionViewerModule = (function () {
                 expand: {
                     handler: (event) => {
                         //TODO: refactor to keep track of these elsewhere
-                        let nav = document.querySelector(".location-info");
-                        let main = document.querySelector(".location-map .location-map");
-                        if (nav.classList.contains("expanded")) {
-                            Helpers.closeNav(nav, main);
-                        } else {
-                            Helpers.openNav(nav, main);
-                        }
+                        const nav = document.querySelector(".location-info");
+                        const btnElement = event.currentTarget;
+                        Helpers.toggleClassOnAction(btnElement, nav, {
+                            toggleButtonActive: true,
+                            toggleButtonIcon: true,
+                            toggleClass: "expanded",
+                        });
+                        // if (nav.classList.contains("expanded")) {
+                        //     Helpers.closeNav(nav, main);
+                        // } else {
+                        //     Helpers.openNav(nav, main);
+                        // }
                     },
                 },
                 open: {
@@ -172,16 +187,14 @@ export const regionViewerModule = (function () {
                 handleHotkey: {
                     handler: (event) => {
                         if (event.key === "i") {
-                            //toggle image
                             toggleImageView(event);
+                        } else if (event.key === "h") {
+                            //TODO
                         } else {
                             let hotkeys = Object.values(uiHandlers.tabsHandler.getData()).map((d) => d.hotkey);
-                            console.log(hotkeys);
                             if (!hotkeys.includes(event.keyCode)) return;
-                            //if we're hovering a hex, select that location first
                             const current = uiHandlers.hoverHandler.getHoverDataProperty("current");
                             if (current) {
-                                // const locationEl = getLocationDataFromElement(current);
                                 selectLocation(current, "", "fromParent");
                             }
                             uiHandlers.tabsHandler.handleHotkey(event);
@@ -372,10 +385,12 @@ export const regionViewerModule = (function () {
         let location = locationEl ? getLocationDataFromElement(locationEl) : locationData;
         if (!shouldHide) {
             uiHandlers.hoveredLocationUI.updateUIData(location, false, false);
-            dependentElement.classList.add("highlighted");
+            Helpers.toggleClassOnAction(locationEl, dependentElement, { addClass: "highlighted" });
+            // dependentElement.classList.add("highlighted");
         } else {
             uiHandlers.hoveredLocationUI.updateUIData(location, false, false);
-            dependentElement.classList.remove("highlighted");
+            Helpers.toggleClassOnAction(locationEl, dependentElement, { removeClass: "highlighted" });
+            // dependentElement.classList.remove("highlighted");
         }
     }
 
@@ -582,45 +597,6 @@ export const regionViewerModule = (function () {
         if (selectedLocationElements.hexChildren.length === 0) {
             selectedLocationElements.imageContainer.classList.remove("hidden");
             selectedLocationElements.imageContainer.querySelector("img").classList.add("view-mode");
-        }
-    }
-
-    /**
-     * add event listeners to parent container
-     * @param {HTMLOrSVGElement} parentElement - the element within which we want add new actions
-     */
-    function addListeners(parentElement = document) {
-        const clickElements = Array.from(parentElement.querySelectorAll("[data-click-action]"));
-        const hoverElements = Array.from(parentElement.querySelectorAll("[data-hover-action]"));
-        const pressElements = [document.documentElement];
-        // const releaseElements = [document.documentElement];
-        document.documentElement.dataset.pressAction = "handleHotkey";
-        // document.documentElement.dataset.releaseAction = "handleKeyRelease";
-
-        const elementSets = {
-            click: { elements: clickElements, eventNames: "click" },
-            hover: { elements: hoverElements, eventNames: "mouseenter mouseleave" },
-            press: { elements: pressElements, eventNames: "keydown" },
-            // release: { elements: releaseElements, eventNames: "keyup" },
-        };
-
-        for (const key in elementSets) {
-            let datasetProperty = key + "Action";
-            const { elements, eventNames } = elementSets[key];
-
-            Helpers.clearEventListenersFromAll(elements, eventNames);
-            Helpers.addEventListenerToAll(elements, eventNames, (event) => {
-                let action = event.currentTarget.dataset[datasetProperty];
-                handleAction(event, key, action);
-            });
-        }
-    }
-    function handleAction(event, actionType, action) {
-        const currentTarget = event.currentTarget;
-        const actionData = locationActionsData.actions[actionType][action];
-        if (actionData.hasOwnProperty("handler")) {
-            const options = { currentTarget };
-            actionData["handler"](event, options);
         }
     }
 

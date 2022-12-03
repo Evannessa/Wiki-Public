@@ -70,27 +70,70 @@ export default class Helpers {
     }
 
     /**
+     * Swap the icon for the alternate icon, store other as data attribute
+     * @param {Button} buttonElement - an HTML button element
+     */
+    static toggleButtonIcon(buttonElement) {
+        const altIcon = buttonElement.dataset.altIcon;
+        let temp = "";
+        const currentIcon = buttonElement.querySelector(".material-symbols-outlined").textContent;
+        temp = buttonElement.dataset.altIcon;
+        buttonElement.dataset.altIcon = currentIcon;
+        buttonElement.querySelector(".material-symbols-outlined").textContent = altIcon;
+    }
+
+    /**
      * Toggle a button's text content, and hide an element
      * @param {HTMLOrSVGElement} actionElement - the element we're adding an event listener to
      * @param {HTMLOrSVGElement} dependentElement - the element that's being manipulated
+     * @param {Object} options -  options to customize method
+     * @param {Boolean} options.addClass - class to add to the dependent element
+     * @param {Boolean} options.removeClass - class to remove from the dependent element
+     * @param {Boolean} options.toggleButtonText - should we toggle the button's text?
+     * @param {Boolean} options.toggleButtonActive - should we toggle the button's active class?
+     * @param {Boolean} options.toggleButtonActive - should we toggle the button's active class?
+     * @param {Boolean} options.toggleButtonIcon - should we toggle the button's icon?
      */
-    static toggleClassOnAction(actionElement, dependentElement, options = { action: "hide", toggleButtonText: false }) {
-        const { content1, content2, toggleButtonText, action } = options;
+    static toggleClassOnAction(
+        actionElement,
+        dependentElement,
+        options = {
+            addClass: "hidden",
+            removeClass: "",
+            toggleClass: "",
+            toggleButtonText: false,
+            toggleButtonActive: false,
+            toggleButtonIcon: false,
+        }
+    ) {
+        const { addClass, removeClass, toggleClass, toggleButtonText, toggleButtonActive, toggleButtonIcon } = options;
         if (toggleButtonText) {
             Helpers.toggleButtonText(actionElement, content1, content2);
         }
-
-        if (action === "hide") {
-            dependentElement.classList.add("hidden");
-        } else if (action === "show") {
-            dependentElement.classList.remove("hidden");
-        } else if (action === "expand") {
-            Helpers.toggleExpandClass(dependentElement);
-        } else if (action === "remove") {
-            Helpers.toggleHiddenClass(dependentElement);
-        } else if (action === "highlight") {
-            dependentElement.classList.toggle("highlighted");
+        if (toggleButtonActive) {
+            Helpers.toggleButtonActive(actionElement);
         }
+        if (toggleButtonIcon) {
+            Helpers.toggleButtonIcon(actionElement);
+        }
+        if (addClass) {
+            dependentElement.classList.add(addClass);
+        } else if (removeClass) {
+            dependentElement.classList.remove(removeClass);
+        } else if (toggleClass) {
+            dependentElement.classList.toggle(toggleClass);
+        }
+
+        // if (action === "hide") {
+        // } else if (action === "show") {
+        //     dependentElement.classList.remove("hidden");
+        // } else if (action === "expand") {
+        //     Helpers.toggleExpandClass(dependentElement);
+        // } else if (action === "remove") {
+        //     Helpers.toggleHiddenClass(dependentElement);
+        // } else if (action === "highlight") {
+        //     dependentElement.classList.toggle("highlighted");
+        // }
     }
     /**
      * Toggle a button between different content states
@@ -102,13 +145,7 @@ export default class Helpers {
         const currentContent = button.textContent;
         button.textContent = currentContent === content1 ? content2 : content1;
     }
-    static toggleHiddenClass(element) {
-        element.classList.toggle("hidden");
-    }
 
-    static toggleExpandClass(element) {
-        element.classList.toggle("expanded");
-    }
     static clearEventListenersFromAll(elementArray, eventNames) {
         elementArray.forEach((element) => {
             Helpers.clearEventListener(element, eventNames);
