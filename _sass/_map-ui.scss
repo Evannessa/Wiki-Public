@@ -72,12 +72,19 @@
     ul:not(.location-info__cast) {
         display: grid;
         grid-auto-rows: minmax(0, 80px);
-        gap: 2rem;
         justify-items: center;
         background-color: hsla(261, 55%, 24%, 0.424);
         backdrop-filter: blur(2px);
         width: 100%;
-        padding: 0.5em 2rem;
+        gap: var(--space-1);
+        @media (min-width: 992px) {
+            padding: 0.25em 1rem;
+            gap: 1rem;
+        }
+        @media (min-width: 1200px) {
+            padding: 0.5em 2rem;
+            gap: 2rem;
+        }
         border-bottom-left-radius: 8px;
         border-bottom-right-radius: 8px;
     }
@@ -85,7 +92,6 @@
     &__connections {
         display: grid;
         grid-auto-rows: minmax(0, 80px);
-        gap: 2rem;
         justify-items: center;
         background-color: hsla(261, 55%, 24%, 0.424);
         backdrop-filter: blur(2px);

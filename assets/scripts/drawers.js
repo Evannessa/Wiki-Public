@@ -8,7 +8,6 @@ export function SideDrawer() {
     function cacheDrawerElements(selectorData) {
         const defaultData = { drawer: ".drawer", toggleButtonOuter: ".drawer__toggle-button" };
         selectorData = { ...defaultData, ...selectorData };
-        console.log(selectorData);
         for (let element in selectorData) {
             elements[element] = document.querySelector(selectorData[element]);
         }
@@ -16,7 +15,6 @@ export function SideDrawer() {
     }
     function addDrawerListeners() {
         const { toggleButtonOuter, toggleButtonInner, drawer } = elements;
-        console.log(elements);
         function toggleExpand() {
             Helpers.toggleClassOnAction(toggleButtonOuter, drawer, { action: "expand" });
         }

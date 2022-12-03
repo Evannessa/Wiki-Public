@@ -79,7 +79,6 @@ window.onload = function (event) {
             ...hint.getActions().click,
         },
     };
-    console.log(allActions);
 
     Helpers.addListeners(allActions, document);
 
@@ -634,7 +633,6 @@ function positionInGenerations() {
             let incrementBy = 100 / positionArray.length; // + svgSize;
             //divide the length of the child array into equal segments to be turned into percentages
             for (let i = 0; i < positionArray.length; i++) {
-                console.log(currentNumber, incrementBy);
                 positionArray[i] = currentNumber;
                 currentNumber += incrementBy;
             }

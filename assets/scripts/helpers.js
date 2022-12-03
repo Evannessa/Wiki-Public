@@ -225,12 +225,16 @@ export default class Helpers {
         const hoverElements = Array.from(parentElement.querySelectorAll("[data-hover-action]"));
         const changeElements = Array.from(parentElement.querySelectorAll("[data-change-action]"));
         const inputElements = Array.from(parentElement.querySelectorAll("[data-input-action]"));
+        const pressElements = [document.documentElement];
+        // const releaseElements = [document.documentElement];
+        document.documentElement.dataset.pressAction = "handleHotkey";
 
         const elementSets = {
             click: { elements: clickElements, eventNames: "click" },
             change: { elements: changeElements, eventNames: "change" },
             hover: { elements: hoverElements, eventNames: "mouseenter mouseleave" },
             input: { elements: inputElements, eventNames: "input" },
+            press: { elements: pressElements, eventNames: "keydown" },
         };
 
         for (const key in elementSets) {
@@ -239,18 +243,22 @@ export default class Helpers {
 
             Helpers.clearEventListenersFromAll(elements, eventNames);
             Helpers.addEventListenerToAll(elements, eventNames, (event) => {
-                let action = event.currentTarget.dataset[datasetProperty];
+                if (event.currentTarget.dataset && event.currentTarget.dataset[datasetProperty]) {
+                    let action = event.currentTarget.dataset[datasetProperty];
 
-                Helpers.handleAction(event, key, action, actionsData);
+                    Helpers.handleAction(event, key, action, actionsData);
+                }
             });
         }
     }
     static handleAction(event, actionType, action, actionsData) {
         const currentTarget = event.currentTarget;
-        const actionData = actionsData[actionType][action];
-        if (actionData.hasOwnProperty("handler")) {
-            const options = { currentTarget };
-            actionData["handler"](event, options);
+        if (actionsData[actionType] && actionsData[actionType][action]) {
+            const actionData = actionsData[actionType][action];
+            if (actionData.hasOwnProperty("handler")) {
+                const options = { currentTarget };
+                actionData["handler"](event, options);
+            }
         }
     }
     static symbolReplacer(text) {

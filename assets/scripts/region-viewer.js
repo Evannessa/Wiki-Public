@@ -261,7 +261,6 @@ export const regionViewerModule = (function () {
         globalData = getLocationsByProperty("type", "global")[0];
         globalData.baseAssetPath = data.sheets.find((sheet) => sheet.name === "ourMetadata").lines[0].baseAssetPath;
 
-        createUIElements(allLocations);
         uiHandlers.tabsHandler = new TabsHandler({
             lore: {
                 hotkey: 76, // l key
@@ -288,6 +287,7 @@ export const regionViewerModule = (function () {
                     "You're hovering a location. Click to 'zoom in' on this location or press [[L]] [[G]] or [[C]] to zoom in *and* switch to a specific tab.",
             },
         });
+        createUIElements(allLocations);
     }
     /**
      * initialize the UI elements for our map
@@ -298,7 +298,6 @@ export const regionViewerModule = (function () {
             image = imageData.mainImage;
 
         addAccentColor(container, locationData);
-        //TODO: cache this somewhere
         document.querySelector(".decor.bottom-card h3").textContent = locationData.id;
 
         const children = getLocationsByProperty("parent", guid);
@@ -341,7 +340,16 @@ export const regionViewerModule = (function () {
         uiHandlers.hoverHandler.initializeHoverData();
 
         setDefaultVisibilityState();
-        addListeners();
+
+        locationActionsData.actions.click = {
+            ...locationActionsData.actions.click,
+            ...uiHandlers.hintHandler.getActions().click,
+        };
+        console.log(locationActionsData.actions.click);
+
+        Helpers.addListeners(locationActionsData.actions, document);
+
+        // addListeners();
     }
 
     function getLocationDataFromElement(locationEl) {
@@ -550,9 +558,11 @@ export const regionViewerModule = (function () {
         uiHandlers.hintHandler.updateHintText("default");
         Object.values(directionElements)
             .map((obj) => obj.parent)
-            .forEach((p) => addListeners(p));
-        addListeners(selectedLocationElements.container);
-        addListeners(uiHandlers.selectedLocationUI.getContainer());
+            .forEach((p) => Helpers.addListeners(locationActionsData.actions, p));
+
+        // Helpers.addListeners(actionsDa)
+        Helpers.addListeners(locationActionsData.actions, selectedLocationElements.container);
+        Helpers.addListeners(locationActionsData.actions, uiHandlers.selectedLocationUI.getContainer());
     }
 
     /**
