@@ -123,17 +123,6 @@ export default class Helpers {
         } else if (toggleClass) {
             dependentElement.classList.toggle(toggleClass);
         }
-
-        // if (action === "hide") {
-        // } else if (action === "show") {
-        //     dependentElement.classList.remove("hidden");
-        // } else if (action === "expand") {
-        //     Helpers.toggleExpandClass(dependentElement);
-        // } else if (action === "remove") {
-        //     Helpers.toggleHiddenClass(dependentElement);
-        // } else if (action === "highlight") {
-        //     dependentElement.classList.toggle("highlighted");
-        // }
     }
     /**
      * Toggle a button between different content states
@@ -289,7 +278,10 @@ export default class Helpers {
             elements.forEach((el) => {
                 if (el.dataset && el.dataset[datasetProperty]) {
                     let action = el.dataset[datasetProperty];
-                    actionsData[key][action].element = el;
+                    if (action) {
+                        console.log(action, key);
+                        actionsData[key][action].element = el;
+                    }
                     // console.log(actionsData[key][action]);
                 }
             });

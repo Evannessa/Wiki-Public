@@ -6,7 +6,7 @@ export default function Hint() {
         buttonElement: "",
         hintText: {},
     };
-    function toggleDisplay() {
+    function toggleDisplay(element) {
         Helpers.toggleClassOnAction(hints.buttonElement, hints.element, {
             toggleButtonActive: true,
             toggleClass: "hidden",
@@ -15,15 +15,8 @@ export default function Hint() {
     const actions = {
         click: {
             toggleDisplay: {
-                handler: () => {
-                    toggleDisplay();
-                },
-            },
-        },
-        press: {
-            toggleDisplay: {
-                handler: () => {
-                    toggleDisplay();
+                handler: (event, element) => {
+                    toggleDisplay(element);
                 },
                 hotkey: 72,
             },

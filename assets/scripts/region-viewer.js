@@ -9,17 +9,15 @@ import Helpers from "./helpers.js";
 import Hint from "./hint-display.js";
 
 export const regionViewerModule = (function () {
-    function toggleImageView(event) {
-        let currentTarget = event.currentTarget;
+    function toggleImageView(event, element) {
+        let currentTarget = element ? element : event.currentTarget;
+        console.log(element);
         Helpers.toggleClassOnAction(currentTarget, selectedLocationElements.imageContainer, {
             toggleClass: "hidden",
             toggleButtonIcon: true,
             toggleButtonActive: true,
         });
-        // selectedLocationElements.imageContainer.classList.toggle("hidden");
         selectedLocationElements.imageContainer.classList.toggle("image-mode");
-        // Helpers.toggleButtonText(currentTarget, "Hide Image", "Show Image");
-        // hide the children
         selectedLocationElements.hexChildren.forEach((hex) => {
             Helpers.toggleClassOnAction(currentTarget, hex, { toggleClass: "hidden" });
         });
@@ -73,7 +71,6 @@ export const regionViewerModule = (function () {
                             toggleButtonActive: true,
                             toggleButtonIcon: true,
                         });
-                        // infoCard.classList.toggle("flat");
                     },
                 },
                 switchTab: {
@@ -85,9 +82,10 @@ export const regionViewerModule = (function () {
                     },
                 },
                 toggle: {
-                    handler: (event) => {
-                        toggleImageView(event);
+                    handler: (event, element) => {
+                        toggleImageView(event, element);
                     },
+                    hotkey: 73,
                 },
                 reset: {
                     handler: () => {
@@ -140,7 +138,6 @@ export const regionViewerModule = (function () {
                             locationData = getLocationsByProperty("guid", targetId)[0];
                         }
                         let method = "fromParent";
-                        console.log(current.classList);
                         if (current.classList.contains("connection-hex")) {
                             method = "fromConnection";
                         }
@@ -196,21 +193,20 @@ export const regionViewerModule = (function () {
                                 expandSidebar("expand");
                             }
                         } else {
-                            let otherHotkeys = Object.values(locationActionsData.actions.press)
+                            let otherHotkeys = Object.values(locationActionsData.actions.click)
                                 .map((d) => d.hotkey)
                                 .filter((d) => d);
-                            let ourKey = Object.values(locationActionsData.actions.press).find(
+                            let ourAction = Object.values(locationActionsData.actions.click).find(
                                 (d) => d.hotkey === event.keyCode
                             );
-                            console.log(otherHotkeys, event.keyCode);
+                            console.log(otherHotkeys, ourAction);
+
+                            if (ourAction.hasOwnProperty("handler")) {
+                                const { handler, element } = ourAction;
+                                handler(event, element);
+                            }
                         }
                     },
-                },
-                toggleImageView: {
-                    handler: (event) => {
-                        toggleImageView(event);
-                    },
-                    hotkey: 73,
                 },
             },
             release: {
@@ -367,9 +363,13 @@ export const regionViewerModule = (function () {
             ...locationActionsData.actions.click,
             ...uiHandlers.hintHandler.getActions().click,
         };
+        locationActionsData.actions.press = {
+            ...locationActionsData.actions.press,
+            ...uiHandlers.hintHandler.getActions().press,
+        };
 
         let actions = Helpers.addListeners(locationActionsData.actions, document);
-        console.log(locationActionsData.actions, actions);
+        // console.log(locationActionsData.actions, actions);
 
         // addListeners();
     }
