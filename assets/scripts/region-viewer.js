@@ -185,13 +185,8 @@ export const regionViewerModule = (function () {
             press: {
                 handleHotkey: {
                     handler: (event) => {
-                        if (event.key === "i") {
-                            toggleImageView(event);
-                        } else if (event.key === "h") {
-                            //TODO
-                        } else {
-                            let hotkeys = Object.values(uiHandlers.tabsHandler.getData()).map((d) => d.hotkey);
-                            if (!hotkeys.includes(event.keyCode)) return;
+                        let tabHotkeys = Object.values(uiHandlers.tabsHandler.getData()).map((d) => d.hotkey);
+                        if (tabHotkeys.includes(event.keyCode)) {
                             const current = uiHandlers.hoverHandler.getHoverDataProperty("current");
                             if (current) {
                                 selectLocation(current, "", "fromParent");
@@ -200,8 +195,22 @@ export const regionViewerModule = (function () {
                             if (!uiHandlers.selectedLocationUI.getContainer().classList.contains("expanded")) {
                                 expandSidebar("expand");
                             }
+                        } else {
+                            let otherHotkeys = Object.values(locationActionsData.actions.press)
+                                .map((d) => d.hotkey)
+                                .filter((d) => d);
+                            let ourKey = Object.values(locationActionsData.actions.press).find(
+                                (d) => d.hotkey === event.keyCode
+                            );
+                            console.log(otherHotkeys, event.keyCode);
                         }
                     },
+                },
+                toggleImageView: {
+                    handler: (event) => {
+                        toggleImageView(event);
+                    },
+                    hotkey: 73,
                 },
             },
             release: {
@@ -441,11 +450,6 @@ export const regionViewerModule = (function () {
             toggleButtonIcon: true,
             toggleButtonActive: true,
         });
-        // if (nav.classList.contains("expanded")) {
-        //     Helpers.closeNav(nav, main);
-        // } else {
-        //     Helpers.openNav(nav, main);
-        // }
     }
 
     function populateHeirarchyFromData(childData) {
@@ -470,7 +474,6 @@ export const regionViewerModule = (function () {
     function clearAndStorePreviousLocation(method, childData) {
         if (method === "fromConnection") {
             removeTopElements();
-            console.log("From connection");
             //if we're jumping to a connection, we need to handle its parents somehow
             //first clear the heirarchy, reseting things to root
             clearHeirarchy();
