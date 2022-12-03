@@ -176,7 +176,6 @@ export const regionViewerModule = (function () {
                         const targetId = actionElement.dataset.guidLink;
                         const hex = document.querySelector(`[data-guid='${targetId}']`);
                         const locationData = getLocationsByProperty("guid", targetId)[0];
-                        console.log(locationData);
                         // Helpers.toggleClassOnAction(actionElement, hex, { action: "highlight" });
                         let shouldHide = event.type === "mouseleave" || event.type === "mouseout";
                         displayInfo(hex, locationData, shouldHide);
@@ -199,7 +198,7 @@ export const regionViewerModule = (function () {
                             }
                             uiHandlers.tabsHandler.handleHotkey(event);
                             if (!uiHandlers.selectedLocationUI.getContainer().classList.contains("expanded")) {
-                                expandSidebar();
+                                expandSidebar("expand");
                             }
                         }
                     },
@@ -302,6 +301,7 @@ export const regionViewerModule = (function () {
         });
         createUIElements(allLocations);
     }
+
     /**
      * initialize the UI elements for our map
      */
@@ -358,9 +358,9 @@ export const regionViewerModule = (function () {
             ...locationActionsData.actions.click,
             ...uiHandlers.hintHandler.getActions().click,
         };
-        console.log(locationActionsData.actions.click);
 
-        Helpers.addListeners(locationActionsData.actions, document);
+        let actions = Helpers.addListeners(locationActionsData.actions, document);
+        console.log(locationActionsData.actions, actions);
 
         // addListeners();
     }
@@ -399,7 +399,7 @@ export const regionViewerModule = (function () {
 
         //Also if it's closed, expand the toggle
         if (!uiHandlers.selectedLocationUI.getContainer().classList.contains("expanded")) {
-            expandSidebar();
+            expandSidebar("expand");
         }
     }
 
@@ -433,14 +433,19 @@ export const regionViewerModule = (function () {
         });
     }
 
-    function expandSidebar() {
+    function expandSidebar(actionKey) {
         let nav = document.querySelector(".location-info");
-        let main = document.querySelector(".location-map .location-map");
-        if (nav.classList.contains("expanded")) {
-            Helpers.closeNav(nav, main);
-        } else {
-            Helpers.openNav(nav, main);
-        }
+        let actionElement = locationActionsData.actions.click[actionKey].element;
+        Helpers.toggleClassOnAction(actionElement, nav, {
+            toggleClass: "expanded",
+            toggleButtonIcon: true,
+            toggleButtonActive: true,
+        });
+        // if (nav.classList.contains("expanded")) {
+        //     Helpers.closeNav(nav, main);
+        // } else {
+        //     Helpers.openNav(nav, main);
+        // }
     }
 
     function populateHeirarchyFromData(childData) {

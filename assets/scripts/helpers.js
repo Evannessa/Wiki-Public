@@ -286,7 +286,15 @@ export default class Helpers {
                     Helpers.handleAction(event, key, action, actionsData);
                 }
             });
+            elements.forEach((el) => {
+                if (el.dataset && el.dataset[datasetProperty]) {
+                    let action = el.dataset[datasetProperty];
+                    actionsData[key][action].element = el;
+                    // console.log(actionsData[key][action]);
+                }
+            });
         }
+        return actionsData;
     }
     static handleAction(event, actionType, action, actionsData) {
         const currentTarget = event.currentTarget;
