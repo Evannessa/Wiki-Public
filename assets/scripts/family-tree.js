@@ -28,16 +28,33 @@ const actions = {
             handler: () => {
                 reset();
             },
+            hotkey: 82,
         },
         jumpGen: {
+            handler: (event, which) => {
+                if (!which) which = event.currentTarget.dataset.gen;
+                jumpToGeneration(event, which);
+            },
+            hotkeys: [1, 2, 3],
+        },
+    },
+    press: {
+        handleHotkey: {
             handler: (event) => {
-                jumpToGeneration(event);
+                let ourAction = Object.values(locationActionsData.actions.click).find(
+                    (d) => d.hotkey === event.keyCode || d.hotkeys.includes(event.keyCode)
+                );
+
+                if (ourAction?.hasOwnProperty("handler")) {
+                    const { handler, element } = ourAction;
+                    handler(event, element);
+                }
             },
         },
     },
 };
 
-window.onload = function (event) {
+window.onload = async function (event) {
     svgElement = document.querySelector(`.family-tree`);
     svgElement.closest("main").classList.add("hidden-overflow-wide-main");
 
@@ -110,6 +127,7 @@ window.onload = function (event) {
     connectToUnions();
     registerMemberListeners();
 
+    // await Helpers.waitForElm("");
     setZoomEventListeners();
 
     window.membersObject = membersObject;
@@ -373,6 +391,7 @@ function registerMemberListeners() {
             });
         });
     });
+    Helpers.dispatchLoadEvent();
 }
 
 // find unions that WE'RE the parents of

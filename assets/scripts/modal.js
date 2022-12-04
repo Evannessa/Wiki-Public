@@ -3,11 +3,9 @@ export class Modal {
     constructor() {}
     initialize(modalType = "information", data = {}, insetParent) {
         const { mainImageSrc, otherImageSrcArray = [] } = data;
-        console.log(data);
         if (modalType === "imageGallery") {
             this.lightbox = this.createLightboxHTML(mainImageSrc, otherImageSrcArray, data, modalType, insetParent);
         } else {
-            console.log("Creating information modal");
             this.lightbox = this.createLightboxHTML(mainImageSrc, otherImageSrcArray, data, modalType);
         }
         if (this.lightbox) {

@@ -237,15 +237,7 @@ export default class Helpers {
         }
         return dataArray;
     }
-    /* Set the width of the side navigation to 250px and the left margin of the page content to 250px */
-    static openNav(nav) {
-        nav.classList.add("expanded");
-    }
 
-    /* Set the width of the side navigation to 0 and the left margin of the page content to 0 */
-    static closeNav(nav) {
-        nav.classList.remove("expanded");
-    }
     static addListeners(actionsData, parentElement = document) {
         const clickElements = Array.from(parentElement.querySelectorAll("[data-click-action]"));
         const hoverElements = Array.from(parentElement.querySelectorAll("[data-hover-action]"));
@@ -292,8 +284,8 @@ export default class Helpers {
         if (actionsData[actionType] && actionsData[actionType][action]) {
             const actionData = actionsData[actionType][action];
             if (actionData.hasOwnProperty("handler")) {
-                const options = { currentTarget };
-                actionData["handler"](event, options);
+                // const options = { currentTarget };
+                actionData["handler"](event, currentTarget);
             }
         }
     }
@@ -314,5 +306,45 @@ export default class Helpers {
         method._tId = setTimeout(function () {
             method();
         }, delay);
+    }
+
+    static dispatchLoadEvent() {
+        let event = new CustomEvent("generatedElementsLoaded", {
+            // detail: {backgroundColor: 'yellow'}
+        });
+        document.dispatchEvent(event);
+    }
+    static waitForImages(parentElement, selector = "image") {
+        Array.from(parentElement.querySelectorAll(selector)).addEventListener("load", (event) => {
+            let img = event.currentTarget;
+            if (img.complete) {
+                // this.lightbox.querySelector(".spotlight-image").setAttribute("src", img.getAttribute("src"));
+            }
+        });
+    }
+
+    /**
+     * @author Yong Wang
+     * @link https://stackoverflow.com/questions/5525071/how-to-wait-until-an-element-exists
+     * @param {String} selector  - selector for the element we're waiting for
+     */
+    static async waitForElm(selector) {
+        return new Promise((resolve) => {
+            if (document.querySelector(selector)) {
+                return resolve(document.querySelector(selector));
+            }
+
+            const observer = new MutationObserver((mutations) => {
+                if (document.querySelector(selector)) {
+                    resolve(document.querySelector(selector));
+                    observer.disconnect();
+                }
+            });
+
+            observer.observe(document.body, {
+                childList: true,
+                subtree: true,
+            });
+        });
     }
 }

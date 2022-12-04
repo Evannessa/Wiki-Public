@@ -1,6 +1,15 @@
+.loader-container {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: 500;
+    background: var(--bg-color);
+    display: grid;
+    place-content: center;
+}
 .loader {
-    border: 16px solid #f3f3f3; /* Light grey */
-    border-top: 16px solid #3498db; /* Blue */
+    border: 16px solid hsl(254, 65%, 50%);
+    border-top: 16px solid var(--bg-color);
     border-radius: 50%;
     width: 120px;
     height: 120px;

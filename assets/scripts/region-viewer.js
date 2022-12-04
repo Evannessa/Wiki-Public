@@ -365,10 +365,11 @@ export const regionViewerModule = (function () {
             ...uiHandlers.hintHandler.getActions().press,
         };
 
-        let actions = Helpers.addListeners(locationActionsData.actions, document);
+        Helpers.addListeners(locationActionsData.actions, document);
         // console.log(locationActionsData.actions, actions);
 
         // addListeners();
+        Helpers.dispatchLoadEvent();
     }
 
     function getLocationDataFromElement(locationEl) {
