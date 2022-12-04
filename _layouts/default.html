@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
     {% include head.html %}
-    <body>
-
+    <body class="loading">
         {% include loader.html %}
         <nav data-layout="{{page.layout}}" style="--page-layout: {{page.layout}}">
 
@@ -10,6 +9,7 @@
             {% include nav.html isTopNav=false navType="mobile" %}
         </nav>
         {% include breadcrumbs.html %}
+
         <div class="wrapper">
             <main data-layout="{{page.layout}}">
                 {{ content }}

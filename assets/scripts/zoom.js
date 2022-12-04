@@ -1,13 +1,16 @@
 //gist.github.com/fabrizzio-gz/8458bb13418e5bb6ea49133ba122930c
 //https://developer.mozilla.org/en-US/docs/Web/API/Element/scroll_event
-import { svgElement, jumpToGeneration, toggleButton, resetButton, defaultTransform } from "./family-tree.js";
+// import { FamilyTreeModule.svgElement, jumpToGeneration, toggleButton, resetButton, FamilyTreeModule.defaultTransform } from "./family-tree.js";
+import { FamilyTreeModule } from "./family-tree.js";
 
 /**
  * set the event listeners for all of the controls
  */
 export function setZoomEventListeners() {
     // resetButton.onclick = () => reset();
-    document.querySelectorAll(".jump-gen").forEach((element) => element.addEventListener("click", jumpToGeneration));
+    document
+        .querySelectorAll(".jump-gen")
+        .forEach((element) => element.addEventListener("click", FamilyTreeModule.jumpToGeneration));
     document.addEventListener("keydown", (event) => {
         event.preventDefault();
         const { code } = event;
@@ -43,13 +46,13 @@ export function setZoomEventListeners() {
 }
 
 // Zoom and Pan Functions
-// code from here: https://onestepcode.com/zoom-pan-effect-svgElement/
+// code from here: https://onestepcode.com/zoom-pan-effect-FamilyTreeModule.svgElement/
 const zoom = (direction) => {
-    const { scale, x, y } = getTransformParameters(svgElement);
+    const { scale, x, y } = getTransformParameters(FamilyTreeModule.svgElement);
     let dScale = 0.1;
     if (direction == "out") dScale *= -1;
     if (scale == 0.1 && direction == "out") dScale = 0;
-    svgElement.style.transform = getTransformString(scale + dScale, x, y);
+    FamilyTreeModule.svgElement.style.transform = getTransformString(scale + dScale, x, y);
 };
 const getTransformParameters = (element) => {
     const transform = element.style.transform;
@@ -63,12 +66,12 @@ const getTransformParameters = (element) => {
 };
 //reset back to default transform
 export function reset() {
-    svgElement.style.transform = defaultTransform;
+    FamilyTreeModule.svgElement.style.transform = FamilyTreeModule.defaultTransform;
 }
 const getTransformString = (scale, x, y) => `scale(${scale}) translateX(${x}%) translateY(${y}%)`;
 
 const pan = (direction) => {
-    const { scale, x, y } = getTransformParameters(svgElement);
+    const { scale, x, y } = getTransformParameters(FamilyTreeModule.svgElement);
     let dx = 0,
         dy = 0;
     switch (direction) {
@@ -85,11 +88,11 @@ const pan = (direction) => {
             dy = -10;
             break;
     }
-    svgElement.style.transform = getTransformString(scale, x + dx, y + dy);
+    FamilyTreeModule.svgElement.style.transform = getTransformString(scale, x + dx, y + dy);
 };
 
 export const setTransformString = (transformString) => {
-    svgElement.style.transform = transformString;
+    FamilyTreeModule.svgElement.style.transform = transformString;
 };
 
 export function toggleSidebar(event) {

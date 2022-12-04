@@ -29,6 +29,11 @@ main {
 }
 body {
     min-height: 100vh;
+    &.loading {
+        > *:not(.loader-container) {
+            display: none;
+        }
+    }
 }
 html,
 body {

@@ -286,7 +286,6 @@
     --border-color: #6065b17a;
     --shadow-color-dark: hsla(261, 63%, 16%, 0.578);
     --shadow-color-light: rgba(50, 50, 93, 0.25);
-    height: 60%;
     backdrop-filter: blur(5px);
     position: absolute;
     top: 50%;
@@ -299,6 +298,7 @@
     border: 1px solid var(--border-color);
     box-shadow: var(--shadow-color-light) 0px 6px 12px -2px, var(--shadow-color-dark) 0px 3px 7px -3px;
     aspect-ratio: 2.35/3.5;
+    height: 60%;
     max-height: 45vh;
 }
 .top-card {
@@ -500,6 +500,8 @@
 }
 @media (min-width: 450px) {
     .top-card {
+        height: 60%;
+        max-height: 45vh;
         top: -10%;
         transform: rotateZ(-50deg);
         h3 {

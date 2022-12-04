@@ -62,8 +62,6 @@ export const regionViewerModule = (function () {
                 fold: {
                     handler: (event) => {
                         const btnElement = event.currentTarget;
-                        // Helpers.toggleButtonActive(btnElement);
-                        // Helpers.toggleButtonIcon(btnElement);
                         let infoCard = document.querySelector(".location-info__content");
                         Helpers.toggleClassOnAction(btnElement, infoCard, {
                             toggleClass: "flat",
@@ -107,11 +105,6 @@ export const regionViewerModule = (function () {
                             toggleButtonIcon: true,
                             toggleClass: "expanded",
                         });
-                        // if (nav.classList.contains("expanded")) {
-                        //     Helpers.closeNav(nav, main);
-                        // } else {
-                        //     Helpers.openNav(nav, main);
-                        // }
                     },
                 },
                 open: {
@@ -192,9 +185,6 @@ export const regionViewerModule = (function () {
                                 expandSidebar("expand");
                             }
                         } else {
-                            let otherHotkeys = Object.values(locationActionsData.actions.click)
-                                .map((d) => d.hotkey)
-                                .filter((d) => d);
                             let ourAction = Object.values(locationActionsData.actions.click).find(
                                 (d) => d.hotkey === event.keyCode
                             );
@@ -203,15 +193,6 @@ export const regionViewerModule = (function () {
                                 handler(event, element);
                             }
                         }
-                    },
-                },
-            },
-            release: {
-                handleKeyRelease: {
-                    handler: (event) => {
-                        // let shouldHide = uiHandlers.hoverHandler.updateHoverData(event);
-                        // // let locationEl = event.currentTarget
-                        // displayInfo("", shouldHide);
                     },
                 },
             },
@@ -356,19 +337,18 @@ export const regionViewerModule = (function () {
 
         setDefaultVisibilityState();
 
-        locationActionsData.actions.click = {
-            ...locationActionsData.actions.click,
-            ...uiHandlers.hintHandler.getActions().click,
-        };
-        locationActionsData.actions.press = {
-            ...locationActionsData.actions.press,
-            ...uiHandlers.hintHandler.getActions().press,
-        };
+        Helpers.combineActions(locationActionsData.actions, uiHandlers.hintHandler.getActions());
+        // locationActionsData.actions.click = {
+        //     ...locationActionsData.actions.click,
+        //     ...uiHandlers.hintHandler.getActions().click,
+        // };
+        // locationActionsData.actions.press = {
+        //     ...locationActionsData.actions.press,
+        //     ...uiHandlers.hintHandler.getActions().press,
+        // };
 
         Helpers.addListeners(locationActionsData.actions, document);
-        // console.log(locationActionsData.actions, actions);
 
-        // addListeners();
         Helpers.dispatchLoadEvent();
     }
 

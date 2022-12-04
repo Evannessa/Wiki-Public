@@ -237,6 +237,15 @@ export default class Helpers {
         }
         return dataArray;
     }
+    static combineActions(actionsData, otherActionsData = [], actionTypes = ["click", "press"]) {
+        actionTypes.forEach((type) => {
+            actionsData[type] = {
+                ...actionsData[type],
+                ...otherActionsData[type],
+            };
+        });
+        console.log(actionsData);
+    }
 
     static addListeners(actionsData, parentElement = document) {
         const clickElements = Array.from(parentElement.querySelectorAll("[data-click-action]"));

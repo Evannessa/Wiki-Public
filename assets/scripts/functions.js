@@ -45,9 +45,17 @@ function navHighlighter() {
 }
 
 document.addEventListener("DOMContentLoaded", function (event) {
-    if (document.querySelector("main").dataset.layout !== "locations_map") {
-        console.log("Functions.js fully loaded");
-        onLoad(event);
+    let layout = document.querySelector("main").dataset.layout;
+    switch (layout) {
+        case "locations_map":
+        case "family-tree":
+        case "search-page":
+            console.log("Family tree or map");
+            break;
+        default:
+            onLoad(event);
+            Helpers.dispatchLoadEvent();
+            break;
     }
 });
 

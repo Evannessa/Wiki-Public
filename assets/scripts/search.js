@@ -29,6 +29,10 @@ const searchActions = {
 };
 
 document.addEventListener("DOMContentLoaded", () => {
+    initializeElements();
+});
+
+function initializeElements() {
     console.log("Search has been loaded");
 
     let filterDrawer = new SideDrawer();
@@ -55,10 +59,8 @@ document.addEventListener("DOMContentLoaded", () => {
     if (deceasedFilter) deceasedFilter.disabled = true;
 
     Helpers.addListeners(searchActions);
-    // disable the status filter
-});
-
-function initializeElements(parentElement) {}
+    Helpers.dispatchLoadEvent();
+}
 
 function doesMatchFilter(filter, className) {
     galleryCards.forEach((card) => {
