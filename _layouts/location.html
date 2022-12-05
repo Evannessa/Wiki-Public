@@ -11,9 +11,15 @@ layout: article-base
 	{% if page.macro %}
 		data-macro="{{page.macro}}"
 	{% endif %}
-	
+	{% if page.mapData %}
+		data-map-data="{{page.mapData}}"
+	{% endif %}
+	{% if page.mapUrl %}
+		data-map-url="{{page.mapUrl}}"
+	{% endif %}
 	>
-        {% include anchor_headings.html html=content anchorBody="#" %} <!-- {{content}} -->
+        {% include anchor_headings.html html=content anchorBody="#" %}
+        <!-- {{content}} -->
     </content>
 </article>
 
