@@ -3,6 +3,8 @@ layout: location
 tags:
 - Category/Location
 layout: location
+mapUrl: starshead-map
+mapData: StarsheadIsland.dpo
 ---
 
 # Starshead Village
@@ -24,4 +26,3 @@ Trade in Starshead is regulated, with taxes and restrictions on what can be brou
 #### Law and Order
 
 The policing presence in Starshead is more of a militia; some of the members of The Regiment of Unbreakable Hand are part time, and there is little need for the use of force outside of intruders. Law in Starshead is reform-based, and those that breach the laws can expect incarceration, fines, or going to an asylum for reform. The death penalty is reserved only for traitors to the state. Magic is typically reserved for those with a license. There is some magic, but is mostly for personal use, and sometimes commercial.
-
