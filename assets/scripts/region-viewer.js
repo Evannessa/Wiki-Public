@@ -121,6 +121,7 @@ export const regionViewerModule = (function () {
                             let imgPath = event.currentTarget.querySelector("image").getAttribute("href");
                             console.log(window.location.hostname + imgPath);
                             navigator.clipboard.writeText("https://" + window.location.hostname + imgPath);
+                            return;
                         }
                         const locationEl = event.currentTarget;
                         selectLocation(locationEl, "", "fromParent");
