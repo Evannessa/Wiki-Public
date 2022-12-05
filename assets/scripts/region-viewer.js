@@ -119,7 +119,8 @@ export const regionViewerModule = (function () {
                         // Copy the text inside the text field
                         if (event.ctrlKey) {
                             let imgPath = event.currentTarget.querySelector("image").getAttribute("href");
-                            navigator.clipboard.writeText(imgPath);
+                            console.log(window.location.hostname + imgPath);
+                            navigator.clipboard.writeText(window.location.hostname + imgPath);
                         }
                         const locationEl = event.currentTarget;
                         selectLocation(locationEl, "", "fromParent");
