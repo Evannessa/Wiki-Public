@@ -1,4 +1,4 @@
-import { fadeIn, fadeOut } from "./animation-helpers.js";
+import { crossfade } from "./animation-helpers.js";
 import Helpers from "./helpers.js";
 export default function Hint() {
     const hints = {
@@ -41,10 +41,12 @@ export default function Hint() {
     //for replacing certain text with icons/letters
 
     function updateHintText(context) {
-        fadeOut(hints.element);
-        const text = `<p>` + Helpers.symbolReplacer(hints.hintText[context]) + `</p>`;
-        Helpers.removeChildren(hints.element);
-        hints.element.appendChild(Helpers.htmlToElement(text));
+        crossfade(hints.element);
+        setTimeout(() => {
+            const text = `<p>` + Helpers.symbolReplacer(hints.hintText[context]) + `</p>`;
+            Helpers.removeChildren(hints.element);
+            hints.element.appendChild(Helpers.htmlToElement(text));
+        }, 200);
     }
 
     return { initializeHints, updateHintText, getActions };

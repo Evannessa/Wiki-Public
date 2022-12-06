@@ -332,6 +332,8 @@ export default class Helpers {
         });
     }
 
+    static notify() {}
+
     /**
      * @author Yong Wang
      * @link https://stackoverflow.com/questions/5525071/how-to-wait-until-an-element-exists

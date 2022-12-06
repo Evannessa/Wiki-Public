@@ -1,4 +1,5 @@
 import { SideDrawer } from "./drawers.js";
+import { Snackbar } from "./snackbar.js";
 import Card from "./cards.js";
 
 document.addEventListener("DOMContentLoaded", function (event) {
@@ -10,6 +11,10 @@ document.addEventListener("DOMContentLoaded", function (event) {
         toggleButtonOuter: ".main-nav-toggle.outer",
         toggleButtonInner: ".main-nav-toggle.inner",
     });
+
+    let ourSnackbar = new Snackbar();
+    ourSnackbar.initializeSnackbar();
+
     handleCards();
 });
 function handleCards() {

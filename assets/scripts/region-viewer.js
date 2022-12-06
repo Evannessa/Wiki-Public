@@ -119,8 +119,10 @@ export const regionViewerModule = (function () {
                         // Copy the text inside the text field
                         if (event.ctrlKey) {
                             let imgPath = event.currentTarget.querySelector("image").getAttribute("href");
-                            console.log(window.location.hostname + imgPath);
                             navigator.clipboard.writeText("https://" + window.location.hostname + imgPath);
+                            if (window.snackbar) console.log(window.snackbar);
+                            window.snackbar.updateText(`Copied '${imgPath}' to Clipboard`);
+                            window.snackbar.toggleShowSnackbar();
                             return;
                         }
                         const locationEl = event.currentTarget;
