@@ -5,6 +5,7 @@ tags:
 layout: location
 mapUrl: starshead-map
 mapData: StarsheadIsland.dpo
+image: /assets/locations/DarkHillsOcean.jpg
 ---
 
 # Starshead Village
