@@ -10,11 +10,18 @@ parents:
     - Taza
 ---
 
-Lourenco, 7
+# Lourenco
 
-_Friendly towards the MC_
+Traits: Shy, imaginative, easily-attached, cannot tolerate conflict
 
-Mature and down-to-earth; they look out for other family members
+### Bio
+
+Nine years after his sister [[Petra]], Lourenco was the second child born on Starshead Island. 
+
+
+
+
+
 
 ### Parents
 

@@ -12,9 +12,14 @@ parents:
 
 # Petra
 
-_Friendly towards the MC_
+Traits: motivated, adventurous, curious, enjoys outdoing others, persistent
 
-Mature and down-to-earth; they look out for other family members
+## Bio
+#wip
+
+Petra was the first child born on Starshead Island, with MC carrying her in the midst of the crash.
+
+
 
 ## Personal Life
 
