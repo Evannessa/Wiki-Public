@@ -13,9 +13,13 @@ parents:
 
 # Ester
 
-_Tries to manipulate the MC_
+#wip
 
-Constantly worries about the wellbeing of other family members
+Traits: Contemplative, artistic, laconic, Versatile, Cooperative, Perceptive, and Abstract
+
+It's often joked among the Ruto clan that Ester is her brother [[Slyvain]]'s 'real' twin, in reference to how calm and quiet the two both are.
+
+
 
 ## Personal Life
 

@@ -160,6 +160,7 @@ main {
             }
         }
         &.page-nav {
+            display: none;
             transform: translateX(100%);
             @media (min-width: 992px) {
                 transform: translateX(0%);
