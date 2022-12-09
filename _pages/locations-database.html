@@ -6,12 +6,9 @@ permalink: /search-locations
 ---
 
 <section class="gallery-section">
-    <h2>
-        Individual Locations
-    </h2>
     {% assign locations = site.notes | where_exp: "note", "note.layout contains
     'location'" %}
-    {% include search.html %}
+    {% include search.html placeholder="Where would you like to go?" %}
     <div class="card-container card-container--gallery" id="individual-locations">
         {% for card in locations %}
             {% include card.html %}

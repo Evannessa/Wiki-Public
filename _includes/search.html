@@ -8,7 +8,7 @@
             name="search-box"
             data-input-action="filterSearch"
             type="text"
-            placeholder="Who are you looking for?"
+            placeholder="{{include.placeholder | default: 'Who are you looking for?'}}"
                 >
     </div>
     <fieldset class="active-filters can-be-hidden hidden">
