@@ -14,6 +14,8 @@ image: /assets/locations/DarkHillsOcean.jpg
 
 ## The Story
 
+Following <a href="/history-of-the-ruto-clan#the-attack">The Attack</a>,
+
 A ship, traveling to a new land, blown astray into uncharted by a rogue storm.
 
 An island, unrecorded on any charts, bearing glittering shores and rolling green hills, food and water aplenty, while not the new world they'd set out to reach, a sanctuary and a paradise of its own.
