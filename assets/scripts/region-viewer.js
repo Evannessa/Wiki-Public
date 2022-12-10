@@ -688,14 +688,13 @@ export const regionViewerModule = (function () {
     function addAccentColor(svgContainer, locationData) {
         let ourData = locationData.imageData ? { ...locationData } : { ...globalData };
         const { color, gradient, titleColor } = ourData.imageData;
-        // let color = ourData.imageData.color;
-        // let gradient = ourData.imageData.gradient;
         if (color) {
             svgContainer.style.setProperty("--accent-color", color);
         }
         let outerMap = document.querySelector(".location-map .location-map");
         if (gradient) {
             outerMap.style.setProperty("--ui-gradient", gradient);
+            outerMap.style.setProperty("--accent-color", color);
         }
         if (titleColor) {
             outerMap.style.setProperty("--title-color", titleColor);
@@ -784,6 +783,7 @@ export const regionViewerModule = (function () {
     function resetGradient() {
         const mapElement = document.querySelector(".location-map .location-map");
 
+        mapElement.style.setProperty("--accent-color", globalData.imageData.color);
         mapElement.style.setProperty("--ui-gradient", globalData.imageData.gradient);
         mapElement.style.setProperty("--title-color", globalData.imageData.titleColor);
     }

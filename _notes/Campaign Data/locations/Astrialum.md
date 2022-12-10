@@ -9,6 +9,7 @@ image: /assets/locations/Astrialum.jpg
 
 # Astrialum
 
+![[/assets/locations/Astrialum.jpg]]
 Astrialum exists on the twilight-nightside of Solrise, a planet tidally locked to its sun, where only a thin strip of the world is habitable.
 
 Astrialum rests on the side of the Twilight Strand of Solrise that faces away from the Sun, causing frozen waters and blistering cold.

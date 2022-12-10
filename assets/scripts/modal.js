@@ -55,7 +55,7 @@ export class Modal {
         const hasOtherImages = otherImageSrcArray.length > 0;
         function returnOtherImageDiv() {
             if (hasOtherImages) {
-                return `	<div class="other-images">
+                return `	<div class="other-images flex-row flex-justify-center flex-align-center">
 	</div>`;
             }
             return ` `;
@@ -96,6 +96,9 @@ export class Modal {
             return Helpers.htmlToElement(`<img class="thumbnail-image" src="${src}" />`);
         });
         imgArray.forEach((item) => {
+            if (currentMainSrc === item.getAttribute("src")) {
+                item.classList.add("current");
+            }
             item.addEventListener("click", (event) => {
                 let currentTarget = event.currentTarget;
                 let src = currentTarget.getAttribute("src");

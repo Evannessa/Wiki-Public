@@ -13,7 +13,37 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_notes/Campaign Data/clans/Maternal Family/Taza.md",
+                "file": "_notes/Campaign Data/locations/SunRune Outpost.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "7367436134c09fd1",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "_notes/Campaign Data/events/Lore of the Solrise Sea.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "5a83a2daa04c54b3",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "93b417227e6b3468",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "_notes/Campaign Data/clans/Ruto/Sylvain.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +123,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_notes/Campaign Data/clans/Maternal Family/Taza.md",
+                "file": "_notes/Campaign Data/locations/SunRune Outpost.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +140,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_notes/Campaign Data/clans/Maternal Family/Taza.md",
+                "file": "_notes/Campaign Data/locations/SunRune Outpost.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +163,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_notes/Campaign Data/clans/Maternal Family/Taza.md"
+                "file": "_notes/Campaign Data/locations/SunRune Outpost.md"
               }
             }
           },
@@ -155,15 +185,15 @@
   },
   "active": "84a04915fb3dac20",
   "lastOpenFiles": [
-    "_notes/Campaign Data/clans/Maternal Family/Nomalanga.md",
-    "_notes/Campaign Data/locations/Astrialum.md",
-    "_notes/Campaign Data/locations/Starshead Island.md",
-    "_notes/Campaign Data/clans/Maternal Family/Taza.md",
-    "_notes/Campaign Data/clans/Maternal Family/Randgen.md",
-    "_notes/Campaign Data/clans/Maternal Family/Isabel.md",
-    "_notes/Campaign Data/clans/Maternal Family/Grandpa.md",
-    "_notes/Campaign Data/clans/Maternal Family/Grandma.md",
-    "_notes/Campaign Data/clans/Maternal Family/Andrew.md",
-    "_notes/Campaign Data/clans/PaternalFamily/Paternal Family.md"
+    "_notes/Campaign Data/locations/Starshead Village.md",
+    "_notes/Campaign Data/locations/SunRune Outpost.md",
+    "_notes/Campaign Data/events/The Story.md",
+    "_notes/Campaign Data/events/Life on Starshead Island.md",
+    "_notes/Campaign Data/clans/Ruto/Sylvain.md",
+    "_notes/Campaign Data/events/Lore of the Solrise Sea.md",
+    "_notes/Campaign Data/events/The History of the Ruto Clan.md",
+    "_notes/Campaign Data/events/The Storm.md",
+    "_notes/Campaign Data/locations/Dovindi.md",
+    "Slyvain.md"
   ]
 }
