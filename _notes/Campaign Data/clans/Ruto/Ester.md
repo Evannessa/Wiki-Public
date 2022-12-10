@@ -15,7 +15,7 @@ parents:
 
 #wip
 
-Traits: Contemplative, artistic, laconic, Versatile, Cooperative, Perceptive, and Abstract
+Traits: Contemplative, artistic, laconic, Versatile, Cooperative, Perceptive, and Investigative
 
 It's often joked among the Ruto clan that Ester is her brother [[Slyvain]]'s 'real' twin, in reference to how calm and quiet the two both are.
 

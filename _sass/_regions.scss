@@ -289,10 +289,13 @@ foreignObject {
             margin-right: 2em,
         ),
     );
+    pointer-events: none;
     @each $name, $direction in $connections {
         &.#{$name} {
             @each $position, $value in $direction {
                 #{$position}: $value;
+                button {
+                }
                 img {
                     // @if ($position == "up" or $position == "$down") {
                     //     width: 100%;
@@ -307,7 +310,9 @@ foreignObject {
         }
     }
 }
+
 .connection-hex {
+    pointer-events: auto;
     width: 4rem;
     height: 4rem;
     padding: unset;
@@ -342,7 +347,18 @@ foreignObject {
         }
     }
 }
-
+.up,
+.down {
+    .connection-hex {
+        transform: rotateZ(-45deg) translateX(-25%);
+    }
+}
+.left,
+.right {
+    .connection-hex {
+        transform: rotateZ(-45deg) translateY(-25%);
+    }
+}
 .removed {
     position: absolute;
     left: -999px;

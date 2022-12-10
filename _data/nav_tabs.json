@@ -5,6 +5,11 @@
         "icon": "home"
     },
     {
+        "text": "Story",
+        "hasDropdown": false,
+        "path": "the-story"
+    },
+    {
         "text": "Characters",
         "hasDropdown": false,
         "path": "search-characters"

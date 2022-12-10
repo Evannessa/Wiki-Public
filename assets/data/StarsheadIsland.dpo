@@ -233,7 +233,20 @@
                     "encounterData": {},
                     "column": 2,
                     "row": 3,
-                    "connections": []
+                    "connections": [
+                        {
+                            "guid": "1d2e8dff-bf5e-4f1a-87fc-799c6c17fbc4",
+                            "destinationId": "b80c4b3d-3541-4a3f-a331-a1dde2ae5b3e",
+                            "direction": "up",
+                            "id": "0"
+                        },
+                        {
+                            "guid": "8c364296-3cd7-4355-8a2e-e5d9d3c2520d",
+                            "destinationId": "964edfb5-77af-401b-b284-8a99876f16e4",
+                            "direction": "right",
+                            "id": "1"
+                        }
+                    ]
                 },
                 {
                     "guid": "58130b91-6181-428f-8087-00b8d72d8dbe",
@@ -242,7 +255,7 @@
                     "parent": "",
                     "imageData": {
                         "guid": "4348e037-d7f4-4af2-a96c-35c1f119d2c9",
-                        "mainImage": "..\\..\\locations\\DarkHillsOcean.jpg",
+                        "mainImage": "..\\..\\locations\\StarsheadIsland2.jpg",
                         "otherImages": "",
                         "color": "hsl(241, 100%, 68%)",
                         "gradient": "linear-gradient(45deg, rgb(15, 0, 180), rgb(143, 0, 171))",
@@ -269,7 +282,7 @@
                     "imageData": {
                         "guid": "4fa28576-7810-44ec-870f-1a787a1cd961",
                         "mainImage": "..\\..\\locations\\SolriseStrand.jpg",
-                        "otherImages": "",
+                        "otherImages": "SolriseStrand2.jpg",
                         "color": "#0096FA",
                         "gradient": "linear-gradient(45deg, #2bc0e4, #eaecc6)",
                         "titleColor": "hsl(234, 56%, 58%)"
@@ -311,7 +324,26 @@
                     "encounterData": {},
                     "column": 2,
                     "row": 2,
-                    "connections": []
+                    "connections": [
+                        {
+                            "guid": "cbaa6ce8-72ea-4982-9ac3-ba071d3bb0c7",
+                            "destinationId": "b9e81372-09e1-493d-9b7f-fb00eb013972",
+                            "direction": "down",
+                            "id": "0"
+                        },
+                        {
+                            "guid": "737ae1e9-1f62-46b5-8f1b-42e279708bb3",
+                            "destinationId": "4019c66f-0b45-4adf-835d-7a32e4df3b22",
+                            "direction": "up",
+                            "id": "1"
+                        },
+                        {
+                            "guid": "ded648b9-b1f1-4e4f-bac5-32d258ceb66c",
+                            "destinationId": "964edfb5-77af-401b-b284-8a99876f16e4",
+                            "direction": "right",
+                            "id": "2"
+                        }
+                    ]
                 },
                 {
                     "guid": "2e42dd47-bb30-4d36-8e8c-8fc71f7dbed4",
@@ -346,7 +378,7 @@
                     "parent": "58130b91-6181-428f-8087-00b8d72d8dbe",
                     "imageData": {
                         "guid": "582230c7-7e1a-44a2-8ae5-c92980145bbd",
-                        "mainImage": "..\\..\\locations\\LostLake1.jpg",
+                        "mainImage": "..\\..\\locations\\LostLake2.jpg",
                         "otherImages": "",
                         "color": "#0585A5",
                         "gradient": "linear-gradient(45deg, rgb(15, 0, 180), rgb(143, 0, 171))",
@@ -695,8 +727,8 @@
                     },
                     "flavorData": {},
                     "encounterData": {},
-                    "column": 3,
-                    "row": 2,
+                    "column": 1,
+                    "row": 3,
                     "connections": []
                 },
                 {
@@ -715,7 +747,7 @@
                     "flavorData": {},
                     "encounterData": {},
                     "column": 2,
-                    "row": 2,
+                    "row": 3,
                     "connections": []
                 },
                 {
@@ -869,6 +901,84 @@
                     "column": 3,
                     "row": 2,
                     "connections": []
+                },
+                {
+                    "guid": "ced3cac2-96dc-410a-8196-f3877541d836",
+                    "id": "SunRune Outpost",
+                    "type": "site",
+                    "parent": "641f28f1-bee4-4c4c-92e7-5aaf88852474",
+                    "imageData": {
+                        "guid": "80da0fa4-a98f-4894-998e-cf804c456878",
+                        "mainImage": "..\\..\\locations\\Copy (9) of VECTEE~1.JPG",
+                        "otherImages": "",
+                        "color": "hsl(241, 100%, 68%)",
+                        "gradient": "linear-gradient(45deg, rgb(15, 0, 180), rgb(143, 0, 171))",
+                        "titleColor": "hsl(234, 56%, 58%)"
+                    },
+                    "flavorData": {},
+                    "encounterData": {},
+                    "column": 2,
+                    "row": 2,
+                    "connections": []
+                },
+                {
+                    "guid": "66fb74a1-acd6-4a6d-998a-0dea20e08ba9",
+                    "id": "Mateo's Workshop",
+                    "type": "site",
+                    "parent": "91e1415c-3f08-4c95-ad07-f2404049569b",
+                    "imageData": {
+                        "guid": "c248c41a-5f28-4df8-a964-31991950b69e",
+                        "mainImage": "..\\..\\locations\\MateosWorkshop.jpg",
+                        "otherImages": "",
+                        "color": "hsl(241, 100%, 68%)",
+                        "gradient": "linear-gradient(45deg, rgb(15, 0, 180), rgb(143, 0, 171))",
+                        "titleColor": "hsl(234, 56%, 58%)"
+                    },
+                    "flavorData": {},
+                    "encounterData": {
+                        "guid": "69d2324e-81ac-4056-963f-93d85fd3dae6",
+                        "factions": [],
+                        "cast": [
+                            {
+                                "guid": "1c734b94-3fb1-470c-a37e-c0fa91514a5c",
+                                "hasPage": true,
+                                "description": "",
+                                "pageUrl": "mateo",
+                                "imageUrl": "Mateo",
+                                "clan": "Ruto",
+                                "id": "Mateo"
+                            }
+                        ]
+                    },
+                    "column": 2,
+                    "row": 2,
+                    "connections": []
+                },
+                {
+                    "guid": "0edfe4b0-60f2-41cc-9791-add09e5f8c35",
+                    "id": "Mirrored Moon",
+                    "type": "area",
+                    "parent": "964edfb5-77af-401b-b284-8a99876f16e4",
+                    "imageData": {
+                        "guid": "a1caa092-6ec1-4897-b005-7133c9eba7de",
+                        "mainImage": "..\\..\\locations\\TheMirroredMoon.jpg",
+                        "otherImages": "",
+                        "color": "hsl(241, 100%, 68%)",
+                        "gradient": "linear-gradient(45deg, rgb(15, 0, 180), rgb(143, 0, 171))",
+                        "titleColor": "hsl(234, 56%, 58%)"
+                    },
+                    "flavorData": {},
+                    "encounterData": {},
+                    "column": 2,
+                    "row": 2,
+                    "connections": [
+                        {
+                            "guid": "1e3ae1a9-b050-4908-b02a-56698fde5359",
+                            "destinationId": "e8dfe955-9acf-492c-878f-151e2e04d329",
+                            "direction": "up",
+                            "id": "Portal to the Gate"
+                        }
+                    ]
                 }
             ],
             "hidden": false,

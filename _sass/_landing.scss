@@ -4,7 +4,8 @@ main[data-layout="landing-page"] {
     padding-top: unset;
 }
 article {
-    overflow: auto;
+    // overflow: auto;
+    overflow: visible;
     max-height: 100vh;
     scroll-snap-type: y mandatory;
     @media (min-width: 992px) {

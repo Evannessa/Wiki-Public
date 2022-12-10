@@ -32,6 +32,7 @@
     place-content: center;
 }
 .hint-container {
+    pointer-events: none;
     position: absolute;
     z-index: 800;
     bottom: var(--space-1);

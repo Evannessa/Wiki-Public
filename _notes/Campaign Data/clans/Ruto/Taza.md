@@ -14,7 +14,7 @@ partners:
 
 #wip
 
-Traits: Passionate, Determined, Courageous, Brash, Outspoken, Protective, Stubborn, Righteous, Impatient
+Traits: Passionate, Intelligent, Determined, Courageous, Brash, Outspoken, Protective, Stubborn, Righteous, Impatient
 
 ## Bio
 
