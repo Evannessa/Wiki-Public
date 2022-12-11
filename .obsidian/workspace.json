@@ -6,6 +6,7 @@
       {
         "id": "949dee77e86d5e69",
         "type": "tabs",
+        "dimension": 49.498997995991985,
         "children": [
           {
             "id": "84a04915fb3dac20",
@@ -13,7 +14,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_notes/Campaign Data/locations/SunRune Outpost.md",
+                "file": "_notes/Campaign Data/locations/The Shadoka.md",
                 "mode": "source",
                 "source": false
               }
@@ -36,6 +37,7 @@
       {
         "id": "5a83a2daa04c54b3",
         "type": "tabs",
+        "dimension": 50.50100200400801,
         "children": [
           {
             "id": "93b417227e6b3468",
@@ -123,7 +125,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_notes/Campaign Data/locations/SunRune Outpost.md",
+                "file": "_notes/Campaign Data/locations/The Shadoka.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -140,7 +142,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_notes/Campaign Data/locations/SunRune Outpost.md",
+                "file": "_notes/Campaign Data/locations/The Shadoka.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -163,7 +165,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_notes/Campaign Data/locations/SunRune Outpost.md"
+                "file": "_notes/Campaign Data/locations/The Shadoka.md"
               }
             }
           },
@@ -185,15 +187,15 @@
   },
   "active": "84a04915fb3dac20",
   "lastOpenFiles": [
-    "_notes/Campaign Data/locations/Starshead Village.md",
+    "Slyvain.md",
+    "_notes/Campaign Data/locations/The Shadoka.md",
+    "Isothaenean.md",
     "_notes/Campaign Data/locations/SunRune Outpost.md",
+    "_notes/Campaign Data/locations/Starshead Village.md",
     "_notes/Campaign Data/events/The Story.md",
     "_notes/Campaign Data/events/Life on Starshead Island.md",
     "_notes/Campaign Data/clans/Ruto/Sylvain.md",
     "_notes/Campaign Data/events/Lore of the Solrise Sea.md",
-    "_notes/Campaign Data/events/The History of the Ruto Clan.md",
-    "_notes/Campaign Data/events/The Storm.md",
-    "_notes/Campaign Data/locations/Dovindi.md",
-    "Slyvain.md"
+    "_notes/Campaign Data/events/The History of the Ruto Clan.md"
   ]
 }
