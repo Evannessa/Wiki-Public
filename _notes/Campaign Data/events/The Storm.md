@@ -34,7 +34,7 @@ And it was within these empty waters, that the gaze of the **Titan's Eye** fell 
 
 And it was here that the Titan's Eye wept. And its tears were rain, and its wails were wind and it thrashed up waves that towered above the sails.
 
-## The Storm
+## The Eye That Wept
 
 The Storm engulfed [[The Shadoka]] whole. Some of the Ruto Clan jumped into action to aid the crew, trying to keep the vessel from capsizing, from sinking.
 

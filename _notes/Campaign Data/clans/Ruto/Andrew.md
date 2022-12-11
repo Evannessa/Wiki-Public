@@ -13,9 +13,9 @@ Clan: Ruto
 
 # Andrew
 
-#wip
+## Traits
 
-Traits: Charming, wisecracking, weak-willed, gossip, great cook
+Charming, wisecracking, weak-willed, gossip, great cook
 
 ## Overview
 

@@ -12,7 +12,9 @@ parents:
 #wip
 # Luca
 
-Traits: Trusting, Naive, A dreamer, Creative, Friendly, Melodious Voice, Animated
+## Traits
+
+Traits: Trusting, Naïve, A dreamer, Creative, Friendly, Melodious Voice, Animated
 
 ## Bio
 

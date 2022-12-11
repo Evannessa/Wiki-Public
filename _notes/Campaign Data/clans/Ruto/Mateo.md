@@ -13,9 +13,11 @@ partners:
 
 #clean-up
 
+## Traits
+
 Traits: Inventive, paranoid, protective, righteous, miserly, superstitious
 
-### Bio
+## Bio
 
 Uncle Mateo's genius is balanced out by paranoia.
 

@@ -12,7 +12,9 @@ Clan: Ruto
 
 # Nomalanga
 
-Traits: Content, Lovable, hardworking, wise
+## Traits
+
+Content, lovable, hardworking, wise, witty
 
 ## Bio
 

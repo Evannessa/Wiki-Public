@@ -14,7 +14,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_notes/Campaign Data/locations/The Shadoka.md",
+                "file": "_notes/Campaign Data/events/The Story in Full.md",
                 "mode": "source",
                 "source": false
               }
@@ -45,7 +45,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_notes/Campaign Data/clans/Ruto/Sylvain.md",
+                "file": "_notes/Campaign Data/clans/Ruto/Taza.md",
                 "mode": "source",
                 "source": false
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_notes/Campaign Data/locations/The Shadoka.md",
+                "file": "_notes/Campaign Data/clans/Ruto/Taza.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -142,7 +142,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_notes/Campaign Data/locations/The Shadoka.md",
+                "file": "_notes/Campaign Data/clans/Ruto/Taza.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -165,7 +165,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_notes/Campaign Data/locations/The Shadoka.md"
+                "file": "_notes/Campaign Data/clans/Ruto/Taza.md"
               }
             }
           },
@@ -185,17 +185,17 @@
     "width": 200,
     "collapsed": true
   },
-  "active": "84a04915fb3dac20",
+  "active": "93b417227e6b3468",
   "lastOpenFiles": [
-    "Slyvain.md",
-    "_notes/Campaign Data/locations/The Shadoka.md",
-    "Isothaenean.md",
-    "_notes/Campaign Data/locations/SunRune Outpost.md",
-    "_notes/Campaign Data/locations/Starshead Village.md",
-    "_notes/Campaign Data/events/The Story.md",
-    "_notes/Campaign Data/events/Life on Starshead Island.md",
+    "_notes/Campaign Data/clans/Ruto/MC.md",
+    "_notes/Campaign Data/clans/Ruto/Taza.md",
     "_notes/Campaign Data/clans/Ruto/Sylvain.md",
-    "_notes/Campaign Data/events/Lore of the Solrise Sea.md",
-    "_notes/Campaign Data/events/The History of the Ruto Clan.md"
+    "_notes/Campaign Data/clans/Ruto/Randgen.md",
+    "_notes/Campaign Data/clans/Ruto/Petra.md",
+    "_notes/Campaign Data/clans/Ruto/Nomalanga.md",
+    "_notes/Campaign Data/clans/Ruto/Mateo.md",
+    "_notes/Campaign Data/clans/Ruto/Luca.md",
+    "_notes/Campaign Data/clans/Ruto/Lourenco.md",
+    "_notes/Campaign Data/clans/Ruto/Isabel.md"
   ]
 }

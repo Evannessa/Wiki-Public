@@ -12,13 +12,16 @@ parents:
 
 # Petra
 
-Traits: motivated, adventurous, curious, enjoys outdoing others, persistent
+## Traits
+
+motivated, adventurous, curious, enjoys outdoing others, determined
 
 ## Bio
 #wip
 
 Petra was the first child born on Starshead Island, with MC carrying her in the midst of the crash.
 
+#TODO 
 
 
 ## Personal Life

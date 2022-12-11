@@ -15,9 +15,13 @@ partners:
 
 # MC
 
-Traits: Loyal, kind, warm, honorable, guilt-ridden
+## Traits
 
-While originally named after their grandmother, MC was a name they chose for themselves. MC is the oldest of the grandchildren, conceived when their parents [[Nomalanga]] and [[Genki]] were still teenagers.
+Loyal, kind, warm, honorable-to-a-fault, patient, courageous, guilt-ridden
+
+## Bio
+
+While originally named after their grandmother [[Grandma|Rosa]], "MC" was a nickname that sort of stuck. MC is the oldest of the grandchildren, conceived when their parents [[Nomalanga]] and [[Genki]] were still teenagers.
 
 They are statuesque, tall and lean with muscle, a birthmark along their neck, shoulders and back.
 

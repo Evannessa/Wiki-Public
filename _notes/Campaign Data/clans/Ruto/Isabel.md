@@ -12,7 +12,9 @@ parents:
 
 # Isabel
 
-Traits: Down-to-earth, mature, level-headed, unadventurous, homebody, joy-kill
+## Traits
+
+Down-to-earth, mature, level-headed, unadventurous, homebody, joy-kill
 
 ## Bio
 

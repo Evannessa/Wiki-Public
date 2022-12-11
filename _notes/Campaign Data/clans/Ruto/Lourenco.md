@@ -12,14 +12,15 @@ parents:
 
 # Lourenco
 
-Traits: Shy, imaginative, easily-attached, cannot tolerate conflict
+## Traits
 
-### Bio
+Traits: Shy, imaginative, day-dreamer, easily-attached, cannot tolerate conflict
+
+## Bio
 
 Nine years after his sister [[Petra]], Lourenco was the second child born on Starshead Island. 
 
-
-
+#todo
 
 
 

@@ -15,7 +15,7 @@ Clan: Ruto
 
 ## Traits
 
-Traits: Inexpressive, Cautious, Reserved, Clever, Laconic, Calm, Patient
+Inexpressive, Cautious, Reserved, Clever, Laconic, Calm, Patient
 
 ## Bio
 
@@ -56,3 +56,7 @@ While at home, though, he is happy to see his family whenever they visit his sec
 -   [[Angelica]]
 -   [[Ester]]
 -   [[Genki]]
+
+### Partners
+
+- Sola (missing/deceased)

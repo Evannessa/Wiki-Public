@@ -13,12 +13,15 @@ parents:
 
 # Ester
 
-#wip
+## Traits
 
 Traits: Contemplative, artistic, laconic, Versatile, Cooperative, Perceptive, and Investigative
 
+## Overview
+
 It's often joked among the Ruto clan that Ester is her brother [[Slyvain]]'s 'real' twin, in reference to how calm and quiet the two both are.
 
+#TODO - complete
 
 
 ## Personal Life

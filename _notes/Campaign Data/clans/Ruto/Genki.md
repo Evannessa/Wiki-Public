@@ -15,11 +15,13 @@ parents:
 #clean-up 
 # Genki 
 
-Traits: Stern, strategic, tactful, diplomatic, perceptive, fair, logical, reserved, level-headed
+## Traits
+
+Stern, strategic, tactful, diplomatic, perceptive, fair, logical, reserved, level-headed
 
 ### Bio
 
-Genki is a true leader, and the head of the Ruto clan. Once a military officer in the homeland, he was honorably discharged after being injured in battle. 
+Genki is a true leader, and the unofficial head of the Ruto clan. Once a military officer in the homeland, he was honorably discharged after being injured in battle. 
 
 He often is the mediator in any conflicts in the family, and while in his younger years was could be stern and systematic, his marriage to [[Nomalanga]] and time spend on the island outside of the rigors of the homeland's society and expectations has softened him immensely.
 

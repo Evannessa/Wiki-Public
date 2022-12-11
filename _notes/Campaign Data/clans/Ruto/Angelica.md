@@ -12,7 +12,11 @@ imagePosition: center
 
 # Angelica
 
-Traits: Expressive, Emotional, Bright, Adoring, Attention-Seeking, Gossip, Temperamental, Funny
+## Traits
+
+Expressive, Emotional, Bright, Adoring, Attention-Seeking, Gossip, Temperamental, Funny
+
+## Bio
 
 Aunt Angelica's emotions have always been a tad unstable, and back in the homeland, were a constant source of conflict in the family. Her moods were as mercurial as the island weather, and a sunny smile could become a stormy disposition at the drop of a hat.
 

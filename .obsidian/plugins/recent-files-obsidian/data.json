@@ -1,68 +1,40 @@
 {
   "recentFiles": [
     {
-      "basename": "The Shadoka",
-      "path": "_notes/Campaign Data/locations/The Shadoka.md"
+      "basename": "Taza",
+      "path": "_notes/Campaign Data/clans/Ruto/Taza.md"
     },
     {
-      "basename": "SunRune Outpost",
-      "path": "_notes/Campaign Data/locations/SunRune Outpost.md"
-    },
-    {
-      "basename": "Starshead Village",
-      "path": "_notes/Campaign Data/locations/Starshead Village.md"
-    },
-    {
-      "basename": "The Story",
-      "path": "_notes/Campaign Data/events/The Story.md"
-    },
-    {
-      "basename": "Life on Starshead Island",
-      "path": "_notes/Campaign Data/events/Life on Starshead Island.md"
+      "basename": "MC",
+      "path": "_notes/Campaign Data/clans/Ruto/MC.md"
     },
     {
       "basename": "Sylvain",
       "path": "_notes/Campaign Data/clans/Ruto/Sylvain.md"
     },
     {
-      "basename": "Lore of the Solrise Sea",
-      "path": "_notes/Campaign Data/events/Lore of the Solrise Sea.md"
+      "basename": "Randgen",
+      "path": "_notes/Campaign Data/clans/Ruto/Randgen.md"
     },
     {
-      "basename": "The History of the Ruto Clan",
-      "path": "_notes/Campaign Data/events/The History of the Ruto Clan.md"
-    },
-    {
-      "basename": "The Storm",
-      "path": "_notes/Campaign Data/events/The Storm.md"
-    },
-    {
-      "basename": "Iothaenea",
-      "path": "_notes/Campaign Data/locations/Iothaenea.md"
-    },
-    {
-      "basename": "Starshead Island",
-      "path": "_notes/Campaign Data/locations/Starshead Island.md"
-    },
-    {
-      "basename": "Astrialum",
-      "path": "_notes/Campaign Data/locations/Astrialum.md"
-    },
-    {
-      "basename": "Mateo",
-      "path": "_notes/Campaign Data/clans/Ruto/Mateo.md"
-    },
-    {
-      "basename": "Taza",
-      "path": "_notes/Campaign Data/clans/Ruto/Taza.md"
+      "basename": "Petra",
+      "path": "_notes/Campaign Data/clans/Ruto/Petra.md"
     },
     {
       "basename": "Nomalanga",
       "path": "_notes/Campaign Data/clans/Ruto/Nomalanga.md"
     },
     {
-      "basename": "Randgen",
-      "path": "_notes/Campaign Data/clans/Ruto/Randgen.md"
+      "basename": "Mateo",
+      "path": "_notes/Campaign Data/clans/Ruto/Mateo.md"
+    },
+    {
+      "basename": "Luca",
+      "path": "_notes/Campaign Data/clans/Ruto/Luca.md"
+    },
+    {
+      "basename": "Lourenco",
+      "path": "_notes/Campaign Data/clans/Ruto/Lourenco.md"
     },
     {
       "basename": "Isabel",
@@ -77,26 +49,6 @@
       "path": "_notes/Campaign Data/clans/Ruto/Grandma.md"
     },
     {
-      "basename": "Andrew",
-      "path": "_notes/Campaign Data/clans/Ruto/Andrew.md"
-    },
-    {
-      "basename": "Luca",
-      "path": "_notes/Campaign Data/clans/Ruto/Luca.md"
-    },
-    {
-      "basename": "Petra",
-      "path": "_notes/Campaign Data/clans/Ruto/Petra.md"
-    },
-    {
-      "basename": "MC",
-      "path": "_notes/Campaign Data/clans/Ruto/MC.md"
-    },
-    {
-      "basename": "Lourenco",
-      "path": "_notes/Campaign Data/clans/Ruto/Lourenco.md"
-    },
-    {
       "basename": "Genki",
       "path": "_notes/Campaign Data/clans/Ruto/Genki.md"
     },
@@ -107,6 +59,58 @@
     {
       "basename": "Angelica",
       "path": "_notes/Campaign Data/clans/Ruto/Angelica.md"
+    },
+    {
+      "basename": "Andrew",
+      "path": "_notes/Campaign Data/clans/Ruto/Andrew.md"
+    },
+    {
+      "basename": "The Story in Full",
+      "path": "_notes/Campaign Data/events/The Story in Full.md"
+    },
+    {
+      "basename": "Lore of the Solrise Sea",
+      "path": "_notes/Campaign Data/events/Lore of the Solrise Sea.md"
+    },
+    {
+      "basename": "Life on Starshead Island",
+      "path": "_notes/Campaign Data/events/Life on Starshead Island.md"
+    },
+    {
+      "basename": "The Storm",
+      "path": "_notes/Campaign Data/lore/The Storm.md"
+    },
+    {
+      "basename": "The Storm",
+      "path": "_notes/Campaign Data/events/The Storm.md"
+    },
+    {
+      "basename": "The Shadoka",
+      "path": "_notes/Campaign Data/locations/The Shadoka.md"
+    },
+    {
+      "basename": "SunRune Outpost",
+      "path": "_notes/Campaign Data/locations/SunRune Outpost.md"
+    },
+    {
+      "basename": "Starshead Village",
+      "path": "_notes/Campaign Data/locations/Starshead Village.md"
+    },
+    {
+      "basename": "The History of the Ruto Clan",
+      "path": "_notes/Campaign Data/events/The History of the Ruto Clan.md"
+    },
+    {
+      "basename": "Iothaenea",
+      "path": "_notes/Campaign Data/locations/Iothaenea.md"
+    },
+    {
+      "basename": "Starshead Island",
+      "path": "_notes/Campaign Data/locations/Starshead Island.md"
+    },
+    {
+      "basename": "Astrialum",
+      "path": "_notes/Campaign Data/locations/Astrialum.md"
     },
     {
       "basename": "Starshead",

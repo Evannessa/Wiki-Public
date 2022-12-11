@@ -11,6 +11,7 @@ layout: lore
   - [Slyvain's Self-Exile, and The Mirrored Moon](#slyvains-self-exile-and-the-mirrored-moon)
 
 previous: [[The Storm]]
+next: [[Life on Starshead Island]]
 
 ## The Arrival
 

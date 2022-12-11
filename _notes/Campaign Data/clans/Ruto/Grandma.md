@@ -14,13 +14,15 @@ partners:
 
 # Grandma
 
+## Overview
+
 Lost overboard in [[The Storm]] that brought the Ruto Clan to Starshead Island.
 
-But young [[Petra]] claims to hear her voice, coming from the [[Other World]].
+But young [[Lourenco]] claims to see her in the dreams he has of the [[Other World]].
 
 ## Traits
 
-Traits: Charismatic, persuasive, adventurous, dynamic, passionate, engaging
+Charismatic, persuasive, adventurous, dynamic, passionate, engaging
 
 ## Bio
 
