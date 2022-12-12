@@ -14,7 +14,7 @@ parents:
 
 ## Traits
 
-Traits: Trusting, Naïve, A dreamer, Creative, Friendly, Melodious Voice, Animated
+<span class='traits chip-list'>Trusting, Naïve, A dreamer, Creative, Friendly, Melodious Voice, Animated</span>
 
 ## Bio
 

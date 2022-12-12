@@ -14,7 +14,7 @@ Clan: Ruto
 
 ## Traits
 
-Content, lovable, hardworking, wise, witty
+<span class='traits chip-list'>Content, lovable, hardworking, wise, witty</span>
 
 ## Bio
 

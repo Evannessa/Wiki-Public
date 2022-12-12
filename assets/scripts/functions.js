@@ -84,6 +84,18 @@ function onLoad(event) {
             p.classList.add("gallery-wrapper");
         }
     });
+    const chipLists = document.querySelectorAll(".chip-list");
+    chipLists.forEach((chipList) => {
+        const content = chipList.textContent;
+        const chipTextArray = content.split(", ");
+        Helpers.removeChildren(chipList);
+        const ol = Helpers.createElement("ol", ["chip-list"]);
+        const chipElements = chipTextArray.map((text) => {
+            return Helpers.createElement("li", "chip", text);
+        });
+        const fragment = Helpers.buildDocumentFragment(ol, chipElements);
+        chipList.appendChild(fragment);
+    });
 
     pageNav = document.querySelector(".page-nav");
     if (pageNav && pageNav.dataset.headingLevel == 2) {

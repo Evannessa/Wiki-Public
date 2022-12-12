@@ -14,7 +14,7 @@ parents:
 
 ## Traits
 
-motivated, adventurous, curious, enjoys outdoing others, determined
+<span class='traits chip-list'>motivated, adventurous, curious, enjoys outdoing others, determined</span>
 
 ## Bio
 #wip

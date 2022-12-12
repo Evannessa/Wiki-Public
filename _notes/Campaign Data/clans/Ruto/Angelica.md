@@ -14,7 +14,7 @@ imagePosition: center
 
 ## Traits
 
-Expressive, Emotional, Bright, Adoring, Attention-Seeking, Gossip, Temperamental, Funny
+<span class='traits chip-list'>Expressive, Emotional, Bright, Adoring, Attention-Seeking, Gossip, Temperamental, Funny</span>
 
 ## Bio
 

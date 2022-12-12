@@ -6,7 +6,7 @@
       {
         "id": "949dee77e86d5e69",
         "type": "tabs",
-        "dimension": 49.498997995991985,
+        "dimension": 47.347347347347345,
         "children": [
           {
             "id": "84a04915fb3dac20",
@@ -14,7 +14,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_notes/Campaign Data/events/The Story in Full.md",
+                "file": "_notes/Campaign Data/clans/Ruto/Taza.md",
                 "mode": "source",
                 "source": false
               }
@@ -37,7 +37,7 @@
       {
         "id": "5a83a2daa04c54b3",
         "type": "tabs",
-        "dimension": 50.50100200400801,
+        "dimension": 52.652652652652655,
         "children": [
           {
             "id": "93b417227e6b3468",
@@ -45,7 +45,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_notes/Campaign Data/clans/Ruto/Taza.md",
+                "file": "_notes/Campaign Data/locations/The Shadoka.md",
                 "mode": "source",
                 "source": false
               }
@@ -185,17 +185,17 @@
     "width": 200,
     "collapsed": true
   },
-  "active": "93b417227e6b3468",
+  "active": "84a04915fb3dac20",
   "lastOpenFiles": [
-    "_notes/Campaign Data/clans/Ruto/MC.md",
-    "_notes/Campaign Data/clans/Ruto/Taza.md",
     "_notes/Campaign Data/clans/Ruto/Sylvain.md",
     "_notes/Campaign Data/clans/Ruto/Randgen.md",
     "_notes/Campaign Data/clans/Ruto/Petra.md",
     "_notes/Campaign Data/clans/Ruto/Nomalanga.md",
+    "_notes/Campaign Data/clans/Ruto/MC.md",
     "_notes/Campaign Data/clans/Ruto/Mateo.md",
     "_notes/Campaign Data/clans/Ruto/Luca.md",
     "_notes/Campaign Data/clans/Ruto/Lourenco.md",
-    "_notes/Campaign Data/clans/Ruto/Isabel.md"
+    "_notes/Campaign Data/clans/Ruto/Isabel.md",
+    "_notes/Campaign Data/clans/Ruto/Grandpa.md"
   ]
 }

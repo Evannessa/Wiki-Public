@@ -17,7 +17,7 @@ parents:
 
 ## Traits
 
-Stern, strategic, tactful, diplomatic, perceptive, fair, logical, reserved, level-headed
+<span class='traits chip-list'>Stern, strategic, tactful, diplomatic, perceptive, fair, logical, reserved, level-headed</span>
 
 ### Bio
 

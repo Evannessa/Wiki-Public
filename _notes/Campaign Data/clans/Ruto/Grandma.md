@@ -22,7 +22,7 @@ But young [[Lourenco]] claims to see her in the dreams he has of the [[Other Wor
 
 ## Traits
 
-Charismatic, persuasive, adventurous, dynamic, passionate, engaging
+<span class='traits chip-list'>Charismatic, persuasive, adventurous, dynamic, passionate, engaging</span>
 
 ## Bio
 

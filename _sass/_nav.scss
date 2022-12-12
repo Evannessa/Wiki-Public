@@ -18,7 +18,7 @@ nav {
             flex-direction: column;
         }
     }
-    @media (min-width: 1000px) {
+    @media (min-width: 992px) {
         $layout: var(--page-layout);
         @if $layout != "locations_map" {
             display: flex;
@@ -54,7 +54,7 @@ nav {
             align-self: flex-end;
         }
     }
-    @media (min-width: 1000px) {
+    @media (min-width: 992px) {
         @if var(--page-layout) != "locations_map" {
             .main-nav-toggle {
                 display: none;
@@ -72,7 +72,7 @@ ul.nav-section {
     //     .dropdown {
     //         left: 100%;
     //     }
-    //     @media screen and (min-width: 1000px) {
+    //     @media screen and (min-width: 992px) {
     //         // hide entirely if screen is big
     //         @if var(--page-layout) != "locations_map" {
     //             display: none;
@@ -95,7 +95,7 @@ ul.nav-section {
         @media (min-width: 992px) {
             padding: 0.35rem 1rem;
         }
-        @media screen and (min-width: 1000px) {
+        @media screen and (min-width: 992px) {
             //show all menu items
             @if var(--page-layout) != "locations_map" {
                 section.menu-item:not(:first-of-type) {

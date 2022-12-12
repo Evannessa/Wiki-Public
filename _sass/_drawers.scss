@@ -16,6 +16,9 @@
 
     transform: translateX(0%);
     transition: transform 200ms ease-in;
+    &[data-width="full-width"] {
+        width: 90vw;
+    }
     min-width: 50vw;
 
     backdrop-filter: blur(12px);
@@ -66,6 +69,7 @@
             position: static;
             display: grid;
             align-self: flex-end;
+            margin: var(--space-4);
         }
     }
     &.expanded {
@@ -75,6 +79,7 @@
     //alterations depending on side
     $self: &;
     &[data-variant="right"] {
+        border-left: 1px solid var(--glass-border);
         transform: translateX(0%);
         right: unset;
         left: 100%;

@@ -15,7 +15,7 @@ Clan: Ruto
 
 ## Traits
 
-Charming, wisecracking, weak-willed, gossip, great cook
+<span class='traits chip-list'>Charming, wisecracking, weak-willed, gossip, great cook</span>
 
 ## Overview
 

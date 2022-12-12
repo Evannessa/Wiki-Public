@@ -1,16 +1,35 @@
 import { SideDrawer } from "./drawers.js";
 import { Snackbar } from "./snackbar.js";
 import Card from "./cards.js";
+import Helpers from "./helpers.js";
 
 document.addEventListener("DOMContentLoaded", function (event) {
     console.log("Toggle UI Has been loaded");
     registerSideViewGalleryListeners();
-    let mobileNav = new SideDrawer();
+    const mobileNav = new SideDrawer();
     mobileNav.cacheDrawerElements({
         drawer: ".drawer.main-nav-mobile",
         toggleButtonOuter: ".main-nav-toggle.outer",
         toggleButtonInner: ".main-nav-toggle.inner",
     });
+    if (document.querySelector("main").dataset.layout === "note") {
+        const button = Helpers.createElement(
+            "button",
+            "circle-button, cards-drawer-toggle",
+            "",
+            { variant: "fab" },
+            "chevron_left"
+        );
+        document.querySelector("main")?.appendChild(button);
+
+        const mobileCardView = new SideDrawer();
+        mobileCardView.cacheDrawerElements({
+            drawer: ".drawer.mobile-cards",
+            toggleButtonOuter: ".cards-drawer-toggle",
+            toggleButtonInner: ".drawer.mobile-cards .drawer__toggle-button.inner",
+        });
+        console.log(mobileCardView);
+    }
 
     let ourSnackbar = new Snackbar();
     ourSnackbar.initializeSnackbar();

@@ -38,7 +38,7 @@ function initializeElements() {
     let filterDrawer = new SideDrawer();
     filterDrawer.cacheDrawerElements({
         drawer: ".drawer.filter-section__wrapper",
-        toggleButtonOuter: ".drawer__toggle-button",
+        toggleButtonOuter: ".filter-section__wrapper .drawer__toggle-button",
     });
 
     // filterSectionWrapper = document.querySelector(".filter-section--wrapper");

@@ -9,7 +9,12 @@ includeSearch: false
     <div id="notes-entry-container">
         <content>
             {{ content }}
+
         </content>
+        {% capture drawer__content %}
+            {% include gallery-list.html galleryType="side" includeSearch="false" includeRelationships="true" clanMembersOnly=true %}
+        {% endcapture %}
+        {% include drawer.html innerButton=true alwaysFixed=true variant="right" classes="mobile-cards" content=drawer__content%}
         <aside class="primary">
             <section class="featured-image">
                 {%assign clan = page.Clan %}
@@ -24,38 +29,40 @@ includeSearch: false
 					capitalize}}/{{firstName}}.webp
                 {% endcapture %}
                 <img src="{{namePath}}" alt="{{namePath}}" />
-                <h2 class="floating-title ">{{page.title}}</h2>
+                <h2 class="floating-title ">
+                    {{page.title}}
+                </h2>
             </section>
 
             {%- comment -%}
-            {% if page.tags.size > 0 %}
+                {% if page.tags.size > 0 %}
                 <section class="tag-section">
-                    <h2>Tags</h2>
-                    <ul class="tag-list">
-                        {% for tag in page.tags %}
-                            <li class="tag">
-                                #{{ tag }}
-                                <div class="shared-tag-preview-list">
-                                    <h3>Other notes tagged
-                                        <em>#{{tag}}</em>
-                                    </h3>
-                                    <div class="wrapper">
-                                        {% for note in site.notes %}
-                                            {% if note.tags
-									contains tag %}
-                                                <div class="shared-tag-preview">
-                                                    <a href="{{note.url}}">{{note.title}}</a>
-                                                </div>
-                                            {% endif %}
-                                        {% endfor %}
-                                    </div>
-                                </div>
-                            </li>
-                        {% endfor %}
-                    </ul>
+                <h2>Tags</h2>
+                <ul class="tag-list">
+                {% for tag in page.tags %}
+                <li class="tag">
+                #{{ tag }}
+                <div class="shared-tag-preview-list">
+                <h3>Other notes tagged
+                <em>#{{tag}}</em>
+                </h3>
+                <div class="wrapper">
+                {% for note in site.notes %}
+                {% if note.tags
+                contains tag %}
+                <div class="shared-tag-preview">
+                <a href="{{note.url}}">{{note.title}}</a>
+                </div>
+                {% endif %}
+                {% endfor %}
+                </div>
+                </div>
+                </li>
+                {% endfor %}
+                </ul>
                 </section>
-            {% endif %}
-{%- endcomment -%}
+                {% endif %}
+            {%- endcomment -%}
         </aside>
 
         <aside class="secondary" style="font-size: 0.9em">
@@ -63,7 +70,7 @@ includeSearch: false
                 <h3 style="margin-bottom: 1em">
                     Related
                 </h3>
-                {% include gallery-list.html galleryType="side" includeSearch="false" includeRelationships="true" %}
+                {% include gallery-list.html galleryType="side" includeSearch="false" includeRelationships="true" clanMembersOnly=true %}
 
             </section>
         </aside>

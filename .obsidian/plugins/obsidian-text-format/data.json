@@ -8,9 +8,9 @@
   "BulletPoints": "•–§",
   "wrapperList": [
     {
-      "name": "span",
-      "prefix": "span",
-      "suffix": "span"
+      "name": "traitSpan",
+      "prefix": "<span class='traits chip-list'>",
+      "suffix": "</span>"
     }
   ],
   "RequestURL": "",

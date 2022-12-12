@@ -14,7 +14,7 @@ parents:
 
 ## Traits
 
-Traits: Shy, imaginative, day-dreamer, easily-attached, cannot tolerate conflict
+<span class='traits chip-list'>Shy, imaginative, day-dreamer, easily-attached, cannot tolerate conflict</span>
 
 ## Bio
 

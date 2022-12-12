@@ -17,7 +17,7 @@ partners:
 
 ## Traits
 
-Loyal, kind, warm, honorable-to-a-fault, patient, courageous, guilt-ridden
+<span class='traits chip-list'>Loyal, kind, warm, honorable-to-a-fault, patient, courageous, guilt-ridden</span>
 
 ## Bio
 

@@ -5,10 +5,6 @@
       "path": "_notes/Campaign Data/clans/Ruto/Taza.md"
     },
     {
-      "basename": "MC",
-      "path": "_notes/Campaign Data/clans/Ruto/MC.md"
-    },
-    {
       "basename": "Sylvain",
       "path": "_notes/Campaign Data/clans/Ruto/Sylvain.md"
     },
@@ -23,6 +19,10 @@
     {
       "basename": "Nomalanga",
       "path": "_notes/Campaign Data/clans/Ruto/Nomalanga.md"
+    },
+    {
+      "basename": "MC",
+      "path": "_notes/Campaign Data/clans/Ruto/MC.md"
     },
     {
       "basename": "Mateo",
@@ -69,6 +69,18 @@
       "path": "_notes/Campaign Data/events/The Story in Full.md"
     },
     {
+      "basename": "The Shadoka",
+      "path": "_notes/Campaign Data/locations/The Shadoka.md"
+    },
+    {
+      "basename": "Shadoka",
+      "path": "_site/assets/locations/Shadoka.jpg"
+    },
+    {
+      "basename": "Starshead Village",
+      "path": "_notes/Campaign Data/locations/Starshead Village.md"
+    },
+    {
       "basename": "Lore of the Solrise Sea",
       "path": "_notes/Campaign Data/events/Lore of the Solrise Sea.md"
     },
@@ -85,16 +97,8 @@
       "path": "_notes/Campaign Data/events/The Storm.md"
     },
     {
-      "basename": "The Shadoka",
-      "path": "_notes/Campaign Data/locations/The Shadoka.md"
-    },
-    {
       "basename": "SunRune Outpost",
       "path": "_notes/Campaign Data/locations/SunRune Outpost.md"
-    },
-    {
-      "basename": "Starshead Village",
-      "path": "_notes/Campaign Data/locations/Starshead Village.md"
     },
     {
       "basename": "The History of the Ruto Clan",

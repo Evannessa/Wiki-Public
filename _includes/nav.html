@@ -38,7 +38,7 @@
 {% endcapture %}
 
 {% if include.navType == "mobile" %}
-    {% include drawer.html classes="main-nav-mobile" content=nav_content innerButton=toggleInnerButton alwaysFixed=true %}
+    {% include drawer.html classes="main-nav-mobile" content=nav_content innerButton=false alwaysFixed=true %}
 {% else %}
     {{nav_content}}
 {% endif %}

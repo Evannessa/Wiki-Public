@@ -2,7 +2,7 @@
 layout: location
 tags:
 - Category/Location
-image: /assets/locations/StarsheadVillage3.jpg
+image: /assets/locations/GoldenFields.jpg
 ---
 # Starshead Village
 

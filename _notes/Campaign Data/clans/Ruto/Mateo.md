@@ -15,7 +15,7 @@ partners:
 
 ## Traits
 
-Traits: Inventive, paranoid, protective, righteous, miserly, superstitious
+<span class='traits chip-list'>Inventive, paranoid, protective, righteous, miserly, superstitious</span>
 
 ## Bio
 

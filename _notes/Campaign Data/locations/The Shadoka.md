@@ -1,7 +1,7 @@
 ---
 layout: location
 tags: Category/Location
-image: /assets/locations/StarRuneOutpost2.jpg
+image: /assets/locations/Shadoka.jpg
 ---
 
 # The Shadoka

@@ -35,6 +35,7 @@
 .card {
     display: grid;
     grid-template-rows: minmax(0, 75%) 1fr;
+    grid-template-columns: 1fr;
     flex-shrink: 0;
     background: #2c254a;
     background: rgb(71, 46, 116);
@@ -44,6 +45,7 @@
     overflow: hidden;
     aspect-ratio: 1/1;
     max-width: 20%;
+    justify-content: center;
     // height: clamp(5rem, 10vh, 20rem);
     // width: clamp(5rem, 10vw, 340px);
 

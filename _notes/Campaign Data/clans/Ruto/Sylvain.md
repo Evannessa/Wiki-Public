@@ -15,7 +15,7 @@ Clan: Ruto
 
 ## Traits
 
-Inexpressive, Cautious, Reserved, Clever, Laconic, Calm, Patient
+<span class='traits chip-list'>Inexpressive, Cautious, Reserved, Clever, Laconic, Calm, Patient</span>
 
 ## Bio
 

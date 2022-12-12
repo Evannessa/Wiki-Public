@@ -11,12 +11,15 @@ export function SideDrawer() {
         for (let element in selectorData) {
             elements[element] = document.querySelector(selectorData[element]);
         }
+        console.log(elements);
         addDrawerListeners();
     }
     function addDrawerListeners() {
         const { toggleButtonOuter, toggleButtonInner, drawer } = elements;
-        function toggleExpand() {
-            Helpers.toggleClassOnAction(toggleButtonOuter, drawer, { action: "expand" });
+        function toggleExpand(event) {
+            const button = event.currentTarget;
+            console.log(button);
+            Helpers.toggleClassOnAction(button, drawer, { toggleClass: "expanded" });
         }
         if (toggleButtonOuter) toggleButtonOuter.addEventListener("click", (event) => toggleExpand(event));
         if (toggleButtonInner) toggleButtonInner.addEventListener("click", (event) => toggleExpand(event));

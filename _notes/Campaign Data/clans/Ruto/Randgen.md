@@ -1,4 +1,5 @@
 ---
+layout: article-base
 ---
 
 https://www.rangen.co.uk/chars/pergen.php

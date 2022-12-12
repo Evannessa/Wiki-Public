@@ -256,7 +256,7 @@
                     "imageData": {
                         "guid": "4348e037-d7f4-4af2-a96c-35c1f119d2c9",
                         "mainImage": "..\\..\\locations\\StarsheadIsland2.jpg",
-                        "otherImages": "",
+                        "otherImages": "DarkHillsOcean.jpg",
                         "color": "hsl(241, 100%, 68%)",
                         "gradient": "linear-gradient(45deg, rgb(15, 0, 180), rgb(143, 0, 171))",
                         "titleColor": "hsl(234, 56%, 58%)"

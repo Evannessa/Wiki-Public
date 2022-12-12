@@ -15,7 +15,7 @@ parents:
 
 ## Traits
 
-Traits: Contemplative, artistic, laconic, Versatile, Cooperative, Perceptive, and Investigative
+<span class='traits chip-list'>Contemplative, artistic, laconic, Versatile, Cooperative, Perceptive, and Investigative</span>
 
 ## Overview
 

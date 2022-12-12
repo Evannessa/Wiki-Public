@@ -16,7 +16,7 @@ partners:
 
 ## Traits
 
-Passionate, Intelligent, Determined, Courageous, Brash, Outspoken, Protective, Stubborn, Righteous, Impatient
+<span class='traits chip-list'>Passionate, Intelligent, Determined, Courageous, Brash, Outspoken, Protective, Stubborn, Righteous, Impatient</span>
 
 ## Bio
 

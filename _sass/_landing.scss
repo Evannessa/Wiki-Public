@@ -2,17 +2,18 @@ main[data-layout="landing-page"] {
     max-width: 100%;
     width: 100%;
     padding-top: unset;
-}
-article {
-    // overflow: auto;
-    overflow: visible;
-    max-height: 100vh;
-    scroll-snap-type: y mandatory;
-    @media (min-width: 992px) {
-        // max-width: 80%;
-        // margin: auto;
+    article {
+        // overflow: auto;
+        overflow: visible;
+        max-height: 100vh;
+        scroll-snap-type: y mandatory;
+        @media (min-width: 992px) {
+            // max-width: 80%;
+            // margin: auto;
+        }
     }
 }
+
 .hero {
     scroll-snap-align: start;
     width: 100%;
@@ -73,7 +74,7 @@ article section.landing-section {
     max-height: 100vh;
     height: 100vh;
     @media (min-width: 992px) {
-        max-width: calc(min(90%, 1000px));
+        max-width: calc(min(90%, 992px));
         margin: 0 auto;
         height: 100vh;
     }

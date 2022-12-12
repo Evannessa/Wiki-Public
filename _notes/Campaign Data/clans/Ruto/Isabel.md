@@ -14,7 +14,7 @@ parents:
 
 ## Traits
 
-Down-to-earth, mature, level-headed, unadventurous, homebody, joy-kill
+<span class='traits chip-list'>Down-to-earth, mature, level-headed, unadventurous, homebody, joy-kill</span>
 
 ## Bio
 

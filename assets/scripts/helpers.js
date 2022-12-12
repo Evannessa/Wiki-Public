@@ -40,6 +40,35 @@ export default class Helpers {
         }
     }
 
+    /**
+     * Create element with specific class and content
+     * @param {String} tagName - the tagname of the element to create
+     * @param {Array} classList - the classlist -- array of strings -- to add to element
+     * @param {String} textContent - potential text content to add
+     * @param {Object} dataset - data elemenets to add to the element
+     * @return the created element
+     */
+    static createElement(tagName, classList, textContent = "", dataset = {}, iconText = "") {
+        const element = document.createElement(tagName);
+        if (typeof classList === "string") {
+            classList = classList.split(", ");
+        }
+        element.classList.add(...classList);
+        if (textContent) {
+            element.textContent = textContent;
+        }
+        if (Object.keys(dataset).length > 0) {
+            for (let key in dataset) {
+                element.dataset[key] = dataset[key];
+            }
+        }
+        if (iconText) {
+            const iconElement = Helpers.createElement("span", "material-symbols-outlined", iconText);
+            element.appendChild(iconElement);
+        }
+        return element;
+    }
+
     static buildDocumentFragment(container = "", children = []) {
         let documentFragment = document.createDocumentFragment();
         let parent = documentFragment;
@@ -48,10 +77,10 @@ export default class Helpers {
             parent = container;
         }
         if (children.length > 0) {
+            console.log(children);
             children.forEach((child) => parent.appendChild(child));
         }
         return documentFragment;
-        // ancestor.appendChild(documentFragment);
     }
 
     static highlightAnotherElement(actionElement, dependentElement) {
