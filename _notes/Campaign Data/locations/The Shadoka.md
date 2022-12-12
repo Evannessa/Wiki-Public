@@ -13,8 +13,8 @@ Irreparably damaged during [[The Storm]], it was salvaged for parts to build [[S
 
 ## Crew
 
-- Sola
-- Shantae
+- [[Sola]]
+- [[Shantae]]
 - 
 
 

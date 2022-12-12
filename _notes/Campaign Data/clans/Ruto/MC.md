@@ -3,6 +3,8 @@ imagePosition: center
 tags:
     - Category/Individual
     - Clans/Ruto
+    - Age/Adult
+    - Location/Starshead-Village
 Clan: Ruto
 parents:
     - Genki

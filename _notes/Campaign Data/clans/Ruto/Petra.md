@@ -5,6 +5,7 @@ tags:
     - Category/Individual
     - Clans/Ruto
     - Age/Teenager
+    - Location/Starshead-Village
 parents:
     - MC
     - Taza

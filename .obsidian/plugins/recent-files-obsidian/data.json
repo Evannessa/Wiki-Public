@@ -9,10 +9,6 @@
       "path": "_notes/Campaign Data/clans/Ruto/Sylvain.md"
     },
     {
-      "basename": "Randgen",
-      "path": "_notes/Campaign Data/clans/Ruto/Randgen.md"
-    },
-    {
       "basename": "Petra",
       "path": "_notes/Campaign Data/clans/Ruto/Petra.md"
     },
@@ -65,12 +61,68 @@
       "path": "_notes/Campaign Data/clans/Ruto/Andrew.md"
     },
     {
-      "basename": "The Story in Full",
-      "path": "_notes/Campaign Data/events/The Story in Full.md"
+      "basename": "Amos",
+      "path": "_notes/Campaign Data/clans/Shadoka/Amos.md"
+    },
+    {
+      "basename": "Finn",
+      "path": "_notes/Campaign Data/clans/Shadoka/Finn.md"
+    },
+    {
+      "basename": "Samson",
+      "path": "_notes/Campaign Data/clans/Shadoka/Samson.md"
+    },
+    {
+      "basename": "Sola",
+      "path": "_notes/Campaign Data/clans/Shadoka/Sola.md"
+    },
+    {
+      "basename": "Shantae",
+      "path": "_notes/Campaign Data/clans/Shadoka/Shantae.md"
+    },
+    {
+      "basename": "Lucia",
+      "path": "_notes/Campaign Data/clans/Shadoka/Lucia.md"
+    },
+    {
+      "basename": "Cyrus",
+      "path": "_notes/Campaign Data/clans/Shadoka/Cyrus.md"
+    },
+    {
+      "basename": "Captain Baara",
+      "path": "_notes/Campaign Data/clans/Shadoka/Captain Baara.md"
+    },
+    {
+      "basename": "Zin",
+      "path": "_notes/Campaign Data/clans/Shadoka/Zin.md"
     },
     {
       "basename": "The Shadoka",
       "path": "_notes/Campaign Data/locations/The Shadoka.md"
+    },
+    {
+      "basename": "Astrialum",
+      "path": "_notes/Campaign Data/locations/Astrialum.md"
+    },
+    {
+      "basename": "Starshead Island",
+      "path": "_notes/Campaign Data/locations/Starshead Island.md"
+    },
+    {
+      "basename": "Iothaenea",
+      "path": "_notes/Campaign Data/locations/Iothaenea.md"
+    },
+    {
+      "basename": "Dovindi",
+      "path": "_notes/Campaign Data/locations/Dovindi.md"
+    },
+    {
+      "basename": "Randgen",
+      "path": "_notes/Campaign Data/clans/Ruto/Randgen.md"
+    },
+    {
+      "basename": "The Story in Full",
+      "path": "_notes/Campaign Data/events/The Story in Full.md"
     },
     {
       "basename": "Shadoka",
@@ -90,10 +142,6 @@
     },
     {
       "basename": "The Storm",
-      "path": "_notes/Campaign Data/lore/The Storm.md"
-    },
-    {
-      "basename": "The Storm",
       "path": "_notes/Campaign Data/events/The Storm.md"
     },
     {
@@ -103,18 +151,6 @@
     {
       "basename": "The History of the Ruto Clan",
       "path": "_notes/Campaign Data/events/The History of the Ruto Clan.md"
-    },
-    {
-      "basename": "Iothaenea",
-      "path": "_notes/Campaign Data/locations/Iothaenea.md"
-    },
-    {
-      "basename": "Starshead Island",
-      "path": "_notes/Campaign Data/locations/Starshead Island.md"
-    },
-    {
-      "basename": "Astrialum",
-      "path": "_notes/Campaign Data/locations/Astrialum.md"
     },
     {
       "basename": "Starshead",

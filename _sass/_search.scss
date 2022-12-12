@@ -276,7 +276,20 @@ fieldset {
     // margin-inline: auto;
 }
 #search {
-    // padding-left: var(--space-8);
+    position: relative;
+    &:before {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        opacity: 24%;
+        background-image: url(/assets/locations/forest-mountain-bg.jpg);
+        background-size: cover;
+        top: 0;
+        left: 0;
+        z-index: 0;
+    }
 }
 
 .is-hidden {

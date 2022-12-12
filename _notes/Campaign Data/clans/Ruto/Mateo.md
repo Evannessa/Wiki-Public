@@ -4,6 +4,7 @@ tags:
     - Clans/Ruto
     - Category/Individual
     - Location/The-Shadoka
+    - Location/Starshead-Village
 Clan: Ruto
 partners:
     - Ester

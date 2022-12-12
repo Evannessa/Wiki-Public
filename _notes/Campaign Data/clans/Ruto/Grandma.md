@@ -4,8 +4,9 @@ tags:
     - Generation/First
     - Clans/Ruto
     - Category/Individual
-    - Condition/Deceased
-    - Age/Deceased
+    - Condition/Missing
+    - Location/Unknown
+    - Age/Elder
 Clan: Ruto
 alias: Rosa
 partners:

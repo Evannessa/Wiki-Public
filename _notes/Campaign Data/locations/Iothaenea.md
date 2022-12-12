@@ -2,7 +2,6 @@
 layout: location
 tags: 
 - Category/Location
-- Location/Nation
 image: /assets/locations/Iothaenea.webp
 alias: Iothaenean
 ---

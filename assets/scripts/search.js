@@ -7,7 +7,7 @@ let expandButton;
 let filterSection;
 let deceasedFilter;
 let deceasedPeople;
-var SearchData = {};
+const SearchData = {};
 
 SearchData.currentQueries = [];
 SearchData.checkedFilters = [];
@@ -34,6 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function initializeElements() {
     console.log("Search has been loaded");
+    window.searchData = SearchData;
 
     let filterDrawer = new SideDrawer();
     filterDrawer.cacheDrawerElements({
@@ -88,10 +89,10 @@ function toggleAll(event) {
     });
 }
 function convert(text) {
-    return text.toLowerCase().replace(/-/, " ");
+    return text.toLowerCase().replaceAll(/-/g, " ");
 }
 function trim(text) {
-    return text.replace(/[\n\r]+|[\s]{2,}/g, " ").trim();
+    return text.replaceAll(/[\n\r]+|[\s]{2,}/g, " ").trim();
 }
 function filterSearch(event) {
     let searchBox = event.currentTarget;
@@ -169,6 +170,7 @@ function filterAll() {
         galleryCards.forEach((card) => {
             let meetsQuery = true; // default value in case there isn't a query
             let match = filterText.some((text) => convert(card.innerText).includes(text));
+            console.log(convert(card.innerText), filterText, match);
             if (searchBoxQuery) {
                 meetsQuery = convert(card.innerText).includes(searchBoxQuery);
             }

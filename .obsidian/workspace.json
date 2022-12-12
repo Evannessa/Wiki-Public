@@ -6,7 +6,7 @@
       {
         "id": "949dee77e86d5e69",
         "type": "tabs",
-        "dimension": 47.347347347347345,
+        "dimension": 79.97997997997997,
         "children": [
           {
             "id": "84a04915fb3dac20",
@@ -21,23 +21,36 @@
             }
           },
           {
-            "id": "7367436134c09fd1",
+            "id": "4931701805fb6b46",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_notes/Campaign Data/events/Lore of the Solrise Sea.md",
+                "file": "_notes/Campaign Data/clans/Shadoka/Cyrus.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "6c8026cddfc3b853",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "_notes/Campaign Data/clans/Ruto/Taza.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 2
       },
       {
         "id": "5a83a2daa04c54b3",
         "type": "tabs",
-        "dimension": 52.652652652652655,
+        "dimension": 20.02002002002002,
         "children": [
           {
             "id": "93b417227e6b3468",
@@ -185,10 +198,9 @@
     "width": 200,
     "collapsed": true
   },
-  "active": "84a04915fb3dac20",
+  "active": "6c8026cddfc3b853",
   "lastOpenFiles": [
     "_notes/Campaign Data/clans/Ruto/Sylvain.md",
-    "_notes/Campaign Data/clans/Ruto/Randgen.md",
     "_notes/Campaign Data/clans/Ruto/Petra.md",
     "_notes/Campaign Data/clans/Ruto/Nomalanga.md",
     "_notes/Campaign Data/clans/Ruto/MC.md",
@@ -196,6 +208,7 @@
     "_notes/Campaign Data/clans/Ruto/Luca.md",
     "_notes/Campaign Data/clans/Ruto/Lourenco.md",
     "_notes/Campaign Data/clans/Ruto/Isabel.md",
-    "_notes/Campaign Data/clans/Ruto/Grandpa.md"
+    "_notes/Campaign Data/clans/Ruto/Grandpa.md",
+    "_notes/Campaign Data/clans/Ruto/Grandma.md"
   ]
 }

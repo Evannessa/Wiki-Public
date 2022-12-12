@@ -3,6 +3,7 @@ imagePosition: center
 tags:
     - Clans/Ruto
     - Category/Individual
+    - Location/Starshead-Village
 Clan: Ruto
 partners:
     - Mateo

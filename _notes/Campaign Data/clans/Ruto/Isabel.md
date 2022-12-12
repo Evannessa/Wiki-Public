@@ -5,6 +5,7 @@ tags:
     - Category/Individual
     - Clans/Ruto
     - Age/Young-Adult
+    - Location/Starshead-Village
 parents:
     - Ester
     - Mateo
