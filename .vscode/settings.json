@@ -7,5 +7,26 @@
     "cSpell.words": ["Moonseek", "Ruto", "Starfall", "Starshead", "webp"],
     "files.associations": {
         "*.html": "liquid"
-    }
+    },
+    "workbench.colorCustomizations": {
+        "activityBar.activeBackground": "#9b8cde",
+        "activityBar.background": "#9b8cde",
+        "activityBar.foreground": "#15202b",
+        "activityBar.inactiveForeground": "#15202b99",
+        "activityBarBadge.background": "#f1d4cd",
+        "activityBarBadge.foreground": "#15202b",
+        "commandCenter.border": "#e7e7e799",
+        "sash.hoverBorder": "#9b8cde",
+        "statusBar.background": "#7964d3",
+        "statusBar.foreground": "#e7e7e7",
+        "statusBarItem.hoverBackground": "#9b8cde",
+        "statusBarItem.remoteBackground": "#7964d3",
+        "statusBarItem.remoteForeground": "#e7e7e7",
+        "tab.activeBorder": "#9b8cde",
+        "titleBar.activeBackground": "#7964d3",
+        "titleBar.activeForeground": "#e7e7e7",
+        "titleBar.inactiveBackground": "#7964d399",
+        "titleBar.inactiveForeground": "#e7e7e799"
+    },
+    "peacock.color": "#7964d3"
 }
