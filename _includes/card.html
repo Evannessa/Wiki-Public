@@ -77,14 +77,19 @@
         </div>
     </div>
 
-    <!-- Link to other page-->
     <div class="card__content">
 
         <a class="internal-link" href="{{site.baseurl}}{{card.url}}{%- if site.use_html_extension -%}.html{%- endif -%}">
             {{ card.title }}
         </a>
         <p class="is-hidden">
-            {{card.tags}}
+            {%- for tag in card.tags -%}
+                {{tag}}
+                <br>
+            {%- endfor -%}
+            {%- comment -%}
+                {{card.tags}}
+            {%- endcomment -%}
         </p>
         {% if include.includeRelationships == "true" %}
             {% include relationships.html %}

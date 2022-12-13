@@ -3,7 +3,22 @@ import { Snackbar } from "./snackbar.js";
 import Card from "./cards.js";
 import Helpers from "./helpers.js";
 
+function handleLoad() {
+    let layout = document.querySelector("main").dataset.layout;
+    switch (layout) {
+        case "locations_map":
+        case "family-tree":
+        case "search-page":
+            console.log("Family tree or map");
+            break;
+        default:
+            Helpers.dispatchLoadEvent();
+            break;
+    }
+}
+
 document.addEventListener("DOMContentLoaded", function (event) {
+    handleLoad();
     console.log("Toggle UI Has been loaded");
     registerSideViewGalleryListeners();
     const mobileNav = new SideDrawer();
@@ -28,7 +43,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
             toggleButtonOuter: ".cards-drawer-toggle",
             toggleButtonInner: ".drawer.mobile-cards .drawer__toggle-button.inner",
         });
-        console.log(mobileCardView);
     }
 
     let ourSnackbar = new Snackbar();

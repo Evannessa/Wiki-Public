@@ -59,8 +59,8 @@ fieldset {
     // max-width: 50%;
     padding: var(--space-1) var(--space-3);
     @media (min-width: 992px) {
-        padding: var(--space-3) var(--space-5);
-        gap: var(--space-3);
+        padding: var(--space-2) var(--space-4);
+        gap: var(--space-2);
     }
     legend {
         color: #9a4dff;
@@ -92,17 +92,14 @@ fieldset {
             overflow: visible;
             position: relative;
             list-style-type: none;
-            // display: inline-flex;
             background-color: transparent;
             border: 1px solid var(--color-tag);
-            // background-color: hsla(249, 100%, 79%, 0.6);
             color: var(--color-tag);
-            // color: white;
             font-weight: bold;
             border-radius: 999px;
             padding: var(--space-1) var(--space-3); //0.25rem 0.75rem;
             @media (min-width: 992px) {
-                padding: var(--space-1) var(--space-4); //0.25rem 0.75rem;
+                padding: var(--space-1) var(--space-3); //0.25rem 0.75rem;
             }
             transition: color 100ms ease-in, background-color 120ms ease-in, border-radius 220ms ease-in;
             font-size: 0.75rem;

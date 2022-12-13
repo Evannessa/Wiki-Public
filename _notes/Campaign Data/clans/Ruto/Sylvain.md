@@ -3,7 +3,7 @@ imagePosition: center
 tags:
     - Category/Individual
     - Clans/Ruto
-    - Location/Sylvain's-Hut
+    - Location/The-Ebon-Rain-Forest
     - Age/Adult
 parents:
     - Grandpa

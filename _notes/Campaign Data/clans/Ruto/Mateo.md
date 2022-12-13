@@ -3,8 +3,7 @@ imagePosition: center
 tags:
     - Clans/Ruto
     - Category/Individual
-    - Location/The-Shadoka
-    - Location/Starshead-Village
+    - Location/Solrise-Strand
 Clan: Ruto
 partners:
     - Ester

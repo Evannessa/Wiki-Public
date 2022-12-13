@@ -13,6 +13,34 @@ main[data-layout="landing-page"] {
         }
     }
 }
+.section-1 {
+    background-image: url(/assets/locations/IslandFlipped.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    &:before {
+        border-top: 5px solid var(--glass-border);
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        transform: translate(0);
+        background: #c6ffdd; /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #f7797d, #fbd786, #c6ffdd); /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(
+            to right,
+            #f7797d,
+            #fbd786,
+            #c6ffdd
+        ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        mix-blend-mode: color;
+    }
+}
 
 .hero {
     scroll-snap-align: start;
@@ -21,22 +49,22 @@ main[data-layout="landing-page"] {
     display: grid;
     place-content: center;
     // background-image: url(/assets/locations/sunrise-mountain.jpg);
-    background-image: url(/assets/locations/LostLake2.webp);
+    background-image: url(/assets/locations/StarsheadIsland2.jpg);
     background-size: cover;
     background-position: center;
     position: relative;
-    &:after {
-        position: absolute;
-        content: "";
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
-        transform: translate(0);
-        background: radial-gradient(circle at 50%, transparent, black);
-        /* var(--color-primary-darkest));*/
-        z-index: 10;
-    }
+    // &:after {
+    //     position: absolute;
+    //     content: "";
+    //     width: 100%;
+    //     height: 100%;
+    //     top: 0;
+    //     left: 0;
+    //     transform: translate(0);
+    //     background: radial-gradient(circle at 50%, transparent, black);
+    //     /* var(--color-primary-darkest));*/
+    //     z-index: 10;
+    // }
     &__title {
         font-size: 2rem;
         @media (min-width: 992px) {

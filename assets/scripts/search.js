@@ -88,6 +88,7 @@ function toggleAll(event) {
         }
     });
 }
+
 function convert(text) {
     return text.toLowerCase().replaceAll(/-/g, " ");
 }
@@ -170,7 +171,6 @@ function filterAll() {
         galleryCards.forEach((card) => {
             let meetsQuery = true; // default value in case there isn't a query
             let match = filterText.some((text) => convert(card.innerText).includes(text));
-            console.log(convert(card.innerText), filterText, match);
             if (searchBoxQuery) {
                 meetsQuery = convert(card.innerText).includes(searchBoxQuery);
             }
@@ -200,7 +200,7 @@ function createFilterSpanFromString(text) {
                     name="${text}"
                     checked
                     type="checkbox" />
-                <label for="${text}-active">${text}</label>
+                <label for="${text}-active">${text.replaceAll(/-/g, " ")}</label>
                 </span>
     `;
     return htmlToElement(string);
