@@ -102,11 +102,14 @@ function handleLoad() {
 function setUpObserver() {
     function callback(entries, observer) {
         const storyBarItems = Array.from(document.querySelectorAll(".story-bar-item"));
+        const scrollButton = document.querySelector("[data-click-action='scroll']");
         entries.forEach((entry) => {
             if (entry.isIntersecting) {
                 storyBarItems.forEach((el) => el.classList.add("visible"));
+                scrollButton.classList.remove("visible");
             } else {
                 storyBarItems.forEach((el) => el.classList.remove("visible"));
+                scrollButton.classList.add("visible");
             }
         });
     }
