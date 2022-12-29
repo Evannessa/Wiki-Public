@@ -4,11 +4,14 @@ layout: lore
 
 # The Story of Starshead Island
 
--   [The Story of Starshead Island](#the-story-of-starshead-island)
-    -   [The Arrival](#the-arrival)
-    -   [Conflict](#conflict)
-    -   [Discovery](#discovery)
-    -   [Slyvain's Self-Exile, and The Mirrored Moon](#slyvains-self-exile-and-the-mirrored-moon)
+- [The Story of Starshead Island](#the-story-of-starshead-island)
+  - [The Arrival](#the-arrival)
+  - [Conflict](#conflict)
+  - [Discovery](#discovery)
+  - [Slyvain's Self-Exile](#slyvains-self-exile)
+  - [The Mirrored Moon and The Otherworld](#the-mirrored-moon-and-the-otherworld)
+  - [Petra's Visions, and Lourenco's Birth](#petras-visions-and-lourencos-birth)
+  - [Lourenco's Dreams](#lourencos-dreams)
 
 previous: [[The Storm]]
 next: [[Life on Starshead Island]]
@@ -105,13 +108,13 @@ The island was in the shape of a crescent, curved along a cove.
 
 However, many things were strange about this cove. For one, the water of the cove was inexplicably fresh, with none of the diversity of marine life from the reefs on the island's coastline entering it.
 
-Though seemingly connected to the see, the ecosystem seemed completely isolated, as if something invisible barred them.
+Though seemingly connected to the sea, the ecosystem seemed completely isolated, as if something invisible barred any of the aquatic flora or fauna from migrating from open sea to cove or vise versa.
 
 For this reason, they named the cove "Lost Lake", given that it acted more like a freshwater lake than a saltwater cove connected to the open ocean.
 
-But the next thing was even more astounding.
+But the next revelation was even more astounding.
 
-And the waters of the lake, rather than reflecting the mossy swamp trees, instead held a reflection.
+The waters of the lake, rather than reflecting the mossy swamp trees, instead held a reflection.
 
 ...and occasionally, they swore they saw the silhouettes of people on those Otherworld shores.
 

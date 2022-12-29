@@ -1,15 +1,14 @@
 ---
 layout: location
-tags: 
-- Category/Location
+tags:
+    - Category/Location
 image: /assets/locations/Iothaenea.webp
 alias: Iothaenean
 ---
 
 # Iothaenea
 
-
-![[_site/assets/locations/Iothaenea.webp]]
+![[/assets/locations/Iothaenea.webp]]
 Iothaenea exists on the twilight-dayside of [[Dovindi]], a planet tidally locked to its sun, where only a thin strip of the world is habitable.
 
 After decades of open warfare, it is currently teetering in an uneasy ceasefire with [[Astrialum]].
