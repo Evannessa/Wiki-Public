@@ -2,7 +2,90 @@ import { SideDrawer } from "./drawers.js";
 import { Snackbar } from "./snackbar.js";
 import Card from "./cards.js";
 import Helpers from "./helpers.js";
-
+//https://www.w3schools.com/howto/howto_js_image_comparison.asp
+function initComparisons() {
+    console.log("initializing comparisons");
+    var x, i;
+    /* Find all elements with an "overlay" class: */
+    x = document.getElementsByClassName("overlay");
+    console.log(x);
+    for (i = 0; i < x.length; i++) {
+        /* Once for each "overlay" element:
+    pass the "overlay" element as a parameter when executing the compareImages function: */
+        compareImages(x[i]);
+    }
+    function compareImages(img) {
+        var slider,
+            img,
+            clicked = 0,
+            w,
+            h;
+        /* Get the width and height of the img element */
+        w = img.offsetWidth;
+        h = img.offsetHeight;
+        /* Set the width of the img element to 50%: */
+        img.style.width = w / 2 + "vw";
+        /* Create slider: */
+        slider = document.createElement("DIV");
+        slider.setAttribute("class", "img-comp-slider");
+        /* Insert slider */
+        img.parentElement.insertBefore(slider, img);
+        /* Position the slider in the middle: */
+        // slider.style.top = h / 2 - slider.offsetHeight / 2 + "vh";
+        slider.style.left = w / 2 - slider.offsetWidth / 2 + "vw";
+        /* Execute a function when the mouse button is pressed: */
+        slider.addEventListener("mousedown", slideReady);
+        /* And another function when the mouse button is released: */
+        window.addEventListener("mouseup", slideFinish);
+        /* Or touched (for touch screens: */
+        slider.addEventListener("touchstart", slideReady);
+        /* And released (for touch screens: */
+        window.addEventListener("touchend", slideFinish);
+        function slideReady(e) {
+            /* Prevent any other actions that may occur when moving over the image: */
+            e.preventDefault();
+            /* The slider is now clicked and ready to move: */
+            clicked = 1;
+            /* Execute a function when the slider is moved: */
+            window.addEventListener("mousemove", slideMove);
+            window.addEventListener("touchmove", slideMove);
+        }
+        function slideFinish() {
+            /* The slider is no longer clicked: */
+            clicked = 0;
+        }
+        function slideMove(e) {
+            var pos;
+            /* If the slider is no longer clicked, exit this function: */
+            if (clicked == 0) return false;
+            /* Get the cursor's x position: */
+            pos = getCursorPos(e);
+            /* Prevent the slider from being positioned outside the image: */
+            if (pos < 0) pos = 0;
+            if (pos > w) pos = w;
+            /* Execute a function that will resize the overlay image according to the cursor: */
+            slide(pos);
+        }
+        function getCursorPos(e) {
+            var a,
+                x = 0;
+            e = e.changedTouches ? e.changedTouches[0] : e;
+            /* Get the x positions of the image: */
+            a = img.getBoundingClientRect();
+            /* Calculate the cursor's x coordinate, relative to the image: */
+            x = e.pageX - a.left;
+            /* Consider any page scrolling: */
+            x = x - window.pageXOffset;
+            return x;
+        }
+        function slide(x) {
+            /* Resize the image: */
+            img.style.width = x + "vw";
+            /* Position the slider: */
+            slider.style.left = img.offsetWidth - slider.offsetWidth / 2 + "vw";
+        }
+    }
+}
 function handleLoad() {
     let layout = document.querySelector("main").dataset.layout;
     switch (layout) {
@@ -16,10 +99,42 @@ function handleLoad() {
             break;
     }
 }
+function setUpObserver() {
+    function callback(entries, observer) {
+        const storyBarItems = Array.from(document.querySelectorAll(".story-bar-item"));
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                storyBarItems.forEach((el) => el.classList.add("visible"));
+            } else {
+                storyBarItems.forEach((el) => el.classList.remove("visible"));
+            }
+        });
+    }
+    let options = {
+        //   root: document.querySelector('#scrollArea'),
+        rootMargin: "0px",
+        threshold: 0.25,
+    };
+
+    let observer = new IntersectionObserver(callback, options);
+
+    let target = document.querySelector(".section-1");
+    observer.observe(target);
+
+    // the callback we setup for the observer will be executed now for the first time
+    // it waits until we assign a target to our observer (even if the target is currently not visible)
+}
 
 document.addEventListener("DOMContentLoaded", function (event) {
     handleLoad();
+
     console.log("Toggle UI Has been loaded");
+    setUpObserver();
+    document.querySelector("[data-click-action='scroll']").addEventListener("click", () => {
+        let scrollEl = document.querySelector(".story-bar");
+        scrollEl.scrollIntoView({ block: "center" });
+    });
+
     registerSideViewGalleryListeners();
     const mobileNav = new SideDrawer();
     mobileNav.cacheDrawerElements({

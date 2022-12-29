@@ -4,11 +4,11 @@ layout: lore
 
 # The Story of Starshead Island
 
-- [The Story of Starshead Island](#the-story-of-starshead-island)
-  - [The Arrival](#the-arrival)
-  - [Conflict](#conflict)
-  - [Discovery](#discovery)
-  - [Slyvain's Self-Exile, and The Mirrored Moon](#slyvains-self-exile-and-the-mirrored-moon)
+-   [The Story of Starshead Island](#the-story-of-starshead-island)
+    -   [The Arrival](#the-arrival)
+    -   [Conflict](#conflict)
+    -   [Discovery](#discovery)
+    -   [Slyvain's Self-Exile, and The Mirrored Moon](#slyvains-self-exile-and-the-mirrored-moon)
 
 previous: [[The Storm]]
 next: [[Life on Starshead Island]]
@@ -87,15 +87,15 @@ He'd planned to tell his family once they'd arrived in [[Iothaenea]].
 
 But the woman, known as Sola, had been lost in The Storm.
 
-And Sylvain's further hesitation had been compounded by his father's outburst toward the Shadoka's crew. 
+And Sylvain's further hesitation had been compounded by his father's outburst toward the Shadoka's crew.
 
 As Sola had been one of the so-called 'cultists', who Grayson blamed for Rosa's death. And Sylvain had known.
 
-Ashamed and conflicted, Sylvain forced himself into a self-imposed exile, hoping following in his mother's adventurous footsteps, and discovering more about the island's mysteries, could help find *something* to ease his father's pain, to help his family come to term with things, and to clear Sola's name.
+Ashamed and conflicted, Sylvain forced himself into a self-imposed exile, hoping following in his mother's adventurous footsteps, and discovering more about the island's mysteries, could help find _something_ to ease his father's pain, to help his family come to term with things, and to clear Sola's name.
 
 Rather than joining the remaining crew-members in [[SunRune Outpost]], Sylvain built his own home in the depths, near a spring he named after the woman he loved.
 
-No amount of persuading his twin sister [[Ester]] or [[Grandpa|Grayson]] could bring him back home. He was determined to find answers and make amends first. 
+No amount of persuading his twin sister [[Ester]] or [[Grandpa|Grayson]] could bring him back home. He was determined to find answers and make amends first.
 
 ## The Mirrored Moon and The Otherworld
 
@@ -115,10 +115,9 @@ And the waters of the lake, rather than reflecting the mossy swamp trees, instea
 
 ...and occasionally, they swore they saw the silhouettes of people on those Otherworld shores.
 
+Once per month, this strange moonlight would seem to _solidify_ the water, into a glassy surface that could be touched, walked upon, and gleamed brightly as a mirror.
 
-Once per month, this strange moonlight would seem to *solidify* the water, into a glassy surface that could be touched, walked upon, and gleamed brightly as a mirror. 
-
-The images on the world on the other side became even more distinct, and one evening a group of the Shadoka crew-members swore they saw a group of faces, a ragtag group of sailors, dressed in uniforms that both the [[Iothaenea|Iothaenean]] and the [[Astrialum]] Navy had worn, staring back at them. 
+The images on the world on the other side became even more distinct, and one evening a group of the Shadoka crew-members swore they saw a group of faces, a ragtag group of sailors, dressed in uniforms that both the [[Iothaenea|Iothaenean]] and the [[Astrialum]] Navy had worn, staring back at them.
 
 At this revelation, both [[Slyvain]] and the [[The Shadoka]]'s crew attempted to break through to this Other World, trying everything they could, though ultimately in vain.
 
@@ -138,9 +137,9 @@ Within the first year of their arrival upon [[Starshead Island]], [[Taza]] and [
 
 She spent it playing with domesticated island animals and following her older cousins [[Luca]] and [[Isabel]] around, pretending she was a wild adventurer like her late [[Grandma|late Great-Grandmother]] she heard so much about.
 
-But around seven years later, when [[Petra]]'s younger brother [[Lourenco]] was born, [[Petra]] began to have strange visions. 
+But around seven years later, when [[Petra]]'s younger brother [[Lourenco]] was born, [[Petra]] began to have strange visions.
 
-Sometimes, while playing among the hills or within the outskirts of the forest, she'd feel dizzy, as if struck by sudden vertigo, her ears would ring, and her vision would blur. 
+Sometimes, while playing among the hills or within the outskirts of the forest, she'd feel dizzy, as if struck by sudden vertigo, her ears would ring, and her vision would blur.
 
 And once it cleared, she'd see herself standing in a completely different realm, with everything strangely mirrored and reversed, as if upside-down.
 
@@ -160,8 +159,7 @@ When [[Sylvain]] sketched all of this down, and compiled it all together with hi
 
 [[Starshead Island]] existed on two separate dimensions, or planes.
 
-And the reason the lost lake
-
+And the reason [[the Lost Lake]]'s ecosystem seemed strangely isolated for that of a cove seemingly connected to the ocean, was that if you put both crescent-shaped versions of the island together, they formed a perfect halo of land encircling the mystic lake.
 
 ## Lourenco's Dreams
 
@@ -175,15 +173,15 @@ A woman whom he called "Gramma", who fit the exact description of the late [[Gra
 
 [[Grandpa|Grayson]] distraught, and refusing to be hooked by false hope after all of these years, refused to believe it.
 
-But [[Taza]] was convinced of something more. 
+But [[Taza]] was convinced of something more.
 
-That island was attempting to speak to her and [[MC]]'s children, to unveil to them its secrets. 
+That island was attempting to speak to her and [[MC]]'s children, to unveil to them its secrets.
 
 And this final revelation was the largest one. The one that must spur everyone, even the most complacent, into action.
 
 For it seemed that those who had been lost in The Storm and even in The Submerging, were perhaps not so 'lost' at all.
 
-And if so, if the sailors lost in The Engulfing lived in this other realm, having found harmony and forgiveness in the wake of such a bloody war, perhaps delving deeper was the right thing to do, perhaps it would unveil the chance to find not just peace for themselves, their family and surviving crew, but peace for all of [[Iothaenea]] and [[Astrialum]] as well. 
+And if so, if the sailors lost in The Engulfing lived in this other realm, having found harmony and forgiveness in the wake of such a bloody war, perhaps delving deeper was the right thing to do, perhaps it would unveil the chance to find not just peace for themselves, their family and surviving crew, but peace for all of [[Iothaenea]] and [[Astrialum]] as well.
 
 The only questions they had to answer were this:
 
@@ -193,6 +191,4 @@ Was it one wicked, or benign?
 
 And knowing that they had found heaven on this side of Starshead Island's shores, what's to say on the other side, they would not find hell?
 
-
-
---- 
+---

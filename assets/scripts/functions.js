@@ -52,6 +52,11 @@ document.addEventListener("DOMContentLoaded", function (event) {
         case "search-page":
             console.log("Family tree or map");
             break;
+        case "landing-page":
+            console.log("Landing page");
+            initComparisons();
+            Helpers.dispatchLoadEvent();
+            break;
         default:
             onLoad(event);
             Helpers.dispatchLoadEvent();
