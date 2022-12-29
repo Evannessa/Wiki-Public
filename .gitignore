@@ -14,7 +14,8 @@ _includes/notes_graph.json
 
 #pdfs
 
+
 *.pdf
 
 #private files
-
+.vscode
