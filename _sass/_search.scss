@@ -17,13 +17,12 @@
             grid-template-columns: repeat(4, minmax(0, 25%));
         }
         padding-block: var(--space-4);
-        .card {
+        .card:not(.is-hidden) {
+            transform: scale(1);
             max-width: unset;
+            transition: transform 200ms ease-in-out;
         }
 
-        @media (min-width: 992px) {
-            // padding: var(--space-8);
-        }
         .card:last-child {
             margin-right: auto;
         }
@@ -293,6 +292,7 @@ fieldset {
     transform: scale(0);
     position: absolute !important;
     left: -999px;
+    transition: transform 200ms ease-in-out, 200ms left 200ms ease-in-out;
 }
 
 .is-hidden-deceased {
