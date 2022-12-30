@@ -94,10 +94,21 @@ function handleLoad() {
         case "search-page":
             console.log("Family tree or map");
             break;
+        case "landing-page":
+            setupScrollButton();
+            setUpObserver();
+            Helpers.dispatchLoadEvent();
+            break;
         default:
             Helpers.dispatchLoadEvent();
             break;
     }
+}
+function setupScrollButton() {
+    document.querySelector("[data-click-action='scroll']").addEventListener("click", () => {
+        let scrollEl = document.querySelector(".story-bar");
+        scrollEl.scrollIntoView({ block: "center" });
+    });
 }
 function setUpObserver() {
     function callback(entries, observer) {
@@ -132,12 +143,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
     handleLoad();
 
     console.log("Toggle UI Has been loaded");
-    setUpObserver();
-    document.querySelector("[data-click-action='scroll']").addEventListener("click", () => {
-        let scrollEl = document.querySelector(".story-bar");
-        scrollEl.scrollIntoView({ block: "center" });
-    });
-
     registerSideViewGalleryListeners();
     const mobileNav = new SideDrawer();
     mobileNav.cacheDrawerElements({
