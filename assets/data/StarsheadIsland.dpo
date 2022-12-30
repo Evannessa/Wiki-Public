@@ -378,7 +378,7 @@
                     "parent": "58130b91-6181-428f-8087-00b8d72d8dbe",
                     "imageData": {
                         "guid": "582230c7-7e1a-44a2-8ae5-c92980145bbd",
-                        "mainImage": "..\\..\\locations\\LostLake2.jpg",
+                        "mainImage": "..\\..\\locations\\LostLake2.JPG",
                         "otherImages": "",
                         "color": "#0585A5",
                         "gradient": "linear-gradient(45deg, rgb(15, 0, 180), rgb(143, 0, 171))",
