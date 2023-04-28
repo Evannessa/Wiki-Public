@@ -1,6 +1,14 @@
 # Collaborative Story Wiki
 
+- [Collaborative Story Wiki](#collaborative-story-wiki)
+  * [Problem Solved](#problem-solved)
+  * [Character Search](#character-search)
+  * [Location Map](#location-map)
+    + [Description of "Location Map" Functionality](#description-of-location-map-functionality)
+  * [Interactive Family Tree](#interactive-family-tree)
+    + [Description of "Family Tree" Functionality](#description-of-family-tree-functionality)
 
+## Problem Solved
 
 While working on a collaborative fiction project with friends, I realized there wasn't an easy way for us to keep track of all of the characters and settings we had built.
 
@@ -8,7 +16,7 @@ Using static site generator [Jekyll](https://jekyllrb.com/), I designed and deve
 
 However, as our project expanded and grew in complexity, I realized there was a need to develop additional functionality to help ease the process of adding and editing new settings and characters and how these settings and characters were interrelated.
 
-Therefore the wiki site contains three main 'sub-projects'.
+The wiki site contains three main 'sub-projects'.
 
 1.  Character Search
 2.  Location Map
@@ -34,7 +42,7 @@ While this could've perhaps been solved by an illustration of a map, the dynamic
 
 In order to solve this, I developed an interactive hex-map that would keep track of each location and stylistically fit the themes and moods of the story.
 
-### Description of Functionality
+### Description of Location Map Functionality
 
 Each "hex" represents an individual location.
 
@@ -42,7 +50,7 @@ You can hover over it to get a summary view of the location, or click upon the l
 
 The detailed view displaying lore descriptions, lists of inner locations, connected locations that could be traveled to or from, and characters or factions present in the location.
 
-## Family Tree
+## Interactive Family Tree
 
 [Live Site Family Tree Page](https://fastidious-smakager-702620.netlify.app/trees-ruto)
 
@@ -52,7 +60,7 @@ Keeping track of familial relations among our cast of characters also proved dif
 
 To solve this, I developed a 'dynamic' family tree that draws from YAML front matter metadata written in each individual's character's article, and leverages that data to connect each character with their immediate family members and distribute them evenly across an SVG viewport.{" "}
 
-## Description of Functionality
+### Description of Family Tree Functionality
 
 
 Hovering over a portrait magnifies the individual in question and highlights their connections with their immediate family members, fading out any non-immediately-related individuals.
